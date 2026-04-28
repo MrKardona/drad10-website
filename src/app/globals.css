@@ -32,7 +32,7 @@
 }
 
 @layer base {
-  * { @apply border-border; }
+  * { box-sizing: border-box; }
   body {
     background: var(--background);
     color: var(--foreground);
@@ -167,6 +167,17 @@
   text-transform: uppercase;
   color: #c9a84c;
   font-weight: 600;
+}
+
+/* ─── Footer social ─── */
+.footer-social {
+  background-color: rgba(201,168,76,0.1);
+  color: #c9a84c;
+  transition: background-color 0.2s, color 0.2s;
+}
+.footer-social:hover {
+  background-color: #c9a84c;
+  color: #0f1219;
 }
 
 /* ─── Scrollbar ─── */

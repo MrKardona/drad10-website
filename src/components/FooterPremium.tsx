@@ -32,10 +32,7 @@ export function FooterPremium() {
               <a
                 key={s.label}
                 href={s.href}
-                className="w-8 h-8 flex items-center justify-center text-[10px] font-bold transition-colors"
-                style={{ backgroundColor: 'rgba(201,168,76,0.1)', color: '#c9a84c' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#c9a84c'; (e.currentTarget as HTMLElement).style.color = '#0f1219'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(201,168,76,0.1)'; (e.currentTarget as HTMLElement).style.color = '#c9a84c'; }}
+                className="w-8 h-8 flex items-center justify-center text-[10px] font-bold footer-social"
               >
                 {s.label}
               </a>
