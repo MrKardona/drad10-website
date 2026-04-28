@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface Credential {
   label: string;
@@ -20,13 +21,12 @@ export function DoctorSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
 
-          {/* ── Left: visual placeholder ── */}
+          {/* ── Left: Doctor photo ── */}
           <div className="relative opacity-0 animate-slide-right">
-            {/* Gold corner decorations — outer container */}
             <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0">
               {/* Top-left gold corner */}
               <div
-                className="absolute -top-3 -left-3 w-10 h-10 hidden lg:block pointer-events-none"
+                className="absolute -top-3 -left-3 w-10 h-10 hidden lg:block pointer-events-none z-10"
                 style={{
                   borderTop: "2px solid #b89a6a",
                   borderLeft: "2px solid #b89a6a",
@@ -34,66 +34,33 @@ export function DoctorSection() {
               />
               {/* Bottom-right gold corner */}
               <div
-                className="absolute -bottom-3 -right-3 w-10 h-10 hidden lg:block pointer-events-none"
+                className="absolute -bottom-3 -right-3 w-10 h-10 hidden lg:block pointer-events-none z-10"
                 style={{
                   borderBottom: "2px solid #b89a6a",
                   borderRight: "2px solid #b89a6a",
                 }}
               />
 
-              {/* Main placeholder frame */}
-              <div
-                className="relative aspect-[3/4] w-full overflow-hidden flex flex-col items-center justify-center pb-12"
-                style={{
-                  background:
-                    "linear-gradient(160deg, #ede0d6 0%, #d8c8bb 60%, #c8b8a8 100%)",
-                }}
-              >
-                {/* Subtle top light */}
-                <div
-                  className="absolute inset-x-0 top-0 h-1/3 pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(250,248,245,0.15) 0%, transparent 100%)",
-                  }}
+              {/* Photo frame */}
+              <div className="relative aspect-[3/4] w-full overflow-hidden img-zoom">
+                <Image
+                  src="/images/dra-daniela.jpg"
+                  alt="Dra. Daniela Díez — DRA.D10 Medicina Estética"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 384px"
+                  priority
                 />
-
-                {/* Initials circle with gold border */}
+                {/* Bottom badge overlay */}
                 <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center mb-5 animate-float"
+                  className="absolute bottom-0 left-0 right-0 px-5 py-4 z-10"
                   style={{
-                    backgroundColor: "rgba(184,154,106,0.15)",
-                    border: "2px solid #b89a6a",
-                  }}
-                >
-                  <span
-                    className="text-2xl font-semibold tracking-wider"
-                    style={{
-                      fontFamily: "var(--font-display), Georgia, serif",
-                      color: "#5a4a3e",
-                      letterSpacing: "0.08em",
-                    }}
-                  >
-                    DD
-                  </span>
-                </div>
-
-                <p
-                  className="text-sm font-medium tracking-wide"
-                  style={{ color: "#5a4a3e", fontFamily: "var(--font-body)" }}
-                >
-                  Dra. Daniela Díez
-                </p>
-
-                {/* Floating badge — bottom of image frame */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 px-5 py-4"
-                  style={{
-                    backgroundColor: "#1c1c1c",
+                    backgroundColor: "rgba(28,28,28,0.92)",
                     borderTop: "2px solid #b89a6a",
+                    backdropFilter: "blur(6px)",
                   }}
                 >
-                  <p className="section-label mb-1">ESPECIALIDAD</p>
+                  <p className="section-label mb-1">FUNDADORA</p>
                   <p
                     className="text-xs leading-snug"
                     style={{
@@ -110,10 +77,8 @@ export function DoctorSection() {
 
           {/* ── Right: content ── */}
           <div className="opacity-0 animate-slide-left delay-200">
-            {/* Section label */}
             <p className="section-label mb-5">CONOCE A LA FUNDADORA</p>
 
-            {/* Heading — two lines */}
             <h2
               className="mb-1 leading-tight"
               style={{
@@ -131,7 +96,6 @@ export function DoctorSection() {
 
             <span className="gold-line" />
 
-            {/* Bio — two real paragraphs */}
             <p
               className="leading-relaxed mb-5"
               style={{
@@ -197,6 +161,59 @@ export function DoctorSection() {
             </Link>
           </div>
         </div>
+
+        {/* ── Team photo strip ── */}
+        <div className="mt-24 opacity-0 animate-fade-up delay-300">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-0 overflow-hidden" style={{ borderRadius: 0 }}>
+            {/* Left label */}
+            <div
+              className="md:col-span-2 flex flex-col justify-center px-10 py-12"
+              style={{ backgroundColor: "#1c1c1c" }}
+            >
+              <p className="section-label mb-4" style={{ color: "#b89a6a" }}>NUESTRO EQUIPO</p>
+              <h3
+                className="leading-tight mb-5"
+                style={{
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
+                  fontWeight: 300,
+                  color: "#faf8f5",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Profesionales
+                <br />
+                <em style={{ color: "#b89a6a", fontStyle: "italic" }}>dedicadas</em>
+                <br />
+                a ti
+              </h3>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "rgba(250,248,245,0.6)", fontFamily: "var(--font-body)" }}
+              >
+                Un equipo formado con vocación, experiencia y calidez humana.
+                Cada miembro está comprometida con tu bienestar y tus resultados.
+              </p>
+            </div>
+
+            {/* Team photo */}
+            <div className="md:col-span-3 relative" style={{ minHeight: "340px" }}>
+              <Image
+                src="/images/equipo.jpg"
+                alt="Equipo DRA.D10 — Clínica Quantum Medellín"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+              {/* Gold overlay strip at bottom */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-1"
+                style={{ backgroundColor: "#b89a6a" }}
+              />
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

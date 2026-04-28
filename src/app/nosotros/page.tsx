@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { NavBar } from "@/components/NavBar";
 import { CTABanner } from "@/components/CTABanner";
 import { FooterPremium } from "@/components/FooterPremium";
@@ -220,18 +221,18 @@ export default function NosotrosPage() {
 
           {/* Visual — right */}
           <div className="opacity-0 animate-fade-in delay-200">
-            {/* Portrait placeholder */}
             <div
-              className="w-full relative"
+              className="w-full relative img-zoom"
               style={{
                 aspectRatio: "3 / 4",
-                backgroundColor: "#e0d0c6",
                 maxWidth: "480px",
                 marginLeft: "auto",
+                overflow: "hidden",
               }}
             >
               {/* Decorative gold corner — top-left */}
               <div
+                className="z-10"
                 style={{
                   position: "absolute",
                   top: "-12px",
@@ -244,6 +245,7 @@ export default function NosotrosPage() {
               />
               {/* Decorative gold corner — bottom-right */}
               <div
+                className="z-10"
                 style={{
                   position: "absolute",
                   bottom: "-12px",
@@ -255,16 +257,28 @@ export default function NosotrosPage() {
                 }}
               />
 
-              {/* Badge */}
+              {/* Real photo */}
+              <Image
+                src="/images/dra-daniela.jpg"
+                alt="Dra. Daniela Díez — Fundadora DRA.D10"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 480px"
+                priority
+              />
+
+              {/* Badge overlay */}
               <div
+                className="z-10"
                 style={{
                   position: "absolute",
-                  bottom: "24px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  backgroundColor: "#1a1816",
-                  padding: "12px 24px",
-                  whiteSpace: "nowrap",
+                  bottom: "0",
+                  left: "0",
+                  right: "0",
+                  backgroundColor: "rgba(28,28,28,0.9)",
+                  borderTop: "2px solid #b89a6a",
+                  padding: "14px 24px",
+                  backdropFilter: "blur(6px)",
                 }}
               >
                 <p
@@ -285,22 +299,17 @@ export default function NosotrosPage() {
                     letterSpacing: "0.22em",
                     textTransform: "uppercase",
                     color: "#888580",
-                    textAlign: "center",
                     marginTop: "2px",
                   }}
                 >
-                  Fundadora
+                  Fundadora · DRA.D10
                 </p>
               </div>
 
-              {/* Monogram center */}
+              {/* (removed placeholder monogram) */}
               <div
                 style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -65%)",
-                  textAlign: "center",
+                  display: "none",
                 }}
               >
                 <div
