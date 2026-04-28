@@ -1,24 +1,26 @@
-import { TopBar } from "@/components/TopBar";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { AboutSection } from "@/components/AboutSection";
-import { VideoSection } from "@/components/VideoSection";
-import { GallerySection } from "@/components/GallerySection";
-import { ContactForm } from "@/components/ContactForm";
-import { Footer } from "@/components/Footer";
+import { NavBar } from "@/components/NavBar";
+import { HeroPremium } from "@/components/HeroPremium";
+import { StatsBanner } from "@/components/StatsBanner";
+import { ServicesPremium } from "@/components/ServicesPremium";
+import { DoctorSection } from "@/components/DoctorSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { CTABanner } from "@/components/CTABanner";
+import { ContactPremium } from "@/components/ContactPremium";
+import { FooterPremium } from "@/components/FooterPremium";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
     <>
-      <TopBar />
-      <Header />
-      <Hero />
-      <AboutSection />
-      <VideoSection />
-      <GallerySection />
-      <ContactForm />
-      <Footer />
+      <NavBar />
+      <HeroPremium />
+      <StatsBanner />
+      <ServicesPremium />
+      <DoctorSection />
+      <TestimonialsSection />
+      <CTABanner />
+      <ContactPremium />
+      <FooterPremium />
       <WhatsAppButton />
     </>
   );
