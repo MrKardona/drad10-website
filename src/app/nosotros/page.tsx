@@ -17,45 +17,23 @@ const filosofiaCards: {
 }[] = [
   {
     icon: "✦",
-    title: "Calidad y Excelencia",
-    desc: "Cada decisión, cada proceso y cada detalle están pensados con propósito. Nos esforzamos para que cada visita sea una experiencia que supere las expectativas y genere resultados reales.",
+    title: "Calidad y excelencia con propósito",
+    desc: "Nos esforzamos por ofrecer servicios que realmente marquen la diferencia. Cada decisión, cada proceso y cada detalle están orientados hacia resultados excepcionales y acordes a las necesidades de cada paciente.",
   },
   {
     icon: "⊕",
-    title: "Tecnología Avanzada",
-    desc: "Incorporamos equipos de última generación como INDIBA, junto con protocolos clínicos actualizados, para ofrecer tratamientos seguros, eficientes y a la vanguardia de la medicina estética.",
-  },
-  {
-    icon: "❧",
-    title: "Personalización Total",
-    desc: "Cada paciente es único. Diseñamos planes de tratamiento individualizados que responden a la historia, los objetivos y la piel particular de cada persona que confía en nosotros.",
+    title: "Tecnología al servicio de las personas",
+    desc: "Creemos en la tecnología como una herramienta, no como un fin. Por eso utilizamos métodos y recursos de última generación que aporten bienestar real y seguro.",
   },
   {
     icon: "○",
-    title: "Resultados Naturales",
-    desc: "Creemos en la belleza auténtica. Sin exageraciones ni artificios, trabajamos para realzar la mejor versión de cada paciente, respetando siempre su identidad y sus proporciones naturales.",
-  },
-];
-
-const valores: {
-  icon: string;
-  title: string;
-  desc: string;
-}[] = [
-  {
-    icon: "✦",
-    title: "Ética y Transparencia",
-    desc: "Actuamos con honestidad en cada consulta, informando con claridad sobre procedimientos, resultados esperados y posibles riesgos. La confianza es nuestra base.",
+    title: "Cercanía que genera confianza",
+    desc: "Escuchamos, acompañamos y cuidamos. Construimos relaciones basadas en la honestidad, el respeto y el compromiso, entendiendo que detrás de cada consulta hay una historia, una expectativa y una persona que merece atención personalizada.",
   },
   {
-    icon: "◎",
-    title: "Cuidado Genuino",
-    desc: "Escuchamos antes de proponer. Cada paciente merece atención íntegra, respetuosa y personalizada, porque detrás de cada consulta hay una persona con una historia que importa.",
-  },
-  {
-    icon: "⟡",
-    title: "Mejora Continua",
-    desc: "Invertimos en formación constante, tecnología y protocolos actualizados. La excelencia no es un destino; es un compromiso que renovamos cada día.",
+    icon: "↗",
+    title: "Innovación con sentido humano",
+    desc: "Evolucionamos constantemente, incorporando nuevas técnicas y mejoras que aporten valor real a la experiencia de nuestros pacientes, siempre priorizando la seguridad, la naturalidad y el bienestar integral.",
   },
 ];
 
@@ -77,13 +55,13 @@ export default function NosotrosPage() {
       >
         <div className="max-w-5xl mx-auto px-6 text-center">
           {/* Section label */}
-          <p className="section-label mb-6 animate-fade-up">
+          <p className="section-label mb-6 opacity-0 animate-fade-up">
             NUESTRA HISTORIA
           </p>
 
           {/* Heading */}
           <h1
-            className="mb-6 leading-tight animate-fade-up delay-100"
+            className="mb-6 leading-tight opacity-0 animate-fade-up delay-100"
             style={{
               fontFamily: "var(--font-display), Georgia, serif",
               fontSize: "clamp(2.8rem, 6vw, 5rem)",
@@ -94,19 +72,14 @@ export default function NosotrosPage() {
           >
             Medicina Estética
             <br />
-            <em
-              style={{
-                color: "#b89a6a",
-                fontStyle: "italic",
-              }}
-            >
+            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
               con Propósito
             </em>
           </h1>
 
           {/* Intro paragraph */}
           <p
-            className="mx-auto mb-8 leading-relaxed animate-fade-up delay-200"
+            className="mx-auto mb-8 leading-relaxed opacity-0 animate-fade-up delay-200"
             style={{
               fontFamily: "var(--font-body)",
               fontSize: "1rem",
@@ -121,7 +94,7 @@ export default function NosotrosPage() {
           </p>
 
           {/* Gold divider */}
-          <div className="flex justify-center mb-14 animate-fade-up delay-300">
+          <div className="flex justify-center mb-14 opacity-0 animate-fade-up delay-300">
             <span className="gold-line" />
           </div>
 
@@ -130,7 +103,7 @@ export default function NosotrosPage() {
             {highlights.map((h, i) => (
               <div
                 key={h.label}
-                className={`animate-scale-in delay-${(i + 4) * 100}`}
+                className={`opacity-0 animate-scale-in delay-${(i + 4) * 100}`}
               >
                 <p
                   className="mb-1"
@@ -168,7 +141,7 @@ export default function NosotrosPage() {
       <section className="py-28" style={{ backgroundColor: "#faf8f5" }}>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Text — left */}
-          <div className="animate-slide-right">
+          <div className="opacity-0 animate-slide-right">
             <p className="section-label mb-6">ESPECIALISTA FUNDADORA</p>
 
             <h2
@@ -183,7 +156,9 @@ export default function NosotrosPage() {
             >
               Dra. Daniela Díez
               <br />
-              <em style={{ color: "#b89a6a" }}>Fundadora</em>
+              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+                Fundadora
+              </em>
             </h2>
 
             <span className="gold-line" />
@@ -198,23 +173,17 @@ export default function NosotrosPage() {
               }}
             >
               <p>
-                La Dra. Daniela Díez es médica con una sólida formación en
-                diversos niveles de complejidad y una profunda vocación humana.
-                Su práctica está fundamentada en valores éticos y morales, con
-                un enfoque proactivo, analítico y centrado en el paciente.
+                ¡Hola! Soy Daniela Díez, una médica formada en diversos niveles
+                de complejidad, con una sólida vocación humana basada en valores
+                éticos y morales y un enfoque proactivo y analítico. Me destaco
+                por mi liderazgo, fácil adaptación a situaciones nuevas y
+                compromiso responsable.
               </p>
               <p>
                 Especialista en Medicina Estética y Microimplante Capilar,
-                formada en Colombia y Argentina, Daniela fundó DRAD10 con la
-                visión de ofrecer una experiencia médica diferente: cercana,
-                honesta y orientada a resultados naturales que potencien la
-                confianza de cada paciente.
-              </p>
-              <p>
-                Su liderazgo, capacidad de adaptación y compromiso responsable
-                con la excelencia clínica han convertido a la clínica en un
-                referente de la medicina estética premium en El Poblado,
-                Medellín.
+                fundé DRAD10 con la visión de ofrecer una experiencia médica
+                diferente: cercana, honesta y orientada a resultados naturales
+                que potencien la confianza de cada paciente.
               </p>
             </div>
 
@@ -244,26 +213,13 @@ export default function NosotrosPage() {
                   padding: "0.4rem 0.9rem",
                 }}
               >
-                INDIBA Certified
-              </span>
-              <span
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.65rem",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "#b89a6a",
-                  border: "1px solid rgba(184,154,106,0.4)",
-                  padding: "0.4rem 0.9rem",
-                }}
-              >
                 Medicina Estética
               </span>
             </div>
           </div>
 
           {/* Visual — right */}
-          <div className="animate-fade-in delay-200">
+          <div className="opacity-0 animate-fade-in delay-200">
             {/* Portrait placeholder */}
             <div
               className="w-full relative"
@@ -274,7 +230,7 @@ export default function NosotrosPage() {
                 marginLeft: "auto",
               }}
             >
-              {/* Decorative gold corner */}
+              {/* Decorative gold corner — top-left */}
               <div
                 style={{
                   position: "absolute",
@@ -286,6 +242,7 @@ export default function NosotrosPage() {
                   borderLeft: "2px solid #b89a6a",
                 }}
               />
+              {/* Decorative gold corner — bottom-right */}
               <div
                 style={{
                   position: "absolute",
@@ -388,40 +345,96 @@ export default function NosotrosPage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECCIÓN 3 — Nuestra Filosofía
+          SECCIÓN 3 — Misión / Nuestro Compromiso
       ══════════════════════════════════════════════ */}
-      <section className="py-28" style={{ backgroundColor: "#1c1c1c" }}>
+      <section
+        className="py-28"
+        style={{
+          background: "linear-gradient(160deg, #1a1816 0%, #2e2e2e 100%)",
+        }}
+      >
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p
+            className="section-label mb-6 opacity-0 animate-fade-up"
+            style={{ color: "#b89a6a" }}
+          >
+            MISIÓN
+          </p>
+
+          <h2
+            className="mb-8 leading-tight opacity-0 animate-fade-up delay-100"
+            style={{
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontSize: "clamp(2rem, 4vw, 3.2rem)",
+              fontWeight: 300,
+              color: "#faf8f5",
+              letterSpacing: "-0.025em",
+            }}
+          >
+            Nuestro compromiso
+          </h2>
+
+          <div className="flex justify-center mb-10 opacity-0 animate-scale-in delay-200">
+            <div
+              style={{
+                width: "40px",
+                height: "1px",
+                backgroundColor: "#b89a6a",
+              }}
+            />
+          </div>
+
+          <div
+            className="flex flex-col gap-7 opacity-0 animate-fade-up delay-300"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.95rem",
+              color: "#888580",
+              lineHeight: 1.9,
+              textAlign: "left",
+            }}
+          >
+            <p>
+              DRAD10 nació con la visión de transformar la experiencia en salud
+              y bienestar, integrando atención médica especializada con
+              soluciones innovadoras, seguras y centradas en la persona. Con un
+              enfoque en innovación, excelencia y servicio, hemos consolidado un
+              proyecto sólido que combina experiencia clínica, profesionalismo y
+              una profunda vocación por el cuidado humano.
+            </p>
+            <p>
+              Creemos que lo que nos diferencia no es solo lo que hacemos, sino
+              cómo lo hacemos: con responsabilidad, ética médica, dedicación y
+              un compromiso constante por superar expectativas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          SECCIÓN 4 — Filosofía (4 valores)
+      ══════════════════════════════════════════════ */}
+      <section className="py-28" style={{ backgroundColor: "#faf8f5" }}>
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-16">
-            <p
-              className="section-label mb-6 animate-fade-up"
-              style={{ color: "#b89a6a" }}
-            >
+            <p className="section-label mb-5 opacity-0 animate-fade-up">
               FILOSOFÍA
             </p>
             <h2
-              className="mb-4 leading-tight animate-fade-up delay-100"
+              className="opacity-0 animate-fade-up delay-100"
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
-                fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+                fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
                 fontWeight: 300,
-                color: "#faf8f5",
-                letterSpacing: "-0.025em",
+                color: "#1c1c1c",
+                letterSpacing: "-0.02em",
               }}
             >
-              Nuestro compromiso
-              <br />
-              <em style={{ color: "#d4b896" }}>contigo</em>
+              Lo que nos define
             </h2>
-            <div className="flex justify-center mt-6 animate-fade-up delay-200">
-              <div
-                style={{
-                  width: "40px",
-                  height: "1px",
-                  backgroundColor: "#b89a6a",
-                }}
-              />
+            <div className="flex justify-center mt-5 opacity-0 animate-fade-up delay-200">
+              <span className="gold-line" />
             </div>
           </div>
 
@@ -430,9 +443,9 @@ export default function NosotrosPage() {
             {filosofiaCards.map((card, i) => (
               <div
                 key={card.title}
-                className={`card-hover animate-fade-up delay-${(i + 2) * 100} p-10`}
+                className={`card-hover opacity-0 animate-fade-up delay-${(i + 3) * 100} p-10`}
                 style={{
-                  backgroundColor: "#2e2e2e",
+                  backgroundColor: "#f0e8e2",
                   borderTop: "2px solid #b89a6a",
                 }}
               >
@@ -451,9 +464,9 @@ export default function NosotrosPage() {
                   className="mb-3"
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.25rem",
+                    fontSize: "1.15rem",
                     fontWeight: 400,
-                    color: "#faf8f5",
+                    color: "#1c1c1c",
                     letterSpacing: "-0.01em",
                   }}
                 >
@@ -476,92 +489,11 @@ export default function NosotrosPage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECCIÓN 4 — Valores
-      ══════════════════════════════════════════════ */}
-      <section className="py-28" style={{ backgroundColor: "#f0e8e2" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <p className="section-label mb-5 animate-fade-up">
-              NUESTROS VALORES
-            </p>
-            <h2
-              className="animate-fade-up delay-100"
-              style={{
-                fontFamily: "var(--font-display), Georgia, serif",
-                fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                fontWeight: 300,
-                color: "#1c1c1c",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Lo que nos define
-            </h2>
-            <div className="flex justify-center mt-5 animate-fade-up delay-200">
-              <span className="gold-line" />
-            </div>
-          </div>
-
-          {/* 3 columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {valores.map((v, i) => (
-              <div
-                key={v.title}
-                className={`text-center animate-fade-up delay-${(i + 3) * 100}`}
-              >
-                {/* Gold icon */}
-                <div
-                  className="mx-auto mb-6 flex items-center justify-center"
-                  style={{
-                    width: "56px",
-                    height: "56px",
-                    border: "1px solid rgba(184,154,106,0.4)",
-                    color: "#b89a6a",
-                    fontSize: "1.2rem",
-                    fontFamily: "var(--font-display), Georgia, serif",
-                  }}
-                >
-                  {v.icon}
-                </div>
-
-                <h3
-                  className="mb-3"
-                  style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.2rem",
-                    fontWeight: 400,
-                    color: "#1c1c1c",
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  {v.title}
-                </h3>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.85rem",
-                    color: "#888580",
-                    lineHeight: 1.8,
-                    maxWidth: "300px",
-                    margin: "0 auto",
-                  }}
-                >
-                  {v.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════
           SECCIÓN 5 — CTA Banner
       ══════════════════════════════════════════════ */}
       <CTABanner />
 
-      {/* ══════════════════════════════════════════════
-          SECCIÓN 6 — Footer
-      ══════════════════════════════════════════════ */}
+      {/* ── Footer ── */}
       <FooterPremium />
     </>
   );

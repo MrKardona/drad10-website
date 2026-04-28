@@ -17,8 +17,16 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "DRA.D10 | Medicina Estética en Medellín",
-  description: "Clínica de medicina estética y rejuvenecimiento en el Poblado, Medellín. Tratamientos faciales, corporales, capilares e inyectables con respaldo médico certificado.",
-  keywords: "medicina estética medellín, botox medellín, microimplante capilar, clínica estética poblado",
+  description: "Clínica de Medicina Estética y Rejuvenecimiento en El Poblado, Medellín. Tratamientos faciales, capilares, corporales e inyectables. INDIBA Certified. Dra. Daniela Díez.",
+  keywords: ["medicina estética medellín", "rejuvenecimiento", "implante capilar", "botox medellín", "INDIBA", "drad10", "dra daniela diez", "el poblado"],
+  openGraph: {
+    title: "DRA.D10 | Medicina Estética de Alto Nivel",
+    description: "Transformamos tu bienestar con tratamientos seguros, naturales y personalizados. Medellín, Colombia.",
+    url: "https://drad10.com",
+    siteName: "DRA.D10 Medicina Estética",
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

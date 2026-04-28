@@ -5,6 +5,7 @@ interface Service {
   title: string;
   desc: string;
   tags: string[];
+  extraTag?: string;
   featured?: boolean;
 }
 
@@ -12,38 +13,39 @@ const services: Service[] = [
   {
     icon: "✦",
     title: "Tratamientos Faciales",
-    desc: "Rejuvenecimiento con resultados naturales y duraderos. Cada protocolo es diseñado a medida para tu anatomía y necesidades.",
-    tags: ["Botox", "Ácido Hialurónico", "Hilos Tensores"],
+    desc: "Botox, ácido hialurónico, hilos tensores, bioestimuladores, peeling y más. Rejuvenecimiento con resultados naturales.",
+    tags: ["Botox", "Ácido Hialurónico", "Hilos Tensores", "Bioestimuladores de Colágeno"],
+    extraTag: "y más...",
   },
   {
     icon: "◈",
     title: "Corporales",
-    desc: "Transforma tu figura con tecnología médica certificada. Desde el moldeamiento hasta la hidratación profunda.",
-    tags: ["Microagujas", "Mesoterapia", "Sueroterapia"],
+    desc: "Microagujas, mesoterapia, sueroterapia y moldeamiento corporal. Transforma tu figura con tecnología avanzada.",
+    tags: ["Microagujas Corporales", "Mesoterapia", "Sueroterapia", "Moldeamiento corporal"],
   },
   {
     icon: "❧",
     title: "Capilares",
-    desc: "Recupera tu cabello con técnicas de vanguardia. Resultados visibles desde las primeras sesiones.",
-    tags: ["Implante Capilar", "Exosomas", "PRP"],
+    desc: "Implante capilar, exosomas, PRP y mesoterapia capilar. Recupera tu cabello con técnicas de vanguardia.",
+    tags: ["Implante Capilar", "Exosomas Capilares", "PRP Capilar", "Mesoterapia Capilar"],
   },
   {
     icon: "⊕",
     title: "Inyectables",
-    desc: "Inyectables estéticos y plasma rico en plaquetas. Resultados visibles, naturales y duraderos con mínima invasión.",
-    tags: ["Inyectables Estéticos", "Plasma Rico", "Bioestimuladores"],
+    desc: "Inyectables estéticos, plasma rico en plaquetas y sueroterapia. Resultados visibles y duraderos.",
+    tags: ["Inyectables Estéticos", "Mesoterapia", "PRP", "Sueroterapia"],
   },
   {
     icon: "○",
     title: "Zona Íntima",
-    desc: "Tratamientos especializados con total confidencialidad y un enfoque médico de alta precisión.",
-    tags: ["Despigmentación", "Estrechamiento Vaginal", "Relleno Labios"],
+    desc: "Despigmentación, estrechamiento vaginal, relleno de labios mayores y otomodeolación.",
+    tags: ["Despigmentación Zona Íntima", "Relleno de Labios Mayores", "Estrechamiento Vaginal", "Otomodeolación"],
   },
   {
     icon: "◉",
-    title: "Scanner D10",
+    title: "Scanner D10 (INDIBA)",
     desc: "Nuestra tecnología INDIBA exclusiva para rejuvenecimiento profundo. El tratamiento insignia de DRA.D10.",
-    tags: ["Radiofrecuencia INDIBA", "Anti-aging", "Lifting Profundo"],
+    tags: ["Radiofrecuencia", "Anti-aging", "Lifting", "Colágeno"],
     featured: true,
   },
 ];
@@ -69,12 +71,31 @@ export function ServicesPremium() {
               letterSpacing: "-0.025em",
             }}
           >
-            Nuestros Tratamientos
-            <br />
+            Nuestros{" "}
+            <span
+              style={{
+                display: "block",
+                fontWeight: 300,
+                color: "#1c1c1c",
+              }}
+            >
+              Tratamientos
+            </span>
             <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
               Personalizados para ti
             </em>
           </h2>
+          <p
+            className="mt-6 max-w-xl leading-relaxed"
+            style={{
+              color: "#888580",
+              fontFamily: "var(--font-body)",
+              fontSize: "0.95rem",
+            }}
+          >
+            Cada tratamiento es diseñado a medida para tus necesidades únicas,
+            con protocolos médicos certificados y tecnología de vanguardia.
+          </p>
         </div>
 
         {/* ── Grid ── */}
@@ -99,7 +120,7 @@ export function ServicesPremium() {
                 className={`card-hover flex flex-col gap-5 p-10 cursor-pointer group opacity-0 animate-fade-up ${delayClass}`}
                 style={{
                   backgroundColor: service.featured ? "#1c1c1c" : "#faf8f5",
-                  borderTop: `2px solid ${service.featured ? "#b89a6a" : "#b89a6a"}`,
+                  borderTop: "2px solid #b89a6a",
                   borderRight: "1px solid rgba(184,154,106,0.15)",
                   borderBottom: "1px solid rgba(184,154,106,0.15)",
                 }}
@@ -177,6 +198,18 @@ export function ServicesPremium() {
                       {tag}
                     </span>
                   ))}
+                  {service.extraTag && (
+                    <span
+                      className="text-[10px] tracking-wider px-2.5 py-1"
+                      style={{
+                        color: "#888580",
+                        fontFamily: "var(--font-body)",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {service.extraTag}
+                    </span>
+                  )}
                 </div>
               </div>
             );

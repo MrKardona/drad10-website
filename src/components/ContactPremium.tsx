@@ -170,8 +170,8 @@ export function ContactPremium() {
             }}
           >
             Queremos conocerte y entender tus necesidades. Uno de nuestros
-            especialistas te contactará a la brevedad para confirmar tu espacio
-            en un ambiente de confianza y tranquilidad.
+            asesores te contactará para agendar tu cita en un espacio pensado
+            para tu bienestar y tranquilidad.
           </p>
 
           {/* Contact items */}

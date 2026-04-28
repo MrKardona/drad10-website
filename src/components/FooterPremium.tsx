@@ -58,8 +58,8 @@ export function FooterPremium() {
               maxWidth: "230px",
             }}
           >
-            Clínica de medicina estética y rejuvenecimiento en El Poblado,
-            Medellín. Tratamientos seguros, naturales y personalizados.
+            Clínica Estética y de Rejuvenecimiento en Medellín, Colombia.
+            Medicina estética segura, natural y personalizada.
           </p>
 
           {/* Social icons */}
@@ -281,8 +281,7 @@ export function FooterPremium() {
             textTransform: "uppercase",
           }}
         >
-          © {new Date().getFullYear()} Clínica Estética DRA.D10. Todos los
-          derechos reservados.
+          © 2026 Clínica Estética DraD10. Todos los derechos reservados.
         </p>
         <p
           style={{

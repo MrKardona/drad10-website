@@ -3,6 +3,7 @@ import Link from "next/link";
 export function CTABanner() {
   return (
     <section
+      id="cta"
       className="relative py-24 overflow-hidden"
       style={{
         background:
@@ -75,8 +76,8 @@ export function CTABanner() {
           }}
         >
           Agenda tu cita de valoración sin costo. Nuestros especialistas
-          analizarán tus necesidades y diseñarán un plan completamente
-          personalizado para ti, en un espacio seguro y confidencial.
+          analizarán tus necesidades y diseñarán un plan personalizado
+          para ti.
         </p>
 
         {/* ── Buttons ── */}

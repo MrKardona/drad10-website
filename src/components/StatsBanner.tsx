@@ -6,26 +6,39 @@ type Stat = {
 
 const stats: Stat[] = [
   { value: "+500", label: "Pacientes Atendidos", sub: "Con resultados reales" },
-  { value: "5+", label: "Años de Experiencia", sub: "En medicina estética" },
-  { value: "33+", label: "Tratamientos", sub: "Especializados y certificados" },
-  { value: "98%", label: "Satisfacción", sub: "En encuestas post-tratamiento" },
+  { value: "5+",   label: "Años de Experiencia", sub: "En medicina estética" },
+  { value: "33+",  label: "Tratamientos",        sub: "Especializados y certificados" },
+  { value: "98%",  label: "Satisfacción",        sub: "En encuestas post-tratamiento" },
 ];
 
+// Full marquee set — duplicated for seamless infinite loop
 const marqueeItems: string[] = [
   "MEDICINA ESTÉTICA",
   "INDIBA CERTIFIED",
   "EL POBLADO",
-  "RESULTADOS REALES",
-  "DRA. DANIELA DÍEZ",
   "MEDELLÍN",
+  "+500 PACIENTES",
+  "DRA. DANIELA DÍEZ",
+  "RESULTADOS REALES",
+  "QUANTUM CERTIFIED",
 ];
 
-// Duplicate items for seamless loop
 const marqueeTrack = [...marqueeItems, ...marqueeItems];
 
 export function StatsBanner() {
   return (
     <section style={{ backgroundColor: "#1c1c1c" }}>
+
+      {/* ── Top gold decorative stripe (2 px) ── */}
+      <div
+        className="w-full"
+        style={{
+          height: "2px",
+          background:
+            "linear-gradient(to right, transparent, #b89a6a 20%, #b89a6a 80%, transparent)",
+        }}
+        aria-hidden="true"
+      />
 
       {/* ── Stats grid ── */}
       <div className="max-w-7xl mx-auto px-6">
@@ -46,7 +59,7 @@ export function StatsBanner() {
                 className={`relative px-8 py-14 flex flex-col gap-1 opacity-0 animate-scale-in ${delayClass}`}
                 style={{ animationFillMode: "forwards" }}
               >
-                {/* Vertical gold separator — shown between items, not before the first */}
+                {/* Vertical gold separator between columns (desktop only) */}
                 {i > 0 && (
                   <div
                     className="absolute left-0 top-10 bottom-10 w-px hidden lg:block"
@@ -57,14 +70,15 @@ export function StatsBanner() {
                     aria-hidden="true"
                   />
                 )}
-                {/* Mobile separator — horizontal bottom border */}
+
+                {/* Mobile: thin horizontal bottom border */}
                 <div
                   className="absolute bottom-0 left-6 right-6 h-px lg:hidden"
                   style={{ backgroundColor: "rgba(184,154,106,0.12)" }}
                   aria-hidden="true"
                 />
 
-                {/* Value */}
+                {/* Number — large Cormorant gold */}
                 <span
                   className="leading-none"
                   style={{
@@ -78,7 +92,7 @@ export function StatsBanner() {
                   {stat.value}
                 </span>
 
-                {/* Label */}
+                {/* Label — white */}
                 <span
                   className="text-sm font-medium mt-2"
                   style={{
@@ -90,7 +104,7 @@ export function StatsBanner() {
                   {stat.label}
                 </span>
 
-                {/* Sub-label */}
+                {/* Sub-label — muted grey */}
                 <span
                   className="text-xs"
                   style={{
@@ -106,7 +120,7 @@ export function StatsBanner() {
         </div>
       </div>
 
-      {/* ── Gold thin divider ── */}
+      {/* ── Mid gold thin divider ── */}
       <div
         className="w-full"
         style={{
@@ -120,14 +134,13 @@ export function StatsBanner() {
       {/* ── Marquee band ── */}
       <div
         className="py-5 overflow-hidden"
-        style={{ borderTop: "none" }}
         aria-hidden="true"
       >
         <div className="marquee-track">
           {marqueeTrack.map((text, idx) => (
             <span
               key={`${text}-${idx}`}
-              className="flex items-center gap-8 pr-8"
+              className="flex items-center gap-6 pr-6"
               style={{ fontFamily: "var(--font-body)" }}
             >
               <span
@@ -140,7 +153,7 @@ export function StatsBanner() {
                 className="text-[8px]"
                 style={{ color: "#b89a6a" }}
               >
-                ✦
+                ·
               </span>
             </span>
           ))}

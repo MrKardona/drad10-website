@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     name: "Valentina S.",
     treatment: "Implante Capilar",
     quote:
-      "Llevaba años buscando una solución para mi cabello. En DRAD10 encontré no solo el tratamiento sino una atención cálida y totalmente profesional.",
+      "Llevaba años buscando una solución para mi cabello. En DRAD10 encontré no solo el tratamiento sino una atención cálida y profesional. 100% recomendado.",
     stars: 5,
   },
   {
@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     name: "Juliana M.",
     treatment: "Scanner Facial D10",
     quote:
-      "Después de la primera sesión noté la diferencia. Mi piel se veía más luminosa y firme. El equipo es muy profesional y el espacio precioso.",
+      "Después de la primera sesión ya noté la diferencia. Mi piel se veía más luminosa y firme. El equipo es muy profesional y el espacio precioso.",
     stars: 5,
   },
 ];
@@ -64,10 +64,8 @@ export function TestimonialsSection() {
           </div>
 
           {/* Rating badge */}
-          <div
-            className="flex flex-col items-start lg:items-end gap-2 opacity-0 animate-fade-in delay-300"
-          >
-            <div className="flex items-center gap-1">
+          <div className="flex flex-col items-start lg:items-end gap-2 opacity-0 animate-fade-in delay-300">
+            <div className="flex items-center gap-1" aria-label="5 estrellas">
               {[1, 2, 3, 4, 5].map((i) => (
                 <span
                   key={i}
@@ -89,7 +87,10 @@ export function TestimonialsSection() {
         </div>
 
         {/* ── Cards ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ backgroundColor: "rgba(184,154,106,0.12)" }}>
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-px"
+          style={{ backgroundColor: "rgba(184,154,106,0.12)" }}
+        >
           {testimonials.map((t, index) => {
             const delayClass =
               index === 0 ? "delay-200" : index === 1 ? "delay-400" : "delay-600";
@@ -98,12 +99,13 @@ export function TestimonialsSection() {
               <div
                 key={t.name}
                 className={`flex flex-col gap-6 p-8 opacity-0 animate-fade-up ${delayClass}`}
-                style={{
-                  backgroundColor: "#2e2e2e",
-                }}
+                style={{ backgroundColor: "#2e2e2e" }}
               >
                 {/* Stars */}
-                <div className="flex gap-1" aria-label={`${t.stars} estrellas`}>
+                <div
+                  className="flex gap-1"
+                  aria-label={`${t.stars} estrellas`}
+                >
                   {Array.from({ length: t.stars }).map((_, i) => (
                     <span
                       key={i}
@@ -116,7 +118,7 @@ export function TestimonialsSection() {
                   ))}
                 </div>
 
-                {/* Quote */}
+                {/* Quote — Cormorant italic style via display font */}
                 <blockquote className="flex-1">
                   <p
                     className="italic leading-relaxed"
@@ -136,13 +138,14 @@ export function TestimonialsSection() {
                   className="flex items-center gap-3 pt-5"
                   style={{ borderTop: "1px solid rgba(184,154,106,0.18)" }}
                 >
-                  {/* Avatar */}
+                  {/* Avatar circle with initials */}
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{ backgroundColor: "rgba(184,154,106,0.2)" }}
+                    aria-hidden="true"
                   >
                     <span
-                      className="text-xs font-semibold tracking-wider"
+                      className="text-xs font-semibold"
                       style={{
                         color: "#d4b896",
                         fontFamily: "var(--font-body)",
@@ -156,13 +159,19 @@ export function TestimonialsSection() {
                   <div>
                     <p
                       className="text-sm font-medium"
-                      style={{ color: "#faf8f5", fontFamily: "var(--font-body)" }}
+                      style={{
+                        color: "#faf8f5",
+                        fontFamily: "var(--font-body)",
+                      }}
                     >
                       {t.name}
                     </p>
                     <p
                       className="text-xs mt-0.5"
-                      style={{ color: "#888580", fontFamily: "var(--font-body)" }}
+                      style={{
+                        color: "#888580",
+                        fontFamily: "var(--font-body)",
+                      }}
                     >
                       {t.treatment}
                     </p>
@@ -173,10 +182,14 @@ export function TestimonialsSection() {
           })}
         </div>
 
-        {/* ── Subtle bottom note ── */}
+        {/* ── Bottom note ── */}
         <p
           className="mt-10 text-center text-xs opacity-0 animate-fade-in delay-800"
-          style={{ color: "#888580", fontFamily: "var(--font-body)", letterSpacing: "0.08em" }}
+          style={{
+            color: "#888580",
+            fontFamily: "var(--font-body)",
+            letterSpacing: "0.08em",
+          }}
         >
           Reseñas verificadas · Más de 500 pacientes satisfechas
         </p>

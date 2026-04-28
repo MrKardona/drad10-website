@@ -1,21 +1,61 @@
 import Link from "next/link";
 
+// 6 floating gold particles — positions and sizes chosen for visual balance
+const particles: {
+  width: number;
+  height: number;
+  top: string;
+  left: string;
+  delay: string;
+  duration: string;
+}[] = [
+  { width: 6,  height: 6,  top: "12%",  left: "8%",  delay: "0s",    duration: "9s"  },
+  { width: 4,  height: 4,  top: "28%",  left: "18%", delay: "1.5s",  duration: "11s" },
+  { width: 8,  height: 8,  top: "55%",  left: "5%",  delay: "0.8s",  duration: "13s" },
+  { width: 5,  height: 5,  top: "72%",  left: "22%", delay: "2.2s",  duration: "10s" },
+  { width: 7,  height: 7,  top: "18%",  left: "42%", delay: "3s",    duration: "12s" },
+  { width: 4,  height: 4,  top: "80%",  left: "38%", delay: "1s",    duration: "8s"  },
+];
+
 export function HeroPremium() {
   return (
     <section
-      className="relative w-full min-h-screen flex items-center overflow-hidden"
+      className="relative w-full min-h-screen flex items-center overflow-hidden grain"
       style={{
         background:
           "linear-gradient(135deg, #faf8f5 0%, #f5ede6 55%, #f0e8e2 100%)",
       }}
     >
-      {/* ── Subtle background ornaments ── */}
+      {/* ── Floating gold particles ── */}
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        aria-hidden="true"
+      >
+        {particles.map((p, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              width: p.width,
+              height: p.height,
+              top: p.top,
+              left: p.left,
+              backgroundColor: "#b89a6a",
+              opacity: 0,
+              animation: `particleFloat ${p.duration} ease-in-out ${p.delay} infinite`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* ── Subtle background wash right side ── */}
       <div
         className="absolute top-0 right-0 w-[55%] h-full pointer-events-none"
         aria-hidden="true"
         style={{ backgroundColor: "#e0d0c6", opacity: 0.35 }}
       />
-      {/* Large faint circle top-right */}
+
+      {/* ── Large faint circle top-right ── */}
       <div
         className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full pointer-events-none"
         aria-hidden="true"
@@ -38,17 +78,17 @@ export function HeroPremium() {
 
         {/* ═══ LEFT — copy ═══ */}
         <div>
-          {/* Section label */}
+          {/* Location label */}
           <p
-            className="section-label mb-6 opacity-0 animate-fade-up"
+            className="section-label mb-6 opacity-0 animate-fade-in"
             style={{ animationFillMode: "forwards" }}
           >
-            ✦ Medellín · El Poblado · Colombia
+            MEDELLÍN · EL POBLADO · COLOMBIA
           </p>
 
-          {/* Heading */}
+          {/* Heading line 1 */}
           <h1
-            className="leading-[0.92] mb-2 opacity-0 animate-fade-up delay-100"
+            className="leading-[0.92] mb-2 opacity-0 animate-fade-up delay-200"
             style={{
               fontFamily: "var(--font-display), Georgia, serif",
               fontSize: "clamp(3.5rem, 7vw, 6rem)",
@@ -60,6 +100,8 @@ export function HeroPremium() {
           >
             Medicina Estética
           </h1>
+
+          {/* Heading line 2 — italic gold */}
           <h1
             className="leading-[0.92] mb-7 opacity-0 animate-fade-up delay-200"
             style={{
@@ -77,13 +119,13 @@ export function HeroPremium() {
 
           {/* Gold divider */}
           <span
-            className="gold-line opacity-0 animate-fade-up delay-300"
+            className="gold-line opacity-0 animate-fade-in delay-300"
             style={{ animationFillMode: "forwards" }}
           />
 
-          {/* Subtitle */}
+          {/* Description */}
           <p
-            className="text-base leading-relaxed max-w-lg mb-10 opacity-0 animate-fade-up delay-400"
+            className="text-base leading-relaxed max-w-lg mb-10 opacity-0 animate-fade-up delay-300"
             style={{
               fontFamily: "var(--font-body)",
               color: "#888580",
@@ -97,7 +139,7 @@ export function HeroPremium() {
 
           {/* CTAs */}
           <div
-            className="flex flex-wrap gap-4 mb-14 opacity-0 animate-fade-up delay-500"
+            className="flex flex-wrap gap-4 mb-14 opacity-0 animate-fade-up delay-400"
             style={{ animationFillMode: "forwards" }}
           >
             <Link href="#agenda" className="btn-gold">
@@ -108,9 +150,9 @@ export function HeroPremium() {
             </Link>
           </div>
 
-          {/* Floating badges */}
+          {/* Trust badges */}
           <div
-            className="flex flex-wrap gap-3 opacity-0 animate-fade-up delay-600"
+            className="flex flex-wrap gap-3 opacity-0 animate-fade-up delay-500"
             style={{ animationFillMode: "forwards" }}
           >
             {[
@@ -139,35 +181,35 @@ export function HeroPremium() {
           className="hidden lg:flex flex-col gap-5 items-stretch opacity-0 animate-slide-left delay-300"
           style={{ animationFillMode: "forwards" }}
         >
-          {/* Main rectangle panel */}
+          {/* Main blush rectangle */}
           <div
-            className="relative rounded-none overflow-hidden"
+            className="relative overflow-hidden"
             style={{
               backgroundColor: "#e0d0c6",
-              minHeight: "460px",
+              minHeight: "480px",
             }}
           >
-            {/* Decorative circles inside panel */}
+            {/* 3 concentric decorative circles — gold border */}
             <div
-              className="absolute top-8 right-8 w-40 h-40 rounded-full"
+              className="absolute top-6 right-6 w-48 h-48 rounded-full"
               style={{
-                border: "1px solid rgba(184,154,106,0.3)",
+                border: "1px solid rgba(184,154,106,0.35)",
                 background: "transparent",
               }}
               aria-hidden="true"
             />
             <div
-              className="absolute top-16 right-16 w-24 h-24 rounded-full"
+              className="absolute top-14 right-14 w-32 h-32 rounded-full"
               style={{
-                border: "1px solid rgba(184,154,106,0.22)",
+                border: "1px solid rgba(184,154,106,0.25)",
                 background: "transparent",
               }}
               aria-hidden="true"
             />
             <div
-              className="absolute bottom-12 left-8 w-28 h-28 rounded-full"
+              className="absolute top-[4.5rem] right-[4.5rem] w-16 h-16 rounded-full"
               style={{
-                border: "1px solid rgba(184,154,106,0.2)",
+                border: "1px solid rgba(184,154,106,0.18)",
                 background: "transparent",
               }}
               aria-hidden="true"
@@ -183,7 +225,21 @@ export function HeroPremium() {
               aria-hidden="true"
             />
 
-            {/* Floating feature card — animate-float */}
+            {/* Top label */}
+            <div className="absolute top-8 left-8">
+              <span
+                className="text-[9px] tracking-[0.3em] uppercase"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "#b89a6a",
+                  opacity: 0.7,
+                }}
+              >
+                DRA.D10
+              </span>
+            </div>
+
+            {/* Floating feature card */}
             <div
               className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[88%] animate-float"
               style={{ animationFillMode: "forwards" }}
@@ -196,7 +252,7 @@ export function HeroPremium() {
                   boxShadow: "0 24px 56px rgba(28,28,28,0.10)",
                 }}
               >
-                <p className="section-label mb-3">Tratamiento Destacado</p>
+                <p className="section-label mb-3">TRATAMIENTO DESTACADO</p>
                 <h3
                   className="text-[#1c1c1c] text-xl mb-2 leading-snug"
                   style={{
@@ -204,7 +260,7 @@ export function HeroPremium() {
                     fontWeight: 400,
                   }}
                 >
-                  INDIBA · Scanner D10
+                  INDIBA · Scanner Facial D10
                 </h3>
                 <p
                   className="text-xs leading-relaxed mb-4"
@@ -213,21 +269,22 @@ export function HeroPremium() {
                     color: "#888580",
                   }}
                 >
-                  Radiofrecuencia de última generación. Resultados visibles
-                  desde la primera sesión.
+                  Tecnología de radiofrecuencia de última generación para
+                  rejuvenecimiento facial profundo y resultados visibles desde
+                  la primera sesión.
                 </p>
                 <div
                   className="flex items-center justify-between pt-4 border-t"
                   style={{ borderColor: "rgba(184,154,106,0.2)" }}
                 >
                   <span
-                    className="text-[9px] tracking-[0.25em] uppercase"
+                    className="text-[9px] tracking-[0.2em] uppercase font-medium"
                     style={{
                       fontFamily: "var(--font-body)",
-                      color: "#888580",
+                      color: "#b89a6a",
                     }}
                   >
-                    Tecnología Certificada
+                    CLÍNICA QUANTUM CERTIFIED
                   </span>
                   <span
                     className="text-[10px] font-bold tracking-widest"
@@ -237,20 +294,6 @@ export function HeroPremium() {
                   </span>
                 </div>
               </div>
-            </div>
-
-            {/* Subtle label top */}
-            <div className="absolute top-8 left-8">
-              <span
-                className="text-[9px] tracking-[0.3em] uppercase"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  color: "#b89a6a",
-                  opacity: 0.7,
-                }}
-              >
-                DRA.D10
-              </span>
             </div>
           </div>
 
@@ -308,8 +351,7 @@ export function HeroPremium() {
         <div
           className="w-px h-12"
           style={{
-            background:
-              "linear-gradient(to bottom, #b89a6a, transparent)",
+            background: "linear-gradient(to bottom, #b89a6a, transparent)",
           }}
         />
       </div>
