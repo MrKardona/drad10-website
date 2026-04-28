@@ -51,6 +51,11 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  /* DraD10 brand tokens */
+  --drad10-topbar: #1a1f2e;
+  --drad10-gold: #c9a84c;
+  --drad10-footer: #1a2030;
+  --drad10-card-gray: #6b7280;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);

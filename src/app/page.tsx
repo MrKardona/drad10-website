@@ -1,9 +1,25 @@
+import { TopBar } from "@/components/TopBar";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { AboutSection } from "@/components/AboutSection";
+import { VideoSection } from "@/components/VideoSection";
+import { GallerySection } from "@/components/GallerySection";
+import { ContactForm } from "@/components/ContactForm";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <TopBar />
+      <Header />
+      <Hero />
+      <AboutSection />
+      <VideoSection />
+      <GallerySection />
+      <ContactForm />
+      <Footer />
+      <WhatsAppButton />
+    </>
   );
 }
