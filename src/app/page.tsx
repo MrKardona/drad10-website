@@ -1,5 +1,5 @@
 import { NavBar } from "@/components/NavBar";
-import { HeroParticle } from "@/components/HeroParticle";
+import { HeroVideo } from "@/components/HeroVideo";
 import { StatsBanner } from "@/components/StatsBanner";
 import { ServicesPremium } from "@/components/ServicesPremium";
 import { DoctorSection } from "@/components/DoctorSection";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <HeroParticle />
+      <HeroVideo />
       <StatsBanner />
       <ServicesPremium />
       <DoctorSection />
