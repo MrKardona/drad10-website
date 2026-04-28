@@ -2,107 +2,316 @@ import Link from "next/link";
 
 export function HeroPremium() {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden grain" style={{ backgroundColor: '#0f1219' }}>
-      {/* Background image overlay */}
-      <div className="absolute inset-0">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 30%',
-            opacity: 0.25,
-          }}
-        />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(15,18,25,0.97) 0%, rgba(15,18,25,0.7) 50%, rgba(26,31,46,0.85) 100%)' }} />
-      </div>
+    <section
+      className="relative w-full min-h-screen flex items-center overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #faf8f5 0%, #f5ede6 55%, #f0e8e2 100%)",
+      }}
+    >
+      {/* ── Subtle background ornaments ── */}
+      <div
+        className="absolute top-0 right-0 w-[55%] h-full pointer-events-none"
+        aria-hidden="true"
+        style={{ backgroundColor: "#e0d0c6", opacity: 0.35 }}
+      />
+      {/* Large faint circle top-right */}
+      <div
+        className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full pointer-events-none"
+        aria-hidden="true"
+        style={{
+          border: "1px solid rgba(184,154,106,0.18)",
+          background: "transparent",
+        }}
+      />
+      <div
+        className="absolute top-20 right-20 w-[320px] h-[320px] rounded-full pointer-events-none"
+        aria-hidden="true"
+        style={{
+          border: "1px solid rgba(184,154,106,0.12)",
+          background: "transparent",
+        }}
+      />
 
-      {/* Decorative gold vertical line */}
-      <div className="absolute left-0 top-0 bottom-0 w-px opacity-30" style={{ background: 'linear-gradient(to bottom, transparent, #c9a84c 30%, #c9a84c 70%, transparent)' }} />
+      {/* ── Main grid ── */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 xl:px-16 py-28 lg:py-36 grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center w-full">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
-        {/* Left — main copy */}
-        <div className="opacity-0 animate-fade-up" style={{ animationFillMode: 'forwards' }}>
-          <p className="section-label mb-6">Medellín · El Poblado · Colombia</p>
-
-          <h1
-            className="text-white leading-[0.95] mb-6"
-            style={{
-              fontFamily: 'var(--font-display), Georgia, serif',
-              fontSize: 'clamp(3.5rem, 8vw, 6.5rem)',
-              fontWeight: 300,
-              letterSpacing: '-0.02em',
-            }}
+        {/* ═══ LEFT — copy ═══ */}
+        <div>
+          {/* Section label */}
+          <p
+            className="section-label mb-6 opacity-0 animate-fade-up"
+            style={{ animationFillMode: "forwards" }}
           >
-            Medicina<br />
-            <em style={{ color: '#c9a84c', fontStyle: 'italic' }}>Estética</em><br />
-            de Alto<br />Nivel
-          </h1>
-
-          <span className="gold-line" />
-
-          <p className="text-gray-400 text-base leading-relaxed mb-10 max-w-md" style={{ fontFamily: 'var(--font-body)' }}>
-            Transformamos tu bienestar con tratamientos seguros, naturales y personalizados. Respaldo médico certificado, tecnología de vanguardia y resultados reales.
+            ✦ Medellín · El Poblado · Colombia
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <Link href="#agenda" className="btn-gold">Agenda tu Cita</Link>
-            <Link href="#servicios" className="btn-outline-white">Ver Tratamientos</Link>
+          {/* Heading */}
+          <h1
+            className="leading-[0.92] mb-2 opacity-0 animate-fade-up delay-100"
+            style={{
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontSize: "clamp(3.5rem, 7vw, 6rem)",
+              fontWeight: 300,
+              letterSpacing: "-0.02em",
+              color: "#1c1c1c",
+              animationFillMode: "forwards",
+            }}
+          >
+            Medicina Estética
+          </h1>
+          <h1
+            className="leading-[0.92] mb-7 opacity-0 animate-fade-up delay-200"
+            style={{
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontSize: "clamp(3.5rem, 7vw, 6rem)",
+              fontWeight: 300,
+              fontStyle: "italic",
+              letterSpacing: "-0.02em",
+              color: "#b89a6a",
+              animationFillMode: "forwards",
+            }}
+          >
+            de Alto Nivel
+          </h1>
+
+          {/* Gold divider */}
+          <span
+            className="gold-line opacity-0 animate-fade-up delay-300"
+            style={{ animationFillMode: "forwards" }}
+          />
+
+          {/* Subtitle */}
+          <p
+            className="text-base leading-relaxed max-w-lg mb-10 opacity-0 animate-fade-up delay-400"
+            style={{
+              fontFamily: "var(--font-body)",
+              color: "#888580",
+              animationFillMode: "forwards",
+            }}
+          >
+            Transformamos tu bienestar con tratamientos seguros, naturales y
+            personalizados. Respaldo médico certificado, tecnología de
+            vanguardia y resultados reales.
+          </p>
+
+          {/* CTAs */}
+          <div
+            className="flex flex-wrap gap-4 mb-14 opacity-0 animate-fade-up delay-500"
+            style={{ animationFillMode: "forwards" }}
+          >
+            <Link href="#agenda" className="btn-gold">
+              AGENDA TU CITA
+            </Link>
+            <Link href="#servicios" className="btn-outline-dark">
+              VER TRATAMIENTOS
+            </Link>
           </div>
 
-          {/* Trust badges */}
-          <div className="mt-12 flex flex-wrap gap-6">
+          {/* Floating badges */}
+          <div
+            className="flex flex-wrap gap-3 opacity-0 animate-fade-up delay-600"
+            style={{ animationFillMode: "forwards" }}
+          >
             {[
-              { n: '+500', label: 'Pacientes satisfechos' },
-              { n: '5+', label: 'Años de experiencia' },
-              { n: '98%', label: 'Tasa de satisfacción' },
-            ].map((b) => (
-              <div key={b.label} className="flex flex-col">
-                <span className="text-2xl font-bold" style={{ color: '#c9a84c', fontFamily: 'var(--font-display)' }}>{b.n}</span>
-                <span className="text-xs tracking-wider text-gray-500" style={{ fontFamily: 'var(--font-body)' }}>{b.label}</span>
-              </div>
+              "✦ INDIBA Certified",
+              "★ +500 Pacientes",
+              "▲ Medellín",
+            ].map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex items-center px-4 py-2 text-[10px] tracking-[0.2em] font-medium border transition-colors duration-200"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "#b89a6a",
+                  borderColor: "rgba(184,154,106,0.35)",
+                  backgroundColor: "rgba(184,154,106,0.06)",
+                }}
+              >
+                {badge}
+              </span>
             ))}
           </div>
         </div>
 
-        {/* Right — floating card */}
-        <div className="hidden lg:flex flex-col items-end opacity-0 animate-fade-up delay-300" style={{ animationFillMode: 'forwards' }}>
+        {/* ═══ RIGHT — decorative visual panel ═══ */}
+        <div
+          className="hidden lg:flex flex-col gap-5 items-stretch opacity-0 animate-slide-left delay-300"
+          style={{ animationFillMode: "forwards" }}
+        >
+          {/* Main rectangle panel */}
           <div
-            className="w-full max-w-sm border p-8"
-            style={{ backgroundColor: 'rgba(26,31,46,0.7)', borderColor: 'rgba(201,168,76,0.25)', backdropFilter: 'blur(16px)' }}
+            className="relative rounded-none overflow-hidden"
+            style={{
+              backgroundColor: "#e0d0c6",
+              minHeight: "460px",
+            }}
           >
-            <p className="section-label mb-4">Tratamiento Destacado</p>
-            <h3 className="text-white text-2xl mb-3" style={{ fontFamily: 'var(--font-display)', fontWeight: 400 }}>
-              INDIBA · Scanner Facial D10
-            </h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6" style={{ fontFamily: 'var(--font-body)' }}>
-              Tecnología de radiofrecuencia de última generación para rejuvenecimiento facial profundo y resultados visibles desde la primera sesión.
-            </p>
-            <div className="border-t pt-6 flex items-center justify-between" style={{ borderColor: 'rgba(201,168,76,0.2)' }}>
-              <span className="text-xs text-gray-500 tracking-wider">CLÍNICA QUANTUM CERTIFIED</span>
-              <span style={{ color: '#c9a84c' }}>⚡</span>
+            {/* Decorative circles inside panel */}
+            <div
+              className="absolute top-8 right-8 w-40 h-40 rounded-full"
+              style={{
+                border: "1px solid rgba(184,154,106,0.3)",
+                background: "transparent",
+              }}
+              aria-hidden="true"
+            />
+            <div
+              className="absolute top-16 right-16 w-24 h-24 rounded-full"
+              style={{
+                border: "1px solid rgba(184,154,106,0.22)",
+                background: "transparent",
+              }}
+              aria-hidden="true"
+            />
+            <div
+              className="absolute bottom-12 left-8 w-28 h-28 rounded-full"
+              style={{
+                border: "1px solid rgba(184,154,106,0.2)",
+                background: "transparent",
+              }}
+              aria-hidden="true"
+            />
+
+            {/* Gold vertical accent line */}
+            <div
+              className="absolute left-0 top-10 bottom-10 w-px"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent, #b89a6a 40%, #b89a6a 60%, transparent)",
+              }}
+              aria-hidden="true"
+            />
+
+            {/* Floating feature card — animate-float */}
+            <div
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[88%] animate-float"
+              style={{ animationFillMode: "forwards" }}
+            >
+              <div
+                className="p-6 border"
+                style={{
+                  backgroundColor: "#faf8f5",
+                  borderColor: "rgba(184,154,106,0.28)",
+                  boxShadow: "0 24px 56px rgba(28,28,28,0.10)",
+                }}
+              >
+                <p className="section-label mb-3">Tratamiento Destacado</p>
+                <h3
+                  className="text-[#1c1c1c] text-xl mb-2 leading-snug"
+                  style={{
+                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontWeight: 400,
+                  }}
+                >
+                  INDIBA · Scanner D10
+                </h3>
+                <p
+                  className="text-xs leading-relaxed mb-4"
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    color: "#888580",
+                  }}
+                >
+                  Radiofrecuencia de última generación. Resultados visibles
+                  desde la primera sesión.
+                </p>
+                <div
+                  className="flex items-center justify-between pt-4 border-t"
+                  style={{ borderColor: "rgba(184,154,106,0.2)" }}
+                >
+                  <span
+                    className="text-[9px] tracking-[0.25em] uppercase"
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      color: "#888580",
+                    }}
+                  >
+                    Tecnología Certificada
+                  </span>
+                  <span
+                    className="text-[10px] font-bold tracking-widest"
+                    style={{ color: "#b89a6a" }}
+                  >
+                    ✦
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Subtle label top */}
+            <div className="absolute top-8 left-8">
+              <span
+                className="text-[9px] tracking-[0.3em] uppercase"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "#b89a6a",
+                  opacity: 0.7,
+                }}
+              >
+                DRA.D10
+              </span>
             </div>
           </div>
 
           {/* Social proof pill */}
-          <div className="mt-4 flex items-center gap-3 px-5 py-3 border" style={{ borderColor: 'rgba(201,168,76,0.2)', backgroundColor: 'rgba(15,18,25,0.8)' }}>
-            <div className="flex -space-x-2">
-              {['DD', 'MP', 'AL'].map((i) => (
-                <div key={i} className="w-7 h-7 rounded-full border-2 flex items-center justify-center text-[9px] font-bold text-white"
-                  style={{ backgroundColor: '#c9a84c', borderColor: '#0f1219' }}>{i}</div>
+          <div
+            className="flex items-center gap-4 px-5 py-4 border"
+            style={{
+              backgroundColor: "#faf8f5",
+              borderColor: "rgba(184,154,106,0.22)",
+              boxShadow: "0 4px 20px rgba(28,28,28,0.05)",
+            }}
+          >
+            {/* Avatar stack */}
+            <div className="flex -space-x-2 flex-shrink-0">
+              {(["DD", "MP", "AL"] as const).map((initials) => (
+                <div
+                  key={initials}
+                  className="w-8 h-8 rounded-full border-2 flex items-center justify-center text-[9px] font-semibold"
+                  style={{
+                    backgroundColor: "#b89a6a",
+                    borderColor: "#faf8f5",
+                    color: "#faf8f5",
+                  }}
+                >
+                  {initials}
+                </div>
               ))}
             </div>
-            <p className="text-xs text-gray-400" style={{ fontFamily: 'var(--font-body)' }}>
-              <strong className="text-white">+500 pacientes</strong> nos eligieron este año
+            <p
+              className="text-xs leading-snug"
+              style={{
+                fontFamily: "var(--font-body)",
+                color: "#888580",
+              }}
+            >
+              <strong style={{ color: "#1c1c1c" }}>+500 pacientes</strong>{" "}
+              nos eligieron este año
             </p>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in delay-600" style={{ animationFillMode: 'forwards' }}>
-        <span className="text-[10px] tracking-[0.3em] text-gray-600 uppercase">Scroll</span>
-        <div className="w-px h-10" style={{ background: 'linear-gradient(to bottom, #c9a84c, transparent)' }} />
+      {/* ── Scroll indicator ── */}
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in delay-800"
+        style={{ animationFillMode: "forwards" }}
+        aria-hidden="true"
+      >
+        <span
+          className="text-[9px] tracking-[0.35em] uppercase"
+          style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
+        >
+          scroll
+        </span>
+        <div
+          className="w-px h-12"
+          style={{
+            background:
+              "linear-gradient(to bottom, #b89a6a, transparent)",
+          }}
+        />
       </div>
     </section>
   );

@@ -1,134 +1,192 @@
 import Link from "next/link";
 
-const services = [
+interface Service {
+  icon: string;
+  title: string;
+  desc: string;
+  tags: string[];
+  featured?: boolean;
+}
+
+const services: Service[] = [
   {
     icon: "✦",
     title: "Tratamientos Faciales",
-    desc: "Botox, ácido hialurónico, hilos tensores, bioestimuladores, peeling y más. Rejuvenecimiento con resultados naturales.",
-    items: ["Botox", "Ácido Hialurónico", "Hilos Tensores", "Bioestimuladores"],
-    color: "#c9a84c",
-  },
-  {
-    icon: "◎",
-    title: "Corporales",
-    desc: "Microagujas, mesoterapia, sueroterapia y moldeamiento corporal. Transforma tu figura con tecnología médica.",
-    items: ["Microagujas", "Mesoterapia", "Sueroterapia", "Moldeamiento"],
-    color: "#8b9dc3",
+    desc: "Rejuvenecimiento con resultados naturales y duraderos. Cada protocolo es diseñado a medida para tu anatomía y necesidades.",
+    tags: ["Botox", "Ácido Hialurónico", "Hilos Tensores"],
   },
   {
     icon: "◈",
+    title: "Corporales",
+    desc: "Transforma tu figura con tecnología médica certificada. Desde el moldeamiento hasta la hidratación profunda.",
+    tags: ["Microagujas", "Mesoterapia", "Sueroterapia"],
+  },
+  {
+    icon: "❧",
     title: "Capilares",
-    desc: "Implante capilar, exosomas, PRP y mesoterapia capilar. Recupera tu cabello con técnicas de vanguardia.",
-    items: ["Implante Capilar", "Exosomas", "PRP Capilar", "Mesoterapia"],
-    color: "#7eb8a4",
+    desc: "Recupera tu cabello con técnicas de vanguardia. Resultados visibles desde las primeras sesiones.",
+    tags: ["Implante Capilar", "Exosomas", "PRP"],
   },
   {
-    icon: "⚡",
+    icon: "⊕",
     title: "Inyectables",
-    desc: "Inyectables estéticos, plasma rico en plaquetas y sueroterapia. Resultados visibles y duraderos.",
-    items: ["Inyectables Estéticos", "PRP", "Sueroterapia", "Mesoterapia"],
-    color: "#c9a84c",
+    desc: "Inyectables estéticos y plasma rico en plaquetas. Resultados visibles, naturales y duraderos con mínima invasión.",
+    tags: ["Inyectables Estéticos", "Plasma Rico", "Bioestimuladores"],
   },
   {
-    icon: "◐",
+    icon: "○",
     title: "Zona Íntima",
-    desc: "Despigmentación, estrechamiento vaginal, relleno de labios mayores y otomodeolación.",
-    items: ["Despigmentación", "Estrechamiento", "Relleno Labios", "Alectomia"],
-    color: "#d4a0a0",
+    desc: "Tratamientos especializados con total confidencialidad y un enfoque médico de alta precisión.",
+    tags: ["Despigmentación", "Estrechamiento Vaginal", "Relleno Labios"],
   },
   {
-    icon: "INDIBA",
+    icon: "◉",
     title: "Scanner D10",
     desc: "Nuestra tecnología INDIBA exclusiva para rejuvenecimiento profundo. El tratamiento insignia de DRA.D10.",
-    items: ["Radiofrecuencia", "Anti-aging", "Lifting", "Colágeno"],
-    color: "#c9a84c",
+    tags: ["Radiofrecuencia INDIBA", "Anti-aging", "Lifting Profundo"],
     featured: true,
   },
 ];
 
 export function ServicesPremium() {
   return (
-    <section id="servicios" className="py-28" style={{ backgroundColor: '#f7f3ee' }}>
+    <section
+      id="servicios"
+      className="py-28"
+      style={{ backgroundColor: "#faf8f5" }}
+    >
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
-          <div>
-            <p className="section-label mb-4">Lo que hacemos</p>
-            <h2
-              className="leading-none"
-              style={{
-                fontFamily: 'var(--font-display), Georgia, serif',
-                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                fontWeight: 300,
-                color: '#0f1219',
-                letterSpacing: '-0.02em',
-              }}
-            >
-              Nuestros<br /><em style={{ color: '#c9a84c' }}>Tratamientos</em>
-            </h2>
-          </div>
-          <p className="text-gray-500 max-w-xs text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
-            Cada tratamiento es diseñado a medida para tus necesidades únicas, con protocolos médicos certificados y tecnología de última generación.
-          </p>
+        {/* ── Header ── */}
+        <div className="mb-16 opacity-0 animate-fade-up">
+          <p className="section-label mb-5">LO QUE HACEMOS</p>
+          <h2
+            className="leading-none"
+            style={{
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontSize: "clamp(2.6rem, 5vw, 4.2rem)",
+              fontWeight: 300,
+              color: "#1c1c1c",
+              letterSpacing: "-0.025em",
+            }}
+          >
+            Nuestros Tratamientos
+            <br />
+            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+              Personalizados para ti
+            </em>
+          </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px" style={{ backgroundColor: 'rgba(0,0,0,0.08)' }}>
-          {services.map((s) => (
-            <div
-              key={s.title}
-              className="card-hover p-8 flex flex-col gap-4 group cursor-pointer"
-              style={{ backgroundColor: s.featured ? '#0f1219' : '#ffffff' }}
-            >
-              <div className="flex items-center justify-between">
-                <span
-                  className="text-sm font-mono"
-                  style={{ color: s.color }}
-                >
-                  {s.icon}
-                </span>
-                <span className="text-xs tracking-widest text-gray-400 group-hover:translate-x-1 transition-transform inline-block" style={{ fontFamily: 'var(--font-body)' }}>
-                  →
-                </span>
-              </div>
+        {/* ── Grid ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+          {services.map((service, index) => {
+            const delayClass =
+              index === 0
+                ? "delay-100"
+                : index === 1
+                ? "delay-200"
+                : index === 2
+                ? "delay-300"
+                : index === 3
+                ? "delay-400"
+                : index === 4
+                ? "delay-500"
+                : "delay-600";
 
-              <h3
-                className="text-xl"
+            return (
+              <div
+                key={service.title}
+                className={`card-hover flex flex-col gap-5 p-10 cursor-pointer group opacity-0 animate-fade-up ${delayClass}`}
                 style={{
-                  fontFamily: 'var(--font-display), Georgia, serif',
-                  fontWeight: 400,
-                  color: s.featured ? '#ffffff' : '#0f1219',
+                  backgroundColor: service.featured ? "#1c1c1c" : "#faf8f5",
+                  borderTop: `2px solid ${service.featured ? "#b89a6a" : "#b89a6a"}`,
+                  borderRight: "1px solid rgba(184,154,106,0.15)",
+                  borderBottom: "1px solid rgba(184,154,106,0.15)",
                 }}
               >
-                {s.title}
-              </h3>
-
-              <p className="text-sm leading-relaxed flex-1" style={{ color: s.featured ? '#9ca3af' : '#6b7280', fontFamily: 'var(--font-body)' }}>
-                {s.desc}
-              </p>
-
-              <div className="flex flex-wrap gap-2 pt-2 border-t" style={{ borderColor: s.featured ? 'rgba(201,168,76,0.2)' : 'rgba(0,0,0,0.06)' }}>
-                {s.items.map((item) => (
+                {/* Icon row */}
+                <div className="flex items-center justify-between">
                   <span
-                    key={item}
-                    className="text-[10px] tracking-wider px-2 py-1"
+                    className="text-2xl"
+                    style={{ color: "#b89a6a", lineHeight: 1 }}
+                  >
+                    {service.icon}
+                  </span>
+                  <span
+                    className="text-xs tracking-widest transition-transform duration-300 group-hover:translate-x-1 inline-block"
                     style={{
-                      backgroundColor: s.featured ? 'rgba(201,168,76,0.1)' : '#f7f3ee',
-                      color: s.featured ? '#c9a84c' : '#9ca3af',
-                      fontFamily: 'var(--font-body)',
+                      color: service.featured
+                        ? "rgba(212,184,150,0.6)"
+                        : "#888580",
+                      fontFamily: "var(--font-body)",
                     }}
                   >
-                    {item}
+                    →
                   </span>
-                ))}
+                </div>
+
+                {/* Title */}
+                <h3
+                  style={{
+                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontSize: "1.35rem",
+                    fontWeight: 400,
+                    color: service.featured ? "#faf8f5" : "#1c1c1c",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className="text-sm leading-relaxed flex-1"
+                  style={{
+                    color: service.featured
+                      ? "rgba(200,196,190,0.85)"
+                      : "#888580",
+                    fontFamily: "var(--font-body)",
+                  }}
+                >
+                  {service.desc}
+                </p>
+
+                {/* Tags */}
+                <div
+                  className="flex flex-wrap gap-2 pt-4"
+                  style={{
+                    borderTop: service.featured
+                      ? "1px solid rgba(184,154,106,0.25)"
+                      : "1px solid rgba(28,28,28,0.08)",
+                  }}
+                >
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] tracking-wider px-2.5 py-1 uppercase"
+                      style={{
+                        backgroundColor: service.featured
+                          ? "rgba(184,154,106,0.12)"
+                          : "rgba(184,154,106,0.08)",
+                        color: service.featured ? "#d4b896" : "#b89a6a",
+                        fontFamily: "var(--font-body)",
+                        fontWeight: 500,
+                        letterSpacing: "0.12em",
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        <div className="mt-12 text-center">
-          <Link href="#agenda" className="btn-dark inline-block">
-            Agenda una Valoración Gratuita
+        {/* ── CTA ── */}
+        <div className="mt-16 text-center opacity-0 animate-fade-up delay-700">
+          <Link href="#agenda" className="btn-outline-dark inline-block">
+            AGENDA UNA VALORACIÓN GRATUITA
           </Link>
         </div>
       </div>
