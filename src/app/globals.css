@@ -225,15 +225,7 @@
   font-weight: 600;
 }
 
-/* ─── Shimmer text ─── */
-.text-shimmer {
-  background: linear-gradient(90deg, #b89a6a 0%, #e8d5b0 40%, #b89a6a 70%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 3.5s linear infinite;
-}
+/* ─── Shimmer text removed — gradient text prohibited ─── */
 
 /* ─── Footer social ─── */
 .footer-social {
@@ -300,3 +292,7 @@
   to   { transform: scaleX(1); transform-origin: left; }
 }
 .line-reveal { animation: lineReveal 0.8s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+/* ─── GSAP initial state (hidden until ScrollTrigger fires) ─── */
+[data-anim] { opacity: 0; }
+[data-anim='line'] { transform-origin: left center; }

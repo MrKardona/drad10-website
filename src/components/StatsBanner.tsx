@@ -1,17 +1,3 @@
-type Stat = {
-  value: string;
-  label: string;
-  sub: string;
-};
-
-const stats: Stat[] = [
-  { value: "+500", label: "Pacientes Atendidos", sub: "Con resultados reales" },
-  { value: "5+",   label: "Años de Experiencia", sub: "En medicina estética" },
-  { value: "33+",  label: "Tratamientos",        sub: "Especializados y certificados" },
-  { value: "98%",  label: "Satisfacción",        sub: "En encuestas post-tratamiento" },
-];
-
-// Full marquee set — duplicated for seamless infinite loop
 const marqueeItems: string[] = [
   "MEDICINA ESTÉTICA",
   "INDIBA CERTIFIED",
@@ -29,113 +15,112 @@ export function StatsBanner() {
   return (
     <section style={{ backgroundColor: "#1c1c1c" }}>
 
-      {/* ── Top gold decorative stripe (2 px) ── */}
+      {/* ── Top gold stripe ── */}
       <div
         className="w-full"
         style={{
           height: "2px",
-          background:
-            "linear-gradient(to right, transparent, #b89a6a 20%, #b89a6a 80%, transparent)",
+          background: "linear-gradient(to right, transparent, #b89a6a 20%, #b89a6a 80%, transparent)",
         }}
         aria-hidden="true"
       />
 
-      {/* ── Stats grid ── */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, i) => {
-            const delayClass =
-              i === 0
-                ? "delay-100"
-                : i === 1
-                ? "delay-200"
-                : i === 2
-                ? "delay-300"
-                : "delay-400";
+      {/* ── Main content: narrative + facts ── */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 lg:gap-24 items-center">
 
-            return (
+          {/* Left: editorial sentence */}
+          <div data-anim="left">
+            <p
+              className="section-label mb-6"
+              style={{ color: "rgba(184,154,106,0.6)" }}
+            >
+              EN NÚMEROS
+            </p>
+            <p
+              className="leading-snug"
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)",
+                fontWeight: 300,
+                color: "#faf8f5",
+                letterSpacing: "-0.02em",
+                maxWidth: "560px",
+              }}
+            >
+              Más de{" "}
+              <span style={{ color: "#b89a6a" }}>500 mujeres</span>{" "}
+              han transformado su imagen en{" "}
+              <span style={{ color: "#b89a6a" }}>5 años</span>{" "}
+              de trayectoria en Medellín.
+            </p>
+          </div>
+
+          {/* Right: 4 compact facts stacked */}
+          <div
+            className="flex flex-row lg:flex-col gap-8 lg:gap-0 flex-wrap"
+            data-anim="right"
+          >
+            {[
+              { num: "500", pre: "+", suf: "", label: "Pacientes atendidas" },
+              { num: "5",   pre: "",  suf: "+", label: "Años de experiencia" },
+              { num: "33",  pre: "",  suf: "+", label: "Tratamientos certificados" },
+              { num: "98",  pre: "",  suf: "%", label: "Satisfacción post-tratamiento" },
+            ].map((s, i) => (
               <div
-                key={stat.label}
-                className={`relative px-8 py-14 flex flex-col gap-1 opacity-0 animate-scale-in ${delayClass}`}
-                style={{ animationFillMode: "forwards" }}
+                key={s.label}
+                className="flex items-baseline gap-3 lg:py-5"
+                style={{
+                  borderTop: i > 0 ? "1px solid rgba(184,154,106,0.15)" : "none",
+                }}
               >
-                {/* Vertical gold separator between columns (desktop only) */}
-                {i > 0 && (
-                  <div
-                    className="absolute left-0 top-10 bottom-10 w-px hidden lg:block"
-                    style={{
-                      background:
-                        "linear-gradient(to bottom, transparent, rgba(184,154,106,0.35) 30%, rgba(184,154,106,0.35) 70%, transparent)",
-                    }}
-                    aria-hidden="true"
-                  />
-                )}
-
-                {/* Mobile: thin horizontal bottom border */}
-                <div
-                  className="absolute bottom-0 left-6 right-6 h-px lg:hidden"
-                  style={{ backgroundColor: "rgba(184,154,106,0.12)" }}
-                  aria-hidden="true"
-                />
-
-                {/* Number — large Cormorant gold */}
+                {/* Number */}
                 <span
-                  className="leading-none"
+                  data-counter={s.num}
+                  data-prefix={s.pre}
+                  data-suffix={s.suf}
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "clamp(2.8rem, 5vw, 4rem)",
+                    fontSize: "clamp(2rem, 3vw, 2.6rem)",
                     fontWeight: 300,
-                    letterSpacing: "-0.02em",
                     color: "#b89a6a",
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1,
+                    minWidth: "80px",
                   }}
                 >
-                  {stat.value}
+                  {s.pre}{s.num}{s.suf}
                 </span>
-
-                {/* Label — white */}
+                {/* Label */}
                 <span
-                  className="text-sm font-medium mt-2"
                   style={{
                     fontFamily: "var(--font-body)",
-                    color: "#ffffff",
-                    letterSpacing: "0.03em",
+                    fontSize: "0.72rem",
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                    color: "rgba(250,248,245,0.45)",
                   }}
                 >
-                  {stat.label}
-                </span>
-
-                {/* Sub-label — muted grey */}
-                <span
-                  className="text-xs"
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    color: "#888580",
-                  }}
-                >
-                  {stat.sub}
+                  {s.label}
                 </span>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* ── Mid gold thin divider ── */}
+      {/* ── Gold divider ── */}
       <div
         className="w-full"
         style={{
           height: "1px",
-          background:
-            "linear-gradient(to right, transparent, rgba(184,154,106,0.35) 20%, rgba(184,154,106,0.35) 80%, transparent)",
+          background: "linear-gradient(to right, transparent, rgba(184,154,106,0.3) 20%, rgba(184,154,106,0.3) 80%, transparent)",
         }}
         aria-hidden="true"
       />
 
-      {/* ── Marquee band ── */}
-      <div
-        className="py-5 overflow-hidden"
-        aria-hidden="true"
-      >
+      {/* ── Marquee ── */}
+      <div className="py-5 overflow-hidden" aria-hidden="true">
         <div className="marquee-track">
           {marqueeTrack.map((text, idx) => (
             <span
@@ -149,12 +134,7 @@ export function StatsBanner() {
               >
                 {text}
               </span>
-              <span
-                className="text-[8px]"
-                style={{ color: "#b89a6a" }}
-              >
-                ·
-              </span>
+              <span className="text-[8px]" style={{ color: "#b89a6a" }}>·</span>
             </span>
           ))}
         </div>

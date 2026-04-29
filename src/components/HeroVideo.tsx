@@ -45,7 +45,7 @@ export function HeroVideo() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(28,28,28,0.55) 0%, rgba(28,28,28,0.25) 40%, rgba(28,28,28,0.72) 100%)",
+            "linear-gradient(to bottom, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.45) 45%, rgba(10,10,10,0.82) 100%)",
         }}
       />
 

@@ -1,226 +1,416 @@
-import Link from "next/link";
+const faciales = [
+  "Botox", "Ácido Hialurónico", "Hilos Tensores", "Bioestimuladores de Colágeno",
+  "Peeling Químico", "Microagujamiento Facial", "Plasma Rico en Plaquetas",
+  "Mesoterapia Facial", "Limpieza Profunda", "Radiofrecuencia Facial",
+];
 
-interface Service {
-  icon: string;
-  title: string;
-  desc: string;
-  tags: string[];
-  extraTag?: string;
-  featured?: boolean;
-}
+const corporales = [
+  "Microagujas Corporales", "Mesoterapia Corporal",
+  "Sueroterapia", "Moldeamiento Corporal",
+];
 
-const services: Service[] = [
-  {
-    icon: "✦",
-    title: "Tratamientos Faciales",
-    desc: "Botox, ácido hialurónico, hilos tensores, bioestimuladores, peeling y más. Rejuvenecimiento con resultados naturales.",
-    tags: ["Botox", "Ácido Hialurónico", "Hilos Tensores", "Bioestimuladores de Colágeno"],
-    extraTag: "y más...",
-  },
-  {
-    icon: "◈",
-    title: "Corporales",
-    desc: "Microagujas, mesoterapia, sueroterapia y moldeamiento corporal. Transforma tu figura con tecnología avanzada.",
-    tags: ["Microagujas Corporales", "Mesoterapia", "Sueroterapia", "Moldeamiento corporal"],
-  },
-  {
-    icon: "❧",
-    title: "Capilares",
-    desc: "Implante capilar, exosomas, PRP y mesoterapia capilar. Recupera tu cabello con técnicas de vanguardia.",
-    tags: ["Implante Capilar", "Exosomas Capilares", "PRP Capilar", "Mesoterapia Capilar"],
-  },
-  {
-    icon: "⊕",
-    title: "Inyectables",
-    desc: "Inyectables estéticos, plasma rico en plaquetas y sueroterapia. Resultados visibles y duraderos.",
-    tags: ["Inyectables Estéticos", "Mesoterapia", "PRP", "Sueroterapia"],
-  },
-  {
-    icon: "○",
-    title: "Zona Íntima",
-    desc: "Despigmentación, estrechamiento vaginal, relleno de labios mayores y otomodeolación.",
-    tags: ["Despigmentación Zona Íntima", "Relleno de Labios Mayores", "Estrechamiento Vaginal", "Otomodeolación"],
-  },
-  {
-    icon: "◉",
-    title: "Scanner D10 (INDIBA)",
-    desc: "Nuestra tecnología INDIBA exclusiva para rejuvenecimiento profundo. El tratamiento insignia de DRA.D10.",
-    tags: ["Radiofrecuencia", "Anti-aging", "Lifting", "Colágeno"],
-    featured: true,
-  },
+const capilares = [
+  "Implante Capilar", "Exosomas Capilares",
+  "PRP Capilar", "Mesoterapia Capilar", "Tratamiento Folicular",
+];
+
+const inyectables = [
+  "Inyectables Estéticos", "Plasma Rico en Plaquetas",
+  "Mesoterapia", "Sueroterapia",
+];
+
+const zonaIntima = [
+  "Despigmentación Zona Íntima", "Estrechamiento Vaginal",
+  "Relleno de Labios Mayores", "Otomodeolación",
 ];
 
 export function ServicesPremium() {
   return (
-    <section
-      id="servicios"
-      className="py-28"
-      style={{ backgroundColor: "#faf8f5" }}
-    >
+    <section id="servicios" className="py-28" style={{ backgroundColor: "#faf8f5" }}>
       <div className="max-w-7xl mx-auto px-6">
+
         {/* ── Header ── */}
-        <div className="mb-16 opacity-0 animate-fade-up">
-          <p className="section-label mb-5">LO QUE HACEMOS</p>
+        <div className="mb-20" data-anim="up">
+          <p className="section-label mb-4">LO QUE HACEMOS</p>
           <h2
-            className="leading-none"
             style={{
               fontFamily: "var(--font-display), Georgia, serif",
               fontSize: "clamp(2.6rem, 5vw, 4.2rem)",
               fontWeight: 300,
               color: "#1c1c1c",
               letterSpacing: "-0.025em",
+              lineHeight: 1.05,
             }}
           >
             Nuestros{" "}
-            <span
-              style={{
-                display: "block",
-                fontWeight: 300,
-                color: "#1c1c1c",
-              }}
-            >
-              Tratamientos
-            </span>
-            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
-              Personalizados para ti
-            </em>
+            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>Tratamientos</em>
           </h2>
-          <p
-            className="mt-6 max-w-xl leading-relaxed"
-            style={{
-              color: "#888580",
-              fontFamily: "var(--font-body)",
-              fontSize: "0.95rem",
-            }}
-          >
-            Cada tratamiento es diseñado a medida para tus necesidades únicas,
-            con protocolos médicos certificados y tecnología de vanguardia.
-          </p>
         </div>
 
-        {/* ── Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-          {services.map((service, index) => {
-            const delayClass =
-              index === 0
-                ? "delay-100"
-                : index === 1
-                ? "delay-200"
-                : index === 2
-                ? "delay-300"
-                : index === 3
-                ? "delay-400"
-                : index === 4
-                ? "delay-500"
-                : "delay-600";
-
-            return (
-              <div
-                key={service.title}
-                className={`card-hover flex flex-col gap-5 p-10 cursor-pointer group opacity-0 animate-fade-up ${delayClass}`}
+        {/* ══ BLOQUE 1: Scanner D10 — Protagonista full-width ══ */}
+        <div
+          className="mb-6 p-10 lg:p-14 relative overflow-hidden"
+          data-anim="up"
+          style={{ backgroundColor: "#1c1c1c" }}
+        >
+          {/* Gold corner accent */}
+          <div
+            className="absolute top-0 right-0 w-32 h-32 pointer-events-none"
+            style={{
+              background: "radial-gradient(circle at top right, rgba(184,154,106,0.12), transparent 70%)",
+            }}
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-end">
+            <div>
+              <p className="section-label mb-4" style={{ color: "#b89a6a" }}>
+                TECNOLOGÍA INSIGNIA
+              </p>
+              <h3
                 style={{
-                  backgroundColor: service.featured ? "#1c1c1c" : "#faf8f5",
-                  borderTop: "2px solid #b89a6a",
-                  borderRight: "1px solid rgba(184,154,106,0.15)",
-                  borderBottom: "1px solid rgba(184,154,106,0.15)",
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                  fontWeight: 300,
+                  color: "#faf8f5",
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.1,
                 }}
               >
-                {/* Icon row */}
-                <div className="flex items-center justify-between">
+                Scanner D10
+                <br />
+                <em style={{ color: "#b89a6a" }}>INDIBA®</em>
+              </h3>
+              <p
+                className="mt-5 max-w-lg leading-relaxed"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.9rem",
+                  color: "rgba(250,248,245,0.6)",
+                  lineHeight: 1.8,
+                }}
+              >
+                Nuestra tecnología exclusiva de radiofrecuencia profunda para
+                rejuvenecimiento celular, lifting sin bisturí y regeneración de
+                colágeno. El tratamiento insignia de DRA.D10.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-7">
+                {["Radiofrecuencia", "Anti-aging", "Lifting", "Colágeno"].map((t) => (
                   <span
-                    className="text-2xl"
-                    style={{ color: "#b89a6a", lineHeight: 1 }}
-                  >
-                    {service.icon}
-                  </span>
-                  <span
-                    className="text-xs tracking-widest transition-transform duration-300 group-hover:translate-x-1 inline-block"
+                    key={t}
                     style={{
-                      color: service.featured
-                        ? "rgba(212,184,150,0.6)"
-                        : "#888580",
                       fontFamily: "var(--font-body)",
+                      fontSize: "0.6rem",
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      color: "#b89a6a",
+                      border: "1px solid rgba(184,154,106,0.35)",
+                      padding: "0.3rem 0.8rem",
                     }}
                   >
-                    →
+                    {t}
                   </span>
-                </div>
+                ))}
+              </div>
+            </div>
+            <div
+              className="text-right hidden lg:block"
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontSize: "7rem",
+                fontWeight: 300,
+                color: "rgba(184,154,106,0.08)",
+                lineHeight: 1,
+                letterSpacing: "-0.05em",
+                userSelect: "none",
+              }}
+            >
+              D10
+            </div>
+          </div>
+        </div>
 
-                {/* Title */}
+        {/* ══ BLOQUE 2: Faciales — Grid editorial ancho completo ══ */}
+        <div
+          className="mb-6 grid grid-cols-1 lg:grid-cols-[2fr_3fr]"
+          data-anim="up"
+          style={{ borderTop: "1px solid #e0d0c6" }}
+        >
+          {/* Label col */}
+          <div
+            className="px-8 py-12 flex flex-col justify-between"
+            style={{ borderRight: "1px solid #e0d0c6" }}
+          >
+            <div>
+              <span
+                className="text-5xl lg:text-7xl"
+                style={{
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontWeight: 300,
+                  color: "rgba(184,154,106,0.18)",
+                  lineHeight: 1,
+                }}
+              >
+                01
+              </span>
+              <h3
+                className="mt-4"
+                style={{
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)",
+                  fontWeight: 300,
+                  color: "#1c1c1c",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Faciales
+              </h3>
+              <p
+                className="mt-3 text-sm leading-relaxed"
+                style={{
+                  color: "#888580",
+                  fontFamily: "var(--font-body)",
+                  maxWidth: "220px",
+                }}
+              >
+                Rejuvenecimiento con resultados naturales, sin sobrecargar el rostro.
+              </p>
+            </div>
+            <div
+              className="mt-8 h-px w-12"
+              style={{ backgroundColor: "#b89a6a" }}
+              data-anim="line"
+            />
+          </div>
+          {/* Treatments col — pill cloud */}
+          <div className="px-8 py-12 flex flex-wrap gap-3 content-start">
+            {faciales.map((t) => (
+              <span
+                key={t}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.78rem",
+                  color: "#1c1c1c",
+                  border: "1px solid #e0d0c6",
+                  padding: "0.45rem 1rem",
+                  whiteSpace: "nowrap",
+                  transition: "border-color 0.25s, color 0.25s",
+                  cursor: "default",
+                }}
+                className="hover:border-[#b89a6a] hover:text-[#b89a6a]"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* ══ BLOQUE 3: Corporales + Capilares — side by side, pesos distintos ══ */}
+        <div
+          className="mb-6 grid grid-cols-1 lg:grid-cols-[3fr_2fr]"
+          data-anim="up"
+          style={{ borderTop: "1px solid #e0d0c6", backgroundColor: "#f0e8e2" }}
+        >
+          {/* Corporales */}
+          <div
+            className="px-8 py-12"
+            style={{ borderRight: "1px solid #e0d0c6" }}
+          >
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <span
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontSize: "3rem",
+                    fontWeight: 300,
+                    color: "rgba(184,154,106,0.18)",
+                    lineHeight: 1,
+                  }}
+                >
+                  02
+                </span>
                 <h3
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.35rem",
-                    fontWeight: 400,
-                    color: service.featured ? "#faf8f5" : "#1c1c1c",
-                    letterSpacing: "-0.01em",
+                    fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
+                    fontWeight: 300,
+                    color: "#1c1c1c",
+                    letterSpacing: "-0.02em",
+                    marginTop: "0.5rem",
                   }}
                 >
-                  {service.title}
+                  Corporales
                 </h3>
-
-                {/* Description */}
-                <p
-                  className="text-sm leading-relaxed flex-1"
-                  style={{
-                    color: service.featured
-                      ? "rgba(200,196,190,0.85)"
-                      : "#888580",
-                    fontFamily: "var(--font-body)",
-                  }}
-                >
-                  {service.desc}
-                </p>
-
-                {/* Tags */}
-                <div
-                  className="flex flex-wrap gap-2 pt-4"
-                  style={{
-                    borderTop: service.featured
-                      ? "1px solid rgba(184,154,106,0.25)"
-                      : "1px solid rgba(28,28,28,0.08)",
-                  }}
-                >
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] tracking-wider px-2.5 py-1 uppercase"
-                      style={{
-                        backgroundColor: service.featured
-                          ? "rgba(184,154,106,0.12)"
-                          : "rgba(184,154,106,0.08)",
-                        color: service.featured ? "#d4b896" : "#b89a6a",
-                        fontFamily: "var(--font-body)",
-                        fontWeight: 500,
-                        letterSpacing: "0.12em",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {service.extraTag && (
-                    <span
-                      className="text-[10px] tracking-wider px-2.5 py-1"
-                      style={{
-                        color: "#888580",
-                        fontFamily: "var(--font-body)",
-                        fontStyle: "italic",
-                      }}
-                    >
-                      {service.extraTag}
-                    </span>
-                  )}
-                </div>
               </div>
-            );
-          })}
+            </div>
+            <p
+              className="text-sm mb-6 leading-relaxed"
+              style={{ color: "#888580", fontFamily: "var(--font-body)", maxWidth: "300px" }}
+            >
+              Transforma tu figura con tecnología avanzada, sin cirugía.
+            </p>
+            <div className="flex flex-col gap-3">
+              {corporales.map((t) => (
+                <div
+                  key={t}
+                  className="flex items-center gap-3"
+                  style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#1c1c1c" }}
+                >
+                  <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>◆</span>
+                  {t}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Capilares */}
+          <div className="px-8 py-12">
+            <span
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "3rem",
+                fontWeight: 300,
+                color: "rgba(184,154,106,0.18)",
+                lineHeight: 1,
+              }}
+            >
+              03
+            </span>
+            <h3
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
+                fontWeight: 300,
+                color: "#1c1c1c",
+                letterSpacing: "-0.02em",
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Capilares
+            </h3>
+            <p
+              className="text-sm mb-6 leading-relaxed"
+              style={{ color: "#888580", fontFamily: "var(--font-body)" }}
+            >
+              Recupera tu cabello con técnicas de vanguardia.
+            </p>
+            <div className="flex flex-col gap-3">
+              {capilares.map((t) => (
+                <div
+                  key={t}
+                  className="flex items-center gap-3"
+                  style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#1c1c1c" }}
+                >
+                  <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>◆</span>
+                  {t}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ══ BLOQUE 4: Inyectables + Zona Íntima — horizontal compact ══ */}
+        <div
+          className="grid grid-cols-1 lg:grid-cols-2"
+          data-anim="up"
+          style={{ borderTop: "1px solid #e0d0c6" }}
+        >
+          {/* Inyectables */}
+          <div
+            className="px-8 py-10"
+            style={{ borderRight: "1px solid #e0d0c6" }}
+          >
+            <div className="flex items-baseline gap-4 mb-5">
+              <span
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "2rem",
+                  fontWeight: 300,
+                  color: "rgba(184,154,106,0.18)",
+                  lineHeight: 1,
+                }}
+              >
+                04
+              </span>
+              <h3
+                style={{
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontSize: "1.5rem",
+                  fontWeight: 300,
+                  color: "#1c1c1c",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Inyectables
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {inyectables.map((t) => (
+                <span
+                  key={t}
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.72rem",
+                    color: "#888580",
+                    border: "1px solid #e0d0c6",
+                    padding: "0.3rem 0.75rem",
+                  }}
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Zona Íntima */}
+          <div className="px-8 py-10">
+            <div className="flex items-baseline gap-4 mb-5">
+              <span
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "2rem",
+                  fontWeight: 300,
+                  color: "rgba(184,154,106,0.18)",
+                  lineHeight: 1,
+                }}
+              >
+                05
+              </span>
+              <h3
+                style={{
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontSize: "1.5rem",
+                  fontWeight: 300,
+                  color: "#1c1c1c",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Zona Íntima
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {zonaIntima.map((t) => (
+                <span
+                  key={t}
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.72rem",
+                    color: "#888580",
+                    border: "1px solid #e0d0c6",
+                    padding: "0.3rem 0.75rem",
+                  }}
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* ── CTA ── */}
-        <div className="mt-16 text-center opacity-0 animate-fade-up delay-700">
-          <Link href="#agenda" className="btn-outline-dark inline-block">
+        <div className="mt-16 text-center" data-anim="up">
+          <a href="#agenda" className="btn-gold">
             AGENDA UNA VALORACIÓN GRATUITA
-          </Link>
+          </a>
         </div>
       </div>
     </section>
