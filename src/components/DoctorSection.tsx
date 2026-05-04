@@ -49,7 +49,6 @@ export function DoctorSection() {
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 384px"
-                  priority
                 />
                 {/* Bottom badge overlay */}
                 <div

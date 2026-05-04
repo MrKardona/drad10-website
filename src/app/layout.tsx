@@ -7,14 +7,21 @@ import { ScrollAnimations } from "@/components/ScrollAnimations";
 const cormorant = Cormorant_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  // Reduced from 5 weights to 3 — saves ~100 KB of font data.
+  // 300 = body text, 400 = normal, 700 = headings. 500/600 unused.
+  weight: ["300", "400", "700"],
   style: ["normal", "italic"],
+  display: "swap",   // render fallback immediately; swap font when loaded
+  preload: true,
 });
 
 const dmSans = DM_Sans({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  // Reduced from 4 weights to 2 — 300/600 not actually used in components.
+  weight: ["400", "500"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {

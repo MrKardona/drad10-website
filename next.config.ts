@@ -30,8 +30,15 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   output: "standalone",
 
-  // ── External images ──────────────────────────────────────────────────────
+  // ── Image optimization ───────────────────────────────────────────────────
   images: {
+    // Serve AVIF first (30-40% smaller than WebP), WebP as fallback.
+    formats: ["image/avif", "image/webp"],
+    // Cache optimized images for 7 days to avoid repeated optimization work.
+    // Note: quality is set per <Image quality={80}> — not a global config.
+    minimumCacheTTL: 604800,
+    // Standard responsive breakpoints — matches Tailwind's default screens.
+    deviceSizes: [640, 828, 1080, 1200, 1920],
     remotePatterns: [
       {
         protocol: "https",

@@ -29,23 +29,30 @@ export function HeroVideo() {
     <section className="relative w-full overflow-hidden" style={{ height: "100vh" }}>
 
       {/* ── Video de fondo ── */}
+      {/* preload="none" prevents the browser from fetching the 34MB video
+          before it's needed. The IntersectionObserver triggers play() when
+          the section enters the viewport. poster shows instantly while loading. */}
       <video
         ref={videoRef}
-        src="/videos/hero-video.mp4"
         autoPlay
         muted
         loop
         playsInline
+        preload="none"
+        poster="/images/hero-bg.jpg"
         className="absolute inset-0 w-full h-full"
         style={{ objectFit: "cover", objectPosition: "center" }}
-      />
+      >
+        <source src="/videos/hero-video.webm" type="video/webm" />
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
+      </video>
 
       {/* ── Overlay premium oscuro ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.45) 45%, rgba(10,10,10,0.82) 100%)",
+            "linear-gradient(to bottom, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.62) 45%, rgba(10,10,10,0.90) 100%)",
         }}
       />
 
@@ -70,9 +77,24 @@ export function HeroVideo() {
       {/* ── Contenido centrado ── */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
 
+        {/* Logo DRA.D10 */}
+        <div className="mb-8 opacity-0 animate-fade-up">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt="DRA.D10"
+            style={{
+              height: "clamp(52px, 8vw, 80px)",
+              width: "auto",
+              filter: "brightness(0) invert(1)",
+              opacity: 0.95,
+            }}
+          />
+        </div>
+
         {/* Etiqueta superior */}
         <p
-          className="section-label mb-6 opacity-0 animate-fade-up"
+          className="section-label mb-6 opacity-0 animate-fade-up delay-100"
           style={{ color: "#b89a6a" }}
         >
           MEDELLÍN · EL POBLADO · COLOMBIA
@@ -80,7 +102,7 @@ export function HeroVideo() {
 
         {/* Título */}
         <h1
-          className="mb-6 leading-tight opacity-0 animate-fade-up delay-100"
+          className="mb-6 leading-tight opacity-0 animate-fade-up delay-200"
           style={{
             fontFamily: "var(--font-display), Georgia, serif",
             fontSize: "clamp(3rem, 7vw, 6.5rem)",
@@ -98,7 +120,7 @@ export function HeroVideo() {
         </h1>
 
         {/* Línea dorada */}
-        <div className="flex justify-center mb-6 opacity-0 animate-fade-up delay-200">
+        <div className="flex justify-center mb-6 opacity-0 animate-fade-up delay-300">
           <div
             style={{
               width: "60px",
@@ -111,7 +133,7 @@ export function HeroVideo() {
 
         {/* Descripción */}
         <p
-          className="mb-10 max-w-lg leading-relaxed opacity-0 animate-fade-up delay-300"
+          className="mb-10 max-w-lg leading-relaxed opacity-0 animate-fade-up delay-400"
           style={{
             fontFamily: "var(--font-body)",
             fontSize: "0.95rem",
@@ -124,7 +146,7 @@ export function HeroVideo() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up delay-400">
+        <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up delay-500">
           <a href="#agenda" className="btn-gold">
             AGENDAR CITA
           </a>
@@ -135,13 +157,13 @@ export function HeroVideo() {
 
         {/* Social proof */}
         <p
-          className="mt-8 opacity-0 animate-fade-up delay-500 text-xs tracking-widest uppercase"
+          className="mt-8 opacity-0 animate-fade-up delay-600 text-xs tracking-widest uppercase"
           style={{
             color: "rgba(250,248,245,0.45)",
             fontFamily: "var(--font-body)",
           }}
         >
-          +500 pacientes nos eligieron este año
+          +8.000 personas han confiado en nosotras
         </p>
       </div>
 
