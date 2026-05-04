@@ -22,10 +22,9 @@ export function HeroVideo() {
     <section className="relative w-full overflow-hidden" style={{ height: "100vh" }}>
 
       {/* ── YouTube background video ── */}
-      {/* Technique: iframe is scaled to cover the full viewport regardless of
-          aspect ratio. min-width/min-height ensure no black bars appear.
-          pointer-events:none prevents clicks on the iframe (no YouTube controls). */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      {/* z-index:1 so the dark overlay (z-index:2) always renders on top,
+          hiding YouTube's title card and player UI completely. */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true" style={{ zIndex: 1 }}>
         <iframe
           src={EMBED_URL}
           allow="autoplay; encrypted-media"
@@ -47,11 +46,14 @@ export function HeroVideo() {
       </div>
 
       {/* ── Overlay premium oscuro ── */}
+      {/* z-index:2 ensures this sits above the YouTube iframe (z-index:1)
+          so the player's title card never bleeds through. */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
+          zIndex: 2,
           background:
-            "linear-gradient(to bottom, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.62) 45%, rgba(10,10,10,0.90) 100%)",
+            "linear-gradient(to bottom, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.62) 45%, rgba(10,10,10,0.90) 100%)",
         }}
       />
 
