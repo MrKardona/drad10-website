@@ -24,9 +24,11 @@ export function proxy(request: NextRequest) {
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'`,
     "style-src 'self' 'unsafe-inline'",
-    `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST}`,
+    `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com`,
     "font-src 'self'",
     `connect-src 'self' https://${SUPABASE_HOST}`,
+    // Allow YouTube nocookie embeds (hero background video)
+    "frame-src https://www.youtube-nocookie.com",
     "frame-ancestors 'none'",
     "object-src 'none'",
     "base-uri 'self'",

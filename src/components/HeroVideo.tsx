@@ -1,51 +1,50 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+// YouTube video ID — change this if the hero video is ever updated
+const VIDEO_ID = "V1-aiXd8ncM";
+
+// Embed URL:
+//  - youtube-nocookie.com: privacy-enhanced mode (no tracking cookies)
+//  - autoplay=1 & mute=1: required for autoplay without user gesture
+//  - loop=1 & playlist=VIDEO_ID: loops the video seamlessly
+//  - controls=0: hides all player UI
+//  - disablekb=1: disables keyboard shortcuts on the iframe
+//  - iv_load_policy=3: hides annotations
+//  - rel=0: no related videos at end
+//  - modestbranding=1: minimal YouTube branding
+const EMBED_URL =
+  `https://www.youtube-nocookie.com/embed/${VIDEO_ID}` +
+  `?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}` +
+  `&controls=0&disablekb=1&fs=0&iv_load_policy=3&rel=0&modestbranding=1&playsinline=1`;
 
 export function HeroVideo() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // IntersectionObserver: reproduce cuando entra al viewport
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="relative w-full overflow-hidden" style={{ height: "100vh" }}>
 
-      {/* ── Video de fondo ── */}
-      {/* preload="none" prevents the browser from fetching the 34MB video
-          before it's needed. The IntersectionObserver triggers play() when
-          the section enters the viewport. poster shows instantly while loading. */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-        poster="/images/hero-bg.jpg"
-        className="absolute inset-0 w-full h-full"
-        style={{ objectFit: "cover", objectPosition: "center" }}
-      >
-        <source src="/videos/hero-video.webm" type="video/webm" />
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* ── YouTube background video ── */}
+      {/* Technique: iframe is scaled to cover the full viewport regardless of
+          aspect ratio. min-width/min-height ensure no black bars appear.
+          pointer-events:none prevents clicks on the iframe (no YouTube controls). */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <iframe
+          src={EMBED_URL}
+          allow="autoplay; encrypted-media"
+          title="DRA.D10 clínica — video de fondo"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            /* 16:9 sizing that always covers the container */
+            width: "177.78vh",   /* 100vh × (16/9) */
+            height: "56.25vw",   /* 100vw × (9/16) */
+            minWidth: "100%",
+            minHeight: "100%",
+            border: "none",
+            pointerEvents: "none",
+          }}
+        />
+      </div>
 
       {/* ── Overlay premium oscuro ── */}
       <div
