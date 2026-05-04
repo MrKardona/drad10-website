@@ -52,8 +52,10 @@ export function HeroVideo() {
         className="absolute inset-0 pointer-events-none"
         style={{
           zIndex: 2,
+          // Fully opaque at 0-10% (hides YouTube title card in top-left corner),
+          // then fades to semi-transparent so the video is visible in the mid section.
           background:
-            "linear-gradient(to bottom, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.62) 45%, rgba(10,10,10,0.90) 100%)",
+            "linear-gradient(to bottom, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 10%, rgba(10,10,10,0.60) 40%, rgba(10,10,10,0.55) 55%, rgba(10,10,10,0.90) 100%)",
         }}
       />
 
