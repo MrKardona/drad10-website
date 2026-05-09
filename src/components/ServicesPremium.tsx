@@ -49,6 +49,7 @@ export function ServicesPremium() {
 
         {/* ══ BLOQUE 1: Scanner D10 — Protagonista full-width ══ */}
         <div
+          id="scanner"
           className="mb-6 p-10 lg:p-14 relative overflow-hidden"
           data-anim="up"
           style={{ backgroundColor: "#1c1c1c" }}
@@ -110,6 +111,18 @@ export function ServicesPremium() {
                   </span>
                 ))}
               </div>
+              <div className="mt-8">
+                <a
+                  href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20el%20Scanner%20D10%20INDIBA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                  style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
+                >
+                  Solicitar información
+                  <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+                </a>
+              </div>
             </div>
             <div
               className="text-right hidden lg:block"
@@ -130,6 +143,7 @@ export function ServicesPremium() {
 
         {/* ══ BLOQUE 2: Faciales — Grid editorial ancho completo ══ */}
         <div
+          id="faciales"
           className="mb-6 grid grid-cols-1 lg:grid-cols-[2fr_3fr]"
           data-anim="up"
           style={{ borderTop: "1px solid #e0d0c6" }}
@@ -200,11 +214,24 @@ export function ServicesPremium() {
                 {t}
               </span>
             ))}
+            <div className="w-full mt-6">
+              <a
+                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20faciales"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
+              >
+                Solicitar información
+                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+              </a>
+            </div>
           </div>
         </div>
 
         {/* ══ BLOQUE 3: Corporales + Capilares — side by side, pesos distintos ══ */}
         <div
+          id="corporales"
           className="mb-6 grid grid-cols-1 lg:grid-cols-[3fr_2fr]"
           data-anim="up"
           style={{ borderTop: "1px solid #e0d0c6", backgroundColor: "#f0e8e2" }}
@@ -259,10 +286,22 @@ export function ServicesPremium() {
                 </div>
               ))}
             </div>
+            <div className="mt-6">
+              <a
+                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20corporales"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
+              >
+                Solicitar información
+                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+              </a>
+            </div>
           </div>
 
           {/* Capilares */}
-          <div className="px-8 py-12">
+          <div id="capilares" className="px-8 py-12">
             <span
               style={{
                 fontFamily: "var(--font-display)",
@@ -305,6 +344,18 @@ export function ServicesPremium() {
                 </div>
               ))}
             </div>
+            <div className="mt-6">
+              <a
+                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20implante%20capilar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
+              >
+                Solicitar información
+                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -316,6 +367,7 @@ export function ServicesPremium() {
         >
           {/* Inyectables */}
           <div
+            id="inyectables"
             className="px-8 py-10"
             style={{ borderRight: "1px solid #e0d0c6" }}
           >
@@ -358,6 +410,18 @@ export function ServicesPremium() {
                   {t}
                 </span>
               ))}
+            </div>
+            <div className="w-full mt-5">
+              <a
+                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20inyectables%20estéticos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
+              >
+                Solicitar información
+                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+              </a>
             </div>
           </div>
 

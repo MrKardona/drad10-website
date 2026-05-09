@@ -6,7 +6,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 type NavItem = {
   label: string;
   href: string;
-  sub?: string[];
+  sub?: { label: string; href: string }[];
 };
 
 const nav: NavItem[] = [
@@ -14,50 +14,50 @@ const nav: NavItem[] = [
   { label: "NOSOTROS", href: "/nosotros" },
   {
     label: "FACIALES",
-    href: "#",
+    href: "/#faciales",
     sub: [
-      "Botox",
-      "Ácido Hialurónico",
-      "Hilos Tensores",
-      "Bioestimuladores de Colágeno",
-      "Enzimas",
-      "Peeling",
-      "Cauterización",
-      "Microagujas Faciales",
-      "Nanopore",
-      "Tratamiento para manchas",
+      { label: "Botox", href: "/servicios/botox" },
+      { label: "Ácido Hialurónico", href: "/#faciales" },
+      { label: "Hilos Tensores", href: "/#faciales" },
+      { label: "Bioestimuladores de Colágeno", href: "/#faciales" },
+      { label: "Enzimas", href: "/#faciales" },
+      { label: "Peeling", href: "/#faciales" },
+      { label: "Cauterización", href: "/#faciales" },
+      { label: "Microagujas Faciales", href: "/#faciales" },
+      { label: "Nanopore", href: "/#faciales" },
+      { label: "Tratamiento para manchas", href: "/#faciales" },
     ],
   },
   {
     label: "CORPORALES",
-    href: "#",
+    href: "/#corporales",
     sub: [
-      "Microagujas Corporales",
-      "Mesoterapia",
-      "Sueroterapia",
-      "Masajes de relajación",
-      "Moldeamiento corporal",
+      { label: "Microagujas Corporales", href: "/#corporales" },
+      { label: "Mesoterapia", href: "/#corporales" },
+      { label: "Sueroterapia", href: "/#corporales" },
+      { label: "Masajes de relajación", href: "/#corporales" },
+      { label: "Moldeamiento corporal", href: "/#corporales" },
     ],
   },
   {
     label: "CAPILARES",
-    href: "#",
+    href: "/#capilares",
     sub: [
-      "Implante de barba",
-      "Implante Capilar",
-      "Exosomas Capilares",
-      "PRP Capilar",
-      "Mesoterapia Capilar",
+      { label: "Implante de barba", href: "/#capilares" },
+      { label: "Implante Capilar", href: "/#capilares" },
+      { label: "Exosomas Capilares", href: "/#capilares" },
+      { label: "PRP Capilar", href: "/#capilares" },
+      { label: "Mesoterapia Capilar", href: "/#capilares" },
     ],
   },
   {
     label: "INYECTABLES",
-    href: "#",
+    href: "/#inyectables",
     sub: [
-      "Inyectables Estéticos",
-      "Mesoterapia",
-      "PRP",
-      "Sueroterapia",
+      { label: "Inyectables Estéticos", href: "/#inyectables" },
+      { label: "Mesoterapia", href: "/#inyectables" },
+      { label: "PRP", href: "/#inyectables" },
+      { label: "Sueroterapia", href: "/#inyectables" },
     ],
   },
   { label: "BLOG", href: "/blog" },
@@ -92,7 +92,30 @@ export function NavBar() {
         className="w-full py-2 px-6 flex items-center justify-center gap-6 text-[10px] tracking-[0.22em]"
         style={{ backgroundColor: "#f0e8e2", color: "#1c1c1c" }}
       >
-        <span>Cl. 7 #39 – 290 Consultorio 516, El Poblado · Medellín</span>
+        <a
+          href="https://maps.app.goo.gl/dtwj4zv9ayygTz8NA"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit", transition: "opacity 0.2s" }}
+          className="hover:opacity-60"
+        >
+          Cl. 7 #39 – 290 Consultorio 516, El Poblado · Medellín
+        </a>
+        <a
+          href="https://www.instagram.com/clinicaquantum.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram @clinicaquantum.co"
+          style={{ color: "#1c1c1c", display: "flex", alignItems: "center", gap: "4px", textDecoration: "none", transition: "opacity 0.2s" }}
+          className="hover:opacity-60"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span className="hidden sm:inline" style={{ letterSpacing: "0.18em" }}>@clinicaquantum.co</span>
+        </a>
         <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
         <span>
           Citas:{" "}
@@ -205,8 +228,8 @@ export function NavBar() {
                         >
                           {item.sub!.map((sub) => (
                             <Link
-                              key={sub}
-                              href="#"
+                              key={sub.label}
+                              href={sub.href}
                               className="block px-5 py-2 text-[11px] tracking-wider transition-all duration-150"
                               style={{
                                 fontFamily: "var(--font-body)",
@@ -229,7 +252,7 @@ export function NavBar() {
                                 ).style.paddingLeft = "20px";
                               }}
                             >
-                              {sub}
+                              {sub.label}
                             </Link>
                           ))}
                         </div>
@@ -332,8 +355,8 @@ export function NavBar() {
                         >
                           {item.sub!.map((sub) => (
                             <Link
-                              key={sub}
-                              href="#"
+                              key={sub.label}
+                              href={sub.href}
                               className="block px-9 py-2.5 text-[11px] tracking-wider transition-colors"
                               style={{
                                 fontFamily: "var(--font-body)",
@@ -344,7 +367,7 @@ export function NavBar() {
                                 setMobileExpanded(null);
                               }}
                             >
-                              {sub}
+                              {sub.label}
                             </Link>
                           ))}
                         </div>

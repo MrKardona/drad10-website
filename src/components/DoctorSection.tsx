@@ -134,8 +134,9 @@ export function DoctorSection() {
                     key={c.label}
                     className={`flex items-start gap-3 p-4 opacity-0 animate-fade-up ${delayClass}`}
                     style={{
-                      backgroundColor: "rgba(184,154,106,0.07)",
-                      borderLeft: "2px solid #b89a6a",
+                      backgroundColor: "rgba(184,154,106,0.06)",
+                      border: "1px solid rgba(184,154,106,0.22)",
+                      borderTop: "2px solid rgba(184,154,106,0.55)",
                     }}
                   >
                     <span
@@ -152,6 +153,15 @@ export function DoctorSection() {
               })}
             </div>
 
+            <a
+              href="https://wa.me/573002440656?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20con%20la%20Dra.%20Daniela%20D%C3%ADez"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold inline-block opacity-0 animate-fade-up delay-600 mb-4"
+            >
+              AGENDAR CON LA DRA. DÍEZ
+            </a>
+            <br />
             <Link
               href="/nosotros"
               className="btn-outline-dark inline-block opacity-0 animate-fade-up delay-700"

@@ -1,31 +1,43 @@
 import Link from "next/link";
 
 const tratamientos: { label: string; href: string }[] = [
-  { label: "Faciales", href: "#" },
-  { label: "Corporales", href: "#" },
-  { label: "Capilares", href: "#" },
-  { label: "Inyectables", href: "#" },
-  { label: "Zona Íntima", href: "#" },
-  { label: "Scanner D10", href: "#" },
+  { label: "Scanner D10", href: "/#scanner" },
+  { label: "Faciales", href: "/#faciales" },
+  { label: "Corporales", href: "/#corporales" },
+  { label: "Capilares", href: "/#capilares" },
+  { label: "Inyectables", href: "/#inyectables" },
+  { label: "Resultados", href: "/resultados" },
 ];
 
 const clinicaLinks: { label: string; href: string }[] = [
   { label: "Nosotros", href: "/nosotros" },
   { label: "Blog", href: "/blog" },
   { label: "Resultados", href: "/resultados" },
-  { label: "Política de Privacidad", href: "#" },
-  { label: "Política de Reembolso", href: "#" },
+  { label: "Política de Privacidad", href: "/politica-de-privacidad" },
+  { label: "Política de Reembolso", href: "/politica-de-reembolso" },
 ];
 
 const socialLinks: { label: string; href: string; ariaLabel: string }[] = [
-  { label: "FB", href: "#", ariaLabel: "Facebook DRA.D10" },
-  { label: "IG", href: "#", ariaLabel: "Instagram DRA.D10" },
+  {
+    label: "IG",
+    href: "https://www.instagram.com/clinicaquantum.co/",
+    ariaLabel: "Instagram @clinicaquantum.co",
+  },
+  {
+    label: "FB",
+    href: "https://www.facebook.com/clinicaquantum.co/",
+    ariaLabel: "Facebook Clínica Quantum",
+  },
+  {
+    label: "TK",
+    href: "https://www.tiktok.com/@clinica.quantum",
+    ariaLabel: "TikTok @clinica.quantum",
+  },
   {
     label: "WA",
     href: "https://wa.me/573002440656",
     ariaLabel: "WhatsApp DRA.D10",
   },
-  { label: "TK", href: "#", ariaLabel: "TikTok DRA.D10" },
 ];
 
 export function FooterPremium() {
@@ -204,9 +216,16 @@ export function FooterPremium() {
                   lineHeight: 1.6,
                 }}
               >
-                Cl. 7 #39-290 Consultorio 516
-                <br />
-                El Poblado, Medellín
+                <a
+                  href="https://maps.app.goo.gl/dtwj4zv9ayygTz8NA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "inherit", transition: "opacity 0.2s" }}
+                >
+                  Cl. 7 #39-290 Consultorio 516
+                  <br />
+                  El Poblado, Medellín
+                </a>
               </p>
             </div>
 
