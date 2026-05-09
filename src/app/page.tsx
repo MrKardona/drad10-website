@@ -7,6 +7,7 @@ import { ResultadosTeaser } from "@/components/ResultadosTeaser";
 import { DoctorSection } from "@/components/DoctorSection";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import InstagramSection from "@/components/InstagramSection";
+import { FAQSection } from "@/components/FAQSection";
 import { CTABanner } from "@/components/CTABanner";
 import { ContactPremium } from "@/components/ContactPremium";
 import { FooterPremium } from "@/components/FooterPremium";
@@ -24,6 +25,7 @@ export default function Home() {
       <DoctorSection />
       <ReviewsCarousel />
       <InstagramSection />
+      <FAQSection />
       <CTABanner />
       <ContactPremium />
       <FooterPremium />

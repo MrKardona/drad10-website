@@ -3,7 +3,7 @@ const marqueeItems: string[] = [
   "INDIBA CERTIFIED",
   "EL POBLADO",
   "MEDELLÍN",
-  "+500 PACIENTES",
+  "+8.000 PACIENTES",
   "DRA. DANIELA DÍEZ",
   "RESULTADOS REALES",
   "QUANTUM CERTIFIED",
@@ -49,7 +49,7 @@ export function StatsBanner() {
               }}
             >
               Más de{" "}
-              <span style={{ color: "#b89a6a" }}>500 mujeres</span>{" "}
+              <span style={{ color: "#b89a6a" }}>8.000 personas</span>{" "}
               han transformado su imagen en{" "}
               <span style={{ color: "#b89a6a" }}>5 años</span>{" "}
               de trayectoria en Medellín.
@@ -62,7 +62,7 @@ export function StatsBanner() {
             data-anim="right"
           >
             {[
-              { num: "500", pre: "+", suf: "", label: "Pacientes atendidas" },
+              { num: "8000", pre: "+", suf: "", label: "Personas atendidas" },
               { num: "5",   pre: "",  suf: "+", label: "Años de experiencia" },
               { num: "33",  pre: "",  suf: "+", label: "Tratamientos certificados" },
               { num: "98",  pre: "",  suf: "%", label: "Satisfacción post-tratamiento" },

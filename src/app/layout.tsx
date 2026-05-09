@@ -35,8 +35,70 @@ export const metadata: Metadata = {
     siteName: "DRA.D10 Medicina Estética",
     locale: "es_CO",
     type: "website",
+    images: [
+      {
+        url: "https://drad10.com/seo/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DRA.D10 — Medicina Estética de Alto Nivel · Medellín",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DRA.D10 | Medicina Estética de Alto Nivel",
+    description: "Transformamos tu bienestar con tratamientos seguros, naturales y personalizados. Medellín, Colombia.",
+    images: ["https://drad10.com/seo/og-image.jpg"],
   },
 };
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "DRA.D10 | Clínica Quantum",
+  description:
+    "Clínica de Medicina Estética y Rejuvenecimiento en El Poblado, Medellín. Tratamientos faciales, capilares, corporales e inyectables.",
+  url: "https://drad10.com",
+  telephone: "+573002440656",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Cl. 7 #39-290 Consultorio 516",
+    addressLocality: "El Poblado",
+    addressRegion: "Medellín",
+    addressCountry: "CO",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 6.2101,
+    longitude: -75.5708,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "14:00",
+    },
+  ],
+  sameAs: [
+    "https://www.instagram.com/clinicaquantum.co/",
+    "https://www.facebook.com/clinicaquantum.co/",
+  ],
+  priceRange: "$$",
+  image: "https://drad10.com/logo.svg",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "227",
+    bestRating: "5",
+  },
+} as const;
 
 // Async layout so we can read the per-request nonce injected by middleware.
 // Calling headers() here also opts the entire route tree into dynamic
@@ -50,6 +112,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="es" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="min-h-full flex flex-col antialiased" {...(nonce ? { "data-nonce": nonce } : {})}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
         <ScrollAnimations />
         {children}
       </body>

@@ -1,0 +1,87 @@
+<h2>¿Cómo interactúa el usuario con las fotos antes/después?</h2>
+<p class="subtitle">Elige el mecanismo que mejor comunica los resultados de la clínica</p>
+
+<div class="cards">
+
+  <!-- Opción A: Slider divisor -->
+  <div class="card" data-choice="slider" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1c1c1c; padding:20px; position:relative; overflow:hidden; height:220px;">
+      <!-- Mockup slider -->
+      <div style="display:flex;height:100%;position:relative;border-radius:4px;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2a2a2a,#3a3a3a);display:flex;align-items:center;justify-content:center;">
+          <span style="color:#888;font-size:11px;letter-spacing:2px;text-transform:uppercase;">ANTES</span>
+        </div>
+        <div style="position:absolute;left:55%;top:0;bottom:0;right:0;background:linear-gradient(135deg,#b89a6a22,#b89a6a44);display:flex;align-items:center;justify-content:center;">
+          <span style="color:#b89a6a;font-size:11px;letter-spacing:2px;text-transform:uppercase;">DESPUÉS</span>
+        </div>
+        <!-- Divider line -->
+        <div style="position:absolute;left:55%;top:0;bottom:0;width:2px;background:#b89a6a;z-index:10;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:#b89a6a;display:flex;align-items:center;justify-content:center;">
+            <span style="color:#1c1c1c;font-size:14px;font-weight:bold;">⟷</span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;">
+        <span style="color:#b89a6a;font-size:9px;letter-spacing:2px;">ARRASTRA PARA COMPARAR</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Slider Divisor</h3>
+      <p>El usuario arrastra una línea para revelar antes / después. Alta interactividad, muy cinematográfico. Estándar premium en clínicas de lujo.</p>
+    </div>
+  </div>
+
+  <!-- Opción B: Hover flip -->
+  <div class="card" data-choice="hover" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1c1c1c; padding:20px; position:relative; overflow:hidden; height:220px;">
+      <div style="display:flex;gap:8px;height:100%;">
+        <!-- Card normal -->
+        <div style="flex:1;background:linear-gradient(135deg,#2a2a2a,#3a3a3a);border-radius:4px;display:flex;align-items:flex-end;padding:10px;position:relative;">
+          <span style="color:#888;font-size:9px;letter-spacing:2px;text-transform:uppercase;">ANTES (reposo)</span>
+          <div style="position:absolute;top:8px;right:8px;background:#333;border:1px solid #444;padding:2px 6px;border-radius:2px;">
+            <span style="color:#666;font-size:8px;">sin hover</span>
+          </div>
+        </div>
+        <!-- Card hovered -->
+        <div style="flex:1;background:linear-gradient(135deg,#b89a6a22,#b89a6a33);border:1px solid #b89a6a55;border-radius:4px;display:flex;align-items:flex-end;padding:10px;position:relative;">
+          <span style="color:#b89a6a;font-size:9px;letter-spacing:2px;text-transform:uppercase;">DESPUÉS (hover)</span>
+          <div style="position:absolute;top:8px;right:8px;background:#b89a6a22;border:1px solid #b89a6a44;padding:2px 6px;border-radius:2px;">
+            <span style="color:#b89a6a;font-size:8px;">con hover</span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;">
+        <span style="color:#888;font-size:9px;letter-spacing:2px;">PASAR EL CURSOR PARA VER RESULTADO</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Flip por Hover</h3>
+      <p>La imagen "voltea" o hace crossfade al pasar el cursor. Elegante y sutil. Funciona mejor en desktop. En móvil requiere tap.</p>
+    </div>
+  </div>
+
+  <!-- Opción C: Botones ANTES/DESPUÉS -->
+  <div class="card" data-choice="toggle" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1c1c1c; padding:20px; position:relative; overflow:hidden; height:220px;">
+      <div style="height:140px;background:linear-gradient(135deg,#b89a6a22,#b89a6a33);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
+        <span style="color:#b89a6a;font-size:11px;letter-spacing:3px;text-transform:uppercase;">DESPUÉS</span>
+      </div>
+      <!-- Toggle buttons -->
+      <div style="display:flex;gap:6px;justify-content:center;">
+        <div style="padding:6px 16px;border:1px solid #444;border-radius:2px;cursor:pointer;">
+          <span style="color:#666;font-size:9px;letter-spacing:2px;text-transform:uppercase;">ANTES</span>
+        </div>
+        <div style="padding:6px 16px;background:#b89a6a;border-radius:2px;cursor:pointer;">
+          <span style="color:#1c1c1c;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;">DESPUÉS</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Botones ANTES / DESPUÉS</h3>
+      <p>Dos botones claros para alternar entre imágenes. Funciona perfecto en móvil y desktop. Simple, accesible y claro para todos los usuarios.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:20px; text-align:center;">💡 Mi recomendación: <strong>A — Slider</strong> para cards individuales, con botones C como alternativa en móvil</p>

@@ -33,7 +33,7 @@ const contactItems = [
   {
     label: "Dirección",
     value: "Cl. 7 #39-290 Cons. 516 El Poblado",
-    href: "https://maps.google.com/?q=Cl.+7+%2339-290+El+Poblado+Medellin",
+    href: "https://maps.app.goo.gl/dtwj4zv9ayygTz8NA",
     icon: (
       <svg
         width="18"
@@ -118,6 +118,8 @@ export function ContactPremium() {
     comentarios: "",
   });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -125,9 +127,30 @@ export function ContactPremium() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setSubmitError(null);
+    setSubmitting(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setSubmitError(data.error ?? "Error al enviar. Intenta de nuevo.");
+        return;
+      }
+
+      setSent(true);
+    } catch {
+      setSubmitError("Error de conexión. Intenta de nuevo.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -401,13 +424,28 @@ export function ContactPremium() {
                 />
               </div>
 
+              {/* Error message */}
+              {submitError && (
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.78rem",
+                    color: "#c0392b",
+                    textAlign: "center",
+                  }}
+                >
+                  {submitError}
+                </p>
+              )}
+
               {/* Submit */}
               <button
                 type="submit"
+                disabled={submitting}
                 className="btn-gold w-full mt-2"
-                style={{ letterSpacing: "0.2em" }}
+                style={{ letterSpacing: "0.2em", opacity: submitting ? 0.6 : 1 }}
               >
-                ENVIAR SOLICITUD
+                {submitting ? "ENVIANDO..." : "ENVIAR SOLICITUD"}
               </button>
 
               {/* Confidentiality note */}

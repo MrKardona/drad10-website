@@ -113,7 +113,15 @@ export function CTABanner() {
           className="mt-10 text-xs opacity-0 animate-fade-in delay-600"
           style={{ color: "#c8c4be", fontFamily: "var(--font-body)", letterSpacing: "0.08em" }}
         >
-          Lun–Vie 9:00–19:00 · Sáb 9:00–14:00 · Cl. 7 #39-290 Consultorio 516, El Poblado
+          Lun–Vie 9:00–19:00 · Sáb 9:00–14:00 ·{" "}
+          <a
+            href="https://maps.app.goo.gl/dtwj4zv9ayygTz8NA"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: "3px", opacity: 0.8 }}
+          >
+            Cl. 7 #39-290 Consultorio 516, El Poblado
+          </a>
         </p>
       </div>
     </section>

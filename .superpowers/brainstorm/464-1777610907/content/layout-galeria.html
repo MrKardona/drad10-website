@@ -1,0 +1,89 @@
+<h2>¿Cómo se organiza la galería?</h2>
+<p class="subtitle">Layout de la página /resultados — filtros + grid de casos</p>
+
+<div class="cards">
+
+  <!-- Opción A: Grid masonry con filtros arriba -->
+  <div class="card" data-choice="masonry" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1c1c1c; padding:16px; height:260px;">
+      <!-- Filtros -->
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;">
+        <div style="padding:4px 10px;background:#b89a6a;border-radius:1px;"><span style="color:#1c1c1c;font-size:8px;letter-spacing:2px;text-transform:uppercase;font-weight:700;">TODOS</span></div>
+        <div style="padding:4px 10px;border:1px solid #444;border-radius:1px;"><span style="color:#666;font-size:8px;letter-spacing:2px;text-transform:uppercase;">FACIALES</span></div>
+        <div style="padding:4px 10px;border:1px solid #444;border-radius:1px;"><span style="color:#666;font-size:8px;letter-spacing:2px;text-transform:uppercase;">CORPORALES</span></div>
+        <div style="padding:4px 10px;border:1px solid #444;border-radius:1px;"><span style="color:#666;font-size:8px;letter-spacing:2px;text-transform:uppercase;">CAPILARES</span></div>
+      </div>
+      <!-- Grid masonry -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:6px;height:180px;">
+        <div style="background:#2a2a2a;border-radius:2px;grid-row:span 2;"></div>
+        <div style="background:#333;border-radius:2px;"></div>
+        <div style="background:#2a2a2a;border-radius:2px;"></div>
+        <div style="background:#2a2a2a;border-radius:2px;"></div>
+        <div style="background:#333;border-radius:2px;grid-row:span 1;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Grid Masonry con filtros</h3>
+      <p>Cards de altura variable tipo Pinterest. Filtros pill en la parte superior. Sensación editorial y orgánica. Las fotos de distintos formatos conviven bien.</p>
+    </div>
+  </div>
+
+  <!-- Opción B: Grid uniforme 3 col + sidebar filtros -->
+  <div class="card" data-choice="grid-sidebar" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1c1c1c; padding:16px; height:260px;">
+      <div style="display:flex;gap:10px;height:100%;">
+        <!-- Sidebar filtros -->
+        <div style="width:55px;background:#1e1e1e;border:1px solid #333;padding:8px;display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:7px;color:#b89a6a;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">FILTRAR</div>
+          <div style="padding:4px 6px;background:#b89a6a;border-radius:1px;"><span style="color:#1c1c1c;font-size:7px;font-weight:700;">Todos</span></div>
+          <div style="padding:4px 6px;border:1px solid #333;border-radius:1px;"><span style="color:#555;font-size:7px;">Faciales</span></div>
+          <div style="padding:4px 6px;border:1px solid #333;border-radius:1px;"><span style="color:#555;font-size:7px;">Corporales</span></div>
+          <div style="padding:4px 6px;border:1px solid #333;border-radius:1px;"><span style="color:#555;font-size:7px;">Capilares</span></div>
+          <div style="padding:4px 6px;border:1px solid #333;border-radius:1px;"><span style="color:#555;font-size:7px;">Inyectable</span></div>
+        </div>
+        <!-- Grid uniforme -->
+        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+          <div style="background:#2a2a2a;border-radius:2px;aspect-ratio:1;"></div>
+          <div style="background:#333;border-radius:2px;aspect-ratio:1;"></div>
+          <div style="background:#333;border-radius:2px;aspect-ratio:1;"></div>
+          <div style="background:#2a2a2a;border-radius:2px;aspect-ratio:1;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Grid + Sidebar de filtros</h3>
+      <p>Cards cuadradas uniformes, filtros siempre visibles en sidebar izquierdo. Muy limpio y fácil de navegar. Ideal si hay muchos casos (10+).</p>
+    </div>
+  </div>
+
+  <!-- Opción C: Showcase featured + grid abajo -->
+  <div class="card" data-choice="showcase" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1c1c1c; padding:16px; height:260px; display:flex;flex-direction:column;gap:8px;">
+      <!-- Featured grande -->
+      <div style="height:110px;background:linear-gradient(135deg,#b89a6a22,#2a2a2a);border:1px solid #b89a6a33;border-radius:2px;display:flex;align-items:center;justify-content:center;position:relative;">
+        <span style="color:#b89a6a;font-size:9px;letter-spacing:3px;text-transform:uppercase;">CASO DESTACADO</span>
+        <div style="position:absolute;top:6px;left:6px;background:#b89a6a;padding:2px 6px;"><span style="color:#1c1c1c;font-size:7px;letter-spacing:1px;text-transform:uppercase;font-weight:700;">INDIBA</span></div>
+      </div>
+      <!-- Filtros pills -->
+      <div style="display:flex;gap:4px;">
+        <div style="padding:3px 8px;background:#b89a6a;"><span style="color:#1c1c1c;font-size:7px;letter-spacing:1px;text-transform:uppercase;font-weight:700;">TODOS</span></div>
+        <div style="padding:3px 8px;border:1px solid #333;"><span style="color:#555;font-size:7px;letter-spacing:1px;text-transform:uppercase;">FACIALES</span></div>
+        <div style="padding:3px 8px;border:1px solid #333;"><span style="color:#555;font-size:7px;letter-spacing:1px;text-transform:uppercase;">CORPORALES</span></div>
+      </div>
+      <!-- Mini grid -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;flex:1;">
+        <div style="background:#2a2a2a;border-radius:2px;"></div>
+        <div style="background:#333;border-radius:2px;"></div>
+        <div style="background:#2a2a2a;border-radius:2px;"></div>
+        <div style="background:#333;border-radius:2px;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Showcase + Grid</h3>
+      <p>Un caso destacado grande arriba (tratamiento estrella), filtros pills, y grid de 4 columnas abajo. Jerarquiza los mejores resultados. Muy editorial.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:20px; text-align:center;">💡 Mi recomendación: <strong>C — Showcase + Grid</strong> por el impacto visual y la jerarquía editorial que refuerza el lujo de la marca</p>
