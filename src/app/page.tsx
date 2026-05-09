@@ -1,10 +1,12 @@
 import { NavBar } from "@/components/NavBar";
 import { HeroVideo } from "@/components/HeroVideo";
 import { StatsBanner } from "@/components/StatsBanner";
+import { TratamientosDestacados } from "@/components/TratamientosDestacados";
 import { ServicesPremium } from "@/components/ServicesPremium";
 import { ResultadosTeaser } from "@/components/ResultadosTeaser";
 import { DoctorSection } from "@/components/DoctorSection";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
+import InstagramSection from "@/components/InstagramSection";
 import { CTABanner } from "@/components/CTABanner";
 import { ContactPremium } from "@/components/ContactPremium";
 import { FooterPremium } from "@/components/FooterPremium";
@@ -16,10 +18,12 @@ export default function Home() {
       <NavBar />
       <HeroVideo />
       <StatsBanner />
+      <TratamientosDestacados />
       <ServicesPremium />
       <ResultadosTeaser />
       <DoctorSection />
       <ReviewsCarousel />
+      <InstagramSection />
       <CTABanner />
       <ContactPremium />
       <FooterPremium />
