@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "El ácido hialurónico es hoy uno de los tratamientos más solicitados en medicina estética — y con razón. Es seguro, versátil, con resultados inmediatos y prácticamente sin tiempo de recuperación. Pero antes de agendarte una cita, queremos que lo conozcas a fondo.",
+        text: "El ácido hialurónico es hoy uno de los tratamientos más solicitados en medicina estética — y en Medellín no es la excepción — y con razón. Es seguro, versátil, con resultados inmediatos y prácticamente sin tiempo de recuperación. Pero antes de agendarte una cita, queremos que lo conozcas a fondo.",
       },
       {
         type: "heading",
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "El procedimiento de relleno con ácido hialurónico es ambulatorio y no requiere hospitalización. En DRA.D10 seguimos un protocolo de 4 pasos:",
+        text: "El procedimiento de relleno con ácido hialurónico es ambulatorio y no requiere hospitalización. En DRA.D10, nuestra clínica en El Poblado, seguimos un protocolo de 4 pasos:",
       },
       {
         type: "list",
@@ -156,11 +156,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Una de las grandes ventajas del ácido hialurónico es que es 100% reversible. Si no quedas satisfecha con el resultado, existe una enzima llamada hialuronidasa que disuelve el filler de forma segura. En DRA.D10 este procedimiento de corrección está disponible para nuestras pacientes.",
+        text: "Una de las grandes ventajas del ácido hialurónico es que es 100% reversible. Si no quedas satisfecha con el resultado, existe una enzima llamada hialuronidasa que disuelve el filler de forma segura. En DRA.D10, nuestra clínica en El Poblado, este procedimiento de corrección está disponible para nuestras pacientes.",
       },
       {
         type: "quote",
-        text: "El ácido hialurónico bien aplicado no se ve — se siente. El objetivo siempre es realzar lo que ya tienes, nunca transformarte en otra persona.",
+        text: "El ácido hialurónico bien aplicado no se ve — se siente. El objetivo siempre es realzar lo que ya tienes, nunca transformarte en otra persona. — Dra. Daniela Díez, fundadora de DRA.D10",
       },
     ],
   },
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "El botox es el tratamiento estético más aplicado en el mundo, y también uno de los más malinterpretados. Cuando se realiza bien, nadie debería notar que te lo hiciste — solo verán que luces más descansada, más fresca. Cuando se hace mal, los resultados son los que todos conocemos: el rostro inmóvil, la mirada extraña. La diferencia está en quién lo aplica.",
+        text: "El botox es el tratamiento estético más aplicado en el mundo, y también uno de los más malinterpretados. Cuando se realiza bien, nadie debería notar que te lo hiciste — solo verán que luces más descansada, más fresca. Cuando se hace mal, los resultados son los que todos conocemos: el rostro inmóvil, la mirada extraña. La diferencia está en quién lo aplica, y en Medellín hay una diferencia enorme entre clínicas.",
       },
       {
         type: "heading",
@@ -209,11 +209,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "La cita dura entre 20 y 30 minutos. Primero hacemos una valoración facial detallada — analizamos tu anatomía, tus gestos habituales y lo que quieres lograr. Luego aplicamos el producto con agujas muy finas; la mayoría de personas describe la sensación como pequeños pinchazos casi imperceptibles. No requiere anestesia, aunque podemos aplicar crema tópica si lo prefieres.",
+        text: "La cita dura entre 20 y 30 minutos. La Dra. Daniela Díez realiza una valoración facial detallada — analizamos tu anatomía, tus gestos habituales y lo que quieres lograr. Luego aplicamos el producto con agujas muy finas en DRA.D10; la mayoría de personas describe la sensación como pequeños pinchazos casi imperceptibles. No requiere anestesia, aunque podemos aplicar crema tópica si lo prefieres.",
       },
       {
         type: "quote",
-        text: "El botox natural no 'congela' — simplemente relaja. Un médico entrenado sabe exactamente qué músculo tratar y en qué dosis para preservar tu expresión.",
+        text: "El botox natural no 'congela' — simplemente relaja. Un médico entrenado sabe exactamente qué músculo tratar y en qué dosis para preservar tu expresión. — Dra. Díez",
       },
       {
         type: "heading",
@@ -254,7 +254,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "En DRA.D10 tenemos un tratamiento que marca la diferencia: el Scanner D10 con tecnología INDIBA. No es un aparato más — es el resultado de décadas de investigación científica en radiofrecuencia profunda. Hoy es el protocolo más solicitado en nuestra clínica, y los resultados hablan por sí solos.",
+        text: "En DRA.D10, nuestra clínica de medicina estética en El Poblado, Medellín, tenemos un tratamiento que marca la diferencia: el Scanner D10 con tecnología INDIBA. No es un aparato más — es el resultado de décadas de investigación científica en radiofrecuencia profunda. Hoy es el protocolo más solicitado en nuestra clínica, y los resultados hablan por sí solos.",
       },
       {
         type: "heading",
@@ -285,11 +285,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Es uno de los tratamientos más cómodos que ofrecemos. La sensación es de calor suave y profundo — muchas pacientes lo describen como un masaje caliente muy relajante. No hay dolor, no hay agujas, no hay tiempo de recuperación. Puedes ir directamente de la sesión a tus actividades del día.",
+        text: "Es uno de los tratamientos más cómodos que ofrecemos. La sensación es de calor suave y profundo — muchas de nuestras pacientes en Medellín lo describen como un masaje caliente muy relajante. No hay dolor, no hay agujas, no hay tiempo de recuperación. Puedes ir directamente de la sesión a tus actividades del día.",
       },
       {
         type: "quote",
-        text: "La diferencia entre INDIBA y otros equipos de radiofrecuencia es que trabaja a nivel celular real — no solo calienta la superficie. Por eso los resultados se mantienen y mejoran con el tiempo.",
+        text: "La diferencia entre INDIBA y otros equipos de radiofrecuencia es que trabaja a nivel celular real — no solo calienta la superficie. Por eso los resultados se mantienen y mejoran con el tiempo. — Dra. Daniela Díez, DRA.D10 Medellín",
       },
       {
         type: "heading",
@@ -316,7 +316,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "La caída del cabello afecta la autoestima de millones de personas — hombres y mujeres. Durante años, las únicas opciones eran aprender a convivir con ella o recurrir a tratamientos temporales. Hoy, el implante capilar con técnica FUE ofrece una solución permanente con resultados completamente naturales.",
+        text: "La caída del cabello afecta la autoestima de millones de personas — hombres y mujeres. En Medellín, y especialmente en El Poblado, cada vez más personas llegan a consulta buscando una solución definitiva, no temporal. Hoy, el implante capilar con técnica FUE ofrece esa solución permanente con resultados completamente naturales.",
       },
       {
         type: "heading",
@@ -346,11 +346,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Todo empieza con una valoración capilar exhaustiva. Analizamos el grado de alopecia, la densidad de la zona donante, la calidad del folículo y tus expectativas. Si eres candidato, diseñamos el mapa de implantación — la nueva línea de nacimiento y la distribución de los injertos — de forma personalizada. El procedimiento se realiza con anestesia local y dura entre 6 y 8 horas según la cantidad de injertos.",
+        text: "Todo empieza con una valoración capilar exhaustiva. En DRA.D10 en Medellín trabajamos analizando el grado de alopecia, la densidad de la zona donante, la calidad del folículo y tus expectativas. Si eres candidato, diseñamos el mapa de implantación — la nueva línea de nacimiento y la distribución de los injertos — de forma personalizada. El procedimiento se realiza con anestesia local y dura entre 6 y 8 horas según la cantidad de injertos.",
       },
       {
         type: "quote",
-        text: "El implante capilar bien hecho es el único tratamiento capaz de devolverte el cabello de forma permanente. La clave está en la planificación — una línea de nacimiento mal diseñada puede verse artificial décadas después.",
+        text: "El implante capilar bien hecho es el único tratamiento capaz de devolverte el cabello de forma permanente. La clave está en la planificación — una línea de nacimiento mal diseñada puede verse artificial décadas después. — Dra. Díez, especialista en implante capilar en Medellín",
       },
       {
         type: "heading",
@@ -377,7 +377,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "En un mundo donde cada semana aparece una dieta nueva, un suplemento milagroso o un aparato que promete eliminar grasa sin esfuerzo, es fácil perderse. La realidad es más sencilla y más compleja al mismo tiempo: bajar de peso de forma sostenible requiere un enfoque médico integral, no atajos. Pero sí existen tratamientos que hacen que el proceso sea más eficiente, más cómodo y con mejores resultados en menos tiempo.",
+        text: "En un mundo donde cada semana aparece una dieta nueva, un suplemento milagroso o un aparato que promete eliminar grasa sin esfuerzo, es fácil perderse. En consulta en Medellín, esto es algo que vemos a diario: personas agotadas de probar atajos que no funcionan. La realidad es más sencilla y más compleja al mismo tiempo: bajar de peso de forma sostenible requiere un enfoque médico integral, no atajos. Pero sí existen tratamientos que hacen que el proceso sea más eficiente, más cómodo y con mejores resultados en menos tiempo.",
       },
       {
         type: "heading",
@@ -393,7 +393,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Los tratamientos estéticos no reemplazan una alimentación adecuada ni el movimiento. Pero sí son grandes aliados cuando se usan de forma complementaria. En DRA.D10 trabajamos con protocolos que atacan la grasa localizada, mejoran la circulación, drenan líquidos retenidos y firman la piel a medida que el peso baja.",
+        text: "Los tratamientos estéticos no reemplazan una alimentación adecuada ni el movimiento. Pero sí son grandes aliados cuando se usan de forma complementaria. En DRA.D10 Medellín trabajamos con protocolos que atacan la grasa localizada, mejoran la circulación, drenan líquidos retenidos y firman la piel a medida que el peso baja.",
       },
       {
         type: "list",
@@ -414,7 +414,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "El cuerpo que pierde peso bien acompañado lo pierde de forma duradera. No se trata de bajar rápido — se trata de bajar bien, preservando el músculo, firmando la piel y manteniendo la energía.",
+        text: "El cuerpo que pierde peso bien acompañado lo pierde de forma duradera. No se trata de bajar rápido — se trata de bajar bien, preservando el músculo, firmando la piel y manteniendo la energía. — Dra. Daniela Díez",
       },
       {
         type: "heading",
@@ -446,7 +446,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "El implante capilar es uno de los procedimientos con más información incorrecta en internet. Desde videos de resultados falsos hasta testimonios de clínicas sin certificación, el tema está lleno de ruido. Hoy vamos a cortar por lo sano: mito por mito, con la realidad médica detrás de cada uno.",
+        text: "El implante capilar es uno de los procedimientos con más información incorrecta en internet, especialmente en Colombia y Medellín, donde la demanda crece rápido. Desde videos de resultados falsos hasta testimonios de clínicas sin certificación, el tema está lleno de ruido. Hoy vamos a cortar por lo sano: mito por mito, con la realidad médica detrás de cada uno.",
       },
       {
         type: "heading",
@@ -510,11 +510,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Realidad: Este es el mito más peligroso. El implante capilar es una cirugía. La diferencia entre un resultado natural y uno que 'se nota' está completamente en la habilidad y el criterio estético del médico. Busca siempre un profesional certificado y desconfía de precios muy por debajo del mercado.",
+        text: "Realidad: Este es el mito más peligroso. El implante capilar es una cirugía. La diferencia entre un resultado natural y uno que 'se nota' está completamente en la habilidad y el criterio estético del médico. Busca siempre un profesional certificado y desconfía de precios muy por debajo del mercado. En DRA.D10 Medellín, la Dra. Daniela Díez es médica certificada con formación internacional en implante capilar.",
       },
       {
         type: "quote",
-        text: "Un implante capilar bien hecho es el mejor secreto que puedes tener. Nadie debería saber que te lo hiciste — solo verán que luces mejor.",
+        text: "Un implante capilar bien hecho es el mejor secreto que puedes tener. Nadie debería saber que te lo hiciste — solo verán que luces mejor. — Dra. Díez, DRA.D10",
       },
     ],
   },
@@ -533,7 +533,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "Acabas de salir de tu sesión de relleno labial y tus labios se ven un poco inflamados, tal vez asimétricos, quizás con un pequeño hematoma. Tranquila — es completamente normal y temporal. Los primeros días son los más importantes para garantizar un resultado final bonito, natural y duradero.",
+        text: "Acabas de salir de tu sesión de relleno labial y tus labios se ven un poco inflamados, tal vez asimétricos, quizás con un pequeño hematoma. Tranquila — es completamente normal y temporal. Los primeros días son los más importantes para garantizar un resultado final bonito, natural y duradero. Esto es lo que le decimos a cada paciente en nuestra clínica de El Poblado, Medellín.",
       },
       {
         type: "heading",
@@ -551,7 +551,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "heading",
-        text: "Lo que SÍ debes hacer",
+        text: "La Dra. Díez recomienda: Lo que SÍ debes hacer",
       },
       {
         type: "list",
@@ -580,7 +580,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "Si al día siguiente no te gustan tus labios, respira. La inflamación puede hacer que el resultado se vea muy diferente al final. Espera 2 semanas antes de juzgar.",
+        text: "Si al día siguiente no te gustan tus labios, respira. La inflamación puede hacer que el resultado se vea muy diferente al final. Espera 2 semanas antes de juzgar. — consejo del equipo de DRA.D10 Medellín",
       },
       {
         type: "heading",
@@ -615,7 +615,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "Pocas palabras en medicina estética generan tanto debate como 'botox'. Un día sale una celebridad con la cara inmóvil y todos culpan al botox. Al día siguiente, otra luce radiante y natural, y nadie menciona que probablemente también se lo aplica. El problema no es el producto — es la desinformación.",
+        text: "Pocas palabras en medicina estética generan tanto debate como 'botox'. Un día sale una celebridad con la cara inmóvil y todos culpan al botox. Al día siguiente, otra luce radiante y natural, y nadie menciona que probablemente también se lo aplica. El problema no es el producto — es la desinformación. Y en Medellín, donde la medicina estética crece rápido, este ruido es aún más alto.",
       },
       {
         type: "heading",
@@ -623,7 +623,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Realidad: El efecto 'cara de plástico' no es una consecuencia inevitable del tratamiento — es el resultado de una mala aplicación. Dosis excesivas, puntos incorrectos, técnica inadecuada. El botox bien aplicado relaja músculos específicos de forma sutil y conserva la expresividad natural.",
+        text: "Realidad: El efecto 'cara de plástico' no es una consecuencia inevitable del tratamiento — es el resultado de una mala aplicación. Dosis excesivas, puntos incorrectos, técnica inadecuada. En DRA.D10, la Dra. Daniela Díez aplica botox con un enfoque de resultados naturales: el botox bien aplicado relaja músculos específicos de forma sutil y conserva la expresividad natural.",
       },
       {
         type: "heading",
@@ -675,7 +675,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "El botox no te hace ver diferente — te hace ver como tú, pero más descansada. Eso es lo que buscamos siempre: que el resultado te sume sin restar nada de lo que ya eres.",
+        text: "El botox no te hace ver diferente — te hace ver como tú, pero más descansada. Eso es lo que buscamos siempre: que el resultado te sume sin restar nada de lo que ya eres. — Dra. Daniela Díez, DRA.D10 El Poblado, Medellín",
       },
     ],
   },
