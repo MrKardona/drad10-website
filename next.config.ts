@@ -45,9 +45,10 @@ const nextConfig: NextConfig = {
   images: {
     // Serve AVIF first (30-40% smaller than WebP), WebP as fallback.
     formats: ["image/avif", "image/webp"],
-    // Cache optimized images for 7 days to avoid repeated optimization work.
+    // Cache optimized images for 31 days to avoid repeated optimization work
+    // (site images rarely change).
     // Note: quality is set per <Image quality={80}> — not a global config.
-    minimumCacheTTL: 604800,
+    minimumCacheTTL: 2678400,
     // Standard responsive breakpoints — matches Tailwind's default screens.
     deviceSizes: [640, 828, 1080, 1200, 1920],
     remotePatterns: [
