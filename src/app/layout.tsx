@@ -93,7 +93,7 @@ const schemaData = {
   image: "https://drad10.com/logo.svg",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5.0",
+    ratingValue: "4.9",
     reviewCount: "227",
     bestRating: "5",
   },
