@@ -7,10 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FRAME_COUNT = 224;
+const FRAME_COUNT = 112;
 
-function src(i: number) {
-  return `/frames/ezgif-frame-${(i + 1).toString().padStart(3, "0")}.jpg`;
+// Two pre-generated WebP sets (scripts/convert-frames.mjs):
+// /frames/d → 1280w for desktop, /frames/m → 640w for mobile.
+function src(i: number, mobile: boolean) {
+  const dir = mobile ? "m" : "d";
+  return `/frames/${dir}/frame-${(i + 1).toString().padStart(3, "0")}.webp`;
 }
 
 function clamp01(v: number) {
@@ -53,23 +56,45 @@ export function ScrollVideoSection() {
     ctx.drawImage(img, (cw - iw * s) / 2, (ch - ih * s) / 2, iw * s, ih * s);
   }, []);
 
-  /* ─── preload ─── */
+  /* ─── preload (lazy: solo cuando la sección está a un viewport de distancia) ─── */
   useEffect(() => {
-    let done = 0;
-    const imgs: HTMLImageElement[] = new Array(FRAME_COUNT);
-    framesRef.current = imgs;
-    for (let i = 0; i < FRAME_COUNT; i++) {
-      const img = new Image();
-      img.src = src(i);
-      const finish = () => {
-        done++;
-        setPct(Math.round((done / FRAME_COUNT) * 100));
-        if (done === FRAME_COUNT) { setLoaded(true); draw(0); }
-      };
-      img.onload = finish;
-      img.onerror = finish;
-      imgs[i] = img;
-    }
+    const container = containerRef.current;
+    if (!container) return;
+
+    let started = false;
+    const startPreload = () => {
+      if (started) return;
+      started = true;
+      const mobile = window.innerWidth < 768;
+      let done = 0;
+      const imgs: HTMLImageElement[] = new Array(FRAME_COUNT);
+      framesRef.current = imgs;
+      for (let i = 0; i < FRAME_COUNT; i++) {
+        const img = new Image();
+        img.src = src(i, mobile);
+        const finish = () => {
+          done++;
+          setPct(Math.round((done / FRAME_COUNT) * 100));
+          if (done === FRAME_COUNT) { setLoaded(true); draw(0); }
+        };
+        img.onload = finish;
+        img.onerror = finish;
+        imgs[i] = img;
+      }
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          startPreload();
+          io.disconnect();
+        }
+      },
+      // Empieza a cargar un viewport antes de que la sección entre en pantalla.
+      { rootMargin: "100% 0px" },
+    );
+    io.observe(container);
+    return () => io.disconnect();
   }, [draw]);
 
   /* ─── canvas resize ─── */
