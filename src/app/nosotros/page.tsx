@@ -692,7 +692,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Items */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem" }}>
               {credentials.map((cred, i) => {
                 const isLeft = i % 2 === 0;
                 return (
@@ -722,9 +722,9 @@ export default function NosotrosPage() {
                         <span
                           style={{
                             fontFamily: "var(--font-display), Georgia, serif",
-                            fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)",
+                            fontSize: "clamp(2.1rem, 3.2vw, 2.8rem)",
                             fontWeight: 300,
-                            color: "rgba(184,154,106,0.55)",
+                            color: "#b89a6a",
                             lineHeight: 1,
                             letterSpacing: "-0.04em",
                             display: "block",
@@ -739,13 +739,13 @@ export default function NosotrosPage() {
                             backgroundColor: "#f4ede6",
                             border: "1px solid rgba(184,154,106,0.18)",
                             borderRight: "3px solid #b89a6a",
-                            padding: "12px 16px",
+                            padding: "22px 26px",
                           }}
                         >
                           <p
                             style={{
                               fontFamily: "var(--font-display), Georgia, serif",
-                              fontSize: "1rem",
+                              fontSize: "1.25rem",
                               fontWeight: 400,
                               color: "#1c1c1c",
                               marginBottom: "4px",
@@ -756,8 +756,8 @@ export default function NosotrosPage() {
                           <p
                             style={{
                               fontFamily: "var(--font-body)",
-                              fontSize: "0.75rem",
-                              color: "#888580",
+                              fontSize: "0.88rem",
+                              color: "#6f6b66",
                               lineHeight: 1.6,
                               marginBottom: "8px",
                             }}
@@ -767,12 +767,12 @@ export default function NosotrosPage() {
                           <span
                             style={{
                               fontFamily: "var(--font-body)",
-                              fontSize: "0.55rem",
+                              fontSize: "0.64rem",
                               letterSpacing: "0.2em",
                               textTransform: "uppercase",
                               color: "#b89a6a",
                               border: "1px solid rgba(184,154,106,0.3)",
-                              padding: "2px 8px",
+                              padding: "4px 12px",
                             }}
                           >
                             {cred.country}
@@ -819,9 +819,9 @@ export default function NosotrosPage() {
                           <span
                             style={{
                               fontFamily: "var(--font-display), Georgia, serif",
-                              fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)",
+                              fontSize: "clamp(2.1rem, 3.2vw, 2.8rem)",
                               fontWeight: 300,
-                              color: "rgba(184,154,106,0.55)",
+                              color: "#b89a6a",
                               lineHeight: 1,
                               letterSpacing: "-0.04em",
                               display: "block",
@@ -836,13 +836,13 @@ export default function NosotrosPage() {
                               backgroundColor: "#f4ede6",
                               border: "1px solid rgba(184,154,106,0.18)",
                               borderLeft: "3px solid #b89a6a",
-                              padding: "12px 16px",
+                              padding: "22px 26px",
                             }}
                           >
                             <p
                               style={{
                                 fontFamily: "var(--font-display), Georgia, serif",
-                                fontSize: "1rem",
+                                fontSize: "1.25rem",
                                 fontWeight: 400,
                                 color: "#1c1c1c",
                                 marginBottom: "4px",
@@ -853,8 +853,8 @@ export default function NosotrosPage() {
                             <p
                               style={{
                                 fontFamily: "var(--font-body)",
-                                fontSize: "0.75rem",
-                                color: "#888580",
+                                fontSize: "0.88rem",
+                                color: "#6f6b66",
                                 lineHeight: 1.6,
                                 marginBottom: "8px",
                               }}
@@ -864,7 +864,7 @@ export default function NosotrosPage() {
                             <span
                               style={{
                                 fontFamily: "var(--font-body)",
-                                fontSize: "0.55rem",
+                                fontSize: "0.64rem",
                                 letterSpacing: "0.2em",
                                 textTransform: "uppercase",
                                 color: "#b89a6a",
@@ -887,11 +887,12 @@ export default function NosotrosPage() {
 
         <style>{`
           .timeline-card {
+            box-shadow: 0 6px 22px rgba(28, 28, 28, 0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
           }
           .timeline-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 14px 34px rgba(28, 28, 28, 0.09);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 44px rgba(28, 28, 28, 0.12);
           }
           @media (max-width: 640px) {
             .hidden-mobile { display: none !important; }
