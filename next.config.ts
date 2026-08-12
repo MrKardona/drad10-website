@@ -2,16 +2,27 @@ import type { NextConfig } from "next";
 
 const SUPABASE_HOST = "igijeqhyppvpennjdkiu.supabase.co";
 
-// CSP is now generated dynamically in src/middleware.ts so every response
-// carries a fresh nonce — this eliminates unsafe-inline and unsafe-eval.
-// This static string is kept only as a reference / fallback comment.
-//
-// const csp = [ ... ] — see middleware.ts
+// Static CSP. The previous per-request nonce (src/proxy.ts) forced every
+// page into dynamic SSR — one function invocation per pageview and zero CDN
+// caching. A static header lets Next prerender the whole site. Trade-off:
+// script-src needs 'unsafe-inline' for Next's bootstrap scripts.
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com`,
+  "font-src 'self'",
+  `connect-src 'self' https://${SUPABASE_HOST}`,
+  "frame-src https://www.youtube-nocookie.com",
+  "frame-ancestors 'none'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
 
-// Content-Security-Policy is intentionally absent here.
-// It is set dynamically per-request by src/middleware.ts with a nonce,
-// which removes unsafe-inline and unsafe-eval from script-src.
 const securityHeaders = [
+  { key: "Content-Security-Policy", value: csp },
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "X-Content-Type-Options", value: "nosniff" },
