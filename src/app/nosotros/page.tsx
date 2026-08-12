@@ -625,7 +625,7 @@ export default function NosotrosPage() {
         className="nos-timeline"
         style={{
           backgroundColor: "#faf8f5",
-          padding: "clamp(72px, 12vw, 140px) 0",
+          padding: "clamp(48px, 7vw, 80px) 0",
         }}
       >
         <div
@@ -636,7 +636,7 @@ export default function NosotrosPage() {
           }}
         >
           {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: "5rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <p data-anim="up" className="section-label" style={{ marginBottom: "1rem" }}>
               FORMACIÓN ACADÉMICA
             </p>
@@ -692,7 +692,7 @@ export default function NosotrosPage() {
             </div>
 
             {/* Items */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
               {credentials.map((cred, i) => {
                 const isLeft = i % 2 === 0;
                 return (
@@ -722,9 +722,9 @@ export default function NosotrosPage() {
                         <span
                           style={{
                             fontFamily: "var(--font-display), Georgia, serif",
-                            fontSize: "clamp(3rem, 5vw, 4.5rem)",
+                            fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)",
                             fontWeight: 300,
-                            color: "rgba(184,154,106,0.18)",
+                            color: "rgba(184,154,106,0.55)",
                             lineHeight: 1,
                             letterSpacing: "-0.04em",
                             display: "block",
@@ -739,7 +739,7 @@ export default function NosotrosPage() {
                             backgroundColor: "#f4ede6",
                             border: "1px solid rgba(184,154,106,0.18)",
                             borderRight: "3px solid #b89a6a",
-                            padding: "16px 20px",
+                            padding: "12px 16px",
                           }}
                         >
                           <p
@@ -819,9 +819,9 @@ export default function NosotrosPage() {
                           <span
                             style={{
                               fontFamily: "var(--font-display), Georgia, serif",
-                              fontSize: "clamp(3rem, 5vw, 4.5rem)",
+                              fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)",
                               fontWeight: 300,
-                              color: "rgba(184,154,106,0.18)",
+                              color: "rgba(184,154,106,0.55)",
                               lineHeight: 1,
                               letterSpacing: "-0.04em",
                               display: "block",
@@ -836,7 +836,7 @@ export default function NosotrosPage() {
                               backgroundColor: "#f4ede6",
                               border: "1px solid rgba(184,154,106,0.18)",
                               borderLeft: "3px solid #b89a6a",
-                              padding: "16px 20px",
+                              padding: "12px 16px",
                             }}
                           >
                             <p
