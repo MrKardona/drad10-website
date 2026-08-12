@@ -94,7 +94,7 @@ const schemaData = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "227",
+    reviewCount: "266",
     bestRating: "5",
   },
 } as const;

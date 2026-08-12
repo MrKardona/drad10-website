@@ -45,7 +45,7 @@ const reviews: Review[] = [
 
 // ─── Datos del perfil de Google (Clínica Quantum, El Poblado) ──────────────
 const GOOGLE_RATING = 4.9;
-const GOOGLE_REVIEW_COUNT = 227; // TODO: confirmar número real de reseñas
+const GOOGLE_REVIEW_COUNT = 266;
 const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/dtwj4zv9ayygTz8NA";
 
 function StarRating({ rating, size = 16 }: { rating: number; size?: number }) {
