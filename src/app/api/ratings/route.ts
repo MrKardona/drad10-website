@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { rateLimit, getIP } from "@/lib/rate-limit";
 
 const SLUG_RE = /^[a-z0-9-]{1,100}$/;
@@ -27,7 +27,7 @@ export async function GET(req: NextRequest) {
   if (!slug || !SLUG_RE.test(slug))
     return NextResponse.json({ error: "slug inválido" }, { status: 400 });
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from("blog_ratings")
     .select("rating")
     .eq("slug", slug);
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
   if (hasVoted(ip, slug))
     return NextResponse.json({ error: "Ya valoraste este artículo." }, { status: 409 });
 
-  const { error } = await supabase
+  const { error } = await getSupabase()
     .from("blog_ratings")
     .insert({ slug, rating });
 

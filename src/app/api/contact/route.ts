@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { rateLimit, getIP } from "@/lib/rate-limit";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
   const cleanTratamiento =
     typeof tratamiento === "string" ? stripTags(tratamiento.trim()) : null;
 
-  const { error } = await supabase.from("contact_submissions").insert({
+  const { error } = await getSupabase().from("contact_submissions").insert({
     nombre: cleanNombre,
     telefono: telefono.trim(),
     correo: correo.trim().toLowerCase(),
