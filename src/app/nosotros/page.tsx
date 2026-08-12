@@ -306,6 +306,8 @@ export default function NosotrosPage() {
             .nos-team-card,
             .nos-quote-word,
             .nos-stat-card,
+            .timeline-row,
+            .timeline-card,
             .opacity-0 {
               opacity: 1 !important;
               transform: none !important;
@@ -696,21 +698,22 @@ export default function NosotrosPage() {
                 return (
                   <div
                     key={`${cred.year}-${i}`}
-                    data-anim={isLeft ? "left" : "right"}
+                    data-side={isLeft ? "left" : "right"}
                     style={{
                       display: "grid",
                       gridTemplateColumns: "1fr 32px 1fr",
                       gap: 0,
                       alignItems: "center",
+                      opacity: 0,
                     }}
                     className="timeline-row"
                   >
-                    {/* Left cell */}
+                    {/* Left cell — siempre columna 1; solo lleva tarjeta en filas pares */}
                     <div
                       style={{
                         paddingRight: "2rem",
-                        textAlign: isLeft ? "right" : "left",
-                        gridColumn: isLeft ? 1 : 3,
+                        textAlign: "right",
+                        gridColumn: 1,
                         gridRow: 1,
                       }}
                     >
@@ -802,12 +805,12 @@ export default function NosotrosPage() {
                       />
                     </div>
 
-                    {/* Right cell */}
+                    {/* Right cell — siempre columna 3; solo lleva tarjeta en filas impares */}
                     <div
                       style={{
                         paddingLeft: "2rem",
-                        textAlign: isLeft ? "right" : "left",
-                        gridColumn: isLeft ? 3 : 1,
+                        textAlign: "left",
+                        gridColumn: 3,
                         gridRow: 1,
                       }}
                     >

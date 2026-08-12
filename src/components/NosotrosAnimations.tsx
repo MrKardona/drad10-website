@@ -72,6 +72,71 @@ export function NosotrosAnimations() {
         );
       }
 
+      // ── 3b. Timeline rows: entrada alternada lado a lado, BIDIRECCIONAL ──
+      // toggleActions "play reverse play reverse" repite la animación tanto
+      // al bajar como al devolverse en el scroll.
+      const rows = gsap.utils.toArray<HTMLElement>(".timeline-row");
+      rows.forEach((row) => {
+        const fromLeft = row.dataset.side === "left";
+        const card = row.querySelector(".timeline-card");
+        const dot = row.querySelector(".timeline-dot > div");
+
+        gsap.fromTo(
+          row,
+          { opacity: 0, x: fromLeft ? -72 : 72, filter: "blur(5px)" },
+          {
+            opacity: 1,
+            x: 0,
+            filter: "blur(0px)",
+            duration: 0.95,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: row,
+              start: "top 86%",
+              toggleActions: "play reverse play reverse",
+            },
+          }
+        );
+
+        if (card) {
+          gsap.fromTo(
+            card,
+            { opacity: 0, y: 26, rotateY: fromLeft ? 6 : -6 },
+            {
+              opacity: 1,
+              y: 0,
+              rotateY: 0,
+              duration: 0.85,
+              delay: 0.12,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: row,
+                start: "top 86%",
+                toggleActions: "play reverse play reverse",
+              },
+            }
+          );
+        }
+
+        if (dot) {
+          gsap.fromTo(
+            dot,
+            { scale: 0 },
+            {
+              scale: 1,
+              duration: 0.55,
+              delay: 0.2,
+              ease: "back.out(2.4)",
+              scrollTrigger: {
+                trigger: row,
+                start: "top 86%",
+                toggleActions: "play reverse play reverse",
+              },
+            }
+          );
+        }
+      });
+
       // ── 4. Filosofía cards: stagger up ───────────────────────────────
       const cards = document.querySelectorAll(".nos-filosofia-card");
       if (cards.length) {
