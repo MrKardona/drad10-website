@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 /* ─── Types ─── */
 interface FAQItem {
@@ -59,6 +59,14 @@ interface AccordionItemProps {
 function AccordionItem({ item, isOpen, onToggle }: AccordionItemProps) {
   const answerRef = useRef<HTMLDivElement>(null);
 
+  // Medir scrollHeight en el DOM directamente: leer la ref durante el render
+  // rompe la regla react-hooks/refs y con contenido dinámico quedaría desfasado.
+  useEffect(() => {
+    const el = answerRef.current;
+    if (!el) return;
+    el.style.maxHeight = isOpen ? `${el.scrollHeight}px` : "0px";
+  }, [isOpen]);
+
   return (
     <div
       className="border-b"
@@ -109,11 +117,7 @@ function AccordionItem({ item, isOpen, onToggle }: AccordionItemProps) {
         ref={answerRef}
         role="region"
         style={{
-          maxHeight: isOpen
-            ? answerRef.current
-              ? `${answerRef.current.scrollHeight}px`
-              : "600px"
-            : "0px",
+          maxHeight: "0px",
           overflow: "hidden",
           transition: "max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1)",
         }}

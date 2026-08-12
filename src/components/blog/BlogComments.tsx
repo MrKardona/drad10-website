@@ -45,7 +45,22 @@ export function BlogComments({ slug }: { slug: string }) {
     setLoading(false);
   }
 
-  useEffect(() => { loadComments(); }, [slug]);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/comments?slug=${slug}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled) return;
+        setComments(Array.isArray(data) ? data : []);
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

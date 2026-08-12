@@ -21,12 +21,12 @@ export default function Home() {
       <NavBar />
       <HeroVideo />
       <StatsBanner />
+      <DoctorSection />
       <ScrollVideoSection />
       <ReviewsCarousel />
       <TratamientosDestacados />
       <ServicesPremium />
       <ResultadosTeaser />
-      <DoctorSection />
       <InstagramSection />
       <FAQSection />
       <SedesSection />

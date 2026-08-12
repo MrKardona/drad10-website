@@ -13,21 +13,23 @@ export function BlogRating({ slug }: { slug: string }) {
   const storageKey = `drad10_rated_${slug}`;
 
   useEffect(() => {
-    // Check if user already voted
     const saved = localStorage.getItem(storageKey);
-    if (saved) {
-      setUserRating(parseInt(saved));
-      setSubmitted(true);
-    }
-    // Fetch stats from API
+    // Todos los setState ocurren en callbacks async (nunca síncronos en el
+    // efecto) para no disparar renders en cascada durante la hidratación.
     fetch(`/api/ratings?slug=${slug}`)
       .then((r) => r.json())
       .then((d) => {
         setAverage(d.average ?? "0.0");
         setCount(d.count ?? 0);
-        setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {})
+      .finally(() => {
+        if (saved) {
+          setUserRating(parseInt(saved));
+          setSubmitted(true);
+        }
+        setLoading(false);
+      });
   }, [slug, storageKey]);
 
   async function handleRate(star: number) {

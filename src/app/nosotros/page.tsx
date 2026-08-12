@@ -243,7 +243,7 @@ export default function NosotrosPage() {
 
           {/* Stats */}
           <div
-            className="opacity-0 animate-fade-up delay-400"
+            className="opacity-0 animate-fade-up delay-400 nos-hero-stats"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -294,6 +294,25 @@ export default function NosotrosPage() {
             ))}
           </div>
         </div>
+
+        {/* Responsive + reduced-motion fallbacks */}
+        <style>{`
+          @media (max-width: 560px) {
+            .nos-hero-stats { grid-template-columns: 1fr !important; }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            [data-anim],
+            .nos-filosofia-card,
+            .nos-team-card,
+            .nos-quote-word,
+            .nos-stat-card,
+            .opacity-0 {
+              opacity: 1 !important;
+              transform: none !important;
+            }
+            .nos-photo-clip { clip-path: none !important; }
+          }
+        `}</style>
 
         {/* ── Marquee band ── */}
         <div
@@ -695,22 +714,24 @@ export default function NosotrosPage() {
                         gridRow: 1,
                       }}
                     >
-                      <span
-                        style={{
-                          fontFamily: "var(--font-display), Georgia, serif",
-                          fontSize: "clamp(3rem, 5vw, 4.5rem)",
-                          fontWeight: 300,
-                          color: "rgba(184,154,106,0.18)",
-                          lineHeight: 1,
-                          letterSpacing: "-0.04em",
-                          display: "block",
-                          marginBottom: "4px",
-                        }}
-                      >
-                        {cred.year}
-                      </span>
                       {isLeft && (
+                        <>
+                        <span
+                          style={{
+                            fontFamily: "var(--font-display), Georgia, serif",
+                            fontSize: "clamp(3rem, 5vw, 4.5rem)",
+                            fontWeight: 300,
+                            color: "rgba(184,154,106,0.18)",
+                            lineHeight: 1,
+                            letterSpacing: "-0.04em",
+                            display: "block",
+                            marginBottom: "4px",
+                          }}
+                        >
+                          {cred.year}
+                        </span>
                         <div
+                          className="timeline-card"
                           style={{
                             backgroundColor: "#f4ede6",
                             border: "1px solid rgba(184,154,106,0.18)",
@@ -754,6 +775,7 @@ export default function NosotrosPage() {
                             {cred.country}
                           </span>
                         </div>
+                        </>
                       )}
                     </div>
 
@@ -806,6 +828,7 @@ export default function NosotrosPage() {
                             {cred.year}
                           </span>
                           <div
+                            className="timeline-card"
                             style={{
                               backgroundColor: "#f4ede6",
                               border: "1px solid rgba(184,154,106,0.18)",
@@ -860,6 +883,13 @@ export default function NosotrosPage() {
         </div>
 
         <style>{`
+          .timeline-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          .timeline-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 34px rgba(28, 28, 28, 0.09);
+          }
           @media (max-width: 640px) {
             .hidden-mobile { display: none !important; }
             .timeline-dot { display: none !important; }
@@ -873,6 +903,7 @@ export default function NosotrosPage() {
               padding-right: 0 !important;
               text-align: left !important;
             }
+            .timeline-row > div:empty { display: none; }
           }
         `}</style>
       </section>
@@ -1404,6 +1435,8 @@ export default function NosotrosPage() {
         </div>
 
         <style>{`
+          .nos-team-card { transition: background-color 0.3s ease; }
+          .nos-team-card:hover { background-color: #202020; }
           @media (max-width: 900px) {
             .nos-equipo-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
