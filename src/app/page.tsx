@@ -22,11 +22,11 @@ export default function Home() {
       <HeroVideo />
       <StatsBanner />
       <ScrollVideoSection />
+      <ReviewsCarousel />
       <TratamientosDestacados />
       <ServicesPremium />
       <ResultadosTeaser />
       <DoctorSection />
-      <ReviewsCarousel />
       <InstagramSection />
       <FAQSection />
       <SedesSection />
