@@ -9,37 +9,37 @@ interface Review {
   text: string;
 }
 
-// ─── RESEÑAS — PROVISIONALES, reemplazar con las reales de Google ──────────
+// ─── Reseñas reales del perfil de Google (Clínica Quantum) ─────────────────
 const reviews: Review[] = [
   {
-    name: "María Camila R.",
-    date: "Junio 14, 2026",
+    name: "Camilo López Posada",
+    date: "Hace 8 meses",
     rating: 5,
-    text: "El resultado fue increíble y completamente natural. La Dra. Díez me explicó todo el proceso y me hizo sentir muy segura. Sin duda volvería.",
+    text: "La mejor clínica, una atención demasiado increíble, muy buen equipo de trabajo (altamente capacitado) y estoy muy feliz con mi proceso. SUPER RECOMENDADO.",
   },
   {
-    name: "Valentina S.",
-    date: "Mayo 28, 2026",
+    name: "Karen Siachoque",
+    date: "Hace 3 meses",
     rating: 5,
-    text: "Llevaba años buscando una solución para mi cabello. En DRAD10 encontré no solo el tratamiento sino una atención cálida y profesional. 100% recomendado.",
+    text: "Mi experiencia en la clínica Quantum fue increíble. Destaco la calidad humana de todo el equipo, su paciencia y el amor con el que tratan a cada persona. Realmente hacen sentir confianza y bienestar desde el primer momento. ¡Totalmente recomendado!",
   },
   {
-    name: "Juliana M.",
-    date: "Mayo 9, 2026",
+    name: "Manuela Gomez",
+    date: "Hace 3 meses",
     rating: 5,
-    text: "Después de la primera sesión ya noté la diferencia. Mi piel se veía más luminosa y firme. El equipo es muy profesional y el espacio precioso.",
+    text: "La atención es increíble, se siente súper cálida y familiar. Todo el equipo es muy atento y hace que uno se sienta en confianza desde el primer momento. Se nota el amor y la dedicación en lo que hacen. ¡Súper recomendada! La Dra Daniela es una crack! 😍",
   },
   {
-    name: "Andrea P.",
-    date: "Abril 22, 2026",
+    name: "Antonia Aguirre",
+    date: "Hace un año",
     rating: 5,
-    text: "Fui por primera vez y me enamoré del lugar. La Dra. Daniela es muy detallada y honesta con lo que realmente necesitas. Nada de venderte lo que no es.",
+    text: "La experiencia fue INCREÍBLE, la atención me encantó. El precio fue super bueno para todo lo que me hicieron. Manejan super buena tecnología, son innovadores y tienen la mejor calidad. Son tan buenos que me voy a traer a mi hermana y a mi novio porque la verdad SUPER recomendado.",
   },
   {
-    name: "Tatiana L.",
-    date: "Abril 3, 2026",
+    name: "Catalina Serra",
+    date: "Hace 2 años",
     rating: 5,
-    text: "El tratamiento capilar superó mis expectativas. Resultados visibles desde la segunda sesión. El equipo te hace sentir como en casa desde el primer momento.",
+    text: "Es muy profesional en la asesoría de cada procedimiento a realizar en sus pacientes de acuerdo a sus necesidades estéticas, y mezclado con su calidez en el trato hace que la Dra tenga asertividad al ejercer sus labores médicas.",
   },
 ];
 
