@@ -404,6 +404,102 @@ export function TratamientosDestacados() {
         </div>
         {/* END Block B */}
 
+        {/* ════════════════════════════════════════════
+            BLOCK C — Three new treatments
+════════════════════════════════════════════ */}
+<div
+  className="flex flex-col md:flex-row gap-4 mt-4"
+>
+  {/* Limpiezas Faciales */}
+  <div
+    data-anim="up"
+    className="relative overflow-hidden flex flex-col group"
+    style={{ backgroundColor: "#f4ede6", flex: "1" }}
+  >
+    <div className="relative overflow-hidden" style={{ height: "220px" }}>
+      <img
+        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=300&fit=crop&crop=center"
+        alt="Limpiezas Faciales — protocolo profundo"
+        style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+      />
+    </div>
+    <div className="flex flex-col justify-end flex-1 px-7 py-8">
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#1c1c1c", opacity: 0.45, fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
+        FACIALES
+      </p>
+      <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, color: "#1c1c1c", letterSpacing: "-0.02em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
+        Limpiezas<br />Faciales
+      </h3>
+      <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.55)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
+        Limpieza profunda, extracción y nutrición personalizada para una piel sana, luminosa y equilibrada.
+      </p>
+      <a href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20limpiezas%20faciales" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/fl">
+        Consultar <span style={{ transition: "transform 0.3s" }} className="group-hover/fl:translate-x-1 inline-block">→</span>
+      </a>
+    </div>
+  </div>
+
+  {/* Recuperación Capilar */}
+  <div
+    data-anim="up"
+    className="relative overflow-hidden flex flex-col group"
+    style={{ backgroundColor: "#1c1c1c", flex: "1" }}
+  >
+    <div className="relative overflow-hidden" style={{ height: "220px" }}>
+      <img
+        src="https://images.unsplash.com/photo-1612908773990-5ac37a0e65c4?w=500&h=300&fit=crop&crop=center"
+        alt="Recuperación Capilar — PRP y exosomas"
+        style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.7)", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+      />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #1c1c1c 0%, transparent 60%)" }} />
+    </div>
+    <div className="flex flex-col justify-end flex-1 px-7 py-8">
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#b89a6a", fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
+        CAPILARES
+      </p>
+      <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, color: "#faf8f5", letterSpacing: "-0.02em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
+        Recuperación<br />Capilar
+      </h3>
+      <p style={{ fontFamily: "var(--font-body)", color: "rgba(250,248,245,0.45)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
+        PRP, exosomas y mesoterapia capilar para frenar la caída y estimular el crecimiento natural.
+      </p>
+      <a href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20recuperación%20capilar" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-70 group/rc">
+        Solicitar valoración <span style={{ transition: "transform 0.3s" }} className="group-hover/rc:translate-x-1 inline-block">→</span>
+      </a>
+    </div>
+  </div>
+
+  {/* Descenso de Peso */}
+  <div
+    data-anim="up"
+    className="relative overflow-hidden flex flex-col group"
+    style={{ backgroundColor: "#b89a6a", flex: "1" }}
+  >
+    <div className="relative overflow-hidden" style={{ height: "220px" }}>
+      <img
+        src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop&crop=center"
+        alt="Descenso de Peso — tratamiento médico"
+        style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.35, transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+      />
+    </div>
+    <div className="flex flex-col justify-end flex-1 px-7 py-8">
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "rgba(28,28,28,0.55)", fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
+        CORPORALES
+      </p>
+      <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, color: "#1c1c1c", letterSpacing: "-0.02em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
+        Descenso<br />de Peso
+      </h3>
+      <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.65)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
+        Protocolo médico supervisado, personalizado y seguro para reducción de peso con resultados sostenibles.
+      </p>
+      <a href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20descenso%20de%20peso" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/dp">
+        Ver protocolo <span style={{ transition: "transform 0.3s" }} className="group-hover/dp:translate-x-1 inline-block">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+{/* END Block C */}
+
       </div>
     </section>
   );

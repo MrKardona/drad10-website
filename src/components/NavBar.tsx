@@ -20,44 +20,64 @@ const nav: NavItem[] = [
       { label: "Ácido Hialurónico", href: "/#faciales" },
       { label: "Hilos Tensores", href: "/#faciales" },
       { label: "Bioestimuladores de Colágeno", href: "/#faciales" },
+      { label: "Limpiezas Faciales", href: "/#faciales" },
       { label: "Enzimas", href: "/#faciales" },
       { label: "Peeling", href: "/#faciales" },
       { label: "Cauterización", href: "/#faciales" },
       { label: "Microagujas Faciales", href: "/#faciales" },
       { label: "Nanopore", href: "/#faciales" },
       { label: "Tratamiento para manchas", href: "/#faciales" },
+      { label: "Rinofiller", href: "/#faciales" },
+      { label: "Relleno de Labios", href: "/#faciales" },
+      { label: "Relleno de Mentón", href: "/#faciales" },
+      { label: "Tercio Medio", href: "/#faciales" },
+      { label: "Long Lasting – LOLA", href: "/#faciales" },
+      { label: "Vitaminas Faciales", href: "/#faciales" },
+      { label: "Esperma de Salmón", href: "/#faciales" },
+      { label: "Sculptra", href: "/#faciales" },
+      { label: "Radiesse", href: "/#faciales" },
     ],
   },
   {
     label: "CORPORALES",
     href: "/#corporales",
     sub: [
+      { label: "Moldeamiento Corporal", href: "/#corporales" },
+      { label: "Descenso de Peso", href: "/#corporales" },
+      { label: "Post Quirúrgicos", href: "/#corporales" },
       { label: "Microagujas Corporales", href: "/#corporales" },
-      { label: "Mesoterapia", href: "/#corporales" },
+      { label: "Mesoterapia Corporal", href: "/#corporales" },
       { label: "Sueroterapia", href: "/#corporales" },
-      { label: "Masajes de relajación", href: "/#corporales" },
-      { label: "Moldeamiento corporal", href: "/#corporales" },
+      { label: "Masajes de Relajación", href: "/#corporales" },
     ],
   },
   {
     label: "CAPILARES",
     href: "/#capilares",
     sub: [
-      { label: "Implante de barba", href: "/#capilares" },
-      { label: "Implante Capilar", href: "/#capilares" },
+      { label: "Implante Capilar FUE", href: "/#capilares" },
+      { label: "Recuperación Capilar", href: "/#capilares" },
+      { label: "Implante de Barba", href: "/#capilares" },
       { label: "Exosomas Capilares", href: "/#capilares" },
       { label: "PRP Capilar", href: "/#capilares" },
       { label: "Mesoterapia Capilar", href: "/#capilares" },
     ],
   },
   {
-    label: "INYECTABLES",
-    href: "/#inyectables",
+    label: "ZONA ÍNTIMA",
+    href: "/#zona-intima",
     sub: [
-      { label: "Inyectables Estéticos", href: "/#inyectables" },
-      { label: "Mesoterapia", href: "/#inyectables" },
-      { label: "PRP", href: "/#inyectables" },
-      { label: "Sueroterapia", href: "/#inyectables" },
+      { label: "Incontinencia Urinaria", href: "/#zona-intima" },
+      { label: "Relleno de Labios Vaginales", href: "/#zona-intima" },
+      { label: "Estrechamiento Vaginal", href: "/#zona-intima" },
+    ],
+  },
+  {
+    label: "QUIRÚRGICOS",
+    href: "/#quirurgicos",
+    sub: [
+      { label: "Otomodelización", href: "/#quirurgicos" },
+      { label: "Alectomina", href: "/#quirurgicos" },
     ],
   },
   { label: "BLOG", href: "/blog" },
@@ -206,8 +226,9 @@ export function NavBar() {
 
                       {/* Dropdown */}
                       <div
-                        className="absolute top-full left-0 pt-3 min-w-[210px] z-50 transition-all duration-200"
+                        className="absolute top-full left-0 pt-3 z-50 transition-all duration-200"
                         style={{
+                          minWidth: item.sub && item.sub.length > 8 ? "440px" : "210px",
                           opacity: openDropdown === item.label ? 1 : 0,
                           pointerEvents:
                             openDropdown === item.label ? "auto" : "none",
@@ -226,35 +247,42 @@ export function NavBar() {
                               "0 16px 48px rgba(28,28,28,0.09)",
                           }}
                         >
-                          {item.sub!.map((sub) => (
-                            <Link
-                              key={sub.label}
-                              href={sub.href}
-                              className="block px-5 py-2 text-[11px] tracking-wider transition-all duration-150"
-                              style={{
-                                fontFamily: "var(--font-body)",
-                                color: "#888580",
-                              }}
-                              onMouseEnter={(e) => {
-                                (
-                                  e.currentTarget as HTMLElement
-                                ).style.color = "#b89a6a";
-                                (
-                                  e.currentTarget as HTMLElement
-                                ).style.paddingLeft = "22px";
-                              }}
-                              onMouseLeave={(e) => {
-                                (
-                                  e.currentTarget as HTMLElement
-                                ).style.color = "#888580";
-                                (
-                                  e.currentTarget as HTMLElement
-                                ).style.paddingLeft = "20px";
-                              }}
-                            >
-                              {sub.label}
-                            </Link>
-                          ))}
+                          <div
+                            style={{
+                              display: item.sub && item.sub.length > 8 ? "grid" : "block",
+                              gridTemplateColumns: "1fr 1fr",
+                            }}
+                          >
+                            {item.sub!.map((sub) => (
+                              <Link
+                                key={sub.label}
+                                href={sub.href}
+                                className="block px-5 py-2 text-[11px] tracking-wider transition-all duration-150"
+                                style={{
+                                  fontFamily: "var(--font-body)",
+                                  color: "#888580",
+                                }}
+                                onMouseEnter={(e) => {
+                                  (
+                                    e.currentTarget as HTMLElement
+                                  ).style.color = "#b89a6a";
+                                  (
+                                    e.currentTarget as HTMLElement
+                                  ).style.paddingLeft = "22px";
+                                }}
+                                onMouseLeave={(e) => {
+                                  (
+                                    e.currentTarget as HTMLElement
+                                  ).style.color = "#888580";
+                                  (
+                                    e.currentTarget as HTMLElement
+                                  ).style.paddingLeft = "20px";
+                                }}
+                              >
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </>

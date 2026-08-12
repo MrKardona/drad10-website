@@ -10,15 +10,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Nosotros | DRA.D10 — Medicina Estética Medellín",
   description:
-    "Conoce a la Dra. Daniela Díez y al equipo de DRA.D10, clínica de medicina estética en El Poblado, Medellín. Más de 8.000 personas atendidas.",
+    "Conoce a la Dra. Daniela Díez y al equipo de DRA.D10, clínica de medicina estética en El Poblado, Medellín. Más de 20.000 personas atendidas.",
 };
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
 const stats = [
   { value: 5, suffix: "+", label: "Años de experiencia", prefix: "" },
-  { value: 8000, suffix: "+", label: "Personas atendidas", prefix: "" },
-  { value: 33, suffix: "+", label: "Tratamientos disponibles", prefix: "" },
+  { value: 20000, suffix: "+", label: "Personas atendidas", prefix: "" },
+  { value: 40, suffix: "+", label: "Tratamientos disponibles", prefix: "" },
 ];
 
 const credentials = [
@@ -36,21 +36,51 @@ const credentials = [
   },
   {
     year: "2020",
-    title: "Curso de Medicina Estética",
-    institution: "Asociación Médica Argentina",
+    title: "Certificación en Toxina Botulínica y Rellenos Dérmicos",
+    institution: "Asociación Médica Argentina (AMA)",
     country: "Argentina",
   },
   {
-    year: "2020",
-    title: "Diploma en Ciencias Estéticas",
-    institution: "Consejo Argentino de Ciencias Estéticas",
+    year: "2021",
+    title: "Certificación en Microimplante Capilar FUE",
+    institution: "Instituto Argentino de Trasplante Capilar",
     country: "Argentina",
+  },
+  {
+    year: "2022",
+    title: "Certificación INDIBA Activ — Radiofrecuencia Profunda",
+    institution: "INDIBA Internacional",
+    country: "España",
+  },
+  {
+    year: "2022",
+    title: "Curso Avanzado en Inyectables Faciales y Estructuración",
+    institution: "Sociedad Colombiana de Medicina Estética",
+    country: "Colombia",
   },
   {
     year: "2023",
     title: "Especialización en Pediatría",
     institution: "Universidad de Buenos Aires (UBA)",
     country: "Argentina",
+  },
+  {
+    year: "2023",
+    title: "Certificación en Zona Íntima y Ginecología Estética",
+    institution: "ISAPS — International Society of Aesthetic Plastic Surgery",
+    country: "Colombia",
+  },
+  {
+    year: "2024",
+    title: "Certificación Scanner D10 — Diagnóstico Cutáneo Avanzado",
+    institution: "Quantum Medical Technologies",
+    country: "Colombia",
+  },
+  {
+    year: "2024",
+    title: "Curso en Tratamientos Quirúrgicos Menores — Otomodelización",
+    institution: "Sociedad Colombiana de Cirugía Plástica",
+    country: "Colombia",
   },
 ];
 
@@ -81,32 +111,32 @@ const equipo = [
   {
     nombre: "Dra. Daniela Díez",
     cargo: "Fundadora & Directora Médica",
-    especialidad: "Medicina Estética · Pediatría · Microimplante Capilar",
-    bio: "Médica con doble habilitación en Argentina y Colombia. Formada en la Universidad de Buenos Aires, lidera el equipo con más de 5 años de experiencia en medicina estética de alta complejidad.",
+    especialidad: "Medicina Estética · Microimplante Capilar FUE · Zona Íntima",
+    bio: "Médica con doble habilitación en Argentina y Colombia. Formada en la Universidad de Buenos Aires, pionera en Medellín en tratamientos de vanguardia con más de 5 años transformando vidas. Certificada en INDIBA, Scanner D10, inyectables avanzados y microimplante capilar.",
     foto: "/images/dra-daniela.jpg",
     initials: "DD",
   },
   {
-    nombre: "Próximamente",
-    cargo: "Especialista en Tratamientos Corporales",
-    especialidad: "Remodelación · INDIBA · Tecnología Láser",
-    bio: "Integrante del equipo con formación especializada en tratamientos no invasivos de remodelación corporal y rejuvenecimiento con tecnología de última generación.",
+    nombre: "Esp. en Tratamientos Corporales",
+    cargo: "Especialista Corporal",
+    especialidad: "INDIBA · Descenso de Peso · Remodelación · Post Quirúrgicos",
+    bio: "Especialista con amplia formación en tratamientos no invasivos de remodelación corporal, descenso de peso y recuperación post quirúrgica con tecnología de última generación.",
     foto: "",
     initials: "TC",
   },
   {
-    nombre: "Próximamente",
-    cargo: "Esteticista Clínica",
-    especialidad: "Faciales · Skincare · Protocolos de Piel",
-    bio: "Especialista en protocolos de cuidado de piel y tratamientos faciales personalizados, con enfoque en la salud dérmica y el bienestar integral.",
+    nombre: "Esp. en Tratamientos Faciales",
+    cargo: "Esteticista Clínica Senior",
+    especialidad: "Limpiezas Faciales · Skincare · Protocolos de Piel · Peeling",
+    bio: "Especialista en protocolos faciales de alta complejidad, limpiezas profundas y tratamientos personalizados de cuidado dérmico. Experta en rejuvenecimiento facial natural.",
     foto: "",
-    initials: "EC",
+    initials: "EF",
   },
   {
-    nombre: "Próximamente",
-    cargo: "Coordinadora de Pacientes",
-    especialidad: "Atención al Paciente · Agendamiento · Seguimiento",
-    bio: "Responsable de garantizar una experiencia fluida y cálida desde el primer contacto hasta el seguimiento post-tratamiento.",
+    nombre: "Coordinadora de Pacientes",
+    cargo: "Experiencia del Paciente",
+    especialidad: "Atención Integral · Agendamiento · Seguimiento Post-Tratamiento",
+    bio: "Responsable de garantizar una experiencia fluida, cálida y personalizada desde el primer contacto hasta el seguimiento post-tratamiento. El corazón de nuestro equipo.",
     foto: "",
     initials: "CP",
   },
@@ -205,9 +235,10 @@ export default function NosotrosPage() {
               marginBottom: "4rem",
             }}
           >
-            Somos una clínica especializada en medicina estética y
-            rejuvenecimiento, fundada con la convicción de que la belleza real
-            surge de la confianza, el bienestar y el cuidado genuino.
+            Somos una clínica especializada en medicina estética y bienestar
+            integral, fundada con la convicción de que la belleza real surge de
+            la confianza, el cuidado genuino y la ciencia de vanguardia. Más de
+            20.000 personas han transformado su vida con nosotros.
           </p>
 
           {/* Stats */}

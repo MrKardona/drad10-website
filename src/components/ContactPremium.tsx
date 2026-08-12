@@ -269,6 +269,71 @@ export function ContactPremium() {
           className="p-8 lg:p-12"
           style={{ backgroundColor: "#f0e8e2" }}
         >
+          {/* Google Calendar booking option */}
+<div
+  style={{
+    borderBottom: "1px solid rgba(28,28,28,0.1)",
+    paddingBottom: "1.5rem",
+    marginBottom: "1.5rem",
+  }}
+>
+  <p
+    style={{
+      fontFamily: "var(--font-body)",
+      fontSize: "0.58rem",
+      letterSpacing: "0.28em",
+      textTransform: "uppercase" as const,
+      color: "#888580",
+      marginBottom: "0.75rem",
+    }}
+  >
+    Reserva directa
+  </p>
+  <a
+    href={process.env.NEXT_PUBLIC_GCAL_BOOKING_URL || "https://wa.me/573002440656?text=Hola%2C%20quiero%20agendar%20una%20cita"}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "0.75rem",
+      padding: "0.85rem 1.25rem",
+      border: "1px solid rgba(184,154,106,0.4)",
+      backgroundColor: "rgba(184,154,106,0.06)",
+      transition: "background-color 0.2s, border-color 0.2s",
+      textDecoration: "none",
+    }}
+    onMouseEnter={(e) => {
+      (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(184,154,106,0.12)";
+      (e.currentTarget as HTMLElement).style.borderColor = "#b89a6a";
+    }}
+    onMouseLeave={(e) => {
+      (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(184,154,106,0.06)";
+      (e.currentTarget as HTMLElement).style.borderColor = "rgba(184,154,106,0.4)";
+    }}
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b89a6a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    <div>
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", fontWeight: 500, color: "#1c1c1c" }}>
+        Agendar en Google Calendar
+      </p>
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.62rem", color: "#888580", marginTop: "1px" }}>
+        Selecciona tu horario disponible en tiempo real
+      </p>
+    </div>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b89a6a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: "auto" }}>
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </svg>
+  </a>
+  <p style={{ fontFamily: "var(--font-body)", fontSize: "0.58rem", color: "rgba(136,133,128,0.6)", marginTop: "0.5rem", letterSpacing: "0.1em" }}>
+    — o completa el formulario abajo —
+  </p>
+</div>
           {sent ? (
             /* Confirmation state */
             <div className="text-center py-16">
