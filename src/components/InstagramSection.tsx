@@ -1,31 +1,31 @@
 import React from "react";
 import Image from "next/image";
 
-// TODO: reemplaza con fotos reales del Instagram
+// Posts reales del feed de @clinicaquantum.co
 const PHOTOS = [
   {
-    src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop&crop=face",
-    alt: "Clínica Quantum - Instagram 1",
+    src: "/images/instagram/post-01.webp",
+    alt: "Clínica Quantum - ¿Vienes a Medellín para la Feria de las Flores?",
   },
   {
-    src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&crop=face",
-    alt: "Clínica Quantum - Instagram 2",
+    src: "/images/instagram/post-03.webp",
+    alt: "Clínica Quantum - Promo amigas: aumento de labios",
   },
   {
-    src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=400&fit=crop&crop=center",
-    alt: "Clínica Quantum - Instagram 3",
+    src: "/images/instagram/post-04.webp",
+    alt: "Clínica Quantum - La Dra. Daniela explica el Botox",
   },
   {
-    src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
-    alt: "Clínica Quantum - Instagram 4",
+    src: "/images/instagram/post-05.webp",
+    alt: "Clínica Quantum - Tratamiento tensor sin cirugía",
   },
   {
-    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=top",
-    alt: "Clínica Quantum - Instagram 5",
+    src: "/images/instagram/post-02.webp",
+    alt: "Clínica Quantum - ¿Por qué tantas personas eligen Medellín para aplicarse Botox?",
   },
   {
-    src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop&crop=center",
-    alt: "Clínica Quantum - Instagram 6",
+    src: "/images/instagram/post-06.webp",
+    alt: "Clínica Quantum - Medicamentos para bajar de peso: no todos son iguales",
   },
 ];
 
