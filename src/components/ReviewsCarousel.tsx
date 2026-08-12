@@ -201,9 +201,9 @@ export function ReviewsCarousel() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="max-w-7xl mx-auto px-6 py-14">
         {/* ── Encabezado ── */}
-        <div className="text-center mb-14" data-anim="up">
+        <div className="text-center mb-10" data-anim="up">
           <p className="section-label mb-4" style={{ color: "rgba(184,154,106,0.7)" }}>
             RESEÑAS DE GOOGLE
           </p>
@@ -317,7 +317,7 @@ export function ReviewsCarousel() {
         `}</style>
 
         {/* ── Pie: enlace al perfil ── */}
-        <div className="mt-12 text-center" style={{ borderTop: "1px solid rgba(184,154,106,0.1)", paddingTop: "2rem" }}>
+        <div className="mt-8 text-center" style={{ borderTop: "1px solid rgba(184,154,106,0.1)", paddingTop: "1.25rem" }}>
           <a
             href={GOOGLE_MAPS_URL}
             target="_blank"
