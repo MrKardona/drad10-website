@@ -87,13 +87,14 @@ export const faciales: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: null,
+      desde: 1200000,
       incluye: [
+        "Jeringa de 1cc de ácido hialurónico reticulado",
         "Valoración y diseño personalizado",
-        "Producto original con registro INVIMA",
         "Anestesia tópica",
         "Control post-tratamiento a los 15 días",
       ],
+      nota: "Pregunta por las promociones vigentes en nuestras redes.",
     },
     faq: [
       {
@@ -207,13 +208,14 @@ export const faciales: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: null,
+      desde: 600000,
       incluye: [
         "Valoración y plan facial por fases",
         "Producto original con registro INVIMA",
         "Anestesia tópica",
         "Control post-tratamiento a los 15 días",
       ],
+      nota: "Ácido de hidratación desde $600.000 · Rellenos reticulados desde $1.200.000 por jeringa de 1cc.",
     },
     faq: [
       {
