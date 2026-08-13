@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
+import { getAllSlugs } from "@/lib/tratamientos";
 
 const BASE_URL = "https://drad10.com";
 
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  const tratamientoUrls = getAllSlugs().map((slug) => ({
+    url: `${BASE_URL}/servicios/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
   }));
 
   return [
@@ -42,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.75,
     },
+    ...tratamientoUrls,
     ...blogUrls,
   ];
 }
