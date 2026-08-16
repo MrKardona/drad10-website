@@ -211,7 +211,8 @@ export function DoctorSection() {
                 src="/images/equipo.jpg"
                 alt="Equipo DRA.D10 — Clínica Quantum Medellín"
                 fill
-                className="object-cover object-center"
+                className="object-cover"
+                style={{ objectPosition: "50% 22%" }}
                 sizes="(max-width: 768px) 100vw, 60vw"
               />
               {/* Gold overlay strip at bottom */}
