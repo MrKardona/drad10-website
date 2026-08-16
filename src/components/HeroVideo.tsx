@@ -158,15 +158,49 @@ export function HeroVideo() {
           </a>
         </div>
 
+        {/* Acceso rápido a tratamientos */}
+        <div
+          className="mt-7 opacity-0 animate-fade-up delay-600 flex flex-wrap gap-2"
+          aria-label="Tratamientos populares"
+        >
+          {[
+            { label: "BOTOX", href: "/servicios/botox" },
+            { label: "LABIOS", href: "/servicios/relleno-de-labios" },
+            { label: "ÁCIDO HIALURÓNICO", href: "/servicios/acido-hialuronico" },
+            { label: "IMPLANTE CAPILAR", href: "/servicios/implante-capilar-fue" },
+            { label: "MOLDEAMIENTO", href: "/servicios/moldeamiento-corporal" },
+            { label: "DESCENSO DE PESO", href: "/servicios/descenso-de-peso" },
+          ].map((c) => (
+            <a
+              key={c.label}
+              href={c.href}
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.6rem",
+                letterSpacing: "0.16em",
+                color: "rgba(250,248,245,0.8)",
+                border: "1px solid rgba(184,154,106,0.35)",
+                backgroundColor: "rgba(0,0,0,0.25)",
+                backdropFilter: "blur(4px)",
+                padding: "7px 14px",
+                textDecoration: "none",
+                transition: "border-color 0.25s, background 0.25s",
+              }}
+            >
+              {c.label}
+            </a>
+          ))}
+        </div>
+
         {/* Social proof */}
         <p
-          className="mt-8 opacity-0 animate-fade-up delay-600 text-xs tracking-widest uppercase"
+          className="mt-8 opacity-0 animate-fade-up delay-700 text-xs tracking-widest uppercase"
           style={{
             color: "rgba(250,248,245,0.45)",
             fontFamily: "var(--font-body)",
           }}
         >
-          +8.000 personas han confiado en nosotras
+          +20.000 personas han confiado en nosotras · ★ 4.9 en Google
         </p>
       </div>
 

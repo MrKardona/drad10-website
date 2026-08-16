@@ -5,6 +5,7 @@ import { ScrollVideoSection } from "@/components/ScrollVideoSection";
 import { TratamientosDestacados } from "@/components/TratamientosDestacados";
 import { ServicesPremium } from "@/components/ServicesPremium";
 import { ResultadosTeaser } from "@/components/ResultadosTeaser";
+import { BlogTeaser } from "@/components/BlogTeaser";
 import { DoctorSection } from "@/components/DoctorSection";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import InstagramSection from "@/components/InstagramSection";
@@ -22,11 +23,12 @@ export default function Home() {
       <HeroVideo />
       <StatsBanner />
       <DoctorSection />
-      <ScrollVideoSection />
       <ReviewsCarousel />
       <TratamientosDestacados />
       <ServicesPremium />
+      <ScrollVideoSection />
       <ResultadosTeaser />
+      <BlogTeaser />
       <InstagramSection />
       <FAQSection />
       <SedesSection />
