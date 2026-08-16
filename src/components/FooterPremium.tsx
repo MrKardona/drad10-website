@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const tratamientos: { label: string; href: string }[] = [
-  { label: "Scanner D10", href: "/#scanner" },
+  { label: "Scanner D10", href: "/#tratamientos-destacados" },
   { label: "Faciales", href: "/#faciales" },
   { label: "Corporales", href: "/#corporales" },
   { label: "Capilares", href: "/#capilares" },
