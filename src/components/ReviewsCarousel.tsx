@@ -90,11 +90,11 @@ function ReviewCard({ review }: { review: Review }) {
         scrollSnapAlign: "start",
         backgroundColor: "#242424",
         border: "1px solid rgba(184,154,106,0.15)",
-        padding: "1.75rem 1.5rem",
+        padding: "2rem 1.75rem",
         display: "flex",
         flexDirection: "column",
         gap: "0.85rem",
-        minHeight: "230px",
+        minHeight: "260px",
       }}
     >
       {/* Nombre + fecha + logo Google */}
@@ -102,10 +102,11 @@ function ReviewCard({ review }: { review: Review }) {
         <div>
           <p
             style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.9rem",
-              fontWeight: 500,
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontSize: "1.15rem",
+              fontWeight: 400,
               color: "#faf8f5",
+              letterSpacing: "0.01em",
             }}
           >
             {review.name}
@@ -113,25 +114,25 @@ function ReviewCard({ review }: { review: Review }) {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.68rem",
-              color: "#888580",
-              marginTop: "3px",
+              fontSize: "0.78rem",
+              color: "#9a968f",
+              marginTop: "4px",
             }}
           >
             {review.date}
           </p>
         </div>
-        <GoogleLogo size={18} />
+        <GoogleLogo size={22} />
       </div>
 
-      <StarRating rating={review.rating} size={15} />
+      <StarRating rating={review.rating} size={18} />
 
       <p
         style={{
           fontFamily: "var(--font-body)",
-          fontSize: "0.82rem",
-          color: "rgba(250,248,245,0.82)",
-          lineHeight: 1.65,
+          fontSize: "0.95rem",
+          color: "rgba(250,248,245,0.88)",
+          lineHeight: 1.75,
           display: "-webkit-box",
           WebkitLineClamp: expanded ? "unset" : 5,
           WebkitBoxOrient: "vertical",
@@ -150,8 +151,8 @@ function ReviewCard({ review }: { review: Review }) {
             border: "none",
             padding: 0,
             fontFamily: "var(--font-body)",
-            fontSize: "0.68rem",
-            letterSpacing: "0.14em",
+            fontSize: "0.72rem",
+            letterSpacing: "0.16em",
             textTransform: "uppercase",
             color: "#b89a6a",
             cursor: "pointer",
@@ -242,7 +243,7 @@ export function ReviewsCarousel() {
             <span
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
-                fontSize: "1.9rem",
+                fontSize: "2.5rem",
                 fontWeight: 300,
                 letterSpacing: "0.12em",
                 color: "#faf8f5",
@@ -250,7 +251,7 @@ export function ReviewsCarousel() {
             >
               EXCELENTE
             </span>
-            <StarRating rating={5} size={26} />
+            <StarRating rating={5} size={32} />
             <span
               style={{
                 fontFamily: "var(--font-body)",
@@ -264,11 +265,11 @@ export function ReviewsCarousel() {
               </strong>
             </span>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "0.4rem" }}>
-              <GoogleLogo size={26} />
+              <GoogleLogo size={30} />
               <span
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "1.05rem",
+                  fontSize: "1.2rem",
                   fontWeight: 500,
                   color: "#faf8f5",
                 }}
@@ -311,7 +312,26 @@ export function ReviewsCarousel() {
         {/* Ancho responsivo de las tarjetas + ocultar scrollbar WebKit */}
         <style>{`
           .reviews-track::-webkit-scrollbar { display: none; }
-          .review-card { width: 100%; }
+          .review-card {
+            width: 100%;
+            position: relative;
+            transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.35s ease, box-shadow 0.35s ease;
+          }
+          .review-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #b89a6a, transparent);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+          }
+          .review-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(184,154,106,0.45);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+          }
+          .review-card:hover::after { opacity: 1; }
           @media (min-width: 640px)  { .review-card { width: calc(50% - 8px); } }
           @media (min-width: 1024px) { .review-card { width: calc(33.333% - 11px); } }
         `}</style>

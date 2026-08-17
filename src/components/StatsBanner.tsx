@@ -35,7 +35,7 @@ export function StatsBanner() {
               className="section-label mb-6"
               style={{ color: "rgba(184,154,106,0.6)" }}
             >
-              EN NÚMEROS
+              RESPALDO REAL
             </p>
             <p
               className="leading-snug"
@@ -48,24 +48,25 @@ export function StatsBanner() {
                 maxWidth: "560px",
               }}
             >
-              Más de{" "}
-              <span style={{ color: "#b89a6a" }}>20.000 personas</span>{" "}
-              han transformado su imagen en{" "}
-              <span style={{ color: "#b89a6a" }}>5 años</span>{" "}
-              de trayectoria en Medellín.
+              <span style={{ color: "#b89a6a" }}>20.000 pacientes</span> y{" "}
+              <span style={{ color: "#b89a6a" }}>5 años</span> después, seguimos
+              midiendo lo único que importa:{" "}
+              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+                resultados que se notan.
+              </em>
             </p>
           </div>
 
-          {/* Right: 4 compact facts stacked */}
+          {/* Right: 4 compact facts stacked (entrada escalonada) */}
           <div
             className="flex flex-row lg:flex-col gap-8 lg:gap-0 flex-wrap"
-            data-anim="right"
+            data-anim="stagger"
           >
             {[
-              { num: "20000", pre: "+", suf: "", label: "Personas atendidas" },
-              { num: "5",   pre: "",  suf: "+", label: "Años de experiencia" },
-              { num: "33",  pre: "",  suf: "+", label: "Tratamientos certificados" },
-              { num: "98",  pre: "",  suf: "%", label: "Satisfacción post-tratamiento" },
+              { num: "20000", pre: "+", suf: "", label: "Pacientes atendidas" },
+              { num: "5",   pre: "",  suf: "+", label: "Años de trayectoria" },
+              { num: "35",  pre: "",  suf: "+", label: "Tratamientos disponibles" },
+              { num: "98",  pre: "",  suf: "%", label: "Pacientes satisfechas" },
             ].map((s, i) => (
               <div
                 key={s.label}

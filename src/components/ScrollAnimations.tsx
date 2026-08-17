@@ -97,7 +97,7 @@ export function ScrollAnimations() {
                 prefix +
                 (isFloat
                   ? obj.val.toFixed(1)
-                  : Math.round(obj.val).toString()) +
+                  : Math.round(obj.val).toLocaleString("es-CO")) +
                 suffix;
             },
           }),
