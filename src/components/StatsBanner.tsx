@@ -66,7 +66,7 @@ export function StatsBanner() {
               { num: "20000", pre: "+", suf: "", label: "Pacientes atendidas" },
               { num: "5",   pre: "",  suf: "+", label: "Años de trayectoria" },
               { num: "35",  pre: "",  suf: "+", label: "Tratamientos disponibles" },
-              { num: "98",  pre: "",  suf: "%", label: "Pacientes satisfechas" },
+              { num: "4.9", pre: "",  suf: "★", label: "Calificación en Google" },
             ].map((s, i) => (
               <div
                 key={s.label}
