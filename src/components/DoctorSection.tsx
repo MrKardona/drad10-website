@@ -23,7 +23,7 @@ export function DoctorSection() {
 
           {/* ── Left: Doctor photo ── */}
           <div className="relative opacity-0 animate-slide-right">
-            <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0">
+            <div className="relative inline-block w-full max-w-lg mx-auto lg:mx-0">
               {/* Top-left gold corner */}
               <div
                 className="absolute -top-3 -left-3 w-10 h-10 hidden lg:block pointer-events-none z-10"
@@ -48,7 +48,7 @@ export function DoctorSection() {
                   alt="Dra. Daniela Díez — DRA.D10 Medicina Estética"
                   fill
                   className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 384px"
+                  sizes="(max-width: 1024px) 100vw, 512px"
                 />
                 {/* Bottom badge overlay */}
                 <div
@@ -130,14 +130,10 @@ export function DoctorSection() {
                     ? "delay-500"
                     : "delay-600";
                 return (
-                  <div
+                  <Link
                     key={c.label}
-                    className={`flex items-start gap-3 p-4 opacity-0 animate-fade-up ${delayClass}`}
-                    style={{
-                      backgroundColor: "rgba(184,154,106,0.06)",
-                      border: "1px solid rgba(184,154,106,0.22)",
-                      borderTop: "2px solid rgba(184,154,106,0.55)",
-                    }}
+                    href="/nosotros#formacion"
+                    className={`cert-chip flex items-start gap-3 p-4 opacity-0 animate-fade-up ${delayClass}`}
                   >
                     <span
                       className="text-xs font-medium leading-snug"
@@ -148,7 +144,7 @@ export function DoctorSection() {
                     >
                       {c.label}
                     </span>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

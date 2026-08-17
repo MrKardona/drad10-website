@@ -622,10 +622,12 @@ export default function NosotrosPage() {
           § 3 — FORMACIÓN ACADÉMICA (Timeline)
       ══════════════════════════════════════════════════════ */}
       <section
+        id="formacion"
         className="nos-timeline"
         style={{
           backgroundColor: "#faf8f5",
           padding: "clamp(48px, 7vw, 80px) 0",
+          scrollMarginTop: "90px",
         }}
       >
         <div
@@ -921,8 +923,31 @@ export default function NosotrosPage() {
           backgroundColor: "#141414",
           padding: "clamp(80px, 14vw, 160px) clamp(24px, 8vw, 120px)",
           textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* Foto de fondo oscurecida */}
+        <Image
+          src="/images/equipo.jpg"
+          alt=""
+          aria-hidden
+          fill
+          className="object-cover"
+          style={{ objectPosition: "50% 25%", opacity: 0.22 }}
+          sizes="100vw"
+        />
+        {/* Viñeta para profundidad y legibilidad */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse at center, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.92) 100%)",
+          }}
+        />
+        <div style={{ position: "relative", zIndex: 2 }}>
         {/* Gold rule top */}
         <div
           data-anim="scale"
@@ -953,10 +978,11 @@ export default function NosotrosPage() {
         <blockquote
           style={{
             fontFamily: "var(--font-display), Georgia, serif",
-            fontSize: "clamp(1.4rem, 3vw, 2.2rem)",
+            fontSize: "clamp(1.55rem, 3.4vw, 2.5rem)",
             fontWeight: 300,
             fontStyle: "italic",
-            color: "#faf8f5",
+            color: "#ffffff",
+            textShadow: "0 2px 30px rgba(0,0,0,0.85)",
             letterSpacing: "-0.02em",
             lineHeight: 1.55,
             maxWidth: "760px",
@@ -1009,6 +1035,7 @@ export default function NosotrosPage() {
             margin: "3rem auto 0",
           }}
         />
+        </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════
