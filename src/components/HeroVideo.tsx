@@ -189,30 +189,6 @@ export function HeroVideo() {
         </p>
       </div>
 
-      {/* ── Scroll indicator ── */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-0 animate-fade-up delay-700"
-        style={{ color: "rgba(250,248,245,0.4)" }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "0.55rem",
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-          }}
-        >
-          Scroll
-        </span>
-        <div
-          className="w-px"
-          style={{
-            height: "40px",
-            background:
-              "linear-gradient(to bottom, rgba(184,154,106,0.7), transparent)",
-          }}
-        />
-      </div>
     </section>
   );
 }
