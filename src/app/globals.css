@@ -300,3 +300,67 @@
 /* ─── GSAP initial state (hidden until ScrollTrigger fires) ─── */
 [data-anim] { opacity: 0; }
 [data-anim='line'] { transform-origin: left center; }
+
+/* ─── Hero: chips de tratamientos con iluminación dorada al hover ─── */
+.hero-chip {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  color: rgba(250, 248, 245, 0.8);
+  border: 1px solid rgba(184, 154, 106, 0.35);
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  padding: 7px 14px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Destello que barre el chip */
+.hero-chip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(250, 248, 245, 0.28) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.hero-chip:hover {
+  color: #faf8f5;
+  border-color: #b89a6a;
+  background-color: rgba(184, 154, 106, 0.18);
+  box-shadow:
+    0 0 22px rgba(184, 154, 106, 0.45),
+    inset 0 0 12px rgba(184, 154, 106, 0.15);
+  transform: translateY(-2px);
+}
+
+.hero-chip:hover::before {
+  left: 120%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-chip,
+  .hero-chip::before {
+    transition: none;
+  }
+  .hero-chip:hover {
+    transform: none;
+  }
+}

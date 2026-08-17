@@ -171,22 +171,7 @@ export function HeroVideo() {
             { label: "MOLDEAMIENTO", href: "/servicios/moldeamiento-corporal" },
             { label: "DESCENSO DE PESO", href: "/servicios/descenso-de-peso" },
           ].map((c) => (
-            <a
-              key={c.label}
-              href={c.href}
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.16em",
-                color: "rgba(250,248,245,0.8)",
-                border: "1px solid rgba(184,154,106,0.35)",
-                backgroundColor: "rgba(0,0,0,0.25)",
-                backdropFilter: "blur(4px)",
-                padding: "7px 14px",
-                textDecoration: "none",
-                transition: "border-color 0.25s, background 0.25s",
-              }}
-            >
+            <a key={c.label} href={c.href} className="hero-chip">
               {c.label}
             </a>
           ))}
