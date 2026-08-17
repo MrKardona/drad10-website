@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const marqueeItems: string[] = [
   "MEDICINA ESTÉTICA",
   "INDIBA CERTIFIED",
@@ -27,7 +29,7 @@ export function StatsBanner() {
 
       {/* ── Main content: narrative + facts ── */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px_auto] gap-12 lg:gap-16 items-center">
 
           {/* Left: editorial sentence */}
           <div data-anim="left">
@@ -57,10 +59,52 @@ export function StatsBanner() {
             </p>
           </div>
 
-          {/* Right: 4 compact facts stacked (entrada escalonada) */}
+          {/* Middle: foto de marca (TODO: reemplazar por foto real de la clínica) */}
+          <div
+            className="relative hidden lg:block"
+            data-anim="up"
+            style={{ aspectRatio: "3 / 4" }}
+          >
+            {/* Esquinas doradas */}
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                top: "-10px",
+                left: "-10px",
+                width: "36px",
+                height: "36px",
+                borderTop: "2px solid #b89a6a",
+                borderLeft: "2px solid #b89a6a",
+                zIndex: 10,
+              }}
+            />
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                bottom: "-10px",
+                right: "-10px",
+                width: "36px",
+                height: "36px",
+                borderBottom: "2px solid #b89a6a",
+                borderRight: "2px solid #b89a6a",
+                zIndex: 10,
+              }}
+            />
+            <Image
+              src="/images/instagram/post-01.webp"
+              alt="DRA.D10 — Medicina estética en Medellín"
+              fill
+              className="object-cover"
+              sizes="260px"
+            />
+          </div>
+
+          {/* Right: 4 compact facts stacked */}
           <div
             className="flex flex-row lg:flex-col gap-8 lg:gap-0 flex-wrap"
-            data-anim="stagger"
+            data-anim="right"
           >
             {[
               { num: "20000", pre: "+", suf: "", label: "Pacientes atendidas" },
