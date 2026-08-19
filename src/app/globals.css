@@ -422,3 +422,15 @@
     transform: none;
   }
 }
+
+/* ─── Responsive: artículo destacado del blog y modal de galería ─── */
+@media (max-width: 768px) {
+  .blog-featured {
+    grid-template-columns: 1fr !important;
+  }
+  .gallery-modal-panel {
+    grid-template-columns: 1fr !important;
+    overflow-y: auto;
+    max-height: 92vh !important;
+  }
+}

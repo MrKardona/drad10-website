@@ -43,6 +43,7 @@ export function GalleryModal({ item, onClose }: Props) {
       {/* Panel */}
       <div
         onClick={(e) => e.stopPropagation()}
+        className="gallery-modal-panel"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",

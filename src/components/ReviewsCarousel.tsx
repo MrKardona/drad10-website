@@ -223,7 +223,7 @@ export function ReviewsCarousel() {
         </div>
 
         {/* ── Resumen + carrusel ── */}
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-center lg:items-stretch" data-anim="up">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch" data-anim="up">
           {/* Bloque resumen (izquierda) */}
           <a
             href={GOOGLE_MAPS_URL}
@@ -280,8 +280,11 @@ export function ReviewsCarousel() {
           </a>
 
           {/* Carrusel (derecha) */}
-          <div style={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", gap: "0.75rem" }}>
-            <button onClick={() => scrollByCard(-1)} aria-label="Reseñas anteriores" style={arrowStyle}>
+          <div
+            className="w-full"
+            style={{ flex: 1, minWidth: 0, maxWidth: "100%", display: "flex", alignItems: "center", gap: "0.75rem" }}
+          >
+            <button onClick={() => scrollByCard(-1)} aria-label="Reseñas anteriores" className="reviews-arrow" style={arrowStyle}>
               ←
             </button>
 
@@ -303,7 +306,7 @@ export function ReviewsCarousel() {
               ))}
             </div>
 
-            <button onClick={() => scrollByCard(1)} aria-label="Más reseñas" style={arrowStyle}>
+            <button onClick={() => scrollByCard(1)} aria-label="Más reseñas" className="reviews-arrow" style={arrowStyle}>
               →
             </button>
           </div>
@@ -334,6 +337,11 @@ export function ReviewsCarousel() {
           .review-card:hover::after { opacity: 1; }
           @media (min-width: 640px)  { .review-card { width: calc(50% - 8px); } }
           @media (min-width: 1024px) { .review-card { width: calc(33.333% - 11px); } }
+          /* Móvil: sin flechas laterales (deslizar con el dedo) y tarjeta con 'peek' */
+          @media (max-width: 639px) {
+            .reviews-arrow { display: none !important; }
+            .review-card { width: 86%; }
+          }
         `}</style>
 
         {/* ── Pie: enlace al perfil ── */}

@@ -19,7 +19,10 @@ const EMBED_URL =
 
 export function HeroVideo() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: "100vh" }}>
+    <section
+      className="relative w-full overflow-hidden min-h-screen"
+      style={{ minHeight: "100svh" }}
+    >
 
       {/* ── YouTube background video ── */}
       {/* z-index:1 so the dark overlay (z-index:2) always renders on top,
@@ -78,7 +81,10 @@ export function HeroVideo() {
       ))}
 
       {/* ── Contenido centrado ── */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+      <div
+        className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6 py-24"
+        style={{ minHeight: "100svh" }}
+      >
 
         {/* Logo DRA.D10 */}
         <div className="mb-8 opacity-0 animate-fade-up">
@@ -160,7 +166,7 @@ export function HeroVideo() {
 
         {/* Acceso rápido a tratamientos */}
         <div
-          className="mt-7 opacity-0 animate-fade-up delay-600 flex flex-wrap gap-2"
+          className="mt-7 opacity-0 animate-fade-up delay-600 flex flex-wrap justify-center gap-2"
           aria-label="Tratamientos populares"
         >
           {[

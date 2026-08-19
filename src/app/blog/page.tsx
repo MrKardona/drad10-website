@@ -64,7 +64,7 @@ export default function BlogPage() {
           {featured && (
             <Link href={`/blog/${featured.slug}`} style={{ textDecoration: "none" }}>
               <div
-                className="group mb-16"
+                className="group mb-16 blog-featured"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
