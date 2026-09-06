@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { resultadosTeaser } from "@/lib/images";
 
-// Muestra 4 casos representativos — cambia por imágenes reales de la clínica
+// 4 categorías de tratamiento. Imágenes ilustrativas (no son pacientes de la clínica).
 const casos = [
   {
     id: "botox",
@@ -43,7 +43,7 @@ export function ResultadosTeaser() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
           <div>
             <p className="section-label mb-4" style={{ color: "rgba(184,154,106,0.7)" }}>
-              RESULTADOS REALES
+              NUESTRAS ESPECIALIDADES
             </p>
             <h2
               style={{
@@ -55,9 +55,9 @@ export function ResultadosTeaser() {
                 lineHeight: 1.1,
               }}
             >
-              Transformaciones{" "}
+              Tratamientos que{" "}
               <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
-                de nuestras pacientes
+                transforman
               </em>
             </h2>
           </div>
@@ -73,7 +73,7 @@ export function ResultadosTeaser() {
               color: "#b89a6a",
             }}
           >
-            Ver galería completa
+            Ver galería de resultados
             <span aria-hidden="true" style={{ fontSize: "1rem" }}>→</span>
           </Link>
         </div>
@@ -86,12 +86,12 @@ export function ResultadosTeaser() {
               href="/resultados"
               className="group relative block overflow-hidden"
               style={{ aspectRatio: "3/4" }}
-              aria-label={`Ver resultados de ${caso.tratamiento}`}
+              aria-label={`Ver ${caso.tratamiento}`}
             >
               {/* Photo */}
               <Image
                 src={caso.image}
-                alt={`Resultado ${caso.tratamiento} — DRA.D10`}
+                alt={`${caso.tratamiento} — DRA.D10`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 25vw"

@@ -6,11 +6,11 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ResultadosGallery } from "@/components/gallery/ResultadosGallery";
 
 export const metadata: Metadata = {
-  title: "Resultados | DRA.D10 — Galería Antes y Después Medellín",
+  title: "Tratamientos | DRA.D10 — Medicina Estética Medellín",
   description:
-    "Galería de resultados reales antes y después de tratamientos estéticos en DRA.D10. Facial, corporal, capilar e inyectables. Clínica premium en El Poblado, Medellín.",
+    "Conoce los tratamientos de medicina estética de DRA.D10: facial, corporal, capilar e inyectables. Clínica premium en El Poblado, Medellín.",
   openGraph: {
-    title: "Resultados Reales | DRA.D10 Medicina Estética",
+    title: "Tratamientos | DRA.D10 Medicina Estética",
     description:
       "Explora nuestra galería de transformaciones reales. Tratamientos faciales, corporales, capilares e inyectables de la mano de la Dra. Daniela Díez en Medellín.",
     url: "https://drad10.com/resultados",
@@ -63,8 +63,8 @@ export default function ResultadosPage() {
             margin: "0 0 1.5rem",
           }}
         >
-          Resultados que{" "}
-          <em style={{ fontStyle: "italic", color: "#b89a6a" }}>hablan</em>
+          Tratamientos que{" "}
+          <em style={{ fontStyle: "italic", color: "#b89a6a" }}>transforman</em>
         </h1>
 
         {/* Gold line */}
@@ -88,9 +88,9 @@ export default function ResultadosPage() {
             margin: "0 auto",
           }}
         >
-          Cada caso refleja una historia de confianza, precisión médica y
-          resultados naturales. Desliza el visor para comparar el antes y
-          el después.
+          Cada tratamiento combina precisión médica, tecnología de vanguardia
+          y un enfoque en resultados naturales y seguros. Explora nuestras
+          especialidades por categoría.
         </p>
       </section>
 
@@ -105,6 +105,26 @@ export default function ResultadosPage() {
         }}
       >
         <ResultadosGallery />
+
+        {/* Aviso legal — publicidad en salud */}
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.68rem",
+            lineHeight: 1.7,
+            color: "rgba(250,248,245,0.35)",
+            maxWidth: "680px",
+            margin: "3rem auto 0",
+            textAlign: "center",
+            borderTop: "1px solid rgba(184,154,106,0.15)",
+            paddingTop: "1.5rem",
+          }}
+        >
+          Las imágenes de esta página son ilustrativas y no corresponden a
+          pacientes de la clínica. Los resultados de cada tratamiento varían
+          según las características individuales de cada persona y requieren
+          una valoración médica previa.
+        </p>
       </section>
 
       <CTABanner />
