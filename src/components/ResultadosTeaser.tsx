@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { resultadosTeaser } from "@/lib/images";
 
 // Muestra 4 casos representativos — cambia por imágenes reales de la clínica
 const casos = [
@@ -7,29 +8,25 @@ const casos = [
     id: "botox",
     label: "Faciales",
     tratamiento: "Toxina Botulínica",
-    image:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&h=750&fit=crop&crop=face",
+    image: resultadosTeaser.faciales,
   },
   {
     id: "labios",
     label: "Inyectables",
     tratamiento: "Ácido Hialurónico",
-    image:
-      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=750&fit=crop&crop=face",
+    image: resultadosTeaser.inyectables,
   },
   {
     id: "corporal",
     label: "Corporales",
     tratamiento: "INDIBA Activ",
-    image:
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=750&fit=crop&crop=center",
+    image: resultadosTeaser.corporales,
   },
   {
     id: "capilar",
     label: "Capilares",
     tratamiento: "Implante Capilar",
-    image:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=750&fit=crop&crop=top",
+    image: resultadosTeaser.capilares,
   },
 ];
 

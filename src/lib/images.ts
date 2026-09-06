@@ -1,0 +1,26 @@
+/**
+ * Registro central de imágenes del sitio.
+ *
+ * Imágenes propias generadas con Higgsfield (soul_2) siguiendo la dirección
+ * de arte de docs/LOTE-1-PROMPTS.md. Para reemplazar una imagen basta con
+ * cambiar el valor aquí — los componentes no se tocan.
+ */
+
+const STOCK = "https://images.unsplash.com/photo";
+
+/** LOTE 1 · Tratamientos destacados (home) — 1400×788 */
+export const tratamientos = {
+  botox: `${STOCK}-1508214751196-bcfd4ca60f91?w=700&h=400&fit=crop&crop=face`, // ⏳ pendiente: requiere fotos de la Dra.
+  implanteCapilar: "/images/tratamientos/implante-capilar.webp",
+  limpiezaFacial: "/images/tratamientos/limpieza-facial.webp",
+  recuperacionCapilar: "/images/tratamientos/recuperacion-capilar.webp",
+  descensoPeso: "/images/tratamientos/descenso-peso.webp",
+} as const;
+
+/** LOTE 1 · Teaser de resultados (home) — 1200×1600 */
+export const resultadosTeaser = {
+  faciales: "/images/resultados/teaser-01.webp",
+  inyectables: "/images/resultados/teaser-02.webp",
+  corporales: "/images/resultados/teaser-03.webp",
+  capilares: "/images/resultados/teaser-04.webp",
+} as const;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { tratamientos } from "@/lib/images";
 import { TecnologiaShowcase } from "@/components/TecnologiaShowcase";
 
 export function TratamientosDestacados() {
@@ -69,7 +70,7 @@ export function TratamientosDestacados() {
               style={{ height: "55%" , minHeight: "260px" }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=700&h=400&fit=crop&crop=face"
+                src={tratamientos.botox}
                 alt="Tratamiento de Botox — resultados naturales"
                 fill
                 sizes="(max-width: 768px) 100vw, 58vw"
@@ -165,7 +166,7 @@ export function TratamientosDestacados() {
               style={{ height: "40%", minHeight: "180px" }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=300&fit=crop"
+                src={tratamientos.implanteCapilar}
                 alt="Implante Capilar — técnica FUE"
                 fill
                 sizes="(max-width: 768px) 100vw, 42vw"
@@ -272,11 +273,14 @@ export function TratamientosDestacados() {
     style={{ backgroundColor: "#f4ede6", flex: "1" }}
   >
     <div className="relative overflow-hidden" style={{ height: "220px" }}>
-      <img
-        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=300&fit=crop&crop=center"
-        alt="Limpiezas Faciales — protocolo profundo"
-        style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
-      />
+      <Image
+          src={tratamientos.limpiezaFacial}
+          alt="Limpiezas Faciales — protocolo profundo"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
+          style={{ transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+        />
     </div>
     <div className="flex flex-col justify-end flex-1 px-7 py-8">
       <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#1c1c1c", opacity: 0.45, fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
@@ -301,11 +305,14 @@ export function TratamientosDestacados() {
     style={{ backgroundColor: "#1c1c1c", flex: "1" }}
   >
     <div className="relative overflow-hidden" style={{ height: "220px" }}>
-      <img
-        src="https://images.unsplash.com/photo-1612908773990-5ac37a0e65c4?w=500&h=300&fit=crop&crop=center"
-        alt="Recuperación Capilar — PRP y exosomas"
-        style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.7)", transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
-      />
+      <Image
+          src={tratamientos.recuperacionCapilar}
+          alt="Recuperación Capilar — PRP y exosomas"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
+          style={{ transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)", filter: "brightness(0.7)" }}
+        />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #1c1c1c 0%, transparent 60%)" }} />
     </div>
     <div className="flex flex-col justify-end flex-1 px-7 py-8">
@@ -331,11 +338,14 @@ export function TratamientosDestacados() {
     style={{ backgroundColor: "#b89a6a", flex: "1" }}
   >
     <div className="relative overflow-hidden" style={{ height: "220px" }}>
-      <img
-        src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop&crop=center"
-        alt="Descenso de Peso — tratamiento médico"
-        style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.35, transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)" }}
-      />
+      <Image
+          src={tratamientos.descensoPeso}
+          alt="Descenso de Peso — tratamiento médico"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
+          style={{ transition: "transform 0.9s cubic-bezier(0.16,1,0.3,1)", opacity: 0.35 }}
+        />
     </div>
     <div className="flex flex-col justify-end flex-1 px-7 py-8">
       <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "rgba(28,28,28,0.55)", fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
