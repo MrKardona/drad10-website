@@ -27,8 +27,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tratamientos Faciales",
     date: "15 de enero, 2025",
     readTime: "8 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=85&fit=crop",
+    coverImage: "/images/blog/acido-hialuronico.webp",
     content: [
       {
         type: "paragraph",
@@ -48,7 +47,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=900&q=85&fit=crop",
+        src: "/images/blog/ah-microinyeccion.webp",
         alt: "Tratamiento de ácido hialurónico en clínica estética",
         caption: "El ácido hialurónico se aplica mediante microinyecciones de precisión.",
       },
@@ -70,7 +69,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=900&q=85&fit=crop",
+        src: "/images/blog/ah-labios-natural.webp",
         alt: "Resultado natural de relleno de labios con ácido hialurónico",
         caption: "Resultados naturales y proporcionales — sin el aspecto exagerado de antaño.",
       },
@@ -96,7 +95,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900&q=85&fit=crop",
+        src: "/images/blog/ah-valoracion.webp",
         alt: "Consulta médica en clínica estética de lujo",
         caption: "Una valoración personalizada es siempre el primer paso.",
       },
@@ -131,7 +130,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=900&q=85&fit=crop",
+        src: "/images/blog/ah-piel-luminosa.webp",
         alt: "Mujer con piel luminosa después de tratamiento estético",
         caption: "Piel más luminosa, hidratada y con volumen natural desde las primeras horas.",
       },
@@ -174,8 +173,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tratamientos Faciales",
     date: "3 de febrero, 2025",
     readTime: "7 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=1200&q=85&fit=crop&crop=face",
+    coverImage: "/images/blog/botox-que-esperar.webp",
     content: [
       {
         type: "paragraph",
@@ -249,8 +247,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tecnología",
     date: "20 de febrero, 2025",
     readTime: "9 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=85&fit=crop&crop=center",
+    coverImage: "/images/blog/scanner-d10-indiba.webp",
     content: [
       {
         type: "paragraph",
@@ -311,8 +308,7 @@ export const blogPosts: BlogPost[] = [
     category: "Capilares",
     date: "10 de marzo, 2025",
     readTime: "10 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=85&fit=crop&crop=top",
+    coverImage: "/images/blog/implante-capilar-fue.webp",
     content: [
       {
         type: "paragraph",
@@ -372,8 +368,7 @@ export const blogPosts: BlogPost[] = [
     category: "Corporales",
     date: "1 de abril, 2025",
     readTime: "8 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=85&fit=crop&crop=center",
+    coverImage: "/images/blog/descenso-de-peso-rapido.webp",
     content: [
       {
         type: "paragraph",
@@ -441,8 +436,7 @@ export const blogPosts: BlogPost[] = [
     category: "Capilares",
     date: "14 de abril, 2025",
     readTime: "9 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=85&fit=crop&crop=top",
+    coverImage: "/images/blog/implante-capilar-mitos-realidad.webp",
     content: [
       {
         type: "paragraph",
@@ -528,8 +522,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tratamientos Faciales",
     date: "28 de abril, 2025",
     readTime: "6 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=85&fit=crop&crop=face",
+    coverImage: "/images/blog/cuidado-labios-relleno.webp",
     content: [
       {
         type: "paragraph",
@@ -610,8 +603,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tratamientos Faciales",
     date: "5 de mayo, 2025",
     readTime: "7 min",
-    coverImage:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=1200&q=85&fit=crop&crop=face",
+    coverImage: "/images/blog/mitos-botox.webp",
     content: [
       {
         type: "paragraph",

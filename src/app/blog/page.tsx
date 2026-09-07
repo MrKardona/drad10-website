@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
 import { FooterPremium } from "@/components/FooterPremium";
@@ -77,18 +78,15 @@ export default function BlogPage() {
                 {/* Image */}
                 <div
                   className="img-zoom"
-                  style={{ height: "420px", overflow: "hidden" }}
+                  style={{ position: "relative", height: "420px", overflow: "hidden" }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                                    <Image
                     src={featured.coverImage}
                     alt={featured.title}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      transition: "transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94)",
-                    }}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 900px"
+                    style={{ objectFit: "cover",
+                      transition: "transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94)" }}
                   />
                 </div>
 
@@ -204,12 +202,13 @@ export default function BlogPage() {
                       cursor: "pointer",
                     }}
                   >
-                    <div className="img-zoom" style={{ height: "220px", overflow: "hidden" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                    <div className="img-zoom" style={{ position: "relative", height: "220px", overflow: "hidden" }}>
+                                            <Image
                         src={post.coverImage}
                         alt={post.title}
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 380px"
+                        style={{ objectFit: "cover" }}
                       />
                     </div>
                     <div style={{ padding: "1.5rem" }}>
