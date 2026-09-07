@@ -1,5 +1,6 @@
 "use client";
 
+import { tecnologia } from "@/lib/images";
 import { useCallback, useState } from "react";
 import Image from "next/image";
 
@@ -26,7 +27,7 @@ const procesos: Proceso[] = [
       texto: "Quiero mi diagnóstico",
       href: "https://wa.me/573002440656?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20con%20el%20Scanner%20D10",
     },
-    img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&h=600&fit=crop&crop=center",
+    img: tecnologia.scannerDiagnostico,
     imgAlt: "Diagnóstico facial Scanner D10",
   },
   {
@@ -39,7 +40,7 @@ const procesos: Proceso[] = [
       texto: "Consultar INDIBA facial",
       href: "https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20INDIBA%20facial",
     },
-    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&h=600&fit=crop&crop=face",
+    img: tecnologia.indibaFacial,
     imgAlt: "INDIBA facial — lifting sin cirugía",
   },
   {
@@ -49,7 +50,7 @@ const procesos: Proceso[] = [
     desc: "Calor profundo controlado que moviliza la grasa localizada y reafirma el tejido: abdomen, flancos, brazos y piernas. Resultados visibles desde las primeras sesiones.",
     tags: ["Reafirmante", "Grasa localizada", "Sin cirugía"],
     cta: { texto: "Ver moldeamiento corporal", href: "/servicios/moldeamiento-corporal" },
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=600&fit=crop&crop=center",
+    img: tecnologia.indibaCorporal,
     imgAlt: "INDIBA corporal — moldeamiento sin cirugía",
   },
   {
@@ -62,7 +63,7 @@ const procesos: Proceso[] = [
       texto: "Consultar disponibilidad",
       href: "https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20INDIBA%20para%20recuperaci%C3%B3n",
     },
-    img: "https://images.unsplash.com/photo-1612908773990-5ac37a0e65c4?w=800&h=600&fit=crop&crop=center",
+    img: tecnologia.indibaRegeneracion,
     imgAlt: "Regeneración celular con INDIBA",
   },
 ];

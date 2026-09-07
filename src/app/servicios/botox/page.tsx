@@ -1,3 +1,4 @@
+import { botox } from "@/lib/images";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -207,7 +208,7 @@ export default function BotoxPage() {
       >
         {/* Background image */}
         <Image
-          src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1400&h=900&fit=crop&crop=center"
+          src={botox.hero}
           alt="Tratamiento de toxina botulínica"
           fill
           style={{ objectFit: "cover", objectPosition: "center", opacity: 0.18 }}
@@ -575,8 +576,8 @@ export default function BotoxPage() {
               className="img-zoom"
             >
               <Image
-                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&h=900&fit=crop&crop=face"
-                alt="Resultado natural toxina botulínica"
+                src={botox.expresion}
+                alt="Rostro con expresión natural y relajada"
                 fill
                 style={{ objectFit: "cover", objectPosition: "center top" }}
                 sizes="(max-width: 768px) 100vw, 50vw"
