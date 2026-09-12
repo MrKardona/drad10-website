@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const SUPABASE_HOST = "igijeqhyppvpennjdkiu.supabase.co";
+// Vercel Analytics y Speed Insights sirven su script desde este host y
+// envían las métricas a vitals.vercel-insights.com. Sin ambos en el CSP el
+// script no carga y los eventos se quedan encolados en el navegador.
+const VERCEL_ANALYTICS = "https://va.vercel-scripts.com";
+const VERCEL_VITALS = "https://vitals.vercel-insights.com";
 
 // Static CSP. The previous per-request nonce (src/proxy.ts) forced every
 // page into dynamic SSR — one function invocation per pageview and zero CDN
@@ -8,11 +13,11 @@ const SUPABASE_HOST = "igijeqhyppvpennjdkiu.supabase.co";
 // script-src needs 'unsafe-inline' for Next's bootstrap scripts.
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline' ${VERCEL_ANALYTICS}`,
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com`,
   "font-src 'self'",
-  `connect-src 'self' https://${SUPABASE_HOST}`,
+  `connect-src 'self' https://${SUPABASE_HOST} ${VERCEL_ANALYTICS} ${VERCEL_VITALS}`,
   "frame-src https://www.youtube-nocookie.com",
   "frame-ancestors 'none'",
   "object-src 'none'",

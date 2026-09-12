@@ -59,6 +59,11 @@ export function ScrollAnimations() {
     // ── 5. Stagger children ───────────────────────────────────────────
     document.querySelectorAll("[data-anim='stagger']").forEach((parent) => {
       const children = parent.children;
+      // globals.css deja todo [data-anim] en opacity:0. Los demás handlers lo
+      // recuperan con fromTo sobre el propio elemento; aquí el movimiento lo
+      // hacen los hijos, así que el contenedor hay que revelarlo aparte o la
+      // sección entera queda invisible.
+      gsap.set(parent, { opacity: 1 });
       gsap.set(children, { opacity: 0, y: 32 });
       ScrollTrigger.create({
         trigger: parent,
