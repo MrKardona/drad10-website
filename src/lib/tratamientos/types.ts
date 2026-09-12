@@ -28,10 +28,22 @@ export interface FaqItem {
   a: string;
 }
 
+export interface ImagenesTratamiento {
+  /** Fondo del hero a pantalla completa — 16:9. La doctora en contexto. */
+  hero: string;
+  /** Apoyo de la sección "qué es" — 3:2. */
+  queEs?: string;
+  /** Una por paso, en el mismo orden que `pasos`. Macros del procedimiento. */
+  pasos?: string[];
+  /** Retrato vertical junto al CTA de cierre — 3:4. */
+  cierre?: string;
+}
 export interface Tratamiento {
   slug: string;
   categoria: CategoriaTratamiento;
   nombre: string;
+  /** Imágenes propias. Opcional: sin ellas la página cae al diseño sin foto. */
+  imagenes?: ImagenesTratamiento;
   /** Título e intro del hero */
   hero: {
     eyebrow: string;

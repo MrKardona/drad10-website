@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/NavBar";
@@ -65,6 +66,7 @@ export default async function TratamientoPage({ params }: Props) {
   const t = getTratamiento(slug);
   if (!t) notFound();
 
+  const img = t.imagenes;
   const WA = `https://wa.me/573002440656?text=${encodeURIComponent(t.waMensaje)}`;
 
   const schema = {
@@ -94,92 +96,162 @@ export default async function TratamientoPage({ params }: Props) {
       />
       <NavBar />
 
-      {/* ══ 1. HERO ══════════════════════════════════════════ */}
+      {/* ══ 1. HERO ═══════════════════════════════════════════════════════ */}
+      {/* Split editorial: copy a la izquierda, retrato a la derecha.
+          Sin imagen propia cae al layout centrado de una sola columna. */}
       <section
         style={{
           backgroundColor: DARK,
-          paddingTop: "clamp(120px, 16vw, 190px)",
-          paddingBottom: "clamp(56px, 8vw, 90px)",
+          paddingTop: "clamp(104px, 14vw, 160px)",
+          paddingBottom: "clamp(48px, 7vw, 80px)",
+          overflow: "hidden",
         }}
       >
         <div
           style={{
-            maxWidth: "1160px",
+            maxWidth: "1240px",
             margin: "0 auto",
             padding: "0 clamp(24px, 6vw, 80px)",
-            textAlign: "center",
+            display: "grid",
+            gridTemplateColumns: img ? "1.05fr 0.95fr" : "1fr",
+            gap: "clamp(32px, 5vw, 72px)",
+            alignItems: "center",
           }}
+          className="tratamiento-hero-grid"
         >
-          <p style={{ ...label, marginBottom: "1.5rem" }}>{t.hero.eyebrow}</p>
-          <h1 style={{ ...display("clamp(2.6rem, 6vw, 4.6rem)", CREAM), marginBottom: "1.5rem" }}>
-            {t.hero.titulo}
-            <br />
-            <em style={{ color: GOLD, fontStyle: "italic" }}>{t.hero.tituloEm}</em>
-          </h1>
-          <div
-            style={{
-              width: "56px",
-              height: "1px",
-              background: `linear-gradient(to right, transparent, ${GOLD}, transparent)`,
-              margin: "0 auto 1.75rem",
-            }}
-          />
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "clamp(0.9rem, 1.4vw, 1rem)",
-              color: "rgba(250,248,245,0.6)",
-              lineHeight: 1.85,
-              maxWidth: "560px",
-              margin: "0 auto 2.5rem",
-            }}
-          >
-            {t.hero.sub}
-          </p>
-          <Link href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
-            AGENDA TU VALORACIÓN GRATUITA
-          </Link>
+          {/* ── Columna de copy ── */}
+          <div style={{ textAlign: img ? "left" : "center" }}>
+            <p style={{ ...label, marginBottom: "1.25rem" }} data-anim="up">
+              {t.hero.eyebrow}
+            </p>
+            <h1
+              data-anim="up"
+              style={{
+                ...display("clamp(2.4rem, 5.2vw, 4.1rem)", CREAM),
+                marginBottom: "1.25rem",
+              }}
+            >
+              {t.hero.titulo}
+              <br />
+              <em style={{ color: GOLD, fontStyle: "italic" }}>{t.hero.tituloEm}</em>
+            </h1>
+            <div
+              data-anim="line"
+              style={{
+                width: "56px",
+                height: "1px",
+                background: `linear-gradient(to right, ${GOLD}, transparent)`,
+                margin: img ? "0 0 1.6rem" : "0 auto 1.6rem",
+              }}
+            />
+            <p
+              data-anim="up"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "clamp(0.9rem, 1.4vw, 1rem)",
+                color: "rgba(250,248,245,0.62)",
+                lineHeight: 1.85,
+                maxWidth: "480px",
+                margin: img ? "0 0 2.25rem" : "0 auto 2.25rem",
+              }}
+            >
+              {t.hero.sub}
+            </p>
+            <div data-anim="up">
+              <Link href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
+                AGENDA TU VALORACIÓN GRATUITA
+              </Link>
+            </div>
 
-          {/* Strip de prueba social */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              gap: "0.75rem 2rem",
-              marginTop: "2.75rem",
-              fontFamily: "var(--font-body)",
-              fontSize: "0.68rem",
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-              color: "rgba(250,248,245,0.45)",
-            }}
-          >
-            <span style={{ color: GOLD }}>★ 4.9 · 266 reseñas en Google</span>
-            <span>+20.000 pacientes</span>
-            <span>Médica certificada ARG · COL</span>
+            {/* Prueba social */}
+            <div
+              data-anim="up"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: img ? "flex-start" : "center",
+                flexWrap: "wrap",
+                gap: "0.6rem 1.6rem",
+                marginTop: "2.25rem",
+                fontFamily: "var(--font-body)",
+                fontSize: "0.64rem",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "rgba(250,248,245,0.42)",
+              }}
+            >
+              <span style={{ color: GOLD }}>★ 4.9 en Google</span>
+              <span>+20.000 pacientes</span>
+              <span>Médica certificada ARG · COL</span>
+            </div>
           </div>
+
+          {/* ── Columna de retrato ── */}
+          {img && (
+            <div
+              data-anim="right"
+              style={{ position: "relative", aspectRatio: "4 / 5", minHeight: "340px" }}
+            >
+              {/* Marcas doradas de esquina */}
+              <div
+                aria-hidden
+                style={{
+                  position: "absolute", top: "-10px", left: "-10px",
+                  width: "44px", height: "44px",
+                  borderTop: `2px solid ${GOLD}`, borderLeft: `2px solid ${GOLD}`,
+                  zIndex: 2, pointerEvents: "none",
+                }}
+              />
+              <div
+                aria-hidden
+                style={{
+                  position: "absolute", bottom: "-10px", right: "-10px",
+                  width: "44px", height: "44px",
+                  borderBottom: `2px solid ${GOLD}`, borderRight: `2px solid ${GOLD}`,
+                  zIndex: 2, pointerEvents: "none",
+                }}
+              />
+              <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+                <Image
+                  src={img.hero}
+                  alt={`${t.nombre} — Dra. Daniela Díez, DRA.D10 Medellín`}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 46vw"
+                  className="object-cover"
+                  priority
+                />
+                {/* Degradado inferior para asentar la imagen en el fondo oscuro */}
+                <div
+                  aria-hidden
+                  style={{
+                    position: "absolute", inset: 0, pointerEvents: "none",
+                    background: `linear-gradient(to top, ${DARK} 0%, transparent 42%)`,
+                  }}
+                />
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* Chips de beneficios rápidos */}
+        {/* Chips de beneficios */}
         <div
           style={{
-            maxWidth: "900px",
-            margin: "2.75rem auto 0",
+            maxWidth: "1240px",
+            margin: "clamp(32px, 5vw, 56px) auto 0",
             padding: "0 clamp(24px, 6vw, 80px)",
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "center",
-            gap: "0.6rem",
+            justifyContent: img ? "flex-start" : "center",
+            gap: "0.55rem",
           }}
         >
           {t.beneficios.map((b) => (
             <span
               key={b}
+              data-anim="up"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.68rem",
+                fontSize: "0.66rem",
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 color: "rgba(250,248,245,0.75)",
@@ -193,6 +265,12 @@ export default async function TratamientoPage({ params }: Props) {
             </span>
           ))}
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .tratamiento-hero-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
 
       {/* ══ 2-3. PROBLEMA ════════════════════════════════════ */}
@@ -392,7 +470,7 @@ export default async function TratamientoPage({ params }: Props) {
               gap: "1.5rem",
             }}
           >
-            {t.pasos.map((paso) => (
+            {t.pasos.map((paso, i) => (
               <div
                 key={paso.num}
                 style={{
@@ -401,6 +479,26 @@ export default async function TratamientoPage({ params }: Props) {
                   backgroundColor: "#1a1a1a",
                 }}
               >
+                {/* Macro del procedimiento — una por paso, en orden */}
+                {img?.pasos?.[i] && (
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "3 / 2",
+                      overflow: "hidden",
+                      marginBottom: "1.5rem",
+                      border: "1px solid rgba(184,154,106,0.14)",
+                    }}
+                  >
+                    <Image
+                      src={img.pasos[i]}
+                      alt={`${paso.title} — ${t.nombre}`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <span
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",

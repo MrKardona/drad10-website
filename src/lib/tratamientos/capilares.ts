@@ -6,6 +6,15 @@ export const capilares: Tratamiento[] = [
     slug: "implante-capilar-fue",
     categoria: "capilares",
     nombre: "Implante Capilar FUE",
+    imagenes: {
+      hero: "/images/servicios/implante-capilar-fue/hero.webp",
+      pasos: [
+        "/images/servicios/implante-capilar-fue/paso-1.webp",
+        "/images/servicios/implante-capilar-fue/paso-2.webp",
+        "/images/servicios/implante-capilar-fue/paso-3.webp",
+      ],
+      cierre: "/images/servicios/implante-capilar-fue/cierre.webp",
+    },
     hero: {
       eyebrow: "MICROIMPLANTE CAPILAR · TÉCNICA FUE",
       titulo: "Recupera tu cabello,",
