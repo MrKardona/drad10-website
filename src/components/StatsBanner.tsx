@@ -93,8 +93,8 @@ export function StatsBanner() {
               }}
             />
             <Image
-              src="/images/instagram/post-01.webp"
-              alt="DRA.D10 — Medicina estética en Medellín"
+              src="/images/dra-daniela-respaldo.webp"
+              alt="Dra. Daniela Díez — directora médica de DRA.D10, El Poblado, Medellín"
               fill
               className="object-cover"
               sizes="260px"
