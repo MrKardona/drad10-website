@@ -127,6 +127,14 @@ export const corporales: Tratamiento[] = [
     slug: "descenso-de-peso",
     categoria: "corporales",
     nombre: "Descenso de Peso Médico",
+    imagenes: {
+      hero: "/images/servicios/descenso-de-peso/hero.webp",
+      pasos: [
+        "/images/servicios/descenso-de-peso/paso-1.webp",
+        "/images/servicios/descenso-de-peso/paso-2.webp",
+        "/images/servicios/descenso-de-peso/paso-3.webp",
+      ],
+    },
     hero: {
       eyebrow: "PROGRAMA MÉDICO SUPERVISADO",
       titulo: "Baja de peso con ciencia,",

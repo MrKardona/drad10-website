@@ -1,4 +1,4 @@
-import { botox } from "@/lib/images";
+import { botox, botoxPasos } from "@/lib/images";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -740,7 +740,7 @@ export default function BotoxPage() {
             data-anim="stagger"
             style={{ display: "flex", flexDirection: "column", gap: "1px", backgroundColor: "rgba(184,154,106,0.1)" }}
           >
-            {pasos.map((paso) => (
+            {pasos.map((paso, i) => (
               <div
                 key={paso.num}
                 style={{
@@ -754,6 +754,26 @@ export default function BotoxPage() {
                 }}
                 className="paso-card"
               >
+                {/* Macro del proceso */}
+                {botoxPasos[i] && (
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "3 / 2",
+                      overflow: "hidden",
+                      marginBottom: "1.5rem",
+                      border: "1px solid rgba(184,154,106,0.14)",
+                    }}
+                  >
+                    <Image
+                      src={botoxPasos[i]}
+                      alt={`${paso.title} — Botox, DRA.D10 Medellín`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <span
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",

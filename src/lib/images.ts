@@ -39,3 +39,10 @@ export const botox = {
   /** Retrato vertical 3:4 — expresión natural preservada — 1000×1333 */
   expresion: "/images/servicios/botox-expresion.webp",
 } as const;
+
+/** Macros del proceso en /servicios/botox — 1000×667 */
+export const botoxPasos = [
+  "/images/servicios/botox/paso-1.webp",
+  "/images/servicios/botox/paso-2.webp",
+  "/images/servicios/botox/paso-3.webp",
+] as const;

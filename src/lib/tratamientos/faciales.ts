@@ -126,6 +126,14 @@ export const faciales: Tratamiento[] = [
     slug: "acido-hialuronico",
     categoria: "faciales",
     nombre: "Ácido Hialurónico",
+    imagenes: {
+      hero: "/images/servicios/acido-hialuronico/hero.webp",
+      pasos: [
+        "/images/servicios/acido-hialuronico/paso-1.webp",
+        "/images/servicios/acido-hialuronico/paso-2.webp",
+        "/images/servicios/acido-hialuronico/paso-3.webp",
+      ],
+    },
     hero: {
       eyebrow: "RELLENOS DÉRMICOS FACIALES",
       titulo: "Recupera volumen y armonía,",
@@ -247,6 +255,14 @@ export const faciales: Tratamiento[] = [
     slug: "limpieza-facial",
     categoria: "faciales",
     nombre: "Limpieza Facial Profunda",
+    imagenes: {
+      hero: "/images/servicios/limpieza-facial/hero.webp",
+      pasos: [
+        "/images/servicios/limpieza-facial/paso-1.webp",
+        "/images/servicios/limpieza-facial/paso-2.webp",
+        "/images/servicios/limpieza-facial/paso-3.webp",
+      ],
+    },
     hero: {
       eyebrow: "PROTOCOLO DE PIEL · CLÍNICO",
       titulo: "Piel limpia y luminosa,",
