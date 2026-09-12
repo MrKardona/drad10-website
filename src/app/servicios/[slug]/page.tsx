@@ -96,6 +96,29 @@ export default async function TratamientoPage({ params }: Props) {
       />
       <NavBar />
 
+      {/* Barra de progreso de lectura — se escala con el scroll de la página */}
+      <div
+        aria-hidden
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "2px",
+          zIndex: 90,
+          pointerEvents: "none",
+        }}
+      >
+        <div
+          data-progress-bar
+          style={{
+            height: "100%",
+            background: `linear-gradient(to right, ${GOLD}, rgba(184,154,106,0.45))`,
+            transform: "scaleX(0)",
+            transformOrigin: "left center",
+          }}
+        />
+      </div>
       {/* ══ 1. HERO ═══════════════════════════════════════════════════════ */}
       {/* Split editorial: copy a la izquierda, retrato a la derecha.
           Sin imagen propia cae al layout centrado de una sola columna. */}
@@ -125,7 +148,7 @@ export default async function TratamientoPage({ params }: Props) {
               {t.hero.eyebrow}
             </p>
             <h1
-              data-anim="up"
+              data-anim="mask"
               style={{
                 ...display("clamp(2.4rem, 5.2vw, 4.1rem)", CREAM),
                 marginBottom: "1.25rem",
@@ -213,6 +236,7 @@ export default async function TratamientoPage({ params }: Props) {
               />
               <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
                 <Image
+                  data-parallax="0.1"
                   src={img.hero}
                   alt={`${t.nombre} — Dra. Daniela Díez, DRA.D10 Medellín`}
                   fill
@@ -473,6 +497,7 @@ export default async function TratamientoPage({ params }: Props) {
             {t.pasos.map((paso, i) => (
               <div
                 key={paso.num}
+                className="paso-card"
                 style={{
                   border: "1px solid rgba(184,154,106,0.18)",
                   padding: "2.25rem 1.9rem",
@@ -642,7 +667,13 @@ export default async function TratamientoPage({ params }: Props) {
           <p style={{ ...label, marginBottom: "1rem" }}>INVERSIÓN</p>
           {t.precio.desde ? (
             <h2 style={{ ...display("clamp(2.2rem, 5vw, 3.6rem)", "#1c1c1c"), marginBottom: "0.5rem" }}>
-              Desde {formatCOP(t.precio.desde)}
+              Desde{" "}
+              <span
+                data-counter={t.precio.desde}
+                data-prefix="$"
+              >
+                {formatCOP(t.precio.desde)}
+              </span>
             </h2>
           ) : (
             <h2 style={{ ...display("clamp(1.7rem, 3.4vw, 2.6rem)", "#1c1c1c"), marginBottom: "0.5rem" }}>

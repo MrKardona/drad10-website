@@ -136,7 +136,65 @@ export function ScrollAnimations() {
         ),
     });
 
+    // ── 9. Mask reveal — el texto asciende tras una máscara ──────────
+    // Para titulares. Funciona con cualquier markup interno (<br>, <em>)
+    // porque recorta el elemento entero en vez de trocear el texto.
+    ScrollTrigger.batch("[data-anim='mask']", {
+      once: true,
+      start: "top 88%",
+      onEnter: (els) =>
+        gsap.fromTo(
+          els,
+          { clipPath: "inset(105% 0% 0% 0%)", y: 24 },
+          {
+            clipPath: "inset(0% 0% -10% 0%)",
+            y: 0,
+            opacity: 1,
+            duration: 1.05,
+            stagger: 0.09,
+            ease: "power4.out",
+            onComplete: () => gsap.set(els, { clearProps: "clipPath" }),
+          }
+        ),
+    });
+
+    // ── 10. Barra de progreso de lectura ────────────────────────────
+    const bar = document.querySelector<HTMLElement>("[data-progress-bar]");
+    if (bar) {
+      gsap.to(bar, {
+        scaleX: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.documentElement,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 0.3,
+        },
+      });
+    }
+    // ── 11. Red de seguridad ────────────────────────────────────────
+    // globals.css deja todo [data-anim] en opacity:0 y son los batches
+    // quienes lo revierten al animar. Pero ScrollTrigger.batch dispara
+    // onEnter al *cruzar* el punto de inicio, y un elemento que ya está
+    // por encima de esa línea al montar nunca lo cruza: se queda oculto.
+    // Eso deja el hero entero invisible, que es justo lo primero que se ve.
+    //
+    // Esta pasada revela cualquier cosa que siga en opacity:0 una vez
+    // asentado el layout. Si su batch ya la animó, no hay nada que hacer.
+    const revelarPendientes = () => {
+      ScrollTrigger.refresh();
+      document.querySelectorAll<HTMLElement>("[data-anim]").forEach((el) => {
+        if (getComputedStyle(el).opacity !== "0") return;
+        const r = el.getBoundingClientRect();
+        const visible = r.top < window.innerHeight && r.bottom > 0;
+        if (!visible) return;
+        gsap.set(el, { clearProps: "clipPath" });
+        gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" });
+      });
+    };
+    const idRevelado = window.setTimeout(revelarPendientes, 900);
     return () => {
+      window.clearTimeout(idRevelado);
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);

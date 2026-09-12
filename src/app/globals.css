@@ -434,3 +434,34 @@
     max-height: 92vh !important;
   }
 }
+
+/* ── Tarjetas de paso en páginas de tratamiento ──────────────────────
+   La imagen crece dentro de su marco mientras la tarjeta se eleva.
+   El overflow:hidden del contenedor de la imagen recorta el zoom. */
+.paso-card {
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+.paso-card img {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (hover: hover) {
+  .paso-card:hover {
+    transform: translateY(-6px);
+  }
+  .paso-card:hover img {
+    transform: scale(1.055);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .paso-card,
+  .paso-card img {
+    transition: none;
+  }
+  .paso-card:hover {
+    transform: none;
+  }
+  .paso-card:hover img {
+    transform: none;
+  }
+}
