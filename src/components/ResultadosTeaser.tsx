@@ -190,7 +190,7 @@ export function ResultadosTeaser() {
               letterSpacing: "0.06em",
             }}
           >
-            Resultados reales de pacientes de DRA.D10 · Medellín, Colombia
+            Medicina estética en El Poblado · Medellín, Colombia
           </p>
           <Link href="/resultados" className="btn-gold flex-shrink-0">
             VER TODOS LOS RESULTADOS

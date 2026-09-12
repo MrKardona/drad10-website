@@ -6,11 +6,10 @@
  * cambiar el valor aquí — los componentes no se tocan.
  */
 
-const STOCK = "https://images.unsplash.com/photo";
 
 /** LOTE 1 · Tratamientos destacados (home) — 1400×788 */
 export const tratamientos = {
-  botox: `${STOCK}-1508214751196-bcfd4ca60f91?w=700&h=400&fit=crop&crop=face`, // ⏳ pendiente: requiere fotos de la Dra.
+  botox: "/images/tratamientos/botox.webp",
   implanteCapilar: "/images/tratamientos/implante-capilar.webp",
   limpiezaFacial: "/images/tratamientos/limpieza-facial.webp",
   recuperacionCapilar: "/images/tratamientos/recuperacion-capilar.webp",

@@ -194,7 +194,7 @@ export default function InstagramSection() {
                   letterSpacing: "0.06em",
                 }}
               >
-                Reel · Stories · Resultados reales
+                Reel · Stories · Tratamientos
               </span>
             </div>
           </div>
