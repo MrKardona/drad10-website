@@ -38,12 +38,24 @@ export interface ImagenesTratamiento {
   /** Retrato vertical junto al CTA de cierre — 3:4. */
   cierre?: string;
 }
+export interface SecuenciaScroll {
+  /** Carpeta bajo /frames con los sets d/ y m/. */
+  dir: string;
+  /** Número de frames del set. */
+  frameCount: number;
+  /** Alto de la sección en vh: a más alto, más lento avanza. */
+  alturaVh?: number;
+  badge?: string;
+  frase?: string;
+}
 export interface Tratamiento {
   slug: string;
   categoria: CategoriaTratamiento;
   nombre: string;
   /** Imágenes propias. Opcional: sin ellas la página cae al diseño sin foto. */
   imagenes?: ImagenesTratamiento;
+  /** Secuencia de frames atada al scroll. Omitir para no mostrarla. */
+  secuencia?: SecuenciaScroll;
   /** Título e intro del hero */
   hero: {
     eyebrow: string;

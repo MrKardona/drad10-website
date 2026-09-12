@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ScrollVideoSection } from "@/components/ScrollVideoSection";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/NavBar";
@@ -471,6 +472,18 @@ export default async function TratamientoPage({ params }: Props) {
         </section>
       )}
 
+      {/* ══ SECUENCIA ATADA AL SCROLL ═══════════════════════════════════ */}
+      {/* El usuario controla la reproducción con su propio scroll. Solo se
+          monta si el tratamiento declara una secuencia de frames. */}
+      {t.secuencia && (
+        <ScrollVideoSection
+          dir={t.secuencia.dir}
+          frameCount={t.secuencia.frameCount}
+          alturaVh={t.secuencia.alturaVh ?? 300}
+          badge={t.secuencia.badge ?? ""}
+          frase={t.secuencia.frase ?? ""}
+        />
+      )}
       {/* ══ 5. CÓMO FUNCIONA — 3 PASOS ═══════════════════════ */}
       <section style={{ backgroundColor: DARK, padding: "clamp(56px, 9vw, 100px) 0" }}>
         <div

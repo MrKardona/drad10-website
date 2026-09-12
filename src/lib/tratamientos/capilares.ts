@@ -6,6 +6,13 @@ export const capilares: Tratamiento[] = [
     slug: "implante-capilar-fue",
     categoria: "capilares",
     nombre: "Implante Capilar FUE",
+    secuencia: {
+      dir: "capilar",
+      frameCount: 61,
+      alturaVh: 300,
+      badge: "Técnica FUE · folículo a folículo",
+      frase: "Cada injerto, colocado a mano",
+    },
     imagenes: {
       hero: "/images/servicios/implante-capilar-fue/hero.webp",
       pasos: [

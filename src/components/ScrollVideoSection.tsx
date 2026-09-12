@@ -7,13 +7,30 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FRAME_COUNT = 112;
+export interface ScrollVideoSectionProps {
+  /** Carpeta bajo /frames con los sets d/ (1280w) y m/ (640w). */
+  dir?: string;
+  /** Cuántos frames tiene el set. */
+  frameCount?: number;
+  /** Alto de la sección: a más alto, más lento avanza la secuencia. */
+  alturaVh?: number;
+  /** Capas de texto sobre el canvas. Se ocultan si es false. */
+  overlays?: boolean;
+  /** Texto del badge inferior izquierdo. */
+  badge?: string;
+  /** Frase central. */
+  frase?: string;
+}
 
-// Two pre-generated WebP sets (scripts/convert-frames.mjs):
-// /frames/d → 1280w for desktop, /frames/m → 640w for mobile.
-function src(i: number, mobile: boolean) {
-  const dir = mobile ? "m" : "d";
-  return `/frames/${dir}/frame-${(i + 1).toString().padStart(3, "0")}.webp`;
+const FRAME_COUNT_DEFECTO = 112;
+
+// Dos sets WebP pregenerados: d/ a 1280w para escritorio, m/ a 640w para
+// móvil. `base` permite varias secuencias: "" usa /frames/d, y un nombre
+// de carpeta usa /frames/<base>/d.
+function src(i: number, mobile: boolean, base: string) {
+  const size = mobile ? "m" : "d";
+  const carpeta = base ? `${base}/${size}` : size;
+  return `/frames/${carpeta}/frame-${(i + 1).toString().padStart(3, "0")}.webp`;
 }
 
 function clamp01(v: number) {
@@ -28,7 +45,15 @@ function fadeWindow(p: number, i0: number, i1: number, o0: number, o1: number) {
   return 0;
 }
 
-export function ScrollVideoSection() {
+export function ScrollVideoSection({
+  dir = "",
+  frameCount = FRAME_COUNT_DEFECTO,
+  alturaVh = 420,
+  overlays = true,
+  badge = "Scanner D10 · INDIBA Certified · Quantum",
+  frase = "Transforma · Renueva · Revela",
+}: ScrollVideoSectionProps = {}) {
+  const FRAME_COUNT = frameCount;
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef    = useRef<HTMLCanvasElement>(null);
   const framesRef    = useRef<HTMLImageElement[]>([]);
@@ -71,7 +96,7 @@ export function ScrollVideoSection() {
       framesRef.current = imgs;
       for (let i = 0; i < FRAME_COUNT; i++) {
         const img = new Image();
-        img.src = src(i, mobile);
+        img.src = src(i, mobile, dir);
         const finish = () => {
           done++;
           setPct(Math.round((done / FRAME_COUNT) * 100));
@@ -95,7 +120,7 @@ export function ScrollVideoSection() {
     );
     io.observe(container);
     return () => io.disconnect();
-  }, [draw]);
+  }, [draw, dir, FRAME_COUNT]);
 
   /* ─── canvas resize ─── */
   useEffect(() => {
@@ -155,7 +180,7 @@ export function ScrollVideoSection() {
   }, { scope: containerRef, dependencies: [loaded] });
 
   return (
-    <section ref={containerRef} style={{ height: "420vh" }} className="relative bg-black">
+    <section ref={containerRef} style={{ height: `${alturaVh}vh` }} className="relative bg-black">
 
       {/* sticky viewport */}
       <div className="sticky top-0 h-screen w-full overflow-hidden">
@@ -197,7 +222,7 @@ export function ScrollVideoSection() {
                 whiteSpace: "nowrap",
               }}
             >
-              Scanner D10 · INDIBA Certified · Quantum
+              {badge}
             </p>
           </div>
         </div>
@@ -221,7 +246,7 @@ export function ScrollVideoSection() {
               padding: "0 1.5rem",
             }}
           >
-            Transforma&ensp;·&ensp;Renueva&ensp;·&ensp;Revela
+            {frase}
           </p>
         </div>
 
