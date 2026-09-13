@@ -83,11 +83,10 @@ export function NosotrosAnimations() {
 
         gsap.fromTo(
           row,
-          { opacity: 0, x: fromLeft ? -72 : 72, filter: "blur(5px)" },
+          { opacity: 0, x: fromLeft ? -72 : 72 },
           {
             opacity: 1,
             x: 0,
-            filter: "blur(0px)",
             duration: 0.95,
             ease: "power3.out",
             scrollTrigger: {

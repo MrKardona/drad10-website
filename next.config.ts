@@ -11,9 +11,13 @@ const VERCEL_VITALS = "https://vitals.vercel-insights.com";
 // page into dynamic SSR — one function invocation per pageview and zero CDN
 // caching. A static header lets Next prerender the whole site. Trade-off:
 // script-src needs 'unsafe-inline' for Next's bootstrap scripts.
+// En desarrollo React usa eval() para reconstruir las pilas de error; sin
+// unsafe-eval la consola se llena de errores. Nunca se añade en producción.
+const DEV_EVAL = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
+
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' ${VERCEL_ANALYTICS}`,
+  `script-src 'self' 'unsafe-inline'${DEV_EVAL} ${VERCEL_ANALYTICS}`,
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com`,
   "font-src 'self'",
