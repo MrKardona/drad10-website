@@ -6,6 +6,7 @@ export const faciales: Tratamiento[] = [
     slug: "relleno-de-labios",
     categoria: "faciales",
     nombre: "Relleno de Labios",
+    resultados: ["labios-acido-hialuronico"],
     hero: {
       eyebrow: "ÁCIDO HIALURÓNICO · LABIOS",
       titulo: "Labios con volumen,",
@@ -126,6 +127,7 @@ export const faciales: Tratamiento[] = [
     slug: "acido-hialuronico",
     categoria: "faciales",
     nombre: "Ácido Hialurónico",
+    resultados: ["surcos-nasogenianos", "ojeras-acido-hialuronico", "perfilado-mandibular", "volumen-menton", "rinomodelacion", "labios-acido-hialuronico"],
     imagenes: {
       hero: "/images/servicios/acido-hialuronico/hero.webp",
       pasos: [

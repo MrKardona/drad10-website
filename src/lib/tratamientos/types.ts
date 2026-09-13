@@ -56,6 +56,8 @@ export interface Tratamiento {
   imagenes?: ImagenesTratamiento;
   /** Secuencia de frames atada al scroll. Omitir para no mostrarla. */
   secuencia?: SecuenciaScroll;
+  /** IDs de casos reales de gallery-data.ts que se muestran en esta página. */
+  resultados?: string[];
   /** Título e intro del hero */
   hero: {
     eyebrow: string;

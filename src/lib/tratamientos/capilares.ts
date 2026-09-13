@@ -6,6 +6,7 @@ export const capilares: Tratamiento[] = [
     slug: "implante-capilar-fue",
     categoria: "capilares",
     nombre: "Implante Capilar FUE",
+    resultados: ["trasplante-capilar"],
     secuencia: {
       dir: "capilar",
       frameCount: 61,

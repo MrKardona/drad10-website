@@ -42,6 +42,7 @@ const nav: NavItem[] = [
     label: "CORPORALES",
     href: "/#corporales",
     sub: [
+      { label: "Criolipólisis", href: "/servicios/criolipolisis" },
       { label: "Moldeamiento Corporal", href: "/servicios/moldeamiento-corporal" },
       { label: "Descenso de Peso", href: "/servicios/descenso-de-peso" },
       { label: "Post Quirúrgicos", href: "/#corporales" },

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ScrollVideoSection } from "@/components/ScrollVideoSection";
+import { BeforeAfterSlider } from "@/components/gallery/BeforeAfterSlider";
+import { galleryCases } from "@/lib/gallery-data";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/NavBar";
@@ -68,6 +70,10 @@ export default async function TratamientoPage({ params }: Props) {
   if (!t) notFound();
 
   const img = t.imagenes;
+  // Casos reales de este tratamiento. Un id que no exista se descarta en vez de romper la página.
+  const casos = (t.resultados ?? [])
+    .map((id) => galleryCases.find((c) => c.id === id))
+    .filter((c): c is NonNullable<typeof c> => Boolean(c));
   const WA = `https://wa.me/573002440656?text=${encodeURIComponent(t.waMensaje)}`;
 
   const schema = {
@@ -588,6 +594,89 @@ export default async function TratamientoPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ══ RESULTADOS REALES ═════════════════════════════════════════════ */}
+      {casos.length > 0 && (
+        <section style={{ backgroundColor: CREAM, padding: "clamp(56px, 9vw, 100px) 0" }}>
+          <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 clamp(24px, 6vw, 80px)" }}>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <p style={{ ...label, marginBottom: "1rem" }} data-anim="up">
+                RESULTADOS REALES
+              </p>
+              <h2 data-anim="mask" style={{ ...display("clamp(1.9rem, 3.8vw, 2.9rem)", "#1c1c1c") }}>
+                Casos de nuestras{" "}
+                <em style={{ color: GOLD, fontStyle: "italic" }}>pacientes</em>
+              </h2>
+              <p
+                data-anim="up"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.9rem",
+                  color: "#6b6760",
+                  lineHeight: 1.8,
+                  maxWidth: "520px",
+                  margin: "1rem auto 0",
+                }}
+              >
+                Arrastra el visor para comparar el antes y el después.
+              </p>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: `repeat(auto-fit, minmax(${casos.length === 1 ? "320px" : "280px"}, 1fr))`,
+                gap: "clamp(20px, 3vw, 32px)",
+                maxWidth: casos.length === 1 ? "460px" : "none",
+                margin: "0 auto",
+              }}
+            >
+              {casos.map((c) => (
+                <figure key={c.id} data-anim="up" style={{ margin: 0 }}>
+                  <BeforeAfterSlider
+                    antes={c.antes}
+                    despues={c.despues}
+                    alt={c.title}
+                    aspectRatio={c.aspectRatio}
+                    objectPosition={c.objectPosition}
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
+                  <figcaption style={{ paddingTop: "0.9rem" }}>
+                    <p style={{ ...label, marginBottom: "0.35rem" }}>{c.zone}</p>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-display), Georgia, serif",
+                        fontSize: "1.15rem",
+                        color: "#1c1c1c",
+                      }}
+                    >
+                      {c.title}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.72rem",
+                color: "#8a867f",
+                lineHeight: 1.7,
+                maxWidth: "620px",
+                margin: "2.5rem auto 0",
+                textAlign: "center",
+              }}
+            >
+              Casos reales de pacientes de Clínica Quantum. Los resultados varían según
+              las características de cada persona y requieren valoración médica previa.{" "}
+              <Link href="/resultados" style={{ color: GOLD, textDecoration: "underline" }}>
+                Ver todos los resultados
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* ══ 6. SEGURIDAD — el corazón ════════════════════════ */}
       <section

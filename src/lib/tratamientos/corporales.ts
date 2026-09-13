@@ -122,6 +122,142 @@ export const corporales: Tratamiento[] = [
     waMensaje: "Hola, me interesa una valoración gratuita para Moldeamiento Corporal con INDIBA",
   },
 
+  // ── Criolipólisis (Cryonic) ──────────────────────────────────────────────
+  {
+    slug: "criolipolisis",
+    categoria: "corporales",
+    nombre: "Criolipólisis Cryonic",
+    imagenes: {
+      hero: "/images/servicios/criolipolisis/hero.webp",
+      pasos: [
+        "/images/servicios/criolipolisis/paso-1.webp",
+        "/images/servicios/criolipolisis/paso-2.webp",
+        "/images/servicios/criolipolisis/paso-3.webp",
+      ],
+      cierre: "/images/dra/scrubs.webp",
+    },
+    resultados: ["criolipolisis-abdomen", "criolipolisis-espalda"],
+    hero: {
+      eyebrow: "CRYONIC · CRIOLIPÓLISIS",
+      titulo: "Congela la grasa localizada,",
+      tituloEm: "afina medidas sin cirugía",
+      sub: "Nuestra tecnología estrella para moldear la figura. En una sola sesión congelamos las células de grasa localizada, sin cirugía ni incapacidad, y la complementamos con INDIBA y drenaje linfático.",
+    },
+    seo: {
+      title: "Criolipólisis en Medellín | Cryonic — Clínica Quantum",
+      description:
+        "Criolipólisis Cryonic en El Poblado, Medellín. Reduce grasa localizada en abdomen, flancos, espalda o piernas en una sesión, sin cirugía. Incluye 3 sesiones de INDIBA y drenaje linfático.",
+      keywords: [
+        "criolipólisis medellín",
+        "cryonic medellín",
+        "congelar grasa medellín",
+        "reducir abdomen sin cirugía",
+        "criolipólisis precio medellín",
+      ],
+    },
+    problema: {
+      titulo: "Esa grasa que no se va con dieta ni ejercicio",
+      parrafos: [
+        "Abdomen, flancos, espalda o papada: hay depósitos de grasa que se quedan aunque cuides tu alimentación y entrenes. No es falta de disciplina, es cómo tu cuerpo almacena grasa en ciertas zonas.",
+        "La criolipólisis actúa justo ahí. El frío controlado elimina células de grasa de la zona tratada, sin agujas, sin quirófano y sin detener tu rutina.",
+      ],
+    },
+    queEs: {
+      titulo: "Qué es la criolipólisis",
+      desc: "Es un tratamiento no invasivo que enfría de forma controlada el tejido graso de una zona. Las células de grasa son más sensibles al frío que la piel y el músculo: se dañan y el organismo las elimina de manera natural en las semanas siguientes. En Clínica Quantum lo realizamos con el equipo Cryonic y lo complementamos con INDIBA y drenaje linfático. No baja de peso: reduce medidas y moldea la zona.",
+    },
+    beneficios: [
+      "Una sola sesión por zona",
+      "Sin cirugía ni incapacidad",
+      "Incluye 3 sesiones de INDIBA",
+      "Incluye drenaje linfático",
+      "Plan por aplicadores",
+    ],
+    zonasTitulo: "Zonas que tratamos",
+    zonas: [
+      { icon: "▭", label: "Abdomen", desc: "Grasa localizada en abdomen alto y bajo." },
+      { icon: "◠", label: "Flancos", desc: "Los laterales de la cintura que marcan la silueta." },
+      { icon: "▯", label: "Espalda", desc: "Pliegues de grasa en espalda alta y baja." },
+      { icon: "∪", label: "Piernas", desc: "Cara interna y externa de muslos." },
+      { icon: "◡", label: "Papada", desc: "Definición del contorno bajo el mentón." },
+    ],
+    pasos: [
+      {
+        num: "01",
+        title: "Valoración y medición",
+        desc: "Revisamos las zonas, medimos el pliegue de grasa y confirmamos que la criolipólisis es lo indicado para tu caso. Definimos cuántos aplicadores necesitas.",
+        detail: "Valoración médica previa",
+      },
+      {
+        num: "02",
+        title: "Sesión de criolipólisis",
+        desc: "Colocamos el aplicador Cryonic sobre la zona. Al inicio sientes frío intenso que se vuelve tolerable en pocos minutos; puedes leer o descansar durante la sesión.",
+        detail: "Una sesión · Sin incapacidad",
+      },
+      {
+        num: "03",
+        title: "INDIBA y drenaje linfático",
+        desc: "Complementamos con 3 sesiones de radiofrecuencia INDIBA y un drenaje linfático para apoyar la eliminación de la grasa tratada y la calidad de la piel.",
+        detail: "3 INDIBA + 1 drenaje incluidos",
+      },
+    ],
+    seguridad: [
+      {
+        num: "01",
+        title: "Criterio médico antes que promoción",
+        desc: "Cada plan lo diseña y ejecuta personal médico. Si la criolipólisis no es lo que necesitas, te lo decimos en la valoración.",
+      },
+      {
+        num: "02",
+        title: "No invasivo",
+        desc: "Sin agujas, sin anestesia y sin quirófano. Retomas tus actividades el mismo día.",
+      },
+      {
+        num: "03",
+        title: "Expectativas claras",
+        desc: "La criolipólisis no es un tratamiento para bajar de peso: reduce medidas y moldea zonas puntuales. Si tu objetivo es perder kilos, tenemos programas médicos de reducción.",
+      },
+      {
+        num: "04",
+        title: "Seguimiento",
+        desc: "El protocolo incluye INDIBA y drenaje linfático, y te acompañamos durante las semanas en que se consolida el resultado.",
+      },
+    ],
+    precio: {
+      desde: 1600000,
+      incluye: [
+        "Criolipólisis con 1 aplicador (zona grande o papada)",
+        "3 sesiones de INDIBA",
+        "1 drenaje linfático",
+        "Valoración médica previa",
+      ],
+      nota: "Planes de 1 a 6 aplicadores según las zonas: 2 aplicadores $2.400.000 · 3 aplicadores $2.600.000 · 4 aplicadores $2.700.000 · 5 aplicadores $3.650.000 · 6 aplicadores $3.800.000.",
+    },
+    faq: [
+      {
+        q: "¿Cuántas sesiones necesito?",
+        a: "Una sesión por zona. Según la cantidad de grasa y las zonas, se definen los aplicadores. En la valoración te decimos si conviene repetir alguna zona más adelante.",
+      },
+      {
+        q: "¿Duele?",
+        a: "Al inicio se siente frío intenso y presión por la succión; en pocos minutos la zona se adormece y se vuelve tolerable. Después puede quedar enrojecimiento o sensibilidad pasajera.",
+      },
+      {
+        q: "¿Cuándo veo resultados?",
+        a: "El cuerpo elimina la grasa tratada de forma progresiva, por eso el cambio se nota a lo largo de las semanas siguientes y no al salir de la sesión.",
+      },
+      {
+        q: "¿Sirve para bajar de peso?",
+        a: "No. Reduce medidas y moldea abdomen, flancos, espalda o piernas. Para bajar de peso tenemos programas de reducción con seguimiento médico.",
+      },
+      {
+        q: "¿Qué incluye el precio?",
+        a: "Todos los planes de criolipólisis incluyen 3 sesiones de INDIBA y 1 drenaje linfático. El valor depende del número de aplicadores.",
+      },
+    ],
+    waMensaje: "Hola, me interesa una valoración para Criolipólisis (Cryonic)",
+  },
+
   // ── Descenso de Peso ─────────────────────────────────────────────────────
   {
     slug: "descenso-de-peso",
