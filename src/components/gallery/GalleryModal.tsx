@@ -86,7 +86,10 @@ export function GalleryModal({ item, onClose }: Props) {
         {/* Left: slider */}
         <div style={{ overflow: "hidden", maxHeight: "90vh" }}>
           <BeforeAfterSlider
-            image={item.image}
+            antes={item.antes}
+            despues={item.despues}
+            aspectRatio={item.aspectRatio}
+            objectPosition={item.objectPosition}
             alt={item.title}
             sizes="(max-width: 960px) 50vw, 480px"
           />

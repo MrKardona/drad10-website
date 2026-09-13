@@ -4,39 +4,41 @@ import { useRef, useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 
 interface Props {
-  image: string;
+  /** Foto real tomada antes del tratamiento. */
+  antes: string;
+  /** Foto real tomada después del tratamiento. */
+  despues: string;
   alt?: string;
-  /** Starting position 0–100 (default 50) */
+  /** Posición inicial del divisor, de 0 a 100. */
   initialPosition?: number;
+  /** Proporción del visor. Las fotos clínicas varían entre retrato y apaisado. */
+  aspectRatio?: string;
+  /** Encuadre dentro del visor: "center top" para rostros, "center" para cuerpo. */
+  objectPosition?: string;
   sizes?: string;
 }
 
-// The "before" effect is simulated with CSS filters on the same image:
-// desaturated + dimmed = before state ; original colours = after state
-const BEFORE_FILTER =
-  "grayscale(30%) brightness(0.75) saturate(0.35) contrast(0.92)";
+const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(v, max));
 
 export function BeforeAfterSlider({
-  image,
+  antes,
+  despues,
   alt = "Resultado",
   initialPosition = 50,
+  aspectRatio = "3 / 4",
+  objectPosition = "center top",
   sizes = "100vw",
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(initialPosition);
   const isDragging = useRef(false);
 
-  const clamp = (val: number, min: number, max: number) =>
-    Math.max(min, Math.min(val, max));
-
   const updatePos = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
-    const pct = ((clientX - rect.left) / rect.width) * 100;
-    setPosition(clamp(pct, 2, 98));
+    setPosition(clamp(((clientX - rect.left) / rect.width) * 100, 2, 98));
   }, []);
 
-  /* ── Mouse ────────────────────────────────────────────────── */
   const onMouseDown = useCallback(
     (e: React.MouseEvent) => {
       e.preventDefault();
@@ -46,7 +48,6 @@ export function BeforeAfterSlider({
     [updatePos]
   );
 
-  /* ── Touch ────────────────────────────────────────────────── */
   const onTouchStart = useCallback(
     (e: React.TouchEvent) => {
       isDragging.current = true;
@@ -55,20 +56,22 @@ export function BeforeAfterSlider({
     [updatePos]
   );
 
-  useEffect(() => {
-    const move = (e: MouseEvent) => {
-      if (isDragging.current) updatePos(e.clientX);
-    };
-    const up = () => {
-      isDragging.current = false;
-    };
-    const tmove = (e: TouchEvent) => {
-      if (isDragging.current) updatePos(e.touches[0].clientX);
-    };
-    const tend = () => {
-      isDragging.current = false;
-    };
+  // Teclado: flechas mueven de a 5%, Inicio/Fin llevan a los extremos.
+  const onKeyDown = useCallback((e: React.KeyboardEvent) => {
+    const paso = e.shiftKey ? 15 : 5;
+    if (e.key === "ArrowLeft") setPosition((p) => clamp(p - paso, 2, 98));
+    else if (e.key === "ArrowRight") setPosition((p) => clamp(p + paso, 2, 98));
+    else if (e.key === "Home") setPosition(2);
+    else if (e.key === "End") setPosition(98);
+    else return;
+    e.preventDefault();
+  }, []);
 
+  useEffect(() => {
+    const move = (e: MouseEvent) => { if (isDragging.current) updatePos(e.clientX); };
+    const up = () => { isDragging.current = false; };
+    const tmove = (e: TouchEvent) => { if (isDragging.current) updatePos(e.touches[0].clientX); };
+    const tend = () => { isDragging.current = false; };
     document.addEventListener("mousemove", move);
     document.addEventListener("mouseup", up);
     document.addEventListener("touchmove", tmove, { passive: true });
@@ -86,28 +89,37 @@ export function BeforeAfterSlider({
       ref={containerRef}
       onMouseDown={onMouseDown}
       onTouchStart={onTouchStart}
+      onKeyDown={onKeyDown}
+      role="slider"
+      tabIndex={0}
+      aria-label={`Comparar antes y después: ${alt}`}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={Math.round(position)}
+      aria-valuetext={`${Math.round(position)}% antes`}
       style={{
         position: "relative",
         width: "100%",
-        aspectRatio: "3 / 4",
+        aspectRatio,
         overflow: "hidden",
         cursor: "col-resize",
         userSelect: "none",
         WebkitUserSelect: "none",
         backgroundColor: "#1c1c1c",
+        outlineOffset: "3px",
       }}
     >
-      {/* ── AFTER layer (full width, original colours) ── */}
+      {/* Capa DESPUÉS — ocupa todo el visor */}
       <Image
-        src={image}
+        src={despues}
         alt={`${alt} — después`}
         fill
         sizes={sizes}
-        style={{ objectFit: "cover", objectPosition: "center top" }}
+        style={{ objectFit: "cover", objectPosition }}
         draggable={false}
       />
 
-      {/* ── BEFORE layer (clipped, filtered) ── */}
+      {/* Capa ANTES — recortada desde la derecha según el divisor */}
       <div
         style={{
           position: "absolute",
@@ -116,21 +128,18 @@ export function BeforeAfterSlider({
         }}
       >
         <Image
-          src={image}
+          src={antes}
           alt={`${alt} — antes`}
           fill
           sizes={sizes}
-          style={{
-            objectFit: "cover",
-            objectPosition: "center top",
-            filter: BEFORE_FILTER,
-          }}
+          style={{ objectFit: "cover", objectPosition }}
           draggable={false}
         />
       </div>
 
-      {/* ── Labels ── */}
+      {/* Etiquetas */}
       <div
+        aria-hidden
         style={{
           position: "absolute",
           top: 12,
@@ -142,19 +151,12 @@ export function BeforeAfterSlider({
           pointerEvents: "none",
         }}
       >
-        <span
-          style={{
-            color: "#faf8f5",
-            fontSize: "0.52rem",
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-          }}
-        >
+        <span style={{ color: "#faf8f5", fontSize: "0.52rem", letterSpacing: "0.22em", textTransform: "uppercase" }}>
           ANTES
         </span>
       </div>
-
       <div
+        aria-hidden
         style={{
           position: "absolute",
           top: 12,
@@ -178,8 +180,9 @@ export function BeforeAfterSlider({
         </span>
       </div>
 
-      {/* ── Gold divider ── */}
+      {/* Divisor dorado */}
       <div
+        aria-hidden
         style={{
           position: "absolute",
           top: 0,
@@ -192,7 +195,6 @@ export function BeforeAfterSlider({
           pointerEvents: "none",
         }}
       >
-        {/* Circular handle */}
         <div
           style={{
             position: "absolute",
@@ -211,7 +213,6 @@ export function BeforeAfterSlider({
             cursor: "col-resize",
           }}
         >
-          {/* Arrows icon */}
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
             <path
               d="M7 8L3 12L7 16M17 8L21 12L17 16"
@@ -224,8 +225,9 @@ export function BeforeAfterSlider({
         </div>
       </div>
 
-      {/* ── Drag hint ── */}
+      {/* Indicación */}
       <div
+        aria-hidden
         style={{
           position: "absolute",
           bottom: 10,

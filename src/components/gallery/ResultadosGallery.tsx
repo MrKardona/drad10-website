@@ -47,7 +47,10 @@ export function ResultadosGallery() {
           {/* Slider */}
           <div style={{ position: "relative" }}>
             <BeforeAfterSlider
-              image={featured.image}
+              antes={featured.antes}
+            despues={featured.despues}
+            aspectRatio={featured.aspectRatio}
+            objectPosition={featured.objectPosition}
               alt={featured.title}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -359,7 +362,10 @@ function GalleryCardItem({
     >
       {/* Slider preview */}
       <BeforeAfterSlider
-        image={item.image}
+        antes={item.antes}
+            despues={item.despues}
+            aspectRatio={item.aspectRatio}
+            objectPosition={item.objectPosition}
         alt={item.title}
         initialPosition={50}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

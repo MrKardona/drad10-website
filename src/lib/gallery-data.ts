@@ -6,94 +6,184 @@ export interface GalleryCase {
   treatment: string;
   zone: string;
   category: GalleryCategory;
-  image: string;
+  /** Foto real tomada antes del tratamiento. */
+  antes: string;
+  /** Foto real tomada después del tratamiento. */
+  despues: string;
+  /** Proporción del visor. Rostros 3:4, cuerpo y composites partidos 1:2. */
+  aspectRatio: string;
+  /** Encuadre dentro del visor. */
+  objectPosition?: string;
   description: string;
   featured?: boolean;
 }
 
-const BASE = "https://images.unsplash.com";
+/**
+ * Casos reales de Clínica Quantum, extraídos del portafolio comercial oficial.
+ *
+ * Cada par se asignó cruzando la posición de la foto en la página del PDF con
+ * la de sus rótulos ANTES/DESPUÉS, y contrastándolo con la lógica médica del
+ * procedimiento. Detalle y casos retenidos en docs/ANALISIS-PORTAFOLIO.md.
+ *
+ * Tres casos del portafolio NO están aquí a propósito: toxina botulínica,
+ * Sculptra y mesoterapia capilar. Sus tomas no son comparables entre sí
+ * (expresión, paciente o ángulo distinto) y no deben publicarse sin revisión.
+ */
+const R = "/images/resultados-reales";
 
 export const galleryCases: GalleryCase[] = [
   {
-    id: "indiba-corporal",
-    title: "Remodelación corporal INDIBA",
-    treatment: "INDIBA Activ",
-    zone: "Abdomen y flancos",
-    category: "corporal",
-    image: `${BASE}/photo-1571019614242-c5c5dee9f50b?w=900&h=1100&fit=crop&crop=center`,
+    id: "trasplante-capilar",
+    title: "Recuperación de densidad en coronilla",
+    treatment: "Trasplante capilar",
+    zone: "Coronilla y zona frontal",
+    category: "capilar",
+    antes: `${R}/trasplante-capilar-antes.webp`,
+    despues: `${R}/trasplante-capilar-despues.webp`,
+    aspectRatio: "3 / 4",
     description:
-      "Tecnología INDIBA de radiofrecuencia profunda para reducción de grasa localizada, lifting sin bisturí y regeneración del tejido. Resultados visibles desde la primera sesión.",
+      "Recupera densidad y redefine la línea del cabello mediante una técnica diseñada para lograr un resultado natural y duradero. Ideal para entradas, coronilla y zonas con pérdida de densidad.",
     featured: true,
   },
   {
-    id: "acido-hialuronico-labios",
-    title: "Volumen y definición labial",
-    treatment: "Ácido Hialurónico",
+    id: "criolipolisis-abdomen",
+    title: "Moldeamiento de abdomen",
+    treatment: "Criolipólisis (Cryonic)",
+    zone: "Abdomen",
+    category: "corporal",
+    antes: `${R}/criolipolisis-abdomen-antes.webp`,
+    despues: `${R}/criolipolisis-abdomen-despues.webp`,
+    aspectRatio: "1 / 2",
+    objectPosition: "center",
+    description:
+      "En una sola sesión congelamos las células de grasa localizada; se complementa con INDIBA y drenaje linfático. No baja de peso: reduce medidas y moldea la zona.",
+  },
+  {
+    id: "criolipolisis-espalda",
+    title: "Contorno de espalda y flancos",
+    treatment: "Criolipólisis (Cryonic)",
+    zone: "Espalda y flancos",
+    category: "corporal",
+    antes: `${R}/criolipolisis-espalda-antes.webp`,
+    despues: `${R}/criolipolisis-espalda-despues.webp`,
+    aspectRatio: "1 / 2",
+    objectPosition: "center",
+    description:
+      "Nuestra tecnología estrella para moldear la figura. Congela la grasa localizada sin cirugía ni incapacidad y afina medidas en espalda, flancos, abdomen o piernas.",
+  },
+  {
+    id: "labios-acido-hialuronico",
+    title: "Volumen y contorno labial",
+    treatment: "Ácido hialurónico",
     zone: "Labios",
     category: "inyectable",
-    image: `${BASE}/photo-1531746020798-e6953c6e8e04?w=700&h=900&fit=crop&crop=face`,
+    antes: `${R}/labios-acido-hialuronico-antes.webp`,
+    despues: `${R}/labios-acido-hialuronico-despues.webp`,
+    aspectRatio: "3 / 4",
     description:
-      "Relleno con ácido hialurónico para volumizar y definir el contorno labial de forma natural, sin sobredimensionar. Efecto hidratado y juvenil.",
+      "Volumen, contorno e hidratación a tu medida. Diseñamos labios que se ven tuyos, proporcionados y naturales, sin el efecto inflado.",
   },
   {
-    id: "botox-frente",
-    title: "Suavizado de expresión",
-    treatment: "Toxina Botulínica",
-    zone: "Frente y entrecejo",
+    id: "rinomodelacion",
+    title: "Perfil y punta nasal sin cirugía",
+    treatment: "Rinomodelación",
+    zone: "Nariz",
     category: "inyectable",
-    image: `${BASE}/photo-1508214751196-bcfd4ca60f91?w=700&h=900&fit=crop&crop=face`,
+    antes: `${R}/rinomodelacion-antes.webp`,
+    despues: `${R}/rinomodelacion-despues.webp`,
+    aspectRatio: "3 / 4",
+    objectPosition: "center",
     description:
-      "Aplicación precisa de toxina botulínica para suavizar líneas de expresión en frente y entrecejo. Resultado natural que preserva la expresividad del rostro.",
+      "Mejora el perfil y la punta de la nariz sin cirugía, buscando mayor armonía y proporción facial.",
   },
   {
-    id: "rejuvenecimiento-facial",
-    title: "Rejuvenecimiento global del rostro",
-    treatment: "Radiofrecuencia Facial",
-    zone: "Rostro completo",
+    id: "perfilado-mandibular",
+    title: "Definición de la línea mandibular",
+    treatment: "Perfilado mandibular",
+    zone: "Mandíbula",
+    category: "inyectable",
+    antes: `${R}/perfilado-mandibular-antes.webp`,
+    despues: `${R}/perfilado-mandibular-despues.webp`,
+    aspectRatio: "1 / 2",
+    objectPosition: "center",
+    description:
+      "Define la línea mandibular para mejorar el contorno y la armonía del rostro.",
+  },
+  {
+    id: "volumen-menton",
+    title: "Proyección del mentón",
+    treatment: "Volumen de mentón",
+    zone: "Mentón",
+    category: "inyectable",
+    antes: `${R}/volumen-menton-antes.webp`,
+    despues: `${R}/volumen-menton-despues.webp`,
+    aspectRatio: "3 / 4",
+    objectPosition: "center",
+    description:
+      "Aporta proyección al mentón para equilibrar el perfil y la proporción del rostro.",
+  },
+  {
+    id: "surcos-nasogenianos",
+    title: "Suavizado de surcos nasogenianos",
+    treatment: "Ácido hialurónico",
+    zone: "Surcos nasogenianos",
+    category: "inyectable",
+    antes: `${R}/surcos-nasogenianos-antes.webp`,
+    despues: `${R}/surcos-nasogenianos-despues.webp`,
+    aspectRatio: "8 / 5",
+    objectPosition: "center",
+    description:
+      "Suaviza los pliegues que van de la nariz a la boca y las líneas de marioneta, conocidas como líneas de amargura.",
+  },
+  {
+    id: "ojeras-acido-hialuronico",
+    title: "Mirada más descansada",
+    treatment: "Ácido hialurónico",
+    zone: "Ojeras",
+    category: "inyectable",
+    antes: `${R}/ojeras-acido-hialuronico-antes.webp`,
+    despues: `${R}/ojeras-acido-hialuronico-despues.webp`,
+    aspectRatio: "2 / 1",
+    objectPosition: "center",
+    description:
+      "Mejora la apariencia de la zona periocular para una mirada más fresca, uniforme y descansada.",
+  },
+  {
+    id: "long-lasting",
+    title: "Rejuvenecimiento de rostro y cuello",
+    treatment: "Long Lasting",
+    zone: "Rostro y cuello",
+    category: "inyectable",
+    antes: `${R}/long-lasting-antes.webp`,
+    despues: `${R}/long-lasting-despues.webp`,
+    aspectRatio: "3 / 4",
+    description:
+      "Rejuvenecimiento de cara y cuello pensado para durar: recupera frescura y firmeza con un efecto que se sostiene en el tiempo.",
+  },
+  {
+    id: "bruxismo",
+    title: "Relajación del músculo masetero",
+    treatment: "Toxina para bruxismo",
+    zone: "Mandíbula",
+    category: "inyectable",
+    antes: `${R}/bruxismo-antes.webp`,
+    despues: `${R}/bruxismo-despues.webp`,
+    aspectRatio: "1 / 2",
+    description:
+      "Reduce la actividad de los músculos de la mandíbula para disminuir el apretamiento y la tensión muscular.",
+  },
+  {
+    id: "alectomia",
+    title: "Afinado de aletas nasales",
+    treatment: "Alectomía",
+    zone: "Aletas nasales",
     category: "facial",
-    image: `${BASE}/photo-1544005313-94ddf0286df2?w=700&h=900&fit=crop&crop=face`,
+    antes: `${R}/alectomia-antes.webp`,
+    despues: `${R}/alectomia-despues.webp`,
+    aspectRatio: "1 / 2",
+    objectPosition: "center",
     description:
-      "Protocolo combinado de radiofrecuencia para estimular la producción de colágeno, tensar la piel y reducir manchas. Piel luminosa y rejuvenecida.",
-  },
-  {
-    id: "hilos-tensores",
-    title: "Lifting sin cirugía",
-    treatment: "Hilos Tensores PDO",
-    zone: "Óvalo facial",
-    category: "facial",
-    image: `${BASE}/photo-1534528741775-53994a69daeb?w=700&h=900&fit=crop&crop=face`,
-    description:
-      "Hilos tensores de PDO para reposicionar tejidos caídos y estimular colágeno de forma progresiva. Efecto lifting inmediato con resultados que mejoran durante semanas.",
-  },
-  {
-    id: "microimplante-capilar",
-    title: "Recuperación capilar",
-    treatment: "Microimplante Capilar FUE",
-    zone: "Zona frontal y coronilla",
-    category: "capilar",
-    image: `${BASE}/photo-1522337360788-8b13dee7a37e?w=700&h=900&fit=crop&crop=top`,
-    description:
-      "Técnica FUE de microimplante capilar para restaurar la densidad del cabello con resultados naturales y permanentes. Sin cicatrices visibles.",
-  },
-  {
-    id: "mesoterapia-capilar",
-    title: "Fortalecimiento del cabello",
-    treatment: "Mesoterapia Capilar",
-    zone: "Cuero cabelludo",
-    category: "capilar",
-    image: `${BASE}/photo-1492106087820-71f1a00d2b11?w=700&h=900&fit=crop&crop=top`,
-    description:
-      "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y activar los folículos.",
-  },
-  {
-    id: "reduccion-corporal",
-    title: "Contorno y firmeza corporal",
-    treatment: "Criolipólisis + Radiofrecuencia",
-    zone: "Muslos y glúteos",
-    category: "corporal",
-    image: `${BASE}/photo-1518611012118-696072aa579a?w=700&h=900&fit=crop&crop=center`,
-    description:
-      "Protocolo combinado de criolipólisis para eliminar grasa y radiofrecuencia para tensar la piel. Resultados progresivos y duraderos sin tiempo de recuperación.",
+      "Procedimiento de armonización quirúrgica menor para afinar las aletas nasales y lograr una armonización natural del rostro.",
   },
 ];
 

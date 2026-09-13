@@ -6,11 +6,11 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ResultadosGallery } from "@/components/gallery/ResultadosGallery";
 
 export const metadata: Metadata = {
-  title: "Tratamientos | DRA.D10 — Medicina Estética Medellín",
+  title: "Resultados | Clínica Quantum — Antes y después en Medellín",
   description:
-    "Conoce los tratamientos de medicina estética de DRA.D10: facial, corporal, capilar e inyectables. Clínica premium en El Poblado, Medellín.",
+    "Antes y después reales de Clínica Quantum en El Poblado, Medellín: trasplante capilar, criolipólisis, rinomodelación, labios, perfilado mandibular y más.",
   openGraph: {
-    title: "Tratamientos | DRA.D10 Medicina Estética",
+    title: "Resultados reales | Clínica Quantum",
     description:
       "Explora nuestra galería de transformaciones reales. Tratamientos faciales, corporales, capilares e inyectables de la mano de la Dra. Daniela Díez en Medellín.",
     url: "https://drad10.com/resultados",
@@ -63,8 +63,8 @@ export default function ResultadosPage() {
             margin: "0 0 1.5rem",
           }}
         >
-          Tratamientos que{" "}
-          <em style={{ fontStyle: "italic", color: "#b89a6a" }}>transforman</em>
+          Resultados que{" "}
+          <em style={{ fontStyle: "italic", color: "#b89a6a" }}>se notan</em>
         </h1>
 
         {/* Gold line */}
@@ -88,9 +88,8 @@ export default function ResultadosPage() {
             margin: "0 auto",
           }}
         >
-          Cada tratamiento combina precisión médica, tecnología de vanguardia
-          y un enfoque en resultados naturales y seguros. Explora nuestras
-          especialidades por categoría.
+          Casos reales de pacientes de Clínica Quantum. Buscamos que se note que
+          estás mejor, no que te hiciste algo. Arrastra el visor para comparar.
         </p>
       </section>
 
@@ -120,10 +119,9 @@ export default function ResultadosPage() {
             paddingTop: "1.5rem",
           }}
         >
-          Las imágenes de esta página son ilustrativas y no corresponden a
-          pacientes de la clínica. Los resultados de cada tratamiento varían
-          según las características individuales de cada persona y requieren
-          una valoración médica previa.
+          Casos reales de pacientes de Clínica Quantum. Los resultados varían según
+          las características de cada persona y todo tratamiento requiere una
+          valoración médica previa.
         </p>
       </section>
 
