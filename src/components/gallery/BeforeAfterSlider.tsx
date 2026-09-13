@@ -24,7 +24,8 @@ export function BeforeAfterSlider({
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(initialPosition);
-  const isDragging = useRef(false);
+  // Limpia los listeners del arrastre en curso (si lo hay).
+  const soltarRef = useRef<(() => void) | null>(null);
 
   const clamp = (val: number, min: number, max: number) =>
     Math.max(min, Math.min(val, max));
@@ -36,50 +37,48 @@ export function BeforeAfterSlider({
     setPosition(clamp(pct, 2, 98));
   }, []);
 
+  // Los listeners del documento solo existen mientras se arrastra. Antes cada
+  // visor dejaba cuatro permanentes: con 12 casos en /resultados eran 48
+  // callbacks ejecutándose en cada movimiento del ratón o del dedo.
+  const empezarArrastre = useCallback(
+    (tactil: boolean) => {
+      soltarRef.current?.();
+      const mover = (e: MouseEvent | TouchEvent) =>
+        updatePos("touches" in e ? e.touches[0].clientX : e.clientX);
+      const soltar = () => {
+        document.removeEventListener(tactil ? "touchmove" : "mousemove", mover);
+        document.removeEventListener(tactil ? "touchend" : "mouseup", soltar);
+        document.removeEventListener("touchcancel", soltar);
+        soltarRef.current = null;
+      };
+      document.addEventListener(tactil ? "touchmove" : "mousemove", mover, { passive: true });
+      document.addEventListener(tactil ? "touchend" : "mouseup", soltar);
+      if (tactil) document.addEventListener("touchcancel", soltar);
+      soltarRef.current = soltar;
+    },
+    [updatePos]
+  );
+
   /* ── Mouse ────────────────────────────────────────────────── */
   const onMouseDown = useCallback(
     (e: React.MouseEvent) => {
       e.preventDefault();
-      isDragging.current = true;
       updatePos(e.clientX);
+      empezarArrastre(false);
     },
-    [updatePos]
+    [updatePos, empezarArrastre]
   );
 
   /* ── Touch ────────────────────────────────────────────────── */
   const onTouchStart = useCallback(
     (e: React.TouchEvent) => {
-      isDragging.current = true;
       updatePos(e.touches[0].clientX);
+      empezarArrastre(true);
     },
-    [updatePos]
+    [updatePos, empezarArrastre]
   );
 
-  useEffect(() => {
-    const move = (e: MouseEvent) => {
-      if (isDragging.current) updatePos(e.clientX);
-    };
-    const up = () => {
-      isDragging.current = false;
-    };
-    const tmove = (e: TouchEvent) => {
-      if (isDragging.current) updatePos(e.touches[0].clientX);
-    };
-    const tend = () => {
-      isDragging.current = false;
-    };
-
-    document.addEventListener("mousemove", move);
-    document.addEventListener("mouseup", up);
-    document.addEventListener("touchmove", tmove, { passive: true });
-    document.addEventListener("touchend", tend);
-    return () => {
-      document.removeEventListener("mousemove", move);
-      document.removeEventListener("mouseup", up);
-      document.removeEventListener("touchmove", tmove);
-      document.removeEventListener("touchend", tend);
-    };
-  }, [updatePos]);
+  useEffect(() => () => soltarRef.current?.(), []);
 
   return (
     <div
@@ -92,6 +91,8 @@ export function BeforeAfterSlider({
         aspectRatio: "3 / 4",
         overflow: "hidden",
         cursor: "col-resize",
+        // El arrastre horizontal es del visor; el vertical sigue siendo scroll.
+        touchAction: "pan-y",
         userSelect: "none",
         WebkitUserSelect: "none",
         backgroundColor: "#1c1c1c",

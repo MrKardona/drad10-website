@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
 // YouTube video ID — change this if the hero video is ever updated
 const VIDEO_ID = "V1-aiXd8ncM";
 
@@ -15,37 +17,101 @@ const VIDEO_ID = "V1-aiXd8ncM";
 const EMBED_URL =
   `https://www.youtube-nocookie.com/embed/${VIDEO_ID}` +
   `?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}` +
-  `&controls=0&disablekb=1&fs=0&iv_load_policy=3&rel=0&modestbranding=1&playsinline=1`;
+  `&controls=0&disablekb=1&fs=0&iv_load_policy=3&rel=0&modestbranding=1&playsinline=1` +
+  // enablejsapi permite pausarlo por postMessage cuando sale de pantalla.
+  `&enablejsapi=1`;
+
+const YT_ORIGIN = "https://www.youtube-nocookie.com";
+// Miniatura del mismo video: fondo mientras el reproductor aún no carga.
+const POSTER = `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`;
 
 export function HeroVideo() {
+  const seccionRef = useRef<HTMLElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [montarVideo, setMontarVideo] = useState(false);
+
+  // El reproductor de YouTube pesa más de 1 MB de JavaScript. Montarlo junto
+  // con la página bloqueaba el hilo principal justo mientras React hidrataba,
+  // sobre todo en móvil. Se monta cuando la página terminó de cargar y el
+  // navegador está libre.
+  useEffect(() => {
+    let idle: number | undefined;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const iniciar = () => {
+      if (typeof window.requestIdleCallback === "function") {
+        idle = window.requestIdleCallback(() => setMontarVideo(true), { timeout: 2500 });
+      } else {
+        timer = setTimeout(() => setMontarVideo(true), 1200);
+      }
+    };
+    if (document.readyState === "complete") iniciar();
+    else window.addEventListener("load", iniciar, { once: true });
+    return () => {
+      window.removeEventListener("load", iniciar);
+      if (idle !== undefined) window.cancelIdleCallback(idle);
+      if (timer !== undefined) clearTimeout(timer);
+    };
+  }, []);
+
+  // Fuera de pantalla el video sigue decodificando y consumiendo CPU mientras
+  // se recorre el resto de la página. Se pausa al salir y se reanuda al volver.
+  useEffect(() => {
+    if (!montarVideo) return;
+    const seccion = seccionRef.current;
+    if (!seccion) return;
+    const comando = (func: "playVideo" | "pauseVideo") =>
+      iframeRef.current?.contentWindow?.postMessage(
+        JSON.stringify({ event: "command", func, args: [] }),
+        YT_ORIGIN,
+      );
+    const io = new IntersectionObserver(([e]) =>
+      comando(e.isIntersecting ? "playVideo" : "pauseVideo"),
+    );
+    io.observe(seccion);
+    return () => io.disconnect();
+  }, [montarVideo]);
+
   return (
     <section
+      ref={seccionRef}
       className="relative w-full overflow-hidden min-h-screen"
-      style={{ minHeight: "100svh" }}
+      style={{ minHeight: "100svh", backgroundColor: "#0a0a0a" }}
     >
 
       {/* ── YouTube background video ── */}
       {/* z-index:1 so the dark overlay (z-index:2) always renders on top,
           hiding YouTube's title card and player UI completely. */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true" style={{ zIndex: 1 }}>
-        <iframe
-          src={EMBED_URL}
-          allow="autoplay; encrypted-media"
-          title="DRA.D10 clínica — video de fondo"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            /* 16:9 sizing that always covers the container */
-            width: "177.78vh",   /* 100vh × (16/9) */
-            height: "56.25vw",   /* 100vw × (9/16) */
-            minWidth: "100%",
-            minHeight: "100%",
-            border: "none",
-            pointerEvents: "none",
-          }}
-        />
+      <div
+        className="absolute inset-0 overflow-hidden"
+        aria-hidden="true"
+        style={{
+          zIndex: 1,
+          backgroundImage: `url(${POSTER})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {montarVideo && (
+          <iframe
+            ref={iframeRef}
+            src={EMBED_URL}
+            allow="autoplay; encrypted-media"
+            title="DRA.D10 clínica — video de fondo"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              /* 16:9 sizing that always covers the container */
+              width: "177.78vh",   /* 100vh × (16/9) */
+              height: "56.25vw",   /* 100vw × (9/16) */
+              minWidth: "100%",
+              minHeight: "100%",
+              border: "none",
+              pointerEvents: "none",
+            }}
+          />
+        )}
       </div>
 
       {/* ── Overlay premium oscuro ── */}

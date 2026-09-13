@@ -99,11 +99,15 @@ export function ScrollVideoSection({
         img.src = src(i, mobile, dir);
         const finish = () => {
           done++;
-          setPct(Math.round((done / FRAME_COUNT) * 100));
+          // Actualizar el porcentaje con cada frame re-renderizaba el
+          // componente más de cien veces; basta con saltos de 10 %.
+          const nuevo = Math.floor((done / FRAME_COUNT) * 10) * 10;
+          setPct((p) => (p === nuevo ? p : nuevo));
           if (done === FRAME_COUNT) { setLoaded(true); draw(0); }
         };
-        img.onload = finish;
-        img.onerror = finish;
+        // decode() descomprime el WebP fuera del hilo principal. Sin esto,
+        // el primer drawImage de cada frame lo decodificaba en pleno scroll.
+        img.decode().then(finish, finish);
         imgs[i] = img;
       }
     };
@@ -127,8 +131,14 @@ export function ScrollVideoSection({
     const resize = () => {
       const c = canvasRef.current;
       if (!c) return;
-      c.width  = window.innerWidth;
-      c.height = window.innerHeight;
+      // Se mide el canvas (100vh fijo) y no window.innerHeight: en móvil la
+      // barra del navegador cambia innerHeight al hacer scroll, y reasignar
+      // width/height borra y re-rasteriza el canvas en cada cambio.
+      const w = c.clientWidth;
+      const h = c.clientHeight;
+      if (c.width === w && c.height === h) return;
+      c.width  = w;
+      c.height = h;
       draw(frameIdxRef.current);
     };
     resize();

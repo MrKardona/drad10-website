@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 
@@ -89,6 +89,20 @@ export function NavBar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const menuMovilRef = useRef<HTMLDivElement>(null);
+  const [altoMenuMovil, setAltoMenuMovil] = useState("100svh");
+
+  // Con un submenú abierto (Faciales tiene 20 opciones) el menú supera el alto
+  // de la pantalla. Se limita al espacio que queda bajo el header, que varía:
+  // la barra superior ocupa una o dos líneas y se va al hacer scroll.
+  const toggleMenuMovil = () => {
+    const el = menuMovilRef.current;
+    if (!mobileOpen && el) {
+      const top = Math.max(0, el.getBoundingClientRect().top);
+      setAltoMenuMovil(`${window.innerHeight - top}px`);
+    }
+    setMobileOpen((v) => !v);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -321,7 +335,7 @@ export function NavBar() {
             <button
               className="lg:hidden p-1.5 transition-colors"
               style={{ color: "#1c1c1c" }}
-              onClick={() => setMobileOpen((v) => !v)}
+              onClick={toggleMenuMovil}
               aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
             >
               {mobileOpen ? (
@@ -335,9 +349,12 @@ export function NavBar() {
 
         {/* ── Mobile menu ── */}
         <div
-          className="lg:hidden overflow-hidden transition-all duration-400"
+          ref={menuMovilRef}
+          className="lg:hidden transition-all duration-400"
           style={{
-            maxHeight: mobileOpen ? "100vh" : "0",
+            maxHeight: mobileOpen ? altoMenuMovil : "0",
+            overflowY: mobileOpen ? "auto" : "hidden",
+            overscrollBehavior: "contain",
             opacity: mobileOpen ? 1 : 0,
             borderTop: mobileOpen
               ? "1px solid rgba(184,154,106,0.18)"
