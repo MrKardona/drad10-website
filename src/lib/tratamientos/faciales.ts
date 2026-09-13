@@ -216,7 +216,7 @@ export const faciales: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: 600000,
+      desde: 800000,
       incluye: [
         "Valoración y plan facial por fases",
         "Producto original con registro INVIMA",
@@ -343,7 +343,7 @@ export const faciales: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: null,
+      desde: 150000,
       incluye: [
         "Diagnóstico de piel",
         "Protocolo completo por fases",

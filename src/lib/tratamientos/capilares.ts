@@ -104,7 +104,7 @@ export const capilares: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: null,
+      desde: 7500000,
       incluye: [
         "Valoración y diseño de línea frontal",
         "Procedimiento completo con anestesia local",

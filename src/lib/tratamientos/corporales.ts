@@ -88,7 +88,7 @@ export const corporales: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: null,
+      desde: 800000,
       incluye: [
         "Valoración corporal completa",
         "Sesión con equipo INDIBA original",
@@ -216,7 +216,7 @@ export const corporales: Tratamiento[] = [
       },
     ],
     precio: {
-      desde: null,
+      desde: 800000,
       incluye: [
         "Evaluación médica inicial completa",
         "Plan personalizado por escrito",
