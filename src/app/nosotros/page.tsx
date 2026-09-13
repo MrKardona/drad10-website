@@ -80,10 +80,10 @@ const filosofia = [
 const equipo = [
   {
     nombre: "Dra. Daniela Díez",
-    cargo: "Fundadora & Directora Médica",
+    cargo: "Directora Médica · Clínica Quantum",
     especialidad: "Medicina estética y antienvejecimiento · Dermatología · Recuperación capilar",
     bio: "Médica con doble habilitación en Argentina y Colombia, formada en la Universidad de Buenos Aires. Su práctica en salud capilar abarca el diagnóstico y tratamiento de la pérdida del cabello y la cirugía de trasplante capilar, siempre a partir de una valoración médica individual. Su filosofía: entender primero, tratar después.",
-    foto: "/images/dra-daniela.jpg",
+    foto: "/images/dra/scrubs.webp",
     initials: "DD",
   },
   {

@@ -44,7 +44,7 @@ export function TratamientosDestacados() {
           </h2>
         </div>
 
-        {/* ══ BLOQUE A — Explorador interactivo Scanner D10 / INDIBA ══ */}
+        {/* ══ BLOQUE A — Explorador interactivo de tecnologías ══ */}
         <TecnologiaShowcase />
 
         {/* ════════════════════════════════════════════

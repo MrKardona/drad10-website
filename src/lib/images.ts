@@ -24,12 +24,17 @@ export const resultadosTeaser = {
   capilares: "/images/resultados/teaser-04.webp",
 } as const;
 
-/** Explorador Scanner D10 / INDIBA (home, dentro de TratamientosDestacados) — 1400×788 */
+/** Explorador de tecnologías (home, dentro de TratamientosDestacados).
+ *  Las cuatro coinciden con el equipamiento declarado en el portafolio. */
 export const tecnologia = {
-  scannerDiagnostico: "/images/tecnologia/scanner-diagnostico.webp",
-  indibaFacial: "/images/tecnologia/indiba-facial.webp",
-  indibaCorporal: "/images/tecnologia/indiba-corporal.webp",
-  indibaRegeneracion: "/images/tecnologia/indiba-regeneracion.webp",
+  /** Foto real: la Dra. Daniela con el analizador capilar. */
+  analizador: "/images/dra/analizador.webp",
+  /** Foto real: criolipólisis Cryonic en uso. */
+  criolipolisis: "/images/clinica/criolipolisis.webp",
+  /** Foto real: equipo INDIBA de la clínica. */
+  indiba: "/images/clinica/indiba.webp",
+  /** Pieza de campaña: mapeo facial. */
+  laserCO2: "/images/campana/mapeo-facial.webp",
 } as const;
 
 /** Página /servicios/botox */

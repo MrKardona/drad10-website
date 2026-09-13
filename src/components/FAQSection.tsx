@@ -15,7 +15,7 @@ const FAQ_ITEMS: FAQItem[] = [
     id: 1,
     question: "¿Los tratamientos duelen?",
     answer:
-      "La mayoría de nuestros procedimientos son mínimamente invasivos y se realizan con anestesia tópica cuando es necesario. La sensación varía según el tratamiento, pero nuestros pacientes describen el proceso como muy tolerable. El Scanner D10 INDIBA, por ejemplo, genera una sensación de calor suave y completamente cómoda.",
+      "La mayoría de nuestros procedimientos son mínimamente invasivos y se realizan con anestesia tópica cuando es necesario. La sensación varía según el tratamiento, pero nuestros pacientes describen el proceso como muy tolerable. INDIBA, por ejemplo, genera una sensación de calor suave y cómoda.",
   },
   {
     id: 2,
@@ -27,13 +27,13 @@ const FAQ_ITEMS: FAQItem[] = [
     id: 3,
     question: "¿Cuánto tiempo dura la recuperación?",
     answer:
-      "Depende del tratamiento. La mayoría de nuestros procedimientos son 'sin tiempo de inactividad' — puedes retomar tus actividades el mismo día. Tratamientos como botox o el Scanner D10 INDIBA no requieren recuperación. Para procedimientos más avanzados como implante capilar o hilos tensores, te explicamos en detalle qué esperar en tu cita de valoración.",
+      "Depende del tratamiento. La mayoría de nuestros procedimientos son 'sin tiempo de inactividad' — puedes retomar tus actividades el mismo día. Tratamientos como la toxina botulínica o INDIBA no requieren recuperación. Para procedimientos más avanzados como implante capilar o hilos tensores, te explicamos en detalle qué esperar en tu cita de valoración.",
   },
   {
     id: 4,
     question: "¿Cuántas sesiones necesito para ver resultados?",
     answer:
-      "Muchos tratamientos muestran resultados desde la primera sesión. El número de sesiones varía: el botox tiene efecto inmediato y dura entre 4 y 6 meses; el Scanner D10 INDIBA generalmente requiere entre 4 y 8 sesiones para resultados óptimos; el implante capilar es un procedimiento único. En tu valoración gratuita diseñamos un plan personalizado según tus objetivos.",
+      "Muchos tratamientos muestran resultados desde la primera sesión. El número de sesiones varía: el botox tiene efecto inmediato y dura entre 4 y 6 meses; INDIBA generalmente requiere entre 4 y 8 sesiones para resultados óptimos; el implante capilar es un procedimiento único. En tu valoración gratuita diseñamos un plan personalizado según tus objetivos.",
   },
   {
     id: 5,

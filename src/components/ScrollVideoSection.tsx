@@ -50,7 +50,7 @@ export function ScrollVideoSection({
   frameCount = FRAME_COUNT_DEFECTO,
   alturaVh = 420,
   overlays = true,
-  badge = "Scanner D10 · INDIBA Certified · Quantum",
+  badge = "Criolipólisis · Láser CO2 · INDIBA",
   frase = "Transforma · Renueva · Revela",
 }: ScrollVideoSectionProps = {}) {
   const FRAME_COUNT = frameCount;

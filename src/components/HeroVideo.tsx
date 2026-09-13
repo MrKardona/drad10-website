@@ -151,7 +151,7 @@ export function HeroVideo() {
           }}
         >
           Transformamos tu bienestar con tratamientos seguros,
-          naturales y personalizados. Tecnología INDIBA · Scanner Facial D10.
+          naturales y personalizados. Criolipólisis · Láser CO2 · INDIBA · Hydrafacial.
         </p>
 
         {/* CTAs */}

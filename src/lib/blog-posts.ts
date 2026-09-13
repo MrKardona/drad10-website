@@ -238,20 +238,20 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 
-  // ─── Artículo 3: Scanner D10 / INDIBA ───────────────────────────────────
+  // ─── Artículo 3: INDIBA ───────────────────────────────────
   {
-    slug: "scanner-d10-indiba",
-    title: "Scanner D10 INDIBA: el tratamiento de radiofrecuencia que transforma desde adentro",
+    slug: "indiba-radiofrecuencia",
+    title: "INDIBA: la radiofrecuencia médica que transforma desde adentro",
     excerpt:
       "Conoce la tecnología insignia de DRA.D10 — cómo la radiofrecuencia profunda INDIBA regenera el colágeno, afirma la piel y remodela el cuerpo sin cirugía.",
     category: "Tecnología",
     date: "20 de febrero, 2025",
     readTime: "9 min",
-    coverImage: "/images/blog/scanner-d10-indiba.webp",
+    coverImage: "/images/blog/indiba-radiofrecuencia.webp",
     content: [
       {
         type: "paragraph",
-        text: "En DRA.D10, nuestra clínica de medicina estética en El Poblado, Medellín, tenemos un tratamiento que marca la diferencia: el Scanner D10 con tecnología INDIBA. No es un aparato más — es el resultado de décadas de investigación científica en radiofrecuencia profunda. Hoy es el protocolo más solicitado en nuestra clínica, y los resultados hablan por sí solos.",
+        text: "En DRA.D10, nuestra clínica de medicina estética en El Poblado, Medellín, tenemos una tecnología que marca la diferencia: la radiofrecuencia médica INDIBA. No es un aparato más — es el resultado de décadas de investigación científica en radiofrecuencia profunda. Hoy es el protocolo más solicitado en nuestra clínica, y los resultados hablan por sí solos.",
       },
       {
         type: "heading",
@@ -263,7 +263,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "heading",
-        text: "¿Para qué sirve el Scanner D10?",
+        text: "¿Para qué sirve INDIBA?",
       },
       {
         type: "list",
@@ -394,7 +394,7 @@ export const blogPosts: BlogPost[] = [
         type: "list",
         items: [
           "Mesoterapia corporal: microinyecciones de sustancias lipolíticas que atacan directamente la grasa localizada en abdomen, flancos, muslos y brazos.",
-          "Scanner D10 INDIBA: radiofrecuencia profunda que destruye células de grasa, mejora la circulación linfática y firma la piel simultáneamente.",
+          "INDIBA: radiofrecuencia profunda que actúa sobre la grasa localizada, mejora la circulación linfática y firma la piel simultáneamente.",
           "Sueroterapia: reposición de vitaminas, minerales y aminoácidos que el organismo pierde durante procesos de adelgazamiento.",
           "Moldeamiento corporal: combinación de técnicas manuales y aparatología para definir silueta y reducir medidas.",
         ],

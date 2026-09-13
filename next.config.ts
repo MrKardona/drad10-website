@@ -69,6 +69,17 @@ const nextConfig: NextConfig = {
   },
 
   // ── Security headers ─────────────────────────────────────────────────────
+  // El artículo se llamaba "Scanner D10", una denominación que no corresponde
+  // a ningún equipo de la clínica. Se conserva la URL vieja con un 301.
+  async redirects() {
+    return [
+      {
+        source: "/blog/scanner-d10-indiba",
+        destination: "/blog/indiba-radiofrecuencia",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
