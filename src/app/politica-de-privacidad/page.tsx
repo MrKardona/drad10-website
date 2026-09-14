@@ -4,100 +4,138 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | DRA.D10 — Medicina Estética Medellín",
+  title: "Política de privacidad y tratamiento de datos | DRA.D10",
   description:
-    "Conoce cómo DRA.D10 recopila, usa y protege tus datos personales. Política de privacidad conforme a la Ley 1581 de 2012 de Colombia.",
+    "Cómo DRA.D10 y Clínica Quantum recolectan, usan y protegen tus datos personales y de salud, conforme a la Ley 1581 de 2012 de Colombia.",
 };
 
 const sections = [
   {
     number: "01",
-    title: "Responsable del Tratamiento",
+    title: "Responsable del tratamiento",
     content: [
-      "DRA.D10 – Clínica Quantum Medellín, con domicilio en Cl. 7 #39-290 Consultorio 516, El Poblado, Medellín, Colombia, es la entidad responsable del tratamiento de los datos personales recopilados a través de este sitio web y durante la prestación de nuestros servicios.",
-      "Para cualquier consulta relacionada con el manejo de tus datos personales puedes contactarnos a través del WhatsApp 304 375 1975 o mediante los canales disponibles en nuestra sección de contacto.",
+      "Clínica Quantum, que opera bajo la marca DRA.D10 con la dirección médica de la Dra. Daniela Díez, es responsable del tratamiento de los datos personales que recolecta a través de este sitio web, sus canales de atención y la prestación de sus servicios.",
+      "Sede principal: Cl. 7 #39-290, Consultorio 516, El Poblado, Medellín, Colombia. Sede Argentina: Av. Gaona 1237, Depto 11-2, Buenos Aires. Canal de atención de datos personales: WhatsApp 304 375 1975 o por escrito en la sede principal.",
+      "Esta política aplica a pacientes, personas interesadas en nuestros servicios, visitantes del sitio web, proveedores, contratistas, colaboradores y candidatos, respecto de todas las bases de datos físicas y digitales que administramos.",
     ],
   },
   {
     number: "02",
-    title: "Datos que Recopilamos",
+    title: "Marco legal",
     content: [
-      "Recopilamos los datos que tú mismo nos proporcionas de forma voluntaria al agendar una cita, completar formularios de contacto, comunicarte con nosotros o utilizar nuestros servicios. Estos pueden incluir: nombre completo, número de teléfono, correo electrónico, fecha de nacimiento, e información de salud relevante para la prestación del servicio médico-estético.",
-      "También recopilamos de forma automática datos técnicos de navegación como dirección IP, tipo de navegador, páginas visitadas y tiempo de permanencia en el sitio, con fines estadísticos y de mejora continua.",
-      "No recopilamos datos de tarjetas de crédito ni información financiera sensible directamente en nuestra plataforma.",
+      "Tratamos los datos personales conforme al artículo 15 de la Constitución Política de Colombia, la Ley Estatutaria 1581 de 2012, el Decreto 1377 de 2013, el Decreto 1074 de 2015 y las demás normas que los modifiquen o complementen. La información de salud se maneja además según la normativa colombiana sobre historia clínica y secreto profesional médico.",
+      "Para la atención prestada en Argentina aplican también la Ley 25.326 de Protección de los Datos Personales y la Ley 26.529 de Derechos del Paciente.",
     ],
   },
   {
     number: "03",
-    title: "Finalidad del Tratamiento",
+    title: "Definiciones",
     content: [
-      "Tus datos personales son utilizados exclusivamente para las siguientes finalidades: (a) agendar y gestionar citas médicas; (b) prestación del servicio de medicina estética y seguimiento post-tratamiento; (c) envío de recordatorios de citas e información relevante sobre tus tratamientos; (d) comunicaciones comerciales y promocionales, solo si nos has dado tu consentimiento expreso; (e) cumplimiento de obligaciones legales y regulatorias.",
-      "Tus datos de salud son considerados datos sensibles y reciben un nivel de protección especial. Únicamente serán consultados por el personal médico autorizado y con estricta confidencialidad clínica.",
+      "Titular: la persona natural cuyos datos se tratan. Dato personal: cualquier información vinculada a una persona natural determinada o determinable. Dato sensible: el que afecta la intimidad del titular o cuyo uso indebido puede generar discriminación, como los datos de salud, la vida sexual, los datos biométricos y las fotografías clínicas.",
+      "Tratamiento: cualquier operación sobre datos personales, como recolección, almacenamiento, uso, circulación o supresión. Autorización: consentimiento previo, expreso e informado del titular. Responsable: quien decide sobre la base de datos y su tratamiento. Encargado: quien trata datos por cuenta del responsable, como un proveedor tecnológico.",
+      "Transmisión: comunicación de datos a un encargado, dentro o fuera de Colombia, para que los trate por cuenta del responsable. Transferencia: envío de datos a otro responsable, dentro o fuera del país.",
     ],
   },
   {
     number: "04",
-    title: "Consentimiento",
+    title: "Datos que recolectamos",
     content: [
-      "Al proporcionarnos tus datos personales, ya sea mediante formularios en línea, comunicación directa o al momento de recibir nuestros servicios, manifiestas tu consentimiento libre, previo, expreso e informado para el tratamiento de dichos datos conforme a esta política.",
-      "Tienes el derecho de revocar tu consentimiento en cualquier momento, sin que ello afecte la licitud del tratamiento efectuado con anterioridad a dicha revocación.",
+      "Datos de identificación y contacto: nombre, documento de identidad, fecha de nacimiento, teléfono, correo electrónico, ciudad y país de residencia.",
+      "Datos de salud (sensibles): antecedentes médicos, alergias, medicamentos, diagnóstico, evolución, consentimientos informados y demás información que integra la historia clínica. También fotografías y videos clínicos de las zonas tratadas, tomados para documentar tu valoración y tu evolución.",
+      "Datos de navegación: dirección IP aproximada, tipo de dispositivo y navegador, páginas visitadas y tiempo de permanencia, obtenidos mediante herramientas de medición del sitio. Datos de pago: comprobantes y datos de facturación. No almacenamos datos completos de tarjetas en este sitio web.",
     ],
   },
   {
     number: "05",
-    title: "Compartición de Datos",
+    title: "Finalidades del tratamiento",
     content: [
-      "DRA.D10 no vende, alquila ni cede tus datos personales a terceros con fines comerciales.",
-      "Podremos compartir tus datos únicamente en los siguientes casos: (a) con proveedores de servicios tecnológicos que operan bajo estrictos acuerdos de confidencialidad y solo para los fines establecidos; (b) con autoridades sanitarias o judiciales cuando así lo exija la ley colombiana; (c) con otros profesionales de la salud involucrados en tu tratamiento, siempre con tu conocimiento previo.",
+      "Atención médica: realizar tu valoración, prestar los procedimientos, elaborar y custodiar la historia clínica, hacer controles y seguimiento, y atender urgencias relacionadas con tu tratamiento.",
+      "Gestión de citas y comunicación: agendar, confirmar y recordar citas, y responder tus consultas por WhatsApp, llamada, correo electrónico o mensajería, en Colombia o en Argentina según la sede que elijas.",
+      "Comunicaciones comerciales: enviarte información sobre servicios, novedades y promociones, solo si lo autorizas. Puedes retirar esta autorización en cualquier momento sin que afecte tu atención médica.",
+      "Gestión administrativa y legal: facturación, cobro, contabilidad, obligaciones tributarias, atención de peticiones, quejas y reclamos, requerimientos de autoridades y defensa ante reclamaciones.",
+      "Mejora del servicio: medir el uso del sitio web y la calidad de la atención con datos estadísticos o anonimizados. Proveedores, contratistas y colaboradores: gestionar la relación contractual o laboral y cumplir las obligaciones legales que de ella se derivan.",
     ],
   },
   {
     number: "06",
-    title: "Conservación de los Datos",
+    title: "Datos sensibles y fotografías clínicas",
     content: [
-      "Conservamos tus datos personales durante el tiempo necesario para cumplir con las finalidades descritas en esta política y con las obligaciones legales aplicables. Los datos clínicos se conservan conforme a los plazos establecidos por la normativa colombiana en materia de historia clínica.",
-      "Una vez cumplidos los plazos legales y finalizada la relación con el paciente, los datos serán eliminados de forma segura o anonimizados.",
+      "No estás obligado a entregar datos sensibles. Sin embargo, algunos datos de salud son indispensables para prestarte una atención segura, y sin ellos podríamos no realizar el procedimiento.",
+      "La historia clínica es reservada. Solo la consulta el personal de salud que interviene en tu atención y solo se entrega a terceros en los casos que la ley permite, como por solicitud tuya, de tu representante o de una autoridad competente.",
+      "Las fotografías y videos clínicos se usan para tu historia clínica y seguimiento. Solo se publican en el sitio web o en redes sociales, como resultados de antes y después, con tu autorización expresa, separada y por escrito, procurando no identificarte salvo que lo aceptes. Puedes retirar esa autorización en cualquier momento y retiraremos el material de nuestros canales.",
     ],
   },
   {
     number: "07",
-    title: "Seguridad de la Información",
+    title: "Menores de edad",
     content: [
-      "Implementamos medidas técnicas, administrativas y físicas para proteger tus datos personales contra acceso no autorizado, pérdida, alteración o divulgación indebida. Nuestro sitio web utiliza protocolos de seguridad SSL/TLS para el cifrado de las comunicaciones.",
-      "A pesar de nuestros esfuerzos, ningún sistema de seguridad es infalible. En caso de una brecha de seguridad que afecte tus datos, te notificaremos conforme a los procedimientos establecidos por la Superintendencia de Industria y Comercio.",
+      "Solo tratamos datos de niñas, niños y adolescentes cuando es necesario para su atención, con autorización de su representante legal y respetando su interés superior y sus derechos fundamentales.",
     ],
   },
   {
     number: "08",
-    title: "Tus Derechos (ARCO)",
+    title: "Autorización",
     content: [
-      "Conforme a la Ley 1581 de 2012 y sus decretos reglamentarios, tienes los siguientes derechos sobre tus datos personales:",
-      "• Acceso: conocer los datos que tenemos sobre ti y cómo los tratamos. • Rectificación: solicitar la corrección de datos inexactos o incompletos. • Cancelación (supresión): pedir la eliminación de tus datos cuando ya no sean necesarios o hayas retirado tu consentimiento. • Oposición: oponerte al tratamiento de tus datos para fines específicos, en particular los comerciales.",
-      "Para ejercer cualquiera de estos derechos, envía tu solicitud a través de WhatsApp 304 375 1975. Responderemos en un plazo máximo de 10 días hábiles.",
+      "Solicitamos tu autorización de forma previa, expresa e informada: por escrito, por medios digitales como formularios o mensajes, de forma verbal o mediante conductas inequívocas, como enviarnos tus datos para agendar una cita. Conservamos prueba de esa autorización.",
+      "Conforme a la ley, no se requiere autorización cuando se trate de datos de naturaleza pública, casos de urgencia médica o sanitaria, información requerida por una autoridad en ejercicio de sus funciones, tratamientos autorizados por la ley con fines históricos, estadísticos o científicos, o datos del registro civil.",
     ],
   },
   {
     number: "09",
-    title: "Cookies y Tecnologías de Seguimiento",
+    title: "Con quién compartimos tus datos",
     content: [
-      "Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar tu experiencia de navegación, analizar el tráfico y personalizar el contenido. Puedes configurar tu navegador para rechazar todas las cookies o para que te avise cuando se envíe una cookie.",
-      "El rechazo de cookies puede afectar el funcionamiento de algunas funciones del sitio web.",
+      "No vendemos ni alquilamos tus datos personales.",
+      "Podemos transmitirlos a encargados que nos prestan servicios, como alojamiento del sitio web y bases de datos, mensajería, agendamiento, facturación, laboratorios o profesionales de apoyo, bajo acuerdos que limitan su uso a las finalidades de esta política y exigen confidencialidad y seguridad.",
+      "Algunos de estos proveedores tienen servidores fuera de Colombia, por ejemplo en Estados Unidos. Además, si te atiendes en la sede de Argentina, la información necesaria para tu atención puede circular entre ambas sedes. En estos casos exigimos niveles adecuados de protección y, cuando la ley lo requiere, tu autorización.",
+      "También entregaremos información a autoridades judiciales, sanitarias o administrativas cuando lo exija la ley o una orden competente.",
     ],
   },
   {
     number: "10",
-    title: "Marco Legal Aplicable",
+    title: "Tus derechos",
     content: [
-      "Esta política se rige por la Ley Estatutaria 1581 de 2012 (Protección de Datos Personales), el Decreto 1377 de 2013 y las demás normas complementarias expedidas por la Superintendencia de Industria y Comercio de Colombia.",
-      "Para cualquier reclamación no resuelta, puedes acudir a la Superintendencia de Industria y Comercio (SIC) a través de su sitio web www.sic.gov.co.",
+      "Como titular puedes: conocer, actualizar y rectificar tus datos; solicitar prueba de la autorización otorgada; ser informado sobre el uso que les hemos dado; revocar la autorización o pedir la supresión de tus datos cuando no se respeten los principios, derechos y garantías legales; acceder gratuitamente a tus datos; y presentar quejas ante la Superintendencia de Industria y Comercio, una vez agotado el trámite de consulta o reclamo con nosotros.",
+      "La supresión y la revocatoria no proceden cuando exista un deber legal o contractual de conservar los datos. En particular, la historia clínica debe conservarse durante los plazos que fija la normativa de salud, aunque sí puedes pedir que dejemos de usar tus datos para fines comerciales o de publicación.",
     ],
   },
   {
     number: "11",
-    title: "Modificaciones a esta Política",
+    title: "Cómo ejercer tus derechos",
     content: [
-      "DRA.D10 se reserva el derecho de actualizar esta Política de Privacidad en cualquier momento. Las modificaciones entrarán en vigencia a partir de su publicación en este sitio web. Te recomendamos revisar periódicamente esta página para mantenerte informado.",
-      "El uso continuado de nuestros servicios tras la publicación de cambios constituye tu aceptación de los mismos.",
+      "Puedes enviar tu solicitud por WhatsApp al 304 375 1975 o por escrito en nuestra sede principal. Incluye tu nombre completo, documento de identidad, datos de contacto, una descripción clara de lo que solicitas y los documentos que la soporten. Si actúas en nombre de otra persona, adjunta el documento que acredite tu representación.",
+      "Consultas: las respondemos en máximo diez (10) días hábiles desde su recibo. Si no es posible, te informaremos el motivo y la nueva fecha, que no superará cinco (5) días hábiles adicionales.",
+      "Reclamos (corrección, actualización, supresión, revocatoria o incumplimiento): los atendemos en máximo quince (15) días hábiles desde el día siguiente a su recibo, prorrogables hasta ocho (8) días hábiles más con aviso previo. Si el reclamo está incompleto, te pediremos completarlo dentro de los cinco (5) días siguientes; si pasan dos (2) meses sin que lo completes, se entenderá que desististe.",
+    ],
+  },
+  {
+    number: "12",
+    title: "Nuestros deberes y seguridad de la información",
+    content: [
+      "Nos comprometemos a garantizar el ejercicio del derecho de hábeas data, conservar prueba de las autorizaciones, informarte la finalidad del tratamiento, mantener la información veraz y actualizada, rectificarla cuando sea incorrecta, tramitar consultas y reclamos en los plazos legales e informar a la autoridad cuando se presenten riesgos en la administración de la información.",
+      "Aplicamos medidas técnicas, humanas y administrativas razonables: accesos restringidos con usuario y contraseña, cifrado de las comunicaciones del sitio web, custodia física de documentos y acuerdos de confidencialidad con el personal. Ningún sistema es infalible; si ocurre un incidente que afecte tus datos, lo informaremos a la autoridad y a los titulares afectados según la ley.",
+    ],
+  },
+  {
+    number: "13",
+    title: "Conservación de los datos",
+    content: [
+      "Conservamos los datos mientras sean necesarios para las finalidades descritas y durante los plazos que exigen las normas de salud, contables y tributarias. Cumplidos esos plazos, los eliminamos de forma segura o los anonimizamos.",
+    ],
+  },
+  {
+    number: "14",
+    title: "Cookies y medición del sitio",
+    content: [
+      "Este sitio usa herramientas de analítica y rendimiento que recopilan información estadística sobre la navegación, sin identificarte directamente. Puedes configurar tu navegador para bloquear o eliminar cookies; algunas funciones del sitio podrían verse afectadas.",
+      "Cuando nos escribes por WhatsApp o nos sigues en Instagram, esos servicios también tratan tus datos según sus propias políticas de privacidad.",
+    ],
+  },
+  {
+    number: "15",
+    title: "Vigencia y cambios",
+    content: [
+      "Esta política rige desde su publicación en este sitio web. Podemos actualizarla para ajustarla a cambios legales o de nuestros servicios. Publicaremos la versión vigente con su fecha de actualización y, si un cambio afecta las finalidades autorizadas, te lo informaremos y pediremos una nueva autorización cuando corresponda.",
+      "Las bases de datos permanecerán vigentes mientras se mantengan las finalidades para las que fueron recolectadas y los plazos legales de conservación.",
     ],
   },
 ];
@@ -141,7 +179,7 @@ export default function PoliticaPrivacidad() {
             }}
           >
             Política de{" "}
-            <em style={{ color: "#b89a6a" }}>Privacidad</em>
+            <em style={{ color: "#b89a6a" }}>Privacidad</em>{" "}y tratamiento de datos
           </h1>
           <div
             style={{
@@ -158,7 +196,7 @@ export default function PoliticaPrivacidad() {
                 color: "#888580",
               }}
             >
-              Última actualización: enero 2025
+              Última actualización: septiembre 2026
             </span>
             <span style={{ color: "rgba(184,154,106,0.4)", fontSize: "0.5rem" }}>✦</span>
             <span
@@ -193,9 +231,9 @@ export default function PoliticaPrivacidad() {
                 lineHeight: 1.8,
               }}
             >
-              En DRA.D10 tu privacidad es una prioridad. Esta política describe cómo recopilamos,
-              usamos y protegemos tu información personal, en cumplimiento de la legislación
-              colombiana de protección de datos personales.
+              Tu información de salud es tan delicada como tu tratamiento. Aquí explicamos qué
+              datos recolectamos, para qué los usamos, con quién los compartimos y cómo puedes
+              conocerlos, corregirlos o pedir que los eliminemos.
             </p>
           </div>
         </div>
@@ -285,7 +323,7 @@ export default function PoliticaPrivacidad() {
                 marginBottom: "0.75rem",
               }}
             >
-              Ejercer tus derechos ARCO
+              Ejerce tus derechos
             </p>
             <p
               style={{
@@ -297,11 +335,12 @@ export default function PoliticaPrivacidad() {
                 lineHeight: 1.4,
               }}
             >
-              Acceso · Rectificación · Cancelación · Oposición
+              Conocer · Actualizar · Rectificar · Suprimir
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <a
-                href="https://wa.me/573043751975"
+                href="https://wa.me/573043751975?text=Hola%2C%20quiero%20hacer%20una%20solicitud%20sobre%20mis%20datos%20personales"
+                data-wa-fijo
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
