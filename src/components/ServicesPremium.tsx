@@ -1,27 +1,46 @@
-const faciales = [
-  "Botox", "Ácido Hialurónico", "Hilos Tensores", "Bioestimuladores de Colágeno",
-  "Peeling Químico", "Microagujamiento Facial", "Plasma Rico en Plaquetas",
-  "Mesoterapia Facial", "Limpieza Profunda", "Radiofrecuencia Facial",
+// Solo servicios reales del portafolio, cada uno con su página.
+type Servicio = { label: string; slug: string };
+
+const faciales: Servicio[] = [
+  { label: "Botox", slug: "botox" },
+  { label: "Ácido hialurónico", slug: "acido-hialuronico" },
+  { label: "Labios", slug: "relleno-de-labios" },
+  { label: "Rinomodelación", slug: "rinomodelacion" },
+  { label: "Sculptra", slug: "sculptra" },
+  { label: "Hilos tensores", slug: "hilos-tensores" },
+  { label: "Láser CO2", slug: "laser-co2" },
+  { label: "Tratamiento de manchas", slug: "cosmelan" },
+  { label: "Hydrafacial", slug: "hydrafacial" },
+  { label: "Limpieza facial", slug: "limpieza-facial" },
 ];
 
-const corporales = [
-  "Microagujas Corporales", "Mesoterapia Corporal",
-  "Sueroterapia", "Moldeamiento Corporal",
+const corporales: Servicio[] = [
+  { label: "Criolipólisis", slug: "criolipolisis" },
+  { label: "Moldeamiento con INDIBA", slug: "moldeamiento-corporal" },
+  { label: "Reducción metabólica", slug: "descenso-de-peso" },
+  { label: "Tratamiento de celulitis", slug: "celulitis" },
 ];
 
-const capilares = [
-  "Implante Capilar", "Exosomas Capilares",
-  "PRP Capilar", "Mesoterapia Capilar", "Tratamiento Folicular",
+const capilares: Servicio[] = [
+  { label: "Trasplante capilar", slug: "implante-capilar-fue" },
+  { label: "Trasplante de barba", slug: "trasplante-de-barba" },
+  { label: "Exosomas capilares", slug: "exosomas-capilares" },
+  { label: "PRP capilar", slug: "prp-capilar" },
+  { label: "Mesoterapia capilar", slug: "mesoterapia-capilar" },
 ];
 
-const inyectables = [
-  "Inyectables Estéticos", "Plasma Rico en Plaquetas",
-  "Mesoterapia", "Sueroterapia",
+const inyectables: Servicio[] = [
+  { label: "Ojeras", slug: "ojeras-acido-hialuronico" },
+  { label: "Perfilado mandibular", slug: "perfilado-mandibular" },
+  { label: "Skinbooster", slug: "skinbooster" },
+  { label: "Sueroterapia", slug: "sueroterapia" },
 ];
 
-const zonaIntima = [
-  "Despigmentación Zona Íntima", "Estrechamiento Vaginal",
-  "Relleno de Labios Mayores", "Otomodeolación",
+const zonaIntima: Servicio[] = [
+  { label: "Rejuvenecimiento vaginal", slug: "rejuvenecimiento-vaginal" },
+  { label: "Despigmentación íntima y axilas", slug: "despigmentacion-intima-axilas" },
+  { label: "Otomodelización", slug: "otomodelizacion" },
+  { label: "Alectomía", slug: "alectomia" },
 ];
 
 export function ServicesPremium() {
@@ -103,8 +122,9 @@ export function ServicesPremium() {
           {/* Treatments col — pill cloud */}
           <div className="px-8 py-12 flex flex-wrap gap-3 content-start">
             {faciales.map((t) => (
-              <span
-                key={t}
+              <a
+                key={t.slug}
+                href={`/servicios/${t.slug}`}
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.78rem",
@@ -113,12 +133,11 @@ export function ServicesPremium() {
                   padding: "0.45rem 1rem",
                   whiteSpace: "nowrap",
                   transition: "border-color 0.25s, color 0.25s",
-                  cursor: "default",
-                }}
+                                  }}
                 className="hover:border-[#b89a6a] hover:text-[#b89a6a]"
               >
-                {t}
-              </span>
+                {t.label}
+              </a>
             ))}
             <div className="w-full mt-6">
               <a
@@ -182,14 +201,15 @@ export function ServicesPremium() {
             </p>
             <div className="flex flex-col gap-3">
               {corporales.map((t) => (
-                <div
-                  key={t}
-                  className="flex items-center gap-3"
+                <a
+                  key={t.slug}
+                  href={`/servicios/${t.slug}`}
+                  className="flex items-center gap-3 transition-colors hover:text-[#b89a6a]"
                   style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#1c1c1c" }}
                 >
                   <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>◆</span>
-                  {t}
-                </div>
+                  {t.label}
+                </a>
               ))}
             </div>
             <div className="mt-6">
@@ -240,14 +260,15 @@ export function ServicesPremium() {
             </p>
             <div className="flex flex-col gap-3">
               {capilares.map((t) => (
-                <div
-                  key={t}
-                  className="flex items-center gap-3"
+                <a
+                  key={t.slug}
+                  href={`/servicios/${t.slug}`}
+                  className="flex items-center gap-3 transition-colors hover:text-[#b89a6a]"
                   style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#1c1c1c" }}
                 >
                   <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>◆</span>
-                  {t}
-                </div>
+                  {t.label}
+                </a>
               ))}
             </div>
             <div className="mt-6">
@@ -298,13 +319,14 @@ export function ServicesPremium() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Inyectables
+                Inyectables y bienestar
               </h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {inyectables.map((t) => (
-                <span
-                  key={t}
+                <a
+                  key={t.slug}
+                  href={`/servicios/${t.slug}`}
                   style={{
                     fontFamily: "var(--font-body)",
                     fontSize: "0.72rem",
@@ -313,8 +335,8 @@ export function ServicesPremium() {
                     padding: "0.3rem 0.75rem",
                   }}
                 >
-                  {t}
-                </span>
+                  {t.label}
+                </a>
               ))}
             </div>
             <div className="w-full mt-5">
@@ -354,13 +376,14 @@ export function ServicesPremium() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Zona Íntima
+                Íntima y quirúrgicos
               </h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {zonaIntima.map((t) => (
-                <span
-                  key={t}
+                <a
+                  key={t.slug}
+                  href={`/servicios/${t.slug}`}
                   style={{
                     fontFamily: "var(--font-body)",
                     fontSize: "0.72rem",
@@ -369,8 +392,8 @@ export function ServicesPremium() {
                     padding: "0.3rem 0.75rem",
                   }}
                 >
-                  {t}
-                </span>
+                  {t.label}
+                </a>
               ))}
             </div>
           </div>
