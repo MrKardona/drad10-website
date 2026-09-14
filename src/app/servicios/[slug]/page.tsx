@@ -149,8 +149,6 @@ export default async function TratamientoPage({ params }: Props) {
     .map((s) => {
       const r = getTratamiento(s);
       if (r) return { slug: r.slug, nombre: r.nombre, grupo: r.grupo ?? CATEGORIAS[r.categoria].label, desde: r.precio.desde, hero: mediosDe(r)?.hero };
-      // Botox tiene página propia fuera del registro de tratamientos.
-      if (s === "botox") return { slug: "botox", nombre: "Botox (toxina botulínica)", grupo: "Toxina botulínica", desde: 1100000, hero: "/images/servicios/botox/paso-1.webp" };
       return null;
     })
     .filter((r): r is NonNullable<typeof r> => Boolean(r));

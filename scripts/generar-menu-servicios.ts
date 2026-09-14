@@ -13,8 +13,6 @@ const items = [
     grupo: t.grupo ?? "Otros",
     desde: t.precio.desde,
   })),
-  // Botox tiene página propia fuera del registro.
-  { slug: "botox", nombre: "Botox (toxina botulínica)", categoria: "faciales", grupo: "Toxina botulínica", desde: 1100000 },
 ];
 
 const salida = `// Archivo generado por scripts/generar-menu-servicios.ts. No editar a mano.

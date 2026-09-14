@@ -2,10 +2,114 @@ import type { Tratamiento } from "../types";
 
 /**
  * Lote inyectables: toxina botulínica (usos estéticos y médicos) y ácido
- * hialurónico. Fuente: docs/servicios-manifest.json. La página "botox" tiene
- * archivo propio y no se incluye aquí.
+ * hialurónico. Fuente: docs/servicios-manifest.json.
  */
 export const inyectables: Tratamiento[] = [
+  // ── Botox (toxina botulínica) ─────────────────────────────────────────────
+  {
+    slug: "botox",
+    categoria: "faciales",
+    grupo: "Toxina botulínica",
+    nombre: "Botox (toxina botulínica)",
+    resultados: [],
+    relacionados: ["mesobotox", "toxina-bruxismo", "skinbooster"],
+    hero: {
+      eyebrow: "TOXINA BOTULÍNICA · TERCIO SUPERIOR",
+      titulo: "Una mirada descansada,",
+      tituloEm: "con tu expresión intacta",
+      sub: "Suavizamos las líneas de expresión de frente, entrecejo y patas de gallo para que te veas más fresca y descansada, conservando la expresión natural de tu rostro.",
+    },
+    seo: {
+      title: "Botox en Medellín | Clínica Quantum",
+      description:
+        "Botox en El Poblado, Medellín: suaviza líneas de frente, entrecejo y patas de gallo con un resultado natural. Tercio superior desde $1.100.000.",
+      keywords: ["botox medellín", "toxina botulínica medellín", "botox el poblado", "precio botox medellín", "patas de gallo botox"],
+    },
+    ficha: {
+      duracion: "20 a 30 min",
+      sesiones: "1 sesión, con control",
+      recuperacion: "Retomas tu rutina el mismo día",
+      resultados: "En días; duran meses",
+    },
+    paraQuien: {
+      ideal: [
+        "Te molestan las líneas de la frente, el entrecejo o las patas de gallo",
+        "Te dicen que te ves cansada o molesta aunque no lo estés",
+        "Quieres prevenir que las líneas de expresión se marquen más",
+        "Buscas un resultado natural, sin cara congelada",
+      ],
+      noIdeal: [
+        "Estás en embarazo o lactancia",
+        "Tienes una enfermedad neuromuscular o infección activa en la zona",
+        "Buscas rellenar surcos o recuperar volumen: para eso existen otros tratamientos",
+        "Esperas eliminar por completo arrugas muy profundas en reposo",
+      ],
+    },
+    problema: {
+      titulo: "Cuando tu cara dice cansancio aunque te sientas bien",
+      parrafos: [
+        "Las líneas de la frente, el entrecejo y las patas de gallo se forman por el movimiento repetido de los músculos al gesticular. Con los años se marcan más y empiezan a verse incluso en reposo.",
+        "La toxina botulínica relaja de forma controlada esos músculos. El objetivo no es borrar tu expresión, sino suavizar las líneas para que tu rostro se vea más fresco y descansado.",
+      ],
+    },
+    queEs: {
+      titulo: "Qué es la toxina botulínica",
+      desc: "Es un medicamento que se aplica en microdosis en músculos específicos de la expresión para relajarlos de forma temporal. Al disminuir su contracción, la piel que está encima se suaviza. Es uno de los tratamientos de medicina estética más estudiados; su efecto es reversible y se va perdiendo con los meses, por eso se repite periódicamente según cada persona.",
+    },
+    beneficios: ["Resultado natural", "Sin incapacidad", "Efecto visible en días", "Aplicación en pocos minutos"],
+    zonasTitulo: "Zonas del tercio superior",
+    zonas: [
+      { icon: "▭", label: "Frente", desc: "Líneas horizontales al levantar las cejas." },
+      { icon: "◇", label: "Entrecejo", desc: "Las líneas que dan aspecto de enojo o preocupación." },
+      { icon: "◠", label: "Patas de gallo", desc: "Líneas junto a los ojos al sonreír." },
+    ],
+    pasos: [
+      { num: "01", title: "Valoración de tu expresión", desc: "Estudiamos cómo se mueve tu rostro, dónde se marcan las líneas y qué quieres lograr. Definimos puntos y dosis para ti.", detail: "Valoración médica previa" },
+      { num: "02", title: "Aplicación precisa", desc: "Limpiamos la zona y aplicamos microdosis con una aguja muy fina. Se siente como pequeños pinchazos breves.", detail: "20 a 30 min" },
+      { num: "03", title: "Resultado y control", desc: "El efecto empieza a notarse en pocos días y se completa en las semanas siguientes. Revisamos el resultado en el control.", detail: "Control posterior" },
+    ],
+    seguridad: [
+      { num: "01", title: "Dosis a la medida de tu rostro", desc: "No usamos una fórmula igual para todos: puntos y unidades se definen según tu musculatura y tu expresión." },
+      { num: "02", title: "Naturalidad como criterio", desc: "Buscamos que te veas descansada, no que pierdas tu forma de expresarte." },
+      { num: "03", title: "Expectativas claras", desc: "Te explicamos qué líneas pueden suavizarse y cuáles necesitan otro enfoque." },
+      { num: "04", title: "Personal médico", desc: "Aplicada por personal médico bajo la dirección médica de la Dra. Daniela Díez." },
+    ],
+    cuidados: {
+      antes: [
+        "Evita alcohol el día anterior",
+        "Cuéntanos si tomas anticoagulantes o tienes alguna condición neuromuscular",
+        "Llega sin maquillaje en la zona o lo retiramos en la clínica",
+      ],
+      despues: [
+        "No te acuestes ni te frotes la zona durante las primeras horas",
+        "Evita ejercicio intenso, sauna y calor ese día",
+        "Es normal un pequeño enrojecimiento o punto de pinchazo que desaparece pronto",
+        "Asiste a tu control para revisar el resultado",
+      ],
+    },
+    precio: {
+      desde: 1100000,
+      opciones: [
+        { label: "Tercio superior · mujer", detalle: "Entrecejo, patas de gallo, frente", valor: 1100000 },
+        { label: "Tercio superior · hombre", detalle: "Entrecejo, patas de gallo, frente", valor: 1200000 },
+        { label: "Por unidad", valor: 19000 },
+      ],
+      incluye: ["Valoración médica previa", "Aplicación en las zonas acordadas", "Indicaciones de cuidado", "Control posterior"],
+      nota: "El tercio superior incluye entrecejo, patas de gallo y frente. Para otras zonas se calcula por unidades.",
+    },
+    faq: [
+      { q: "¿Cuánto cuesta el botox?", a: "El tercio superior (entrecejo, patas de gallo y frente) cuesta $1.100.000 en mujeres y $1.200.000 en hombres. Para otras zonas se calcula por unidad, a $19.000 cada una." },
+      { q: "¿Voy a quedar con la cara congelada?", a: "No es el objetivo. Las dosis se ajustan a tu musculatura para suavizar las líneas conservando tu expresión natural." },
+      { q: "¿Cuándo se ve el resultado?", a: "Habitualmente empieza a notarse entre los primeros días y la primera semana, y se completa en las semanas siguientes." },
+      { q: "¿Cuánto dura?", a: "Suele durar varios meses; depende de cada persona, la zona y la actividad muscular. Por eso se repite periódicamente." },
+      { q: "¿Duele?", a: "Se usa una aguja muy fina y la aplicación es rápida. La mayoría lo describe como pequeños pinchazos tolerables." },
+      { q: "¿Qué efectos secundarios puede tener?", a: "Lo más frecuente es enrojecimiento leve, sensibilidad o un pequeño morado en el punto de aplicación, que desaparecen pronto. Otros efectos son poco frecuentes y te los explicamos en la valoración." },
+      { q: "¿Quién no puede aplicárselo?", a: "No se aplica en embarazo o lactancia, con infección activa en la zona ni en ciertas enfermedades neuromusculares. Lo revisamos en tu historia clínica." },
+      { q: "¿Se puede combinar con otros tratamientos?", a: "Sí. Se combina con frecuencia con ácido hialurónico, skinbooster o tratamientos de piel. Definimos el orden en la valoración." },
+    ],
+    waMensaje: "Hola, quiero agendar una valoración para Botox (toxina botulínica)",
+  },
+
   // ── Mesobotox ─────────────────────────────────────────────────────────────
   {
     slug: "mesobotox",

@@ -36,18 +36,3 @@ export const tecnologia = {
   /** Pieza de campaña: mapeo facial. */
   laserCO2: "/images/campana/mapeo-facial.webp",
 } as const;
-
-/** Página /servicios/botox */
-export const botox = {
-  /** Fondo del hero, se muestra al 18% de opacidad — 1600×900 */
-  hero: "/images/servicios/botox-hero.webp",
-  /** Retrato vertical 3:4 — expresión natural preservada — 1000×1333 */
-  expresion: "/images/servicios/botox-expresion.webp",
-} as const;
-
-/** Macros del proceso en /servicios/botox — 1000×667 */
-export const botoxPasos = [
-  "/images/servicios/botox/paso-1.webp",
-  "/images/servicios/botox/paso-2.webp",
-  "/images/servicios/botox/paso-3.webp",
-] as const;

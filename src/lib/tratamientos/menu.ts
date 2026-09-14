@@ -11,6 +11,13 @@ export interface ItemMenu {
 
 export const menuServicios: ItemMenu[] = [
   {
+    "slug": "botox",
+    "nombre": "Botox (toxina botulínica)",
+    "categoria": "faciales",
+    "grupo": "Toxina botulínica",
+    "desde": 1100000
+  },
+  {
     "slug": "mesobotox",
     "nombre": "Mesobotox",
     "categoria": "faciales",
@@ -520,12 +527,5 @@ export const menuServicios: ItemMenu[] = [
     "categoria": "corporales",
     "grupo": "Cosmetología",
     "desde": 40000
-  },
-  {
-    "slug": "botox",
-    "nombre": "Botox (toxina botulínica)",
-    "categoria": "faciales",
-    "grupo": "Toxina botulínica",
-    "desde": 1100000
   }
 ];

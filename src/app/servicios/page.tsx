@@ -50,7 +50,6 @@ const formatCOP = (n: number) => `$${n.toLocaleString("es-CO")}`;
 
 export default function ServiciosPage() {
   const tarjetas: Tarjeta[] = [
-    { slug: "botox", nombre: "Botox (toxina botulínica)", grupo: "Toxina botulínica", desde: 1100000, hero: "/images/servicios/botox/paso-1.webp", categoria: "faciales" },
     ...tratamientos.map((t) => ({
       slug: t.slug,
       nombre: t.nombre,
