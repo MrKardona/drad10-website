@@ -89,7 +89,7 @@ export function CTABanner() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/573002440656"
+            href="https://wa.me/573043751975"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-8 py-4 border-2 border-black text-black text-[0.68rem] tracking-[0.12em] uppercase font-semibold transition-all duration-300 hover:bg-black hover:text-white"

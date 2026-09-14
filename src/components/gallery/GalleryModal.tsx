@@ -212,7 +212,7 @@ export function GalleryModal({ item, onClose }: Props) {
           {/* CTA */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "8px" }}>
             <Link
-              href="https://wa.me/573002440656"
+              href="https://wa.me/573043751975"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold"

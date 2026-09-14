@@ -63,7 +63,7 @@ const sections = [
     number: "07",
     title: "Proceso de Solicitud de Reembolso",
     content: [
-      "Para iniciar una solicitud de reembolso, el paciente debe comunicarse por escrito a través de nuestros canales oficiales (WhatsApp: 300 244 0656 o correo electrónico), indicando: nombre completo, fecha del servicio, descripción del motivo y soporte de pago.",
+      "Para iniciar una solicitud de reembolso, el paciente debe comunicarse por escrito a través de nuestros canales oficiales (WhatsApp: 304 375 1975 o correo electrónico), indicando: nombre completo, fecha del servicio, descripción del motivo y soporte de pago.",
       "DRA.D10 responderá la solicitud dentro de los 3 días hábiles siguientes a su recepción, con la decisión y el proceso a seguir.",
     ],
   },
@@ -277,7 +277,7 @@ export default function PoliticaReembolso() {
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <a
-                href="https://wa.me/573002440656"
+                href="https://wa.me/573043751975"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
@@ -286,11 +286,11 @@ export default function PoliticaReembolso() {
                 WhatsApp
               </a>
               <a
-                href="tel:+573002440656"
+                href="tel:+573043751975"
                 className="btn-outline-cream"
                 style={{ fontSize: "0.65rem" }}
               >
-                300 244 0656
+                304 375 1975
               </a>
             </div>
           </div>

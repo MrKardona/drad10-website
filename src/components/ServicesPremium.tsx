@@ -141,7 +141,7 @@ export function ServicesPremium() {
             ))}
             <div className="w-full mt-6">
               <a
-                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20faciales"
+                href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20faciales"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
@@ -214,7 +214,7 @@ export function ServicesPremium() {
             </div>
             <div className="mt-6">
               <a
-                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20corporales"
+                href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20corporales"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
@@ -273,7 +273,7 @@ export function ServicesPremium() {
             </div>
             <div className="mt-6">
               <a
-                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20implante%20capilar"
+                href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20implante%20capilar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
@@ -341,7 +341,7 @@ export function ServicesPremium() {
             </div>
             <div className="w-full mt-5">
               <a
-                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20inyectables%20estéticos"
+                href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20inyectables%20estéticos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"

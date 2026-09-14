@@ -213,7 +213,7 @@ export function FAQSection() {
 
             {/* WhatsApp link */}
             <a
-              href="https://wa.me/573002440656?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20tratamientos"
+              href="https://wa.me/573043751975?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20tratamientos"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 mt-10"

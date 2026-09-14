@@ -60,7 +60,7 @@ const schemaData = {
   description:
     "Clínica de Medicina Estética y Rejuvenecimiento en El Poblado, Medellín. Tratamientos faciales, capilares, corporales e inyectables.",
   url: "https://drad10.com",
-  telephone: "+573002440656",
+  telephone: "+573043751975",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Cl. 7 #39-290 Consultorio 516",

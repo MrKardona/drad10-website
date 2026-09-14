@@ -567,7 +567,7 @@ export default function NosotrosPage() {
 
             <div data-anim="up">
               <Link
-                href="https://wa.me/573002440656"
+                href="https://wa.me/573043751975"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
@@ -1427,7 +1427,7 @@ export default function NosotrosPage() {
               </p>
             </div>
             <Link
-              href="https://wa.me/573002440656"
+              href="https://wa.me/573043751975"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold"

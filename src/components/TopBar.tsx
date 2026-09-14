@@ -9,8 +9,8 @@ export function TopBar() {
       >
         📍 Clínica Medellín sede del Poblado, Cl. 7 #39 - 290 Consultorio 516
       </a>
-      <a href="tel:+573002440656" style={{ textDecoration: "none", color: "inherit" }}>
-        Citas: <strong>300 244 0656</strong>
+      <a href="tel:+573043751975" style={{ textDecoration: "none", color: "inherit" }}>
+        Citas: <strong>304 375 1975</strong>
       </a>
     </div>
   );

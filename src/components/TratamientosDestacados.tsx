@@ -231,7 +231,7 @@ export function TratamientosDestacados() {
               </p>
 
               <a
-                href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20implante%20capilar"
+                href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20implante%20capilar"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -292,7 +292,7 @@ export function TratamientosDestacados() {
       <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.55)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
         Limpieza profunda, extracción y nutrición personalizada para una piel sana, luminosa y equilibrada.
       </p>
-      <a href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20limpiezas%20faciales" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/fl">
+      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20limpiezas%20faciales" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/fl">
         Consultar <span style={{ transition: "transform 0.3s" }} className="group-hover/fl:translate-x-1 inline-block">→</span>
       </a>
     </div>
@@ -325,7 +325,7 @@ export function TratamientosDestacados() {
       <p style={{ fontFamily: "var(--font-body)", color: "rgba(250,248,245,0.45)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
         PRP, exosomas y mesoterapia capilar para frenar la caída y estimular el crecimiento natural.
       </p>
-      <a href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20recuperación%20capilar" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-70 group/rc">
+      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20recuperación%20capilar" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-70 group/rc">
         Solicitar valoración <span style={{ transition: "transform 0.3s" }} className="group-hover/rc:translate-x-1 inline-block">→</span>
       </a>
     </div>
@@ -357,7 +357,7 @@ export function TratamientosDestacados() {
       <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.65)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
         Protocolo médico supervisado, personalizado y seguro para reducción de peso con resultados sostenibles.
       </p>
-      <a href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20descenso%20de%20peso" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/dp">
+      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20descenso%20de%20peso" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/dp">
         Ver protocolo <span style={{ transition: "transform 0.3s" }} className="group-hover/dp:translate-x-1 inline-block">→</span>
       </a>
     </div>

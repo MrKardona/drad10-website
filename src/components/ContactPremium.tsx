@@ -13,8 +13,8 @@ type FormState = {
 const contactItems = [
   {
     label: "WhatsApp",
-    value: "300 244 0656",
-    href: "https://wa.me/573002440656",
+    value: "304 375 1975",
+    href: "https://wa.me/573043751975",
     icon: (
       <svg
         width="18"

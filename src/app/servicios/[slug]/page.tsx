@@ -155,7 +155,7 @@ export default async function TratamientoPage({ params }: Props) {
   // Las reseñas de Google van primero: son verificables públicamente.
   const testimonios = [...reviews].sort((a, b) => (a.fuente === "google" ? -1 : 1) - (b.fuente === "google" ? -1 : 1)).slice(0, 3);
   const categoria = CATEGORIAS[t.categoria];
-  const WA = `https://wa.me/573002440656?text=${encodeURIComponent(t.waMensaje)}`;
+  const WA = `https://wa.me/573043751975?text=${encodeURIComponent(t.waMensaje)}`;
   const precioTexto = t.precio.desde ? `Desde ${formatCOP(t.precio.desde)}` : "Precio a valoración";
   // Cosmetología y bienestar no son procedimientos médicos: se agenda una cita.
   const cta = t.grupo === "Cosmetología" || t.categoria === "bienestar" ? "Agendar cita" : "Agendar valoración";
@@ -170,7 +170,7 @@ export default async function TratamientoPage({ params }: Props) {
       provider: {
         "@type": "MedicalBusiness",
         name: "DRA.D10 | Clínica Quantum",
-        telephone: "+573002440656",
+        telephone: "+573043751975",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Cl. 7 #39-290 Consultorio 516",
@@ -794,7 +794,7 @@ export default async function TratamientoPage({ params }: Props) {
           <p style={{ ...label, letterSpacing: "0.2em", color: "rgba(250,248,245,0.38)", marginTop: "2.25rem", lineHeight: 2 }}>
             Cl. 7 #39-290, Consultorio 516 · El Poblado, Medellín
             <br />
-            Lunes a sábado · 300 244 0656
+            Lunes a sábado · 304 375 1975
           </p>
         </div>
       </section>

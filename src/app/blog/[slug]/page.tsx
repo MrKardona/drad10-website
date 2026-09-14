@@ -350,7 +350,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
               <a
-                href="https://wa.me/573002440656"
+                href="https://wa.me/573043751975"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"

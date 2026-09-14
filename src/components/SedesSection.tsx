@@ -110,7 +110,7 @@ export function SedesSection() {
               {[
                 { icon: "📍", label: "Dirección", value: "Cl. 7 #39–290 Consultorio 516" },
                 { icon: "🏙️", label: "Zona", value: "El Poblado, Medellín, Antioquia" },
-                { icon: "📞", label: "Teléfono", value: "300 244 0656" },
+                { icon: "📞", label: "Teléfono", value: "304 375 1975" },
                 { icon: "🕐", label: "Horario", value: "Lun–Vie 9–19h · Sáb 9–14h" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
@@ -268,7 +268,7 @@ export function SedesSection() {
 
             <div className="flex flex-wrap gap-x-8 gap-y-3">
             <a
-              href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20atención%20en%20Argentina"
+              href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20atención%20en%20Argentina"
               target="_blank"
               rel="noopener noreferrer"
               style={{

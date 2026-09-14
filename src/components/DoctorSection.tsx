@@ -150,7 +150,7 @@ export function DoctorSection() {
             </div>
 
             <a
-              href="https://wa.me/573002440656?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20con%20la%20Dra.%20Daniela%20D%C3%ADez"
+              href="https://wa.me/573043751975?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20con%20la%20Dra.%20Daniela%20D%C3%ADez"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold inline-block opacity-0 animate-fade-up delay-600 mb-4"

@@ -15,7 +15,7 @@ const sections = [
     title: "Responsable del Tratamiento",
     content: [
       "DRA.D10 – Clínica Quantum Medellín, con domicilio en Cl. 7 #39-290 Consultorio 516, El Poblado, Medellín, Colombia, es la entidad responsable del tratamiento de los datos personales recopilados a través de este sitio web y durante la prestación de nuestros servicios.",
-      "Para cualquier consulta relacionada con el manejo de tus datos personales puedes contactarnos a través del WhatsApp 300 244 0656 o mediante los canales disponibles en nuestra sección de contacto.",
+      "Para cualquier consulta relacionada con el manejo de tus datos personales puedes contactarnos a través del WhatsApp 304 375 1975 o mediante los canales disponibles en nuestra sección de contacto.",
     ],
   },
   {
@@ -73,7 +73,7 @@ const sections = [
     content: [
       "Conforme a la Ley 1581 de 2012 y sus decretos reglamentarios, tienes los siguientes derechos sobre tus datos personales:",
       "• Acceso: conocer los datos que tenemos sobre ti y cómo los tratamos. • Rectificación: solicitar la corrección de datos inexactos o incompletos. • Cancelación (supresión): pedir la eliminación de tus datos cuando ya no sean necesarios o hayas retirado tu consentimiento. • Oposición: oponerte al tratamiento de tus datos para fines específicos, en particular los comerciales.",
-      "Para ejercer cualquiera de estos derechos, envía tu solicitud a través de WhatsApp 300 244 0656. Responderemos en un plazo máximo de 10 días hábiles.",
+      "Para ejercer cualquiera de estos derechos, envía tu solicitud a través de WhatsApp 304 375 1975. Responderemos en un plazo máximo de 10 días hábiles.",
     ],
   },
   {
@@ -301,7 +301,7 @@ export default function PoliticaPrivacidad() {
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <a
-                href="https://wa.me/573002440656"
+                href="https://wa.me/573043751975"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
@@ -310,11 +310,11 @@ export default function PoliticaPrivacidad() {
                 Contactar por WhatsApp
               </a>
               <a
-                href="tel:+573002440656"
+                href="tel:+573043751975"
                 className="btn-outline-cream"
                 style={{ fontSize: "0.65rem" }}
               >
-                300 244 0656
+                304 375 1975
               </a>
             </div>
           </div>

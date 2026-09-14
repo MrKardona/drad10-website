@@ -14,7 +14,7 @@ type NavItem = {
   columnas?: Columna[];
 };
 
-const WA_CITA = `https://wa.me/573002440656?text=${encodeURIComponent(
+const WA_CITA = `https://wa.me/573043751975?text=${encodeURIComponent(
   "Hola, quiero agendar una cita en Clínica Quantum",
 )}`;
 
@@ -144,8 +144,8 @@ export function NavBar() {
         <span className="hidden md:inline" style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
         <span>
           Citas:{" "}
-          <a href="tel:+573002440656" className="inline-block py-1.5 font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
-            300 244 0656
+          <a href="tel:+573043751975" className="inline-block py-1.5 font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
+            304 375 1975
           </a>
         </span>
       </div>

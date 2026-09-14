@@ -312,7 +312,7 @@ export function ResultadosGallery() {
           Agenda tu valoración hoy
         </p>
         <a
-          href="https://wa.me/573002440656"
+          href="https://wa.me/573043751975"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold"

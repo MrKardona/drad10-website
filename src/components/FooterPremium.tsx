@@ -35,7 +35,7 @@ const socialLinks: { label: string; href: string; ariaLabel: string }[] = [
   },
   {
     label: "WA",
-    href: "https://wa.me/573002440656",
+    href: "https://wa.me/573043751975",
     ariaLabel: "WhatsApp DRA.D10",
   },
 ];
@@ -244,7 +244,7 @@ export function FooterPremium() {
                 Citas
               </p>
               <a
-                href="tel:+573002440656"
+                href="tel:+573043751975"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.78rem",
@@ -254,7 +254,7 @@ export function FooterPremium() {
                 }}
                 className="footer-nav-link"
               >
-                300 244 0656
+                304 375 1975
               </a>
             </div>
 
