@@ -95,9 +95,8 @@ export default function PoliticaReembolso() {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.32em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "rgba(184,154,106,0.7)",
               marginBottom: "1.25rem",
             }}
@@ -106,17 +105,17 @@ export default function PoliticaReembolso() {
           </p>
           <h1
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 5vw, 3.2rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.1,
               marginBottom: "1.5rem",
             }}
           >
             Política de{" "}
-            <em style={{ color: "#b89a6a" }}>Reembolso</em>
+            <em style={{ color: "inherit" }}>Reembolso</em>
           </h1>
           <div
             style={{
@@ -129,17 +128,16 @@ export default function PoliticaReembolso() {
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.72rem",
+                fontSize: "0.8125rem",
                 color: "#888580",
               }}
             >
               Última actualización: enero 2025
             </span>
-            <span style={{ color: "rgba(184,154,106,0.4)", fontSize: "0.5rem" }}>✦</span>
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.72rem",
+                fontSize: "0.8125rem",
                 color: "#888580",
               }}
             >
@@ -163,7 +161,7 @@ export default function PoliticaReembolso() {
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.85rem",
+                fontSize: "0.9375rem",
                 color: "rgba(250,248,245,0.75)",
                 lineHeight: 1.8,
               }}
@@ -184,7 +182,7 @@ export default function PoliticaReembolso() {
           <div
             style={{
               height: "1px",
-              background: "linear-gradient(to right, #b89a6a 0%, transparent 60%)",
+              background: "rgba(184,154,106,0.3)",
               marginBottom: "3rem",
             }}
           />
@@ -196,11 +194,11 @@ export default function PoliticaReembolso() {
                 <div style={{ flexShrink: 0, width: "48px" }}>
                   <span
                     style={{
-                      fontFamily: "var(--font-display), Georgia, serif",
+                      fontFamily: "var(--font-display)",
                       fontSize: "2rem",
-                      fontWeight: 400,
+                      fontWeight: 600,
                       color: "#b89a6a",
-                      letterSpacing: "0.05em",
+                      letterSpacing: "-0.03em",
                       lineHeight: 1,
                     }}
                   >
@@ -212,12 +210,12 @@ export default function PoliticaReembolso() {
                 <div style={{ flex: 1 }}>
                   <h2
                     style={{
-                      fontFamily: "var(--font-display), Georgia, serif",
+                      fontFamily: "var(--font-display)",
                       fontSize: "1.15rem",
-                      fontWeight: 400,
+                      fontWeight: 600,
                       color: "#faf8f5",
                       marginBottom: "1rem",
-                      letterSpacing: "-0.01em",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     {s.title}
@@ -228,7 +226,7 @@ export default function PoliticaReembolso() {
                         key={i}
                         style={{
                           fontFamily: "var(--font-body)",
-                          fontSize: "0.875rem",
+                          fontSize: "0.9375rem",
                           color: "rgba(250,248,245,0.65)",
                           lineHeight: 1.85,
                         }}
@@ -254,9 +252,8 @@ export default function PoliticaReembolso() {
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.28em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 marginBottom: "0.75rem",
               }}
@@ -265,9 +262,9 @@ export default function PoliticaReembolso() {
             </p>
             <p
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "1.25rem",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
                 marginBottom: "1.5rem",
                 lineHeight: 1.4,
@@ -281,14 +278,14 @@ export default function PoliticaReembolso() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
-                style={{ fontSize: "0.65rem" }}
+                style={{ fontSize: "0.8125rem" }}
               >
                 WhatsApp
               </a>
               <a
                 href="tel:+573043751975"
                 className="btn-outline-cream"
-                style={{ fontSize: "0.65rem" }}
+                style={{ fontSize: "0.8125rem" }}
               >
                 304 375 1975
               </a>

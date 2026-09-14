@@ -33,9 +33,8 @@ export default function BlogPage() {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.32em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "rgba(184,154,106,0.7)",
               marginBottom: "1.25rem",
             }}
@@ -44,16 +43,16 @@ export default function BlogPage() {
           </p>
           <h1
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.2rem, 5vw, 3.6rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.1,
             }}
           >
             Blog{" "}
-            <em style={{ color: "#b89a6a" }}>DRA.D10</em>
+            <em style={{ color: "inherit" }}>DRA.D10</em>
           </h1>
         </div>
       </div>
@@ -104,9 +103,8 @@ export default function BlogPage() {
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.58rem",
-                        letterSpacing: "0.22em",
-                        textTransform: "uppercase",
+                        fontSize: "0.8125rem",
+                        letterSpacing: "0.01em",
                         color: "#b89a6a",
                         border: "1px solid rgba(184,154,106,0.35)",
                         padding: "4px 10px",
@@ -117,7 +115,7 @@ export default function BlogPage() {
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.62rem",
+                        fontSize: "0.8125rem",
                         color: "#888580",
                       }}
                     >
@@ -127,13 +125,13 @@ export default function BlogPage() {
 
                   <h2
                     style={{
-                      fontFamily: "var(--font-display), Georgia, serif",
+                      fontFamily: "var(--font-display)",
                       fontSize: "clamp(1.3rem, 2.5vw, 1.9rem)",
-                      fontWeight: 300,
+                      fontWeight: 600,
                       color: "#faf8f5",
                       lineHeight: 1.3,
                       marginBottom: "1.25rem",
-                      letterSpacing: "-0.02em",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     {featured.title}
@@ -142,7 +140,7 @@ export default function BlogPage() {
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.85rem",
+                      fontSize: "0.9375rem",
                       color: "rgba(250,248,245,0.6)",
                       lineHeight: 1.8,
                       marginBottom: "2rem",
@@ -155,9 +153,9 @@ export default function BlogPage() {
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.65rem",
+                        fontSize: "0.8125rem",
                         color: "#888580",
-                        letterSpacing: "0.08em",
+                        letterSpacing: "0.01em",
                       }}
                     >
                       {featured.date}
@@ -165,9 +163,8 @@ export default function BlogPage() {
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.65rem",
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
+                        fontSize: "0.8125rem",
+                        letterSpacing: "0.01em",
                         color: "#b89a6a",
                         display: "flex",
                         alignItems: "center",
@@ -215,9 +212,8 @@ export default function BlogPage() {
                       <span
                         style={{
                           fontFamily: "var(--font-body)",
-                          fontSize: "0.55rem",
-                          letterSpacing: "0.2em",
-                          textTransform: "uppercase",
+                          fontSize: "0.8125rem",
+                          letterSpacing: "0.01em",
                           color: "#b89a6a",
                           display: "block",
                           marginBottom: "0.75rem",
@@ -227,9 +223,9 @@ export default function BlogPage() {
                       </span>
                       <h3
                         style={{
-                          fontFamily: "var(--font-display), Georgia, serif",
+                          fontFamily: "var(--font-display)",
                           fontSize: "1.05rem",
-                          fontWeight: 300,
+                          fontWeight: 600,
                           color: "#faf8f5",
                           lineHeight: 1.35,
                           marginBottom: "0.75rem",
@@ -240,7 +236,7 @@ export default function BlogPage() {
                       <p
                         style={{
                           fontFamily: "var(--font-body)",
-                          fontSize: "0.78rem",
+                          fontSize: "0.9375rem",
                           color: "rgba(250,248,245,0.5)",
                           lineHeight: 1.7,
                         }}
@@ -266,13 +262,12 @@ export default function BlogPage() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.78rem",
+                  fontSize: "0.8125rem",
                   color: "#888580",
-                  letterSpacing: "0.1em",
+                  letterSpacing: "0.01em",
                 }}
               >
-                Próximos artículos — muy pronto ✦
-              </p>
+                Próximos artículos — muy pronto </p>
             </div>
           )}
 

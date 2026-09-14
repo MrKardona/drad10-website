@@ -6,7 +6,7 @@
 
 @theme inline {
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), Georgia, serif;
+  --font-display: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-gold: #b89a6a;
@@ -42,9 +42,14 @@
     font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
+  :root { --font-display: var(--font-body); }
   h1, h2, h3, h4 {
-    font-family: var(--font-display), Georgia, serif;
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
   }
+  em { font-style: normal; }
 }
 
 /* ─── Keyframes ─── */
@@ -157,11 +162,10 @@
   color: #faf8f5;
   font-family: var(--font-body), sans-serif;
   font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-  padding: 1rem 2.5rem;
-  border-radius: 0;
+  letter-spacing: 0;
+  font-size: 0.9375rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 6px;
   transition: background 0.3s, transform 0.25s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
@@ -188,11 +192,10 @@
   color: #1c1c1c;
   font-family: var(--font-body), sans-serif;
   font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-  padding: 1rem 2.5rem;
-  border-radius: 0;
+  letter-spacing: 0;
+  font-size: 0.9375rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 6px;
   transition: background 0.3s, color 0.3s, transform 0.25s;
 }
 .btn-outline-dark:hover { background: #1c1c1c; color: #faf8f5; transform: translateY(-2px); }
@@ -202,11 +205,10 @@
   color: #faf8f5;
   font-family: var(--font-body), sans-serif;
   font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-  padding: 1rem 2.5rem;
-  border-radius: 0;
+  letter-spacing: 0;
+  font-size: 0.9375rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 6px;
   transition: background 0.3s, border-color 0.3s, transform 0.25s;
 }
 .btn-outline-cream:hover { border-color: #b89a6a; background: rgba(184,154,106,0.1); transform: translateY(-2px); }
@@ -216,11 +218,10 @@
   color: #faf8f5;
   font-family: var(--font-body), sans-serif;
   font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-  padding: 1rem 2.5rem;
-  border-radius: 0;
+  letter-spacing: 0;
+  font-size: 0.9375rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 6px;
   transition: background 0.3s, transform 0.25s;
 }
 .btn-dark:hover { background: #2e2e2e; transform: translateY(-2px); }
@@ -228,11 +229,10 @@
 /* ─── Section label ─── */
 .section-label {
   font-family: var(--font-body), sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #b89a6a;
-  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  color: #8a6a3c;
+  font-weight: 500;
 }
 
 /* ─── Shimmer text removed — gradient text prohibited ─── */
@@ -312,9 +312,9 @@
 /* ─── Hero: chips de tratamientos con iluminación dorada al hover ─── */
 .hero-chip {
   font-family: var(--font-body);
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
-  color: rgba(250, 248, 245, 0.8);
+  font-size: 0.8125rem;
+  letter-spacing: 0;
+  color: rgba(250, 248, 245, 0.85);
   border: 1px solid rgba(184, 154, 106, 0.35);
   /* Sin backdrop-filter: sobre el video de fondo obligaba a recalcular el
      desenfoque en cada fotograma. Un fondo algo más opaco da la misma lectura. */

@@ -50,15 +50,15 @@ function columnasDe(categorias: CategoriaTratamiento[]): Columna[] {
 }
 
 const nav: NavItem[] = [
-  { label: "INICIO", href: "/" },
-  { label: "NOSOTROS", href: "/nosotros" },
-  { label: "FACIALES", href: "/servicios#faciales", columnas: columnasDe(["faciales"]) },
-  { label: "CORPORALES", href: "/servicios#corporales", columnas: columnasDe(["corporales", "bienestar"]) },
-  { label: "CAPILARES", href: "/servicios#capilares", columnas: columnasDe(["capilares"]) },
-  { label: "ZONA ÍNTIMA", href: "/servicios#zona-intima", columnas: columnasDe(["zona-intima"]) },
-  { label: "QUIRÚRGICOS", href: "/servicios#quirurgicos", columnas: columnasDe(["quirurgicos"]) },
-  { label: "BLOG", href: "/blog" },
-  { label: "RESULTADOS", href: "/resultados" },
+  { label: "Inicio", href: "/" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Faciales", href: "/servicios#faciales", columnas: columnasDe(["faciales"]) },
+  { label: "Corporales", href: "/servicios#corporales", columnas: columnasDe(["corporales", "bienestar"]) },
+  { label: "Capilares", href: "/servicios#capilares", columnas: columnasDe(["capilares"]) },
+  { label: "Zona íntima", href: "/servicios#zona-intima", columnas: columnasDe(["zona-intima"]) },
+  { label: "Quirúrgicos", href: "/servicios#quirurgicos", columnas: columnasDe(["quirurgicos"]) },
+  { label: "Blog", href: "/blog" },
+  { label: "Resultados", href: "/resultados" },
 ];
 
 const textoMenu: React.CSSProperties = { fontFamily: "var(--font-body)", color: "#1c1c1c" };
@@ -121,7 +121,7 @@ export function NavBar() {
     <>
       {/* ── Top bar ── */}
       <div
-        className="w-full py-2 px-4 sm:px-6 flex items-center justify-center gap-4 sm:gap-6 text-[11px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.22em]"
+        className="w-full py-2 px-4 sm:px-6 flex items-center justify-center gap-4 sm:gap-6 text-[13px] sm:text-[13px] tracking-normal sm:tracking-normal"
         style={{ backgroundColor: "#f0e8e2", color: "#1c1c1c" }}
       >
         <a
@@ -146,12 +146,11 @@ export function NavBar() {
             <circle cx="12" cy="12" r="4" />
             <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
           </svg>
-          <span className="hidden sm:inline" style={{ letterSpacing: "0.18em" }}>@dra.d10</span>
+          <span className="hidden sm:inline" style={{ letterSpacing: "0.01em" }}>@dra.d10</span>
         </a>
-        <span className="hidden md:inline" style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
         <span className="hidden sm:inline">
           Citas:{" "}
-          <a href={`tel:${PAISES[pais].tel}`} className="inline-block py-1.5 font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
+          <a href={`tel:${PAISES[pais].tel}`} className="inline-block py-1.5 font-semibold tracking-normal transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
             {PAISES[pais].telefono}
           </a>
         </span>
@@ -162,8 +161,8 @@ export function NavBar() {
               type="button"
               aria-pressed={pais === p}
               onClick={() => { setPais(p); guardarPais(p); }}
-              className="rounded-full px-3 py-1.5 uppercase transition-colors"
-              style={{ backgroundColor: pais === p ? "#1c1c1c" : "transparent", color: pais === p ? "#faf8f5" : "#1c1c1c", letterSpacing: "0.16em", minHeight: 30 }}
+              className="rounded-full px-3 py-1.5 transition-colors"
+              style={{ backgroundColor: pais === p ? "#1c1c1c" : "transparent", color: pais === p ? "#faf8f5" : "#1c1c1c", letterSpacing: "0.01em", minHeight: 30 }}
             >
               {PAISES[p].nombre}
             </button>
@@ -198,7 +197,7 @@ export function NavBar() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="group relative text-[10px] font-medium tracking-[0.2em] uppercase pb-1 block"
+                    className="group relative text-[13px] font-medium tracking-normal pb-1 block"
                     style={textoMenu}
                   >
                     {item.label}
@@ -216,7 +215,7 @@ export function NavBar() {
                 >
                   <button
                     type="button"
-                    className="flex items-center gap-0.5 text-[10px] font-medium tracking-[0.2em] uppercase relative pb-1"
+                    className="flex items-center gap-0.5 text-[13px] font-medium tracking-normal relative pb-1"
                     style={textoMenu}
                     aria-haspopup="true"
                     aria-expanded={abierto}
@@ -261,7 +260,7 @@ export function NavBar() {
                         {item.columnas.map((col) => (
                           <div key={col.titulo} style={{ breakInside: "avoid", marginBottom: mega ? "1.5rem" : 0 }}>
                             {mega && (
-                              <p className="text-[9px] tracking-[0.28em] uppercase pb-2 mb-1" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", borderBottom: "1px solid rgba(184,154,106,0.2)" }}>
+                              <p className="text-[13px] tracking-normal pb-2 mb-1" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", borderBottom: "1px solid rgba(184,154,106,0.2)" }}>
                                 {col.titulo}
                               </p>
                             )}
@@ -270,7 +269,7 @@ export function NavBar() {
                                 key={sub.href}
                                 href={sub.href}
                                 onClick={cerrarTodo}
-                                className={`block text-[12px] leading-snug transition-colors hover:text-[#b89a6a] ${mega ? "py-1.5" : "px-5 py-2"}`}
+                                className={`block text-[13px] leading-snug transition-colors hover:text-[#b89a6a] ${mega ? "py-1.5" : "px-5 py-2"}`}
                                 style={{ fontFamily: "var(--font-body)", color: "#5c5a57" }}
                               >
                                 {sub.label}
@@ -282,7 +281,7 @@ export function NavBar() {
                           <Link
                             href={item.href}
                             onClick={cerrarTodo}
-                            className="inline-block text-[10px] tracking-[0.22em] uppercase mt-2 hover:text-[#b89a6a] transition-colors"
+                            className="inline-block text-[13px] tracking-normal mt-2 hover:text-[#b89a6a] transition-colors"
                             style={{ ...textoMenu, breakInside: "avoid" }}
                           >
                             Ver todos los tratamientos →
@@ -299,7 +298,7 @@ export function NavBar() {
           {/* ── CTA + hamburguesa ── */}
           <div className="flex items-center gap-4">
             <a href={WA_CITA} target="_blank" rel="noopener noreferrer" className="btn-gold hidden lg:inline-block" style={{ whiteSpace: "nowrap" }}>
-              AGENDA CITA
+              Agenda cita
             </a>
             <button
               type="button"
@@ -332,7 +331,7 @@ export function NavBar() {
               const filaStyle: React.CSSProperties = { ...textoMenu, borderBottom: "1px solid rgba(184,154,106,0.1)" };
               if (!item.columnas) {
                 return (
-                  <Link key={item.label} href={item.href} className="block px-6 py-4 text-[12px] tracking-[0.2em] uppercase font-medium" style={filaStyle} onClick={cerrarTodo}>
+                  <Link key={item.label} href={item.href} className="block px-6 py-4 text-[13px] tracking-normal font-medium" style={filaStyle} onClick={cerrarTodo}>
                     {item.label}
                   </Link>
                 );
@@ -341,7 +340,7 @@ export function NavBar() {
                 <div key={item.label}>
                   <button
                     type="button"
-                    className="w-full flex items-center justify-between px-6 py-4 text-[12px] tracking-[0.2em] uppercase font-medium"
+                    className="w-full flex items-center justify-between px-6 py-4 text-[13px] tracking-normal font-medium"
                     style={filaStyle}
                     aria-expanded={expandido}
                     onClick={() => setMobileExpanded(expandido ? null : item.label)}
@@ -354,7 +353,7 @@ export function NavBar() {
                       {item.columnas.map((col) => (
                         <div key={col.titulo}>
                           {item.columnas!.length > 1 && (
-                            <p className="px-8 pt-4 pb-1 text-[10px] tracking-[0.24em] uppercase" style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}>
+                            <p className="px-8 pt-4 pb-1 text-[13px] tracking-normal" style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}>
                               {col.titulo}
                             </p>
                           )}
@@ -373,7 +372,7 @@ export function NavBar() {
 
             <div className="px-6 py-5">
               <a href={WA_CITA} target="_blank" rel="noopener noreferrer" className="btn-gold block text-center" onClick={cerrarTodo}>
-                AGENDA CITA
+                Agenda cita
               </a>
             </div>
           </div>

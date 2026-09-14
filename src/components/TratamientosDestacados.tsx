@@ -17,28 +17,28 @@ export function TratamientosDestacados() {
           <p
             style={{
               fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
-              fontSize: "0.6875rem",
-              letterSpacing: "0.2em",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
               fontWeight: 500,
             }}
-            className="uppercase mb-5"
+            className="mb-5"
           >
-            TRATAMIENTOS DESTACADOS
+            Tratamientos destacados
           </p>
           <h2
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.4rem, 4.5vw, 4rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#1c1c1c",
-              letterSpacing: "-0.02em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.05,
             }}
           >
             Nuestros tratamientos{" "}
             <br className="hidden sm:block" />
-            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+            <em style={{ color: "inherit" }}>
               más solicitados
             </em>
           </h2>
@@ -71,7 +71,7 @@ export function TratamientosDestacados() {
             >
               <Image
                 src={tratamientos.botox}
-                alt="Tratamiento de Botox — resultados naturales"
+                alt="Tratamiento de botox — resultados naturales"
                 fill
                 sizes="(max-width: 768px) 100vw, 58vw"
                 className="object-cover"
@@ -87,23 +87,23 @@ export function TratamientosDestacados() {
               <p
                 style={{
                   fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.2em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#1c1c1c",
                   opacity: 0.45,
                   fontWeight: 500,
                 }}
-                className="uppercase mb-4"
+                className="mb-4"
               >
-                FACIALES · INYECTABLES
+                Faciales · Inyectables
               </p>
 
               <h3
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
-                  fontWeight: 300,
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
                   color: "#1c1c1c",
-                  letterSpacing: "-0.025em",
+                  letterSpacing: "-0.03em",
                   lineHeight: 0.95,
                   fontSize: "clamp(3.2rem, 5vw, 5.5rem)",
                 }}
@@ -132,7 +132,7 @@ export function TratamientosDestacados() {
                   fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
                   color: "#1c1c1c",
                   fontSize: "0.875rem",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.01em",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.4rem",
@@ -167,7 +167,7 @@ export function TratamientosDestacados() {
             >
               <Image
                 src={tratamientos.implanteCapilar}
-                alt="Implante Capilar — técnica FUE"
+                alt="Implante capilar — técnica FUE"
                 fill
                 sizes="(max-width: 768px) 100vw, 42vw"
                 className="object-cover"
@@ -190,22 +190,22 @@ export function TratamientosDestacados() {
               <p
                 style={{
                   fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.2em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                   fontWeight: 500,
                 }}
-                className="uppercase mb-4"
+                className="mb-4"
               >
-                CAPILARES
+                Capilares
               </p>
 
               <h3
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
-                  fontWeight: 300,
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
                   color: "#faf8f5",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.03em",
                   lineHeight: 1.0,
                   fontSize: "clamp(2.4rem, 3.8vw, 3.8rem)",
                 }}
@@ -213,14 +213,14 @@ export function TratamientosDestacados() {
               >
                 Implante{" "}
                 <br />
-                Capilar
+                capilar
               </h3>
 
               <p
                 style={{
                   fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
                   color: "rgba(250,248,245,0.45)",
-                  fontSize: "0.9rem",
+                  fontSize: "0.9375rem",
                   lineHeight: 1.65,
                   maxWidth: "32ch",
                 }}
@@ -238,7 +238,7 @@ export function TratamientosDestacados() {
                   fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
                   color: "#b89a6a",
                   fontSize: "0.875rem",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.01em",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.4rem",
@@ -275,7 +275,7 @@ export function TratamientosDestacados() {
     <div className="relative overflow-hidden" style={{ height: "220px" }}>
       <Image
           src={tratamientos.limpiezaFacial}
-          alt="Limpiezas Faciales — protocolo profundo"
+          alt="Limpiezas faciales — protocolo profundo"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"
@@ -283,16 +283,16 @@ export function TratamientosDestacados() {
         />
     </div>
     <div className="flex flex-col justify-end flex-1 px-7 py-8">
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#1c1c1c", opacity: 0.45, fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
-        FACIALES
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#1c1c1c", opacity: 0.45, fontWeight: 500, marginBottom: "0.75rem" }}>
+        Faciales
       </p>
-      <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, color: "#1c1c1c", letterSpacing: "-0.02em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
-        Limpiezas<br />Faciales
+      <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#1c1c1c", letterSpacing: "-0.03em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
+        Limpiezas<br />faciales
       </h3>
-      <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.55)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
+      <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.55)", fontSize: "0.9375rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
         Limpieza profunda, extracción y nutrición personalizada para una piel sana, luminosa y equilibrada.
       </p>
-      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20limpiezas%20faciales" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/fl">
+      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20limpiezas%20faciales" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.01em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/fl">
         Consultar <span style={{ transition: "transform 0.3s" }} className="group-hover/fl:translate-x-1 inline-block">→</span>
       </a>
     </div>
@@ -307,7 +307,7 @@ export function TratamientosDestacados() {
     <div className="relative overflow-hidden" style={{ height: "220px" }}>
       <Image
           src={tratamientos.recuperacionCapilar}
-          alt="Recuperación Capilar — PRP y exosomas"
+          alt="Recuperación capilar — PRP y exosomas"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"
@@ -316,16 +316,16 @@ export function TratamientosDestacados() {
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #1c1c1c 0%, transparent 60%)" }} />
     </div>
     <div className="flex flex-col justify-end flex-1 px-7 py-8">
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#b89a6a", fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
-        CAPILARES
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#b89a6a", fontWeight: 500, marginBottom: "0.75rem" }}>
+        Capilares
       </p>
-      <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, color: "#faf8f5", letterSpacing: "-0.02em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
-        Recuperación<br />Capilar
+      <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#faf8f5", letterSpacing: "-0.03em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
+        Recuperación<br />capilar
       </h3>
-      <p style={{ fontFamily: "var(--font-body)", color: "rgba(250,248,245,0.45)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
+      <p style={{ fontFamily: "var(--font-body)", color: "rgba(250,248,245,0.45)", fontSize: "0.9375rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
         PRP, exosomas y mesoterapia capilar para frenar la caída y estimular el crecimiento natural.
       </p>
-      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20recuperación%20capilar" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-70 group/rc">
+      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20recuperación%20capilar" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#b89a6a", fontSize: "0.875rem", letterSpacing: "0.01em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-70 group/rc">
         Solicitar valoración <span style={{ transition: "transform 0.3s" }} className="group-hover/rc:translate-x-1 inline-block">→</span>
       </a>
     </div>
@@ -340,7 +340,7 @@ export function TratamientosDestacados() {
     <div className="relative overflow-hidden" style={{ height: "220px" }}>
       <Image
           src={tratamientos.descensoPeso}
-          alt="Descenso de Peso — tratamiento médico"
+          alt="Descenso de peso — tratamiento médico"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"
@@ -348,16 +348,16 @@ export function TratamientosDestacados() {
         />
     </div>
     <div className="flex flex-col justify-end flex-1 px-7 py-8">
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", color: "rgba(28,28,28,0.55)", fontWeight: 500, textTransform: "uppercase" as const, marginBottom: "0.75rem" }}>
-        CORPORALES
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "rgba(28,28,28,0.55)", fontWeight: 500, marginBottom: "0.75rem" }}>
+        Corporales
       </p>
-      <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, color: "#1c1c1c", letterSpacing: "-0.02em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
-        Descenso<br />de Peso
+      <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#1c1c1c", letterSpacing: "-0.03em", lineHeight: 1.05, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginBottom: "0.75rem" }}>
+        Descenso<br />de peso
       </h3>
-      <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.65)", fontSize: "0.875rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
+      <p style={{ fontFamily: "var(--font-body)", color: "rgba(28,28,28,0.65)", fontSize: "0.9375rem", lineHeight: 1.65, maxWidth: "30ch", marginBottom: "1.25rem" }}>
         Protocolo médico supervisado, personalizado y seguro para reducción de peso con resultados sostenibles.
       </p>
-      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20descenso%20de%20peso" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.06em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/dp">
+      <a href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20descenso%20de%20peso" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", color: "#1c1c1c", fontSize: "0.875rem", letterSpacing: "0.01em", display: "inline-flex", alignItems: "center", gap: "0.4rem", transition: "opacity 0.2s" }} className="hover:opacity-50 group/dp">
         Ver protocolo <span style={{ transition: "transform 0.3s" }} className="group-hover/dp:translate-x-1 inline-block">→</span>
       </a>
     </div>

@@ -1,11 +1,11 @@
 const doctors = [
   {
-    name: "DRA. DANIELA DIEZ",
+    name: "Dra. Daniela Díez",
     specialty: "Especialista en Medicina Estética\nMicroimplante Capilar",
     initials: "DD",
   },
   {
-    name: "DRA. DANIELA DIEZ",
+    name: "Dra. Daniela Díez",
     specialty: "Especialista en Medicina Estética\nMicroimplante Capilar",
     initials: "DD",
   },

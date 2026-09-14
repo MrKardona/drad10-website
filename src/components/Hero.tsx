@@ -10,8 +10,8 @@ export function Hero() {
     >
       <div className="absolute inset-0 bg-black/20" />
       <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-5xl font-black tracking-widest mb-2" style={{ letterSpacing: '0.15em' }}>DRA.D10</h1>
-        <p className="text-lg tracking-[0.3em] font-light">MEDICINA ESTÉTICA</p>
+        <h1 className="text-5xl font-black tracking-normal mb-2" style={{ letterSpacing: '0.15em' }}>DRA.D10</h1>
+        <p className="text-lg tracking-normal font-light">Medicina estética</p>
         <a
           href="#agenda"
           className="mt-8 inline-block bg-black text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"

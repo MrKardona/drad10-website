@@ -44,20 +44,20 @@ export function TestimonialsSection() {
         {/* ── Header ── */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8 opacity-0 animate-fade-up">
           <div>
-            <p className="section-label mb-5">LO QUE DICEN</p>
+            <p className="section-label mb-5">Lo que dicen</p>
             <h2
               className="leading-none"
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2.4rem, 4.5vw, 3.8rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
-                letterSpacing: "-0.025em",
+                letterSpacing: "-0.03em",
               }}
             >
               Pacientes que
               <br />
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+              <em style={{ color: "inherit" }}>
                 confían en nosotros
               </em>
             </h2>
@@ -78,7 +78,7 @@ export function TestimonialsSection() {
               ))}
             </div>
             <span
-              className="text-sm tracking-wide"
+              className="text-sm tracking-normal"
               style={{ color: "#888580", fontFamily: "var(--font-body)" }}
             >
               5.0 · Google Reviews
@@ -121,12 +121,12 @@ export function TestimonialsSection() {
                 {/* Quote — Cormorant italic style via display font */}
                 <blockquote className="flex-1">
                   <p
-                    className="italic leading-relaxed"
+                    className="leading-relaxed"
                     style={{
-                      fontFamily: "var(--font-display), Georgia, serif",
+                      fontFamily: "var(--font-display)",
                       fontSize: "1.05rem",
                       color: "rgba(250,248,245,0.82)",
-                      fontWeight: 300,
+                      fontWeight: 600,
                     }}
                   >
                     &ldquo;{t.quote}&rdquo;
@@ -149,7 +149,7 @@ export function TestimonialsSection() {
                       style={{
                         color: "#d4b896",
                         fontFamily: "var(--font-body)",
-                        letterSpacing: "0.05em",
+                        letterSpacing: "0.01em",
                       }}
                     >
                       {t.initials}
@@ -188,7 +188,7 @@ export function TestimonialsSection() {
           style={{
             color: "#888580",
             fontFamily: "var(--font-body)",
-            letterSpacing: "0.08em",
+            letterSpacing: "0.01em",
           }}
         >
           Reseñas verificadas · Más de 500 pacientes satisfechas

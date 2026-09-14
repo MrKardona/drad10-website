@@ -93,10 +93,10 @@ export function BlogComments({ slug }: { slug: string }) {
     <div style={{ marginTop: "4rem" }}>
       {/* Header */}
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "2.5rem", paddingBottom: "1.25rem", borderBottom: "1px solid rgba(184,154,106,0.15)" }}>
-        <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "1.4rem", fontWeight: 300, color: "#faf8f5", margin: 0 }}>
+        <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 600, color: "#faf8f5", margin: 0 }}>
           Comentarios
         </h3>
-        <span style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", color: "#b89a6a", border: "1px solid rgba(184,154,106,0.3)", padding: "3px 10px", letterSpacing: "0.1em" }}>
+        <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#b89a6a", border: "1px solid rgba(184,154,106,0.3)", padding: "3px 10px", letterSpacing: "0.01em" }}>
           {loading ? "—" : comments.length}
         </span>
       </div>
@@ -104,18 +104,17 @@ export function BlogComments({ slug }: { slug: string }) {
       {/* Comment list */}
       <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "3rem" }}>
         {loading ? (
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#888580", textAlign: "center", padding: "2rem 0" }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", textAlign: "center", padding: "2rem 0" }}>
             Cargando comentarios...
           </p>
         ) : comments.length === 0 ? (
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#888580", textAlign: "center", padding: "2rem 0" }}>
-            Sé el primero en comentar este artículo ✦
-          </p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", textAlign: "center", padding: "2rem 0" }}>
+            Sé el primero en comentar este artículo </p>
         ) : comments.map((c) => (
           <div key={c.id} style={{ display: "flex", gap: "16px", padding: "1.5rem", backgroundColor: "#242424", border: "1px solid rgba(184,154,106,0.1)" }}>
             {/* Avatar */}
             <div style={{ width: "42px", height: "42px", borderRadius: "50%", backgroundColor: "rgba(184,154,106,0.15)", border: "1px solid rgba(184,154,106,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", fontWeight: 700, color: "#d4b896", letterSpacing: "0.04em" }}>
+              <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", fontWeight: 700, color: "#d4b896", letterSpacing: "0.01em" }}>
                 {c.initials}
               </span>
             </div>
@@ -128,11 +127,11 @@ export function BlogComments({ slug }: { slug: string }) {
                   </span>
                   <MiniStars rating={c.rating} />
                 </div>
-                <span style={{ fontFamily: "var(--font-body)", fontSize: "0.62rem", color: "#888580", letterSpacing: "0.06em" }}>
+                <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", letterSpacing: "0.01em" }}>
                   {formatDate(c.created_at)}
                 </span>
               </div>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "rgba(250,248,245,0.65)", lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9375rem", color: "rgba(250,248,245,0.65)", lineHeight: 1.75, margin: 0 }}>
                 {c.text}
               </p>
             </div>
@@ -142,10 +141,10 @@ export function BlogComments({ slug }: { slug: string }) {
 
       {/* Form */}
       <div style={{ padding: "2.5rem", border: "1px solid rgba(184,154,106,0.18)", backgroundColor: "#1e1e1e" }}>
-        <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.28em", textTransform: "uppercase", color: "#b89a6a", marginBottom: "0.5rem" }}>
+        <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#b89a6a", marginBottom: "0.5rem" }}>
           Deja tu comentario
         </p>
-        <p style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "1.15rem", fontWeight: 300, color: "#faf8f5", marginBottom: "2rem" }}>
+        <p style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 600, color: "#faf8f5", marginBottom: "2rem" }}>
           ¿Tienes alguna pregunta o comentario sobre este artículo?
         </p>
 
@@ -160,7 +159,7 @@ export function BlogComments({ slug }: { slug: string }) {
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
             {/* Name */}
             <div>
-              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888580", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", display: "block", marginBottom: "8px" }}>
                 Nombre *
               </label>
               <input
@@ -174,7 +173,7 @@ export function BlogComments({ slug }: { slug: string }) {
 
             {/* Rating */}
             <div>
-              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888580", display: "block", marginBottom: "10px" }}>
+              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", display: "block", marginBottom: "10px" }}>
                 Tu valoración *
               </label>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
@@ -198,7 +197,7 @@ export function BlogComments({ slug }: { slug: string }) {
                   );
                 })}
                 {rating > 0 && (
-                  <span style={{ fontFamily: "var(--font-body)", fontSize: "0.72rem", color: "#b89a6a", marginLeft: "8px" }}>
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#b89a6a", marginLeft: "8px" }}>
                     {labelMap[rating]}
                   </span>
                 )}
@@ -207,27 +206,27 @@ export function BlogComments({ slug }: { slug: string }) {
 
             {/* Comment */}
             <div>
-              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888580", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", display: "block", marginBottom: "8px" }}>
                 Comentario *
               </label>
               <textarea
                 value={text} onChange={(e) => setText(e.target.value)}
                 placeholder="Escribe tu pregunta o comentario..."
                 rows={4}
-                style={{ width: "100%", backgroundColor: "#2a2a2a", border: "1px solid rgba(184,154,106,0.2)", color: "#faf8f5", fontFamily: "var(--font-body)", fontSize: "0.875rem", padding: "12px 16px", outline: "none", resize: "vertical", lineHeight: 1.7 }}
+                style={{ width: "100%", backgroundColor: "#2a2a2a", border: "1px solid rgba(184,154,106,0.2)", color: "#faf8f5", fontFamily: "var(--font-body)", fontSize: "0.9375rem", padding: "12px 16px", outline: "none", resize: "vertical", lineHeight: 1.7 }}
                 onFocus={(e) => (e.target.style.borderColor = "rgba(184,154,106,0.6)")}
                 onBlur={(e) => (e.target.style.borderColor = "rgba(184,154,106,0.2)")}
               />
             </div>
 
             {error && (
-              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#e07070", margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#e07070", margin: 0 }}>
                 {error}
               </p>
             )}
 
             <div>
-              <button type="submit" className="btn-gold" style={{ fontSize: "0.65rem", opacity: sending ? 0.7 : 1 }} disabled={sending}>
+              <button type="submit" className="btn-gold" style={{ fontSize: "0.8125rem", opacity: sending ? 0.7 : 1 }} disabled={sending}>
                 {sending ? "Publicando..." : "Publicar comentario"}
               </button>
             </div>

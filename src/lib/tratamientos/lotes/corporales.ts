@@ -12,7 +12,7 @@ export const corporales: Tratamiento[] = [
     resultados: ["criolipolisis-abdomen", "criolipolisis-espalda"],
     relacionados: ["moldeamiento-corporal", "fosfatidilcolina", "paquete-reductor-abdomen"],
     hero: {
-      eyebrow: "CRYONIC · CRIOLIPÓLISIS",
+      eyebrow: "Cryonic · Criolipólisis",
       titulo: "Congela la grasa localizada,",
       tituloEm: "afina medidas sin cirugía",
       sub: "Nuestra tecnología estrella para moldear la figura. En una sola sesión por zona congelamos las células de grasa localizada y lo complementamos con INDIBA y drenaje linfático, con criterio médico en cada plan.",
@@ -195,7 +195,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["descenso-de-peso", "paquete-mesoterapeutico", "criolipolisis"],
     hero: {
-      eyebrow: "PROGRAMA MÉDICO Y NUTRICIONAL",
+      eyebrow: "Programa médico y nutricional",
       titulo: "Un proceso completo para tu peso,",
       tituloEm: "con acompañamiento de principio a fin",
       sub: "Programa integral que une seguimiento médico, nutrición, mesoterapia, aparatología y sueroterapia détox para favorecer la pérdida de peso y la reducción de medidas, con metas realistas.",
@@ -373,7 +373,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["reduccion-intensiva", "paquete-mesoterapeutico", "sueroterapia"],
     hero: {
-      eyebrow: "MANEJO MÉDICO DEL PESO",
+      eyebrow: "Manejo médico del peso",
       titulo: "Tratar el peso es un acto médico,",
       tituloEm: "con valoración y seguimiento reales",
       sub: "Descenso de peso con manejo médico y apoyo farmacológico cuando está indicado, ajustado a tu metabolismo. Empieza siempre con historia clínica y continúa con controles.",
@@ -550,7 +550,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["criolipolisis", "paquete-mesoterapeutico", "paquete-reductor-abdomen"],
     hero: {
-      eyebrow: "FOSFATIDILCOLINA · GRASA LOCALIZADA",
+      eyebrow: "Fosfatidilcolina · Grasa localizada",
       titulo: "Trabaja esa zona puntual,",
       tituloEm: "con un plan hecho para ella",
       sub: "Tratamiento dirigido a zonas específicas de grasa localizada, complementado con drenaje, masajes y aparatología. Indicado tras valoración médica según tu zona y tu tejido.",
@@ -728,7 +728,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["fosfatidilcolina", "celulitis", "reduccion-intensiva"],
     hero: {
-      eyebrow: "MESOTERAPIA · DRENAJE · NUTRICIÓN",
+      eyebrow: "Mesoterapia · Drenaje · Nutrición",
       titulo: "Medidas que cambian de verdad,",
       tituloEm: "con un plan que te acompaña",
       sub: "Mesoterapia, drenajes, aparatología y acompañamiento nutricional en un solo paquete, para trabajar medidas y hábitos al mismo tiempo con orientación médica.",
@@ -899,7 +899,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["estrias", "moldeamiento-corporal", "paquete-mesoterapeutico"],
     hero: {
-      eyebrow: "CELULITIS · TEXTURA Y FIRMEZA",
+      eyebrow: "Celulitis · Textura y firmeza",
       titulo: "Piel más lisa y firme,",
       tituloEm: "para vestirte sin pensarlo",
       sub: "Un paquete que mejora la textura de piel de naranja y firma la zona, combinando Liposonic, mesoterapia, drenajes y aparatología con criterio médico.",
@@ -1023,7 +1023,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["criolipolisis", "fosfatidilcolina", "moldeamiento-corporal"],
     hero: {
-      eyebrow: "INDIBA · MADEROTERAPIA · ABDOMEN",
+      eyebrow: "INDIBA · Maderoterapia · Abdomen",
       titulo: "Un abdomen más firme,",
       tituloEm: "sesión a sesión",
       sub: "Protocolo integral que combina INDIBA, maderoterapia y técnicas complementarias para ayudar a reducir medidas y mejorar la firmeza y apariencia del abdomen.",
@@ -1201,7 +1201,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["celulitis", "microagujas", "laser-co2"],
     hero: {
-      eyebrow: "ESTRÍAS · TEXTURA Y COLOR",
+      eyebrow: "Estrías · Textura y color",
       titulo: "Estrías menos visibles,",
       tituloEm: "una piel con la que te reconcilias",
       sub: "Un protocolo que mejora el aspecto y el color de las estrías, diseñado según el tipo de estría, su antigüedad y tu piel, con expectativas claras desde la valoración.",
@@ -1323,7 +1323,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["celulitis", "estrias", "depilacion-laser"],
     hero: {
-      eyebrow: "ESCLEROTERAPIA · PIERNAS",
+      eyebrow: "Escleroterapia · Piernas",
       titulo: "Piernas sin arañitas visibles,",
       tituloEm: "para lucirlas con tranquilidad",
       sub: "Tratamiento para las arañitas y várices finas de las piernas, con valoración médica previa. Si hay várices grandes, te orientamos primero a una valoración vascular.",
@@ -1498,7 +1498,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["criolipolisis", "celulitis", "paquete-reductor-abdomen"],
     hero: {
-      eyebrow: "INDIBA · RADIOFRECUENCIA MÉDICA",
+      eyebrow: "INDIBA · Radiofrecuencia médica",
       titulo: "Moldea tu figura,",
       tituloEm: "sin cirugía ni incapacidad",
       sub: "Radiofrecuencia médica INDIBA combinada con mesoterapia para trabajar reducción, celulitis y flacidez. Un plan por sesiones, con criterio médico en cada paso.",
@@ -1675,7 +1675,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["toxina-migrana", "masajes-de-relajacion", "indiba-post-quirurgico"],
     hero: {
-      eyebrow: "INDIBA · RADIOFRECUENCIA PARA DOLOR",
+      eyebrow: "INDIBA · Radiofrecuencia para dolor",
       titulo: "Menos tensión en el cuerpo,",
       tituloEm: "más ligereza en tu día",
       sub: "Radiofrecuencia médica INDIBA como complemento para el manejo del dolor muscular y articular, en un paquete de 10 sesiones y con valoración médica previa.",
@@ -1845,7 +1845,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["indiba-post-quirurgico", "tratamiento-de-fibrosis", "sueroterapia"],
     hero: {
-      eyebrow: "POST QUIRÚRGICO · DRENAJES Y CURACIONES",
+      eyebrow: "Post quirúrgico · Drenajes y curaciones",
       titulo: "Tu recuperación en buenas manos,",
       tituloEm: "para cuidar el resultado de tu cirugía",
       sub: "Cuidamos tu recuperación con INDIBA, drenajes y curaciones para bajar la inflamación y proteger el resultado de tu cirugía, siempre en coordinación con las indicaciones de tu cirujano.",
@@ -2026,7 +2026,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["post-quirurgico", "tratamiento-de-fibrosis", "indiba-dolor"],
     hero: {
-      eyebrow: "INDIBA · RECUPERACIÓN POST QUIRÚRGICA",
+      eyebrow: "INDIBA · Recuperación post quirúrgica",
       titulo: "Una recuperación más llevadera,",
       tituloEm: "con radiofrecuencia médica",
       sub: "Paquete de 10 sesiones de INDIBA con drenajes y curaciones para acompañar la recuperación después de tu cirugía corporal, con autorización de tu cirujano.",
@@ -2198,7 +2198,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["post-quirurgico", "enzimas-cicatrices-queloides", "indiba-post-quirurgico"],
     hero: {
-      eyebrow: "ENZIMAS RECOMBINANTES · FIBROSIS",
+      eyebrow: "Enzimas recombinantes · Fibrosis",
       titulo: "Suaviza esas zonas duras,",
       tituloEm: "vuelve a sentir tu piel flexible",
       sub: "Ayuda a suavizar y mejorar la apariencia de la fibrosis postquirúrgica, favoreciendo una textura más uniforme y flexible, con aplicación de enzimas recombinantes tras valoración médica.",
@@ -2367,7 +2367,7 @@ export const corporales: Tratamiento[] = [
     resultados: [],
     relacionados: ["despigmentacion-intima-axilas", "hiperhidrosis", "limpieza-facial"],
     hero: {
-      eyebrow: "DEPILACIÓN LÁSER · POR ZONAS",
+      eyebrow: "Depilación láser · Por zonas",
       titulo: "Menos vello, menos rutina,",
       tituloEm: "piel suave por más tiempo",
       sub: "Reduce el vello de forma progresiva, por zonas. Ajustamos el plan a tu tipo de vello y de piel para trabajar con criterio y cuidar tu piel en cada sesión.",

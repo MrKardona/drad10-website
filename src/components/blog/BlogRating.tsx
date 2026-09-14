@@ -63,11 +63,11 @@ export function BlogRating({ slug }: { slug: string }) {
         textAlign: "center",
       }}
     >
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#b89a6a", marginBottom: "0.75rem" }}>
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#b89a6a", marginBottom: "0.75rem" }}>
         {submitted ? "Tu valoración" : "¿Te fue útil este artículo?"}
       </p>
 
-      <p style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "1.15rem", fontWeight: 300, color: "#faf8f5", marginBottom: "1.5rem" }}>
+      <p style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 600, color: "#faf8f5", marginBottom: "1.5rem" }}>
         {submitted ? "¡Gracias por tu valoración!" : "Valora este artículo"}
       </p>
 
@@ -101,14 +101,14 @@ export function BlogRating({ slug }: { slug: string }) {
       {/* Stats */}
       {!loading && (
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px" }}>
-          <span style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "1.8rem", fontWeight: 300, color: "#faf8f5", lineHeight: 1 }}>
+          <span style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 600, color: "#faf8f5", lineHeight: 1 }}>
             {average}
           </span>
           <div style={{ display: "flex", flexDirection: "column", gap: "5px", alignItems: "flex-start" }}>
             <div style={{ width: "120px", height: "4px", backgroundColor: "rgba(184,154,106,0.15)", borderRadius: "2px", overflow: "hidden" }}>
               <div style={{ height: "100%", width: `${pct}%`, backgroundColor: "#b89a6a", borderRadius: "2px", transition: "width 0.6s ease" }} />
             </div>
-            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.65rem", color: "#888580", letterSpacing: "0.06em" }}>
+            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", letterSpacing: "0.01em" }}>
               {count} {count === 1 ? "valoración" : "valoraciones"}
             </span>
           </div>

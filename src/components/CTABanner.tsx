@@ -35,23 +35,23 @@ export function CTABanner() {
 
         {/* ── Section label ── */}
         <p className="section-label mb-6 opacity-0 animate-fade-up">
-          PRIMERA CITA DE VALORACIÓN
+          Primera cita de valoración
         </p>
 
         {/* ── Heading ── */}
         <h2
           className="mb-6 leading-tight opacity-0 animate-fade-up delay-100"
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#1c1c1c",
-            letterSpacing: "-0.025em",
+            letterSpacing: "-0.03em",
           }}
         >
           Tu transformación comienza
           <br />
-          <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+          <em style={{ color: "inherit" }}>
             con una conversación
           </em>
         </h2>
@@ -84,7 +84,7 @@ export function CTABanner() {
         <div className="flex flex-wrap justify-center gap-4 opacity-0 animate-fade-up delay-400">
           {/* Primary */}
           <Link href="/#agenda" className="btn-dark inline-block">
-            AGENDAR CITA AHORA
+            Agendar cita ahora
           </Link>
 
           {/* WhatsApp */}
@@ -92,7 +92,7 @@ export function CTABanner() {
             href="https://wa.me/573043751975"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-8 py-4 border-2 border-black text-black text-[0.68rem] tracking-[0.12em] uppercase font-semibold transition-all duration-300 hover:bg-black hover:text-white"
+            className="inline-flex items-center gap-2.5 px-8 py-4 border-2 border-black text-black text-[0.875rem] tracking-normal font-semibold transition-all duration-300 hover:bg-black hover:text-white"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {/* WhatsApp icon */}
@@ -111,7 +111,7 @@ export function CTABanner() {
         {/* ── Schedule info ── */}
         <p
           className="mt-10 text-xs opacity-0 animate-fade-in delay-600"
-          style={{ color: "#c8c4be", fontFamily: "var(--font-body)", letterSpacing: "0.08em" }}
+          style={{ color: "#c8c4be", fontFamily: "var(--font-body)", letterSpacing: "0.01em" }}
         >
           Lun–Vie 9:00–19:00 · Sáb 9:00–14:00 ·{" "}
           <a

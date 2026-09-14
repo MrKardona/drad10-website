@@ -74,8 +74,8 @@ export function Header() {
 
         {/* Logo */}
         <div className="flex flex-col items-center">
-          <span className="text-3xl font-black tracking-widest leading-none" style={{ fontFamily: 'system-ui, sans-serif', letterSpacing: '0.15em' }}>DRA.D10</span>
-          <span className="text-xs tracking-[0.3em] font-medium text-gray-700 mt-0.5">MEDICINA ESTÉTICA</span>
+          <span className="text-3xl font-black tracking-normal leading-none" style={{ fontFamily: 'system-ui, sans-serif', letterSpacing: '0.15em' }}>DRA.D10</span>
+          <span className="text-xs tracking-normal font-medium text-gray-700 mt-0.5">Medicina estética</span>
         </div>
 
         {/* Cart */}

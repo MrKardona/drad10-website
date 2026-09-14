@@ -13,26 +13,25 @@ export function SedesSection() {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.38em",
-              textTransform: "uppercase" as const,
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
               marginBottom: "1rem",
             }}
           >
-            PRESENCIA INTERNACIONAL
+            Presencia internacional
           </p>
           <h2
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
             }}
           >
             Nuestras{" "}
-            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+            <em style={{ color: "inherit" }}>
               sedes
             </em>
           </h2>
@@ -51,22 +50,21 @@ export function SedesSection() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.55rem",
-                    letterSpacing: "0.35em",
-                    textTransform: "uppercase" as const,
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#b89a6a",
                     marginBottom: "0.75rem",
                   }}
                 >
-                  SEDE PRINCIPAL
+                  Sede principal
                 </p>
                 <h3
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "#faf8f5",
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   Colombia
@@ -74,7 +72,7 @@ export function SedesSection() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.8rem",
+                    fontSize: "0.8125rem",
                     color: "rgba(250,248,245,0.4)",
                     marginTop: "0.3rem",
                   }}
@@ -82,46 +80,22 @@ export function SedesSection() {
                   Medellín · El Poblado
                 </p>
               </div>
-              <span
-                style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
-                  fontSize: "4rem",
-                  fontWeight: 300,
-                  color: "rgba(184,154,106,0.1)",
-                  lineHeight: 1,
-                  letterSpacing: "-0.04em",
-                  userSelect: "none" as const,
-                }}
-              >
-                CO
-              </span>
             </div>
-
-            <div
-              style={{
-                width: "48px",
-                height: "1px",
-                background: "linear-gradient(to right, #b89a6a, transparent)",
-                marginBottom: "2rem",
-              }}
-            />
 
             <div className="space-y-4 mb-8">
               {[
-                { icon: "📍", label: "Dirección", value: "Cl. 7 #39–290 Consultorio 516" },
-                { icon: "🏙️", label: "Zona", value: "El Poblado, Medellín, Antioquia" },
-                { icon: "📞", label: "Teléfono", value: "304 375 1975" },
-                { icon: "🕐", label: "Horario", value: "Lun–Vie 9–19h · Sáb 9–14h" },
+                { label: "Dirección", value: "Cl. 7 #39–290 Consultorio 516" },
+                { label: "Zona", value: "El Poblado, Medellín, Antioquia" },
+                { label: "Teléfono", value: "304 375 1975" },
+                { label: "Horario", value: "Lun–Vie 9–19h · Sáb 9–14h" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
-                  <span style={{ fontSize: "0.85rem", marginTop: "1px", opacity: 0.6 }}>{item.icon}</span>
                   <div>
                     <p
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.55rem",
-                        letterSpacing: "0.22em",
-                        textTransform: "uppercase" as const,
+                        fontSize: "0.8125rem",
+                        letterSpacing: "0.01em",
                         color: "rgba(184,154,106,0.5)",
                         marginBottom: "2px",
                       }}
@@ -148,9 +122,8 @@ export function SedesSection() {
               rel="noopener noreferrer"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 display: "inline-flex",
                 alignItems: "center",
@@ -174,22 +147,21 @@ export function SedesSection() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.55rem",
-                    letterSpacing: "0.35em",
-                    textTransform: "uppercase" as const,
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#b89a6a",
                     marginBottom: "0.75rem",
                   }}
                 >
-                  SEDE ARGENTINA
+                  Sede Argentina
                 </p>
                 <h3
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "#faf8f5",
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   Argentina
@@ -197,7 +169,7 @@ export function SedesSection() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.8rem",
+                    fontSize: "0.8125rem",
                     color: "rgba(250,248,245,0.4)",
                     marginTop: "0.3rem",
                   }}
@@ -205,47 +177,23 @@ export function SedesSection() {
                   Buenos Aires
                 </p>
               </div>
-              <span
-                style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
-                  fontSize: "4rem",
-                  fontWeight: 300,
-                  color: "rgba(184,154,106,0.1)",
-                  lineHeight: 1,
-                  letterSpacing: "-0.04em",
-                  userSelect: "none" as const,
-                }}
-              >
-                AR
-              </span>
             </div>
-
-            <div
-              style={{
-                width: "48px",
-                height: "1px",
-                background: "linear-gradient(to right, #b89a6a, transparent)",
-                marginBottom: "2rem",
-              }}
-            />
 
             <div className="space-y-4 mb-8">
               {[
-                { icon: "📍", label: "Dirección", value: "Av. Gaona 1237, Depto 11-2" },
-                { icon: "🏙️", label: "Ciudad", value: "Buenos Aires, Argentina" },
-                { icon: "🌎", label: "Habilitación", value: "Doble habilitación ARG & COL" },
-                { icon: "📞", label: "WhatsApp", value: "+54 11 5344-7956" },
-                { icon: "🕐", label: "Horario", value: "Lun–Vie 14–20h · Sáb 9–14h" },
+                { label: "Dirección", value: "Av. Gaona 1237, Depto 11-2" },
+                { label: "Ciudad", value: "Buenos Aires, Argentina" },
+                { label: "Habilitación", value: "Doble habilitación ARG & COL" },
+                { label: "WhatsApp", value: "+54 11 5344-7956" },
+                { label: "Horario", value: "Lun–Vie 14–20h · Sáb 9–14h" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
-                  <span style={{ fontSize: "0.85rem", marginTop: "1px", opacity: 0.6 }}>{item.icon}</span>
                   <div>
                     <p
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.55rem",
-                        letterSpacing: "0.22em",
-                        textTransform: "uppercase" as const,
+                        fontSize: "0.8125rem",
+                        letterSpacing: "0.01em",
                         color: "rgba(184,154,106,0.5)",
                         marginBottom: "2px",
                       }}
@@ -274,9 +222,8 @@ export function SedesSection() {
               rel="noopener noreferrer"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 display: "inline-flex",
                 alignItems: "center",
@@ -294,9 +241,8 @@ export function SedesSection() {
               rel="noopener noreferrer"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 display: "inline-flex",
                 alignItems: "center",
@@ -318,9 +264,8 @@ export function SedesSection() {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase" as const,
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "rgba(184,154,106,0.35)",
             }}
           >

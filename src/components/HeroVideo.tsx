@@ -175,25 +175,25 @@ export function HeroVideo() {
           className="section-label mb-6 opacity-0 animate-fade-up delay-100"
           style={{ color: "#b89a6a" }}
         >
-          MEDELLÍN · EL POBLADO · COLOMBIA
+          Medellín · El Poblado · Colombia
         </p>
 
         {/* Título */}
         <h1
           className="mb-6 leading-tight opacity-0 animate-fade-up delay-200"
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(3rem, 7vw, 6.5rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#faf8f5",
             letterSpacing: "-0.03em",
             lineHeight: 1.05,
           }}
         >
-          Medicina Estética
+          Medicina estética
           <br />
-          <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
-            de Alto Nivel
+          <em style={{ color: "inherit" }}>
+            de alto nivel
           </em>
         </h1>
 
@@ -226,10 +226,10 @@ export function HeroVideo() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up delay-500">
           <a href="#agenda" className="btn-gold">
-            AGENDAR CITA
+            Agendar cita
           </a>
           <a href="#servicios" className="btn-outline-cream">
-            VER TRATAMIENTOS
+            Ver tratamientos
           </a>
         </div>
 
@@ -239,12 +239,12 @@ export function HeroVideo() {
           aria-label="Tratamientos populares"
         >
           {[
-            { label: "BOTOX", href: "/servicios/botox" },
-            { label: "LABIOS", href: "/servicios/relleno-de-labios" },
-            { label: "ÁCIDO HIALURÓNICO", href: "/servicios/acido-hialuronico" },
-            { label: "IMPLANTE CAPILAR", href: "/servicios/implante-capilar-fue" },
-            { label: "CRIOLIPÓLISIS", href: "/servicios/criolipolisis" },
-            { label: "VER TODOS", href: "/servicios" },
+            { label: "Botox", href: "/servicios/botox" },
+            { label: "Labios", href: "/servicios/relleno-de-labios" },
+            { label: "Ácido hialurónico", href: "/servicios/acido-hialuronico" },
+            { label: "Implante capilar", href: "/servicios/implante-capilar-fue" },
+            { label: "Criolipólisis", href: "/servicios/criolipolisis" },
+            { label: "Ver todos", href: "/servicios" },
           ].map((c) => (
             <a key={c.label} href={c.href} className="hero-chip">
               {c.label}
@@ -254,7 +254,7 @@ export function HeroVideo() {
 
         {/* Social proof */}
         <p
-          className="mt-8 opacity-0 animate-fade-up delay-700 text-xs tracking-widest uppercase"
+          className="mt-8 opacity-0 animate-fade-up delay-700 text-[13px] tracking-normal"
           style={{
             color: "rgba(250,248,245,0.45)",
             fontFamily: "var(--font-body)",

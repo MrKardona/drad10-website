@@ -72,26 +72,26 @@ export default function InstagramSection() {
               style={{
                 fontFamily: "var(--font-body)",
                 color: "#b89a6a",
-                fontSize: "0.7rem",
-                letterSpacing: "0.25em",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 fontWeight: 500,
               }}
             >
-              INSTAGRAM
+              Instagram
             </span>
 
             {/* Heading */}
             <h2
               style={{
                 fontFamily: "var(--font-display)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
                 fontSize: "clamp(2.4rem, 4vw, 3.4rem)",
                 lineHeight: 1.1,
               }}
             >
               Síguenos y{" "}
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+              <em style={{ color: "inherit" }}>
                 descubre más
               </em>
             </h2>
@@ -112,7 +112,7 @@ export default function InstagramSection() {
               style={{
                 fontFamily: "var(--font-body)",
                 color: "rgba(250,248,245,0.55)",
-                fontSize: "0.88rem",
+                fontSize: "0.9375rem",
                 lineHeight: 1.75,
                 maxWidth: "34ch",
               }}
@@ -140,8 +140,8 @@ export default function InstagramSection() {
                   fontFamily: "var(--font-display)",
                   color: "#b89a6a",
                   fontSize: "1.35rem",
-                  fontWeight: 400,
-                  letterSpacing: "0.01em",
+                  fontWeight: 600,
+                  letterSpacing: "-0.03em",
                 }}
                 className="transition-opacity duration-300 group-hover/handle:opacity-70"
               >
@@ -158,13 +158,13 @@ export default function InstagramSection() {
                 className="btn-gold self-start"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.18em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   fontWeight: 500,
                   textDecoration: "none",
                 }}
               >
-                SEGUIR EN INSTAGRAM
+                Seguir en Instagram
               </a>
 
               {/* Secondary note */}
@@ -172,8 +172,8 @@ export default function InstagramSection() {
                 style={{
                   fontFamily: "var(--font-body)",
                   color: "rgba(250,248,245,0.35)",
-                  fontSize: "0.72rem",
-                  letterSpacing: "0.06em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                 }}
               >
                 Reel · Stories · Tratamientos
@@ -226,8 +226,8 @@ export default function InstagramSection() {
             style={{
               fontFamily: "var(--font-body)",
               color: "rgba(250,248,245,0.35)",
-              fontSize: "0.72rem",
-              letterSpacing: "0.06em",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
             }}
           >
             Contenido nuevo cada semana · Resultados · Técnicas · Equipo
@@ -241,8 +241,8 @@ export default function InstagramSection() {
             style={{
               fontFamily: "var(--font-body)",
               color: "#b89a6a",
-              fontSize: "0.78rem",
-              letterSpacing: "0.06em",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               textDecoration: "none",
             }}
           >

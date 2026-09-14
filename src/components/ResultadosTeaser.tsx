@@ -47,20 +47,20 @@ export function ResultadosTeaser() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
           <div>
             <p className="section-label mb-4" style={{ color: "rgba(184,154,106,0.7)" }}>
-              NUESTRAS ESPECIALIDADES
+              Nuestras especialidades
             </p>
             <h2
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2.2rem, 4vw, 3.4rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
-                letterSpacing: "-0.025em",
+                letterSpacing: "-0.03em",
                 lineHeight: 1.1,
               }}
             >
               Tratamientos que{" "}
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+              <em style={{ color: "inherit" }}>
                 transforman
               </em>
             </h2>
@@ -71,9 +71,8 @@ export function ResultadosTeaser() {
             className="inline-flex items-center gap-2 transition-opacity hover:opacity-70 flex-shrink-0"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.68rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
             }}
           >
@@ -123,9 +122,8 @@ export function ResultadosTeaser() {
                   className="mb-1"
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.55rem",
-                    letterSpacing: "0.25em",
-                    textTransform: "uppercase",
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#b89a6a",
                   }}
                 >
@@ -133,11 +131,11 @@ export function ResultadosTeaser() {
                 </p>
                 <p
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "#faf8f5",
-                    letterSpacing: "-0.01em",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   {caso.tratamiento}
@@ -149,9 +147,8 @@ export function ResultadosTeaser() {
                 className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.55rem",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                   border: "1px solid rgba(184,154,106,0.5)",
                   padding: "0.3rem 0.6rem",
@@ -166,9 +163,9 @@ export function ResultadosTeaser() {
               <div
                 className="absolute top-4 left-4"
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.6rem",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "rgba(184,154,106,0.15)",
                   lineHeight: 1,
                   userSelect: "none",
@@ -189,15 +186,15 @@ export function ResultadosTeaser() {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.78rem",
+              fontSize: "0.8125rem",
               color: "rgba(250,248,245,0.45)",
-              letterSpacing: "0.06em",
+              letterSpacing: "0.01em",
             }}
           >
             Medicina estética en El Poblado · Medellín, Colombia
           </p>
           <Link href="/resultados" className="btn-gold flex-shrink-0">
-            VER TODOS LOS RESULTADOS
+            Ver todos los resultados
           </Link>
         </div>
       </div>

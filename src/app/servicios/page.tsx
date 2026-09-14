@@ -67,11 +67,11 @@ export default function ServiciosPage() {
 
       <section style={{ backgroundColor: DARK, padding: "clamp(72px, 11vw, 136px) 0 clamp(48px, 7vw, 88px)" }}>
         <div style={{ maxWidth: "1180px", margin: "0 auto", padding: "0 clamp(20px, 6vw, 80px)" }}>
-          <p data-anim="up" style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", letterSpacing: "0.26em", textTransform: "uppercase", color: GOLD, marginBottom: "1.25rem" }}>
+          <p data-anim="up" style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: GOLD, marginBottom: "1.25rem" }}>
             {tarjetas.length} tratamientos · Clínica Quantum
           </p>
-          <h1 data-anim="mask" style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, fontSize: "clamp(2.5rem, 6vw, 4.6rem)", color: CREAM, letterSpacing: "-0.03em", lineHeight: 1.08, maxWidth: "15ch", marginBottom: "1.5rem" }}>
-            Tratamientos con <em style={{ color: GOLD, fontStyle: "italic" }}>criterio médico</em>
+          <h1 data-anim="mask" style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "clamp(2.5rem, 6vw, 4.6rem)", color: CREAM, letterSpacing: "-0.03em", lineHeight: 1.08, maxWidth: "15ch", marginBottom: "1.5rem" }}>
+            Tratamientos con <em style={{ color: "inherit" }}>criterio médico</em>
           </h1>
           <p data-anim="up" style={{ fontFamily: "var(--font-body)", fontSize: "1rem", lineHeight: 1.85, color: "rgba(250,248,245,0.62)", maxWidth: "560px", marginBottom: "2.5rem" }}>
             Cada plan lo diseña y ejecuta personal médico, no un catálogo de promociones. Explora cada tratamiento, sus precios de
@@ -83,7 +83,7 @@ export default function ServiciosPage() {
                 key={s.id}
                 href={`#${s.id}`}
                 className="hover:border-[#b89a6a] hover:text-[#b89a6a] transition-colors"
-                style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", letterSpacing: "0.06em", color: "rgba(250,248,245,0.85)", border: "1px solid rgba(184,154,106,0.3)", padding: "12px 16px", display: "inline-block" }}
+                style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "rgba(250,248,245,0.85)", border: "1px solid rgba(184,154,106,0.3)", padding: "12px 16px", display: "inline-block" }}
               >
                 {s.titulo}
               </a>
@@ -99,7 +99,7 @@ export default function ServiciosPage() {
           <section key={sec.id} id={sec.id} style={{ backgroundColor: i % 2 === 0 ? CREAM : SAND, padding: "clamp(64px, 9vw, 112px) 0", scrollMarginTop: "80px" }}>
             <div style={{ maxWidth: "1180px", margin: "0 auto", padding: "0 clamp(20px, 6vw, 80px)" }}>
               <div style={{ maxWidth: "640px", marginBottom: "clamp(2.5rem, 5vw, 3.5rem)" }}>
-                <h2 data-anim="mask" style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, fontSize: "clamp(2rem, 4vw, 3rem)", color: INK, letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: "1rem" }}>
+                <h2 data-anim="mask" style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "clamp(2rem, 4vw, 3rem)", color: INK, letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: "1rem" }}>
                   {sec.titulo}
                 </h2>
                 <p data-anim="up" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem", lineHeight: 1.85, color: MUTED }}>{sec.intro}</p>
@@ -108,7 +108,7 @@ export default function ServiciosPage() {
               {grupos.map((g) => (
                 <div key={g} style={{ marginBottom: "clamp(2.5rem, 5vw, 3.5rem)" }}>
                   {grupos.length > 1 && (
-                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", letterSpacing: "0.24em", textTransform: "uppercase", color: GOLD, paddingBottom: "0.75rem", borderBottom: "1px solid rgba(184,154,106,0.25)", marginBottom: "1.5rem" }}>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: GOLD, paddingBottom: "0.75rem", borderBottom: "1px solid rgba(184,154,106,0.25)", marginBottom: "1.5rem" }}>
                       {g}
                     </p>
                   )}
@@ -129,10 +129,10 @@ export default function ServiciosPage() {
                                 />
                               )}
                             </div>
-                            <p className="group-hover:text-[#b89a6a] transition-colors" style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "clamp(1rem, 1.6vw, 1.2rem)", color: INK, lineHeight: 1.25 }}>
+                            <p className="group-hover:text-[#b89a6a] transition-colors" style={{ fontFamily: "var(--font-display), fontWeight: 600, Georgia, serif", fontSize: "clamp(1rem, 1.6vw, 1.2rem)", color: INK, lineHeight: 1.25 }}>
                               {t.nombre}
                             </p>
-                            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: MUTED, marginTop: "0.25rem" }}>
+                            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: MUTED, marginTop: "0.25rem" }}>
                               {t.desde ? `Desde ${formatCOP(t.desde)}` : "Precio a valoración"}
                             </p>
                           </Link>

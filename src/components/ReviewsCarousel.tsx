@@ -57,11 +57,11 @@ function ReviewCard({ review }: { review: Review }) {
         <div>
           <p
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "1.15rem",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "0.01em",
+              letterSpacing: "-0.03em",
             }}
           >
             {review.name}
@@ -69,7 +69,7 @@ function ReviewCard({ review }: { review: Review }) {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.78rem",
+              fontSize: "0.8125rem",
               color: "#9a968f",
               marginTop: "4px",
             }}
@@ -107,9 +107,8 @@ function ReviewCard({ review }: { review: Review }) {
             padding: "12px 0",
             margin: "-12px 0",
             fontFamily: "var(--font-body)",
-            fontSize: "0.72rem",
-            letterSpacing: "0.16em",
-            textTransform: "uppercase",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#b89a6a",
             cursor: "pointer",
           }}
@@ -162,19 +161,19 @@ export function ReviewsCarousel() {
         {/* ── Encabezado ── */}
         <div className="text-center mb-10" data-anim="up">
           <p className="section-label mb-4" style={{ color: "rgba(184,154,106,0.7)" }}>
-            RESEÑAS DE GOOGLE
+            Reseñas de Google
           </p>
           <h2
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.2rem, 4vw, 3.4rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.1,
             }}
           >
-            Lo que dicen <em style={{ color: "#b89a6a" }}>nuestros pacientes</em>
+            Lo que dicen <em style={{ color: "inherit" }}>nuestros pacientes</em>
           </h2>
         </div>
 
@@ -198,20 +197,20 @@ export function ReviewsCarousel() {
           >
             <span
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "2.5rem",
-                fontWeight: 300,
-                letterSpacing: "0.12em",
+                fontWeight: 600,
+                letterSpacing: "-0.03em",
                 color: "#faf8f5",
               }}
             >
-              EXCELENTE
+              Excelente
             </span>
             <StarRating rating={5} size={32} />
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.78rem",
+                fontSize: "0.8125rem",
                 color: "#888580",
               }}
             >
@@ -308,10 +307,9 @@ export function ReviewsCarousel() {
             rel="noopener noreferrer"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.68rem",
+              fontSize: "0.8125rem",
               color: "#b89a6a",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
+              letterSpacing: "0.01em",
               textDecoration: "none",
               display: "inline-block",
               padding: "12px 0",

@@ -1,27 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ScrollAnimations } from "@/components/ScrollAnimations";
 import { WhatsAppPorPais } from "@/components/WhatsAppPorPais";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-display",
-  subsets: ["latin"],
-  // Reduced from 5 weights to 3 — saves ~100 KB of font data.
-  // 300 = body text, 400 = normal, 700 = headings. 500/600 unused.
-  weight: ["300", "400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",   // render fallback immediately; swap font when loaded
-  preload: true,
-});
-
-const dmSans = DM_Sans({
+// Una sola familia para títulos y texto: sobria, clara en celular y lejos del
+// serif de "lujo" genérico. Se exponen las dos variables que usan los componentes.
+const schibsted = Schibsted_Grotesk({
   variable: "--font-body",
   subsets: ["latin"],
-  // Reduced from 4 weights to 2 — 300/600 not actually used in components.
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   preload: true,
 });
@@ -104,7 +94,7 @@ const schemaData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="es" className={schibsted.variable}>
       <body className="min-h-full flex flex-col antialiased">
         <script
           type="application/ld+json"

@@ -17,7 +17,7 @@ export const capilarYOtros: Tratamiento[] = [
       frase: "Cada injerto, colocado a mano",
     },
     hero: {
-      eyebrow: "MEDICINA CAPILAR · TRASPLANTE CAPILAR",
+      eyebrow: "Medicina capilar · Trasplante capilar",
       titulo: "Recupera densidad y tu línea del cabello,",
       tituloEm: "con un resultado natural",
       sub: "Trasplante capilar para entradas, coronilla y zonas con pérdida de densidad. Partimos de una valoración médica individual con analizador capilar, bajo la dirección médica de la Dra. Daniela Díez.",
@@ -133,7 +133,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["implante-capilar-fue", "prp-capilar", "mesoterapia-capilar"],
     hero: {
-      eyebrow: "MEDICINA CAPILAR · TRASPLANTE DE BARBA",
+      eyebrow: "Medicina capilar · Trasplante de barba",
       titulo: "La barba que quieres llevar,",
       tituloEm: "diseñada y con densidad natural",
       sub: "Diseña o densifica la barba con tu propio cabello y resultados naturales. Planeamos cada zona desde una valoración médica individual.",
@@ -247,7 +247,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["prp-capilar", "exosomas-capilares", "indiba-capilar"],
     hero: {
-      eyebrow: "MEDICINA CAPILAR · MESOTERAPIA + INDIBA",
+      eyebrow: "Medicina capilar · Mesoterapia + INDIBA",
       titulo: "Un cabello más fuerte,",
       tituloEm: "sesión a sesión",
       sub: "Aportamos activos directamente al cuero cabelludo para ayudar a fortalecer el folículo y mejorar la calidad del cabello. Cada sesión incluye aparatología capilar y parte de un diagnóstico médico.",
@@ -359,7 +359,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["mesoterapia-capilar", "exosomas-capilares", "implante-capilar-fue"],
     hero: {
-      eyebrow: "MEDICINA CAPILAR · PLASMA RICO EN PLAQUETAS",
+      eyebrow: "Medicina capilar · Plasma rico en plaquetas",
       titulo: "Tu propio plasma",
       tituloEm: "para fortalecer tu cabello",
       sub: "Usamos el plasma rico en plaquetas de tu propia sangre para estimular y fortalecer el cabello. Indicado tras una valoración médica con analizador capilar.",
@@ -471,7 +471,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["prp-capilar", "mesoterapia-capilar", "implante-capilar-fue"],
     hero: {
-      eyebrow: "MEDICINA CAPILAR · EXOSOMAS",
+      eyebrow: "Medicina capilar · Exosomas",
       titulo: "Revitaliza tu cuero cabelludo,",
       tituloEm: "mejora calidad y densidad",
       sub: "Tratamiento avanzado que favorece la regeneración y revitalización del cuero cabelludo, ayudando a mejorar la calidad y densidad del cabello. Indicado tras una valoración médica.",
@@ -582,7 +582,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["mesoterapia-capilar", "prp-capilar", "exosomas-capilares"],
     hero: {
-      eyebrow: "MEDICINA CAPILAR · RADIOFRECUENCIA E INDIBA",
+      eyebrow: "Medicina capilar · Radiofrecuencia e INDIBA",
       titulo: "Oxigena y estimula tu cuero cabelludo,",
       tituloEm: "sin agujas",
       sub: "Radiofrecuencia e INDIBA para oxigenar y estimular el cuero cabelludo en un paquete de 10 sesiones. Un complemento cómodo dentro de tu plan capilar.",
@@ -698,7 +698,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: ["alectomia"],
     relacionados: ["rinomodelacion", "otomodelizacion", "lobulo-rasgado"],
     hero: {
-      eyebrow: "ARMONIZACIÓN QUIRÚRGICA MENOR · ALECTOMÍA",
+      eyebrow: "Armonización quirúrgica menor · Alectomía",
       titulo: "Aletas nasales más finas,",
       tituloEm: "una nariz en armonía con tu rostro",
       sub: "Procedimiento para afinar las aletas nasales buscando una armonización natural del rostro. Cirugía menor con anestesia local, planeada desde una valoración médica.",
@@ -811,7 +811,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["lobulo-rasgado", "alectomia", "rinomodelacion"],
     hero: {
-      eyebrow: "ARMONIZACIÓN QUIRÚRGICA MENOR · OTOMODELIZACIÓN",
+      eyebrow: "Armonización quirúrgica menor · Otomodelización",
       titulo: "Orejas en su lugar,",
       tituloEm: "un rostro en armonía natural",
       sub: "Procedimiento para mejorar la posición de las orejas, buscando una armonización natural del rostro. Cirugía menor con anestesia local y acompañamiento médico.",
@@ -927,7 +927,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["otomodelizacion", "alectomia", "cauterizacion"],
     hero: {
-      eyebrow: "ARMONIZACIÓN QUIRÚRGICA MENOR · LÓBULO RASGADO",
+      eyebrow: "Armonización quirúrgica menor · Lóbulo rasgado",
       titulo: "Vuelve a lucir tus aretes,",
       tituloEm: "con un lóbulo reparado",
       sub: "Corregimos el lóbulo rasgado o alargado por el uso de aretes con un procedimiento menor y anestesia local, planeado desde una valoración médica.",
@@ -1037,7 +1037,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["despigmentacion-intima-axilas", "hilos-de-colageno", "plasma-rico-en-plaquetas-facial"],
     hero: {
-      eyebrow: "SALUD ÍNTIMA · REJUVENECIMIENTO VAGINAL",
+      eyebrow: "Salud íntima · Rejuvenecimiento vaginal",
       titulo: "Bienestar íntimo,",
       tituloEm: "con discreción y acompañamiento médico",
       sub: "Tonifica, hidrata y revitaliza la zona íntima con ácido hialurónico o hilos de colágeno. Tratamientos discretos, pensados para tu comodidad y tu seguridad.",
@@ -1150,7 +1150,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["rejuvenecimiento-vaginal", "depilacion-laser", "cosmelan"],
     hero: {
-      eyebrow: "SALUD ÍNTIMA · DESPIGMENTACIÓN",
+      eyebrow: "Salud íntima · Despigmentación",
       titulo: "Un tono más parejo,",
       tituloEm: "para sentirte a gusto contigo misma",
       sub: "Aclaramos y emparejamos el tono de la piel de la zona íntima y las axilas con protocolos seguros, definidos desde una valoración médica y con total discreción.",
@@ -1266,7 +1266,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["masajes-de-relajacion", "reduccion-intensiva", "post-quirurgico"],
     hero: {
-      eyebrow: "BIENESTAR · SUEROTERAPIA INTRAVENOSA",
+      eyebrow: "Bienestar · Sueroterapia intravenosa",
       titulo: "Vitaminas y antioxidantes,",
       tituloEm: "un respiro para tu organismo",
       sub: "Vitaminas y antioxidantes directo a tu organismo como complemento de tus hábitos de bienestar. Cada línea se indica después de una valoración médica.",
@@ -1384,7 +1384,7 @@ export const capilarYOtros: Tratamiento[] = [
     resultados: [],
     relacionados: ["sueroterapia", "indiba-dolor", "hydrafacial"],
     hero: {
-      eyebrow: "BIENESTAR · MASAJE DE RELAJACIÓN",
+      eyebrow: "Bienestar · Masaje de relajación",
       titulo: "Dos horas y media para ti,",
       tituloEm: "suelta la tensión y descansa",
       sub: "Dos horas y media de descanso profundo: masaje craneal, facial y corporal con piedras volcánicas para soltar la tensión, en el ambiente sereno de Clínica Quantum.",

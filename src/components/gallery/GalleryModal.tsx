@@ -110,9 +110,8 @@ export function GalleryModal({ item, onClose }: Props) {
           <span
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.58rem",
-              letterSpacing: "0.28em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
               border: "1px solid rgba(184,154,106,0.35)",
               padding: "3px 10px",
@@ -125,11 +124,11 @@ export function GalleryModal({ item, onClose }: Props) {
           {/* Title */}
           <h2
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.4rem, 3vw, 2rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.2,
               margin: 0,
             }}
@@ -138,13 +137,6 @@ export function GalleryModal({ item, onClose }: Props) {
           </h2>
 
           {/* Gold line */}
-          <div
-            style={{
-              width: "36px",
-              height: "1px",
-              background: "linear-gradient(to right, #b89a6a, transparent)",
-            }}
-          />
 
           {/* Treatment + Zone */}
           <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
@@ -152,9 +144,8 @@ export function GalleryModal({ item, onClose }: Props) {
               <span
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#888580",
                   minWidth: "80px",
                 }}
@@ -175,9 +166,8 @@ export function GalleryModal({ item, onClose }: Props) {
               <span
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#888580",
                   minWidth: "80px",
                 }}
@@ -200,7 +190,7 @@ export function GalleryModal({ item, onClose }: Props) {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.875rem",
+              fontSize: "0.9375rem",
               color: "rgba(250,248,245,0.55)",
               lineHeight: 1.8,
               margin: 0,
@@ -216,9 +206,9 @@ export function GalleryModal({ item, onClose }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold"
-              style={{ textAlign: "center", fontSize: "0.62rem" }}
+              style={{ textAlign: "center", fontSize: "0.8125rem" }}
             >
-              AGENDAR VALORACIÓN
+              Agendar valoración
             </Link>
             <button
               onClick={onClose}
@@ -227,14 +217,13 @@ export function GalleryModal({ item, onClose }: Props) {
                 border: "1px solid rgba(184,154,106,0.2)",
                 color: "#888580",
                 fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 padding: "10px 20px",
                 cursor: "pointer",
               }}
             >
-              VER MÁS CASOS
+              Ver más casos
             </button>
           </div>
         </div>

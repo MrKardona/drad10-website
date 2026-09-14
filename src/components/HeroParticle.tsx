@@ -191,16 +191,16 @@ export function HeroParticle() {
           className="section-label mb-6 opacity-0 animate-fade-up"
           style={{ color: "#b89a6a" }}
         >
-          MEDELLÍN · EL POBLADO · COLOMBIA
+          Medellín · El Poblado · Colombia
         </p>
 
         {/* Título principal */}
         <h1
           className="mb-6 leading-tight opacity-0 animate-fade-up delay-100"
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(3rem, 7vw, 6.5rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#faf8f5",
             letterSpacing: "-0.03em",
             lineHeight: 1.05,
@@ -208,7 +208,7 @@ export function HeroParticle() {
         >
           Medicina Estética
           <br />
-          <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+          <em style={{ color: "inherit" }}>
             de Alto Nivel
           </em>
         </h1>
@@ -241,16 +241,16 @@ export function HeroParticle() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up delay-400">
           <a href="#agenda" className="btn-gold">
-            AGENDAR CITA
+            Agendar cita
           </a>
           <a href="#servicios" className="btn-outline-cream">
-            VER TRATAMIENTOS
+            Ver tratamientos
           </a>
         </div>
 
         {/* Social proof */}
         <p
-          className="mt-8 opacity-0 animate-fade-up delay-500 text-xs tracking-widest uppercase"
+          className="mt-8 opacity-0 animate-fade-up delay-500 text-[13px] tracking-normal"
           style={{ color: "rgba(250,248,245,0.45)", fontFamily: "var(--font-body)" }}
         >
           +500 pacientes nos eligieron este año
@@ -265,9 +265,8 @@ export function HeroParticle() {
         <span
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.55rem",
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
           }}
         >
           Scroll

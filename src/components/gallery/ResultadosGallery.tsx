@@ -69,14 +69,13 @@ export function ResultadosGallery() {
               <span
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.55rem",
-                  letterSpacing: "0.28em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#1c1c1c",
                   fontWeight: 700,
                 }}
               >
-                CASO DESTACADO
+                Caso destacado
               </span>
             </div>
           </div>
@@ -95,9 +94,8 @@ export function ResultadosGallery() {
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.58rem",
-                letterSpacing: "0.28em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 border: "1px solid rgba(184,154,106,0.3)",
                 padding: "3px 10px",
@@ -109,9 +107,9 @@ export function ResultadosGallery() {
 
             <h2
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.5rem, 3vw, 2.4rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
                 letterSpacing: "-0.03em",
                 lineHeight: 1.2,
@@ -120,14 +118,6 @@ export function ResultadosGallery() {
             >
               {featured.title}
             </h2>
-
-            <div
-              style={{
-                width: "40px",
-                height: "1px",
-                background: "linear-gradient(to right, #b89a6a, transparent)",
-              }}
-            />
 
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               {[
@@ -141,9 +131,8 @@ export function ResultadosGallery() {
                   <span
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.58rem",
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
+                      fontSize: "0.8125rem",
+                      letterSpacing: "0.01em",
                       color: "#888580",
                       minWidth: "90px",
                     }}
@@ -166,7 +155,7 @@ export function ResultadosGallery() {
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.875rem",
+                fontSize: "0.9375rem",
                 color: "rgba(250,248,245,0.5)",
                 lineHeight: 1.85,
                 margin: 0,
@@ -182,9 +171,8 @@ export function ResultadosGallery() {
                 border: "1px solid rgba(184,154,106,0.35)",
                 color: "#b89a6a",
                 fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 padding: "10px 20px",
                 cursor: "pointer",
                 display: "flex",
@@ -192,7 +180,7 @@ export function ResultadosGallery() {
                 gap: "8px",
               }}
             >
-              VER DETALLE
+              Ver detalle
               <svg
                 width="12"
                 height="12"
@@ -226,9 +214,8 @@ export function ResultadosGallery() {
               onClick={() => setActiveCategory(cat)}
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.68rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 padding: "12px 18px",
                 border: active
                   ? "1px solid #b89a6a"
@@ -257,8 +244,7 @@ export function ResultadosGallery() {
             fontSize: "0.85rem",
           }}
         >
-          Próximos casos de {categoryLabels[activeCategory].toLowerCase()} — muy pronto ✦
-        </div>
+          Próximos casos de {categoryLabels[activeCategory].toLowerCase()} — muy pronto </div>
       ) : (
         <div
           style={{
@@ -290,22 +276,21 @@ export function ResultadosGallery() {
         <p
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.6rem",
-            letterSpacing: "0.28em",
-            textTransform: "uppercase",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#b89a6a",
             marginBottom: "0.75rem",
           }}
         >
-          ¿QUIERES VER TU PROPIO RESULTADO?
+          ¿Quieres ver tu propio resultado?
         </p>
         <p
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#faf8f5",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.03em",
             marginBottom: "1.75rem",
           }}
         >
@@ -316,9 +301,9 @@ export function ResultadosGallery() {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold"
-          style={{ fontSize: "0.62rem" }}
+          style={{ fontSize: "0.8125rem" }}
         >
-          AGENDAR AHORA — WHATSAPP
+          Agendar ahora — WhatsApp
         </a>
       </div>
 
@@ -388,9 +373,8 @@ function GalleryCardItem({
         <span
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.55rem",
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#b89a6a",
             display: "block",
             marginBottom: "4px",
@@ -400,9 +384,9 @@ function GalleryCardItem({
         </span>
         <p
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "0.95rem",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#faf8f5",
             margin: 0,
             lineHeight: 1.3,
@@ -435,14 +419,13 @@ function GalleryCardItem({
           <span
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#1c1c1c",
               fontWeight: 700,
             }}
           >
-            VER DETALLE
+            Ver detalle
           </span>
         </div>
       </div>

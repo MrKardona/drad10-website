@@ -24,31 +24,31 @@ const stats = [
 const credentials = [
   {
     year: "2019",
-    title: "Médica General",
+    title: "Médica general",
     institution: "Instituto Universitario de Ciencias de la Salud — Fundación H. A. Barceló",
     country: "Argentina",
   },
   {
     year: "2020",
-    title: "Diploma en Medicina Estética",
+    title: "Diploma en medicina estética",
     institution: "Universidad de Buenos Aires (UBA)",
     country: "Argentina",
   },
   {
     year: "2020",
-    title: "Curso de Medicina Estética",
+    title: "Curso de medicina estética",
     institution: "Asociación Médica Argentina",
     country: "Argentina",
   },
   {
     year: "2020",
-    title: "Diploma en Ciencias Estéticas",
+    title: "Diploma en ciencias estéticas",
     institution: "Consejo Argentino de Ciencias Estéticas",
     country: "Argentina",
   },
   {
     year: "2023",
-    title: "Especialización en Pediatría",
+    title: "Especialización en pediatría",
     institution: "Universidad de Buenos Aires (UBA)",
     country: "Argentina",
   },
@@ -113,12 +113,12 @@ const equipo = [
 ];
 
 const marqueeItems = [
-  "Medicina Estética",
-  "Microimplante Capilar",
+  "Medicina estética",
+  "Microimplante capilar",
   "INDIBA Activ",
   "Pediatría",
-  "Hilos Tensores",
-  "Toxina Botulínica",
+  "Hilos tensores",
+  "Toxina botulínica",
   "Radiofrecuencia",
   "Medellín · ARG & COL",
   "Dra. Daniela Díez",
@@ -159,26 +159,26 @@ export default function NosotrosPage() {
             className="section-label opacity-0 animate-fade-up"
             style={{ marginBottom: "1.5rem" }}
           >
-            NUESTRA HISTORIA
+            Nuestra historia
           </p>
 
           {/* Title */}
           <h1
             className="opacity-0 animate-fade-up delay-100"
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(3rem, 7vw, 5.5rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#1c1c1c",
-              letterSpacing: "-0.04em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.05,
               marginBottom: "2rem",
             }}
           >
-            Medicina Estética
+            Medicina estética
             <br />
-            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
-              con Propósito
+            <em style={{ color: "inherit" }}>
+              con propósito
             </em>
           </h1>
 
@@ -188,7 +188,7 @@ export default function NosotrosPage() {
             style={{
               width: "56px",
               height: "1px",
-              background: "linear-gradient(to right, #b89a6a, transparent)",
+              background: "rgba(184,154,106,0.3)",
               marginBottom: "2rem",
             }}
           />
@@ -238,9 +238,9 @@ export default function NosotrosPage() {
                   data-suffix={s.suffix}
                   data-prefix={s.prefix}
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(2.4rem, 5vw, 3.8rem)",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "#b89a6a",
                     letterSpacing: "-0.03em",
                     lineHeight: 1,
@@ -252,9 +252,8 @@ export default function NosotrosPage() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.62rem",
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#b0aba6",
                   }}
                 >
@@ -302,16 +301,14 @@ export default function NosotrosPage() {
                 key={i}
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.26em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#888580",
                   paddingRight: "3rem",
                   whiteSpace: "nowrap",
                 }}
               >
                 {item}
-                <span style={{ color: "#b89a6a", marginLeft: "1.5rem" }}>✦</span>
               </span>
             ))}
           </div>
@@ -402,11 +399,11 @@ export default function NosotrosPage() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "1rem",
-                    fontWeight: 400,
+                    fontWeight: 600,
                     color: "#d4b896",
-                    letterSpacing: "0.04em",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   Dra. Daniela Díez
@@ -414,9 +411,8 @@ export default function NosotrosPage() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.58rem",
-                    letterSpacing: "0.22em",
-                    textTransform: "uppercase",
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#888580",
                     marginTop: "3px",
                   }}
@@ -442,9 +438,9 @@ export default function NosotrosPage() {
             >
               <p
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "2.2rem",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#1c1c1c",
                   lineHeight: 1,
                   letterSpacing: "-0.03em",
@@ -455,14 +451,13 @@ export default function NosotrosPage() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.55rem",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "rgba(28,28,28,0.7)",
                   marginTop: "4px",
                 }}
               >
-                AÑOS
+                Años
                 <br />
                 EXP.
               </p>
@@ -476,15 +471,15 @@ export default function NosotrosPage() {
               className="section-label"
               style={{ color: "#b89a6a", marginBottom: "1.25rem" }}
             >
-              ESPECIALISTA FUNDADORA
+              Especialista fundadora
             </p>
 
             <h2
               data-anim="up"
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
                 letterSpacing: "-0.03em",
                 lineHeight: 1.1,
@@ -492,7 +487,7 @@ export default function NosotrosPage() {
               }}
             >
               Formada para{" "}
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+              <em style={{ color: "inherit" }}>
                 transformar
               </em>
             </h2>
@@ -514,7 +509,7 @@ export default function NosotrosPage() {
                 flexDirection: "column",
                 gap: "1.1rem",
                 fontFamily: "var(--font-body)",
-                fontSize: "0.88rem",
+                fontSize: "0.9375rem",
                 color: "rgba(250,248,245,0.55)",
                 lineHeight: 1.9,
                 marginBottom: "2rem",
@@ -528,7 +523,7 @@ export default function NosotrosPage() {
                 comprometido con la excelencia clínica.
               </p>
               <p>
-                Especialista en Medicina Estética, Pediatría y Microimplante
+                Especialista en medicina estética, pediatría y microimplante
                 Capilar, fundé DRA.D10 con la visión de ofrecer una experiencia
                 médica diferente: cercana, honesta y orientada a resultados
                 naturales que potencien la confianza de cada paciente en
@@ -542,8 +537,8 @@ export default function NosotrosPage() {
               style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "2.5rem" }}
             >
               {[
-                "Medicina Estética",
-                "Microimplante Capilar",
+                "Medicina estética",
+                "Microimplante capilar",
                 "Pediatría",
                 "INDIBA",
                 "ARG · COL",
@@ -552,9 +547,8 @@ export default function NosotrosPage() {
                   key={tag}
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.58rem",
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#b89a6a",
                     border: "1px solid rgba(184,154,106,0.35)",
                     padding: "5px 12px",
@@ -571,9 +565,9 @@ export default function NosotrosPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
-                style={{ fontSize: "0.62rem" }}
+                style={{ fontSize: "0.8125rem" }}
               >
-                AGENDAR CON LA DRA. DANIELA
+                Agendar con la Dra. Daniela
               </Link>
             </div>
           </div>
@@ -613,16 +607,16 @@ export default function NosotrosPage() {
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
             <p data-anim="up" className="section-label" style={{ marginBottom: "1rem" }}>
-              FORMACIÓN ACADÉMICA
+              Formación académica
             </p>
             <h2
               data-anim="up"
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#1c1c1c",
-                letterSpacing: "-0.025em",
+                letterSpacing: "-0.03em",
                 marginBottom: "1.25rem",
               }}
             >
@@ -696,12 +690,12 @@ export default function NosotrosPage() {
                         <>
                         <span
                           style={{
-                            fontFamily: "var(--font-display), Georgia, serif",
+                            fontFamily: "var(--font-display)",
                             fontSize: "clamp(2.1rem, 3.2vw, 2.8rem)",
-                            fontWeight: 300,
+                            fontWeight: 600,
                             color: "#b89a6a",
                             lineHeight: 1,
-                            letterSpacing: "-0.04em",
+                            letterSpacing: "-0.03em",
                             display: "block",
                             marginBottom: "4px",
                           }}
@@ -719,9 +713,9 @@ export default function NosotrosPage() {
                         >
                           <p
                             style={{
-                              fontFamily: "var(--font-display), Georgia, serif",
+                              fontFamily: "var(--font-display)",
                               fontSize: "1.25rem",
-                              fontWeight: 400,
+                              fontWeight: 600,
                               color: "#1c1c1c",
                               marginBottom: "4px",
                             }}
@@ -731,7 +725,7 @@ export default function NosotrosPage() {
                           <p
                             style={{
                               fontFamily: "var(--font-body)",
-                              fontSize: "0.88rem",
+                              fontSize: "0.9375rem",
                               color: "#6f6b66",
                               lineHeight: 1.6,
                               marginBottom: "8px",
@@ -742,9 +736,8 @@ export default function NosotrosPage() {
                           <span
                             style={{
                               fontFamily: "var(--font-body)",
-                              fontSize: "0.64rem",
-                              letterSpacing: "0.2em",
-                              textTransform: "uppercase",
+                              fontSize: "0.8125rem",
+                              letterSpacing: "0.01em",
                               color: "#b89a6a",
                               border: "1px solid rgba(184,154,106,0.3)",
                               padding: "4px 12px",
@@ -793,12 +786,12 @@ export default function NosotrosPage() {
                         <>
                           <span
                             style={{
-                              fontFamily: "var(--font-display), Georgia, serif",
+                              fontFamily: "var(--font-display)",
                               fontSize: "clamp(2.1rem, 3.2vw, 2.8rem)",
-                              fontWeight: 300,
+                              fontWeight: 600,
                               color: "#b89a6a",
                               lineHeight: 1,
-                              letterSpacing: "-0.04em",
+                              letterSpacing: "-0.03em",
                               display: "block",
                               marginBottom: "4px",
                             }}
@@ -816,9 +809,9 @@ export default function NosotrosPage() {
                           >
                             <p
                               style={{
-                                fontFamily: "var(--font-display), Georgia, serif",
+                                fontFamily: "var(--font-display)",
                                 fontSize: "1.25rem",
-                                fontWeight: 400,
+                                fontWeight: 600,
                                 color: "#1c1c1c",
                                 marginBottom: "4px",
                               }}
@@ -828,7 +821,7 @@ export default function NosotrosPage() {
                             <p
                               style={{
                                 fontFamily: "var(--font-body)",
-                                fontSize: "0.88rem",
+                                fontSize: "0.9375rem",
                                 color: "#6f6b66",
                                 lineHeight: 1.6,
                                 marginBottom: "8px",
@@ -839,9 +832,8 @@ export default function NosotrosPage() {
                             <span
                               style={{
                                 fontFamily: "var(--font-body)",
-                                fontSize: "0.64rem",
-                                letterSpacing: "0.2em",
-                                textTransform: "uppercase",
+                                fontSize: "0.8125rem",
+                                letterSpacing: "0.01em",
                                 color: "#b89a6a",
                                 border: "1px solid rgba(184,154,106,0.3)",
                                 padding: "2px 8px",
@@ -935,9 +927,9 @@ export default function NosotrosPage() {
         {/* Large open-quote glyph */}
         <div
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(5rem, 12vw, 10rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "rgba(184,154,106,0.12)",
             lineHeight: 0.6,
             marginBottom: "2.5rem",
@@ -950,13 +942,12 @@ export default function NosotrosPage() {
         {/* Quote text — each word gets animated */}
         <blockquote
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(1.55rem, 3.4vw, 2.5rem)",
-            fontWeight: 300,
-            fontStyle: "italic",
+            fontWeight: 600,
             color: "#ffffff",
             textShadow: "0 2px 30px rgba(0,0,0,0.85)",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.03em",
             lineHeight: 1.55,
             maxWidth: "760px",
             margin: "0 auto 3rem",
@@ -987,13 +978,12 @@ export default function NosotrosPage() {
           <span
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.28em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
             }}
           >
-            DRA. DANIELA DÍEZ · FUNDADORA DRA.D10
+            Dra. Daniela Díez · Fundadora DRA.D10
           </span>
           <div style={{ width: "32px", height: "1px", backgroundColor: "#b89a6a" }} />
         </div>
@@ -1041,16 +1031,16 @@ export default function NosotrosPage() {
           >
             <div>
               <p data-anim="up" className="section-label" style={{ marginBottom: "0.75rem" }}>
-                FILOSOFÍA
+                Filosofía
               </p>
               <h2
                 data-anim="up"
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#1c1c1c",
-                  letterSpacing: "-0.025em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Lo que nos define
@@ -1061,7 +1051,7 @@ export default function NosotrosPage() {
               style={{
                 width: "80px",
                 height: "1px",
-                background: "linear-gradient(to right, #b89a6a, transparent)",
+                background: "rgba(184,154,106,0.3)",
                 marginBottom: "8px",
               }}
             />
@@ -1091,25 +1081,25 @@ export default function NosotrosPage() {
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "3rem",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "rgba(184,154,106,0.2)",
                     lineHeight: 1,
                     display: "block",
                     marginBottom: "1.25rem",
-                    letterSpacing: "-0.04em",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   {card.num}
                 </span>
                 <h3
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "1.1rem",
-                    fontWeight: 400,
+                    fontWeight: 600,
                     color: "#1c1c1c",
-                    letterSpacing: "-0.01em",
+                    letterSpacing: "-0.03em",
                     marginBottom: "0.75rem",
                     lineHeight: 1.3,
                   }}
@@ -1119,7 +1109,7 @@ export default function NosotrosPage() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.82rem",
+                    fontSize: "0.9375rem",
                     color: "#888580",
                     lineHeight: 1.8,
                   }}
@@ -1172,27 +1162,27 @@ export default function NosotrosPage() {
               className="section-label"
               style={{ color: "#b89a6a", marginBottom: "1rem" }}
             >
-              NUESTRO EQUIPO
+              Nuestro equipo
             </p>
             <h2
               data-anim="up"
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
                 letterSpacing: "-0.03em",
                 marginBottom: "1rem",
               }}
             >
               Profesionales{" "}
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>dedicadas a ti</em>
+              <em style={{ color: "inherit" }}>dedicadas a ti</em>
             </h2>
             <p
               data-anim="up"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.88rem",
+                fontSize: "0.9375rem",
                 color: "rgba(250,248,245,0.4)",
                 maxWidth: "500px",
                 margin: "0 auto 1.5rem",
@@ -1294,11 +1284,11 @@ export default function NosotrosPage() {
                       >
                         <span
                           style={{
-                            fontFamily: "var(--font-display), Georgia, serif",
+                            fontFamily: "var(--font-display)",
                             fontSize: "1.3rem",
-                            fontWeight: 300,
+                            fontWeight: 600,
                             color: "#b89a6a",
-                            letterSpacing: "0.05em",
+                            letterSpacing: "-0.03em",
                           }}
                         >
                           {persona.initials}
@@ -1307,9 +1297,8 @@ export default function NosotrosPage() {
                       <span
                         style={{
                           fontFamily: "var(--font-body)",
-                          fontSize: "0.5rem",
-                          letterSpacing: "0.22em",
-                          textTransform: "uppercase",
+                          fontSize: "0.8125rem",
+                          letterSpacing: "0.01em",
                           color: "rgba(184,154,106,0.3)",
                         }}
                       >
@@ -1330,9 +1319,9 @@ export default function NosotrosPage() {
                 >
                   <p
                     style={{
-                      fontFamily: "var(--font-display), Georgia, serif",
+                      fontFamily: "var(--font-display)",
                       fontSize: "1rem",
-                      fontWeight: 400,
+                      fontWeight: 600,
                       color: "#faf8f5",
                       lineHeight: 1.25,
                     }}
@@ -1342,9 +1331,8 @@ export default function NosotrosPage() {
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.58rem",
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
+                      fontSize: "0.8125rem",
+                      letterSpacing: "0.01em",
                       color: "#b89a6a",
                     }}
                   >
@@ -1361,7 +1349,7 @@ export default function NosotrosPage() {
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.75rem",
+                      fontSize: "0.9375rem",
                       color: "rgba(250,248,245,0.38)",
                       lineHeight: 1.7,
                     }}
@@ -1371,8 +1359,8 @@ export default function NosotrosPage() {
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.55rem",
-                      letterSpacing: "0.1em",
+                      fontSize: "0.8125rem",
+                      letterSpacing: "0.01em",
                       color: "rgba(184,154,106,0.4)",
                       marginTop: "10px",
                       paddingTop: "10px",
@@ -1405,22 +1393,21 @@ export default function NosotrosPage() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.58rem",
-                  letterSpacing: "0.28em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                   marginBottom: "6px",
                 }}
               >
-                CLÍNICA QUANTUM · MEDELLÍN
+                Clínica Quantum · Medellín
               </p>
               <p
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.2rem, 2.5vw, 1.75rem)",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#faf8f5",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Un equipo, una visión
@@ -1431,9 +1418,9 @@ export default function NosotrosPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold"
-              style={{ fontSize: "0.62rem" }}
+              style={{ fontSize: "0.8125rem" }}
             >
-              AGENDAR CITA
+              Agendar cita
             </Link>
           </div>
         </div>

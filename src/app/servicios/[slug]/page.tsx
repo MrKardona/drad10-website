@@ -64,16 +64,15 @@ const formatCOP = (n: number) => `$${n.toLocaleString("es-CO")}`;
 
 const label: React.CSSProperties = {
   fontFamily: "var(--font-body)",
-  fontSize: "0.68rem",
-  letterSpacing: "0.26em",
-  textTransform: "uppercase",
+  fontSize: "0.8125rem",
+  letterSpacing: "0.01em",
   color: GOLD,
 };
 
 const display = (size: string, color: string): React.CSSProperties => ({
-  fontFamily: "var(--font-display), Georgia, serif",
+  fontFamily: "var(--font-display)",
   fontSize: size,
-  fontWeight: 300,
+  fontWeight: 600,
   color,
   letterSpacing: "-0.03em",
   lineHeight: 1.12,
@@ -118,7 +117,7 @@ function Encabezado({
         {eyebrow}
       </p>
       <h2 data-anim="mask" style={display("clamp(1.9rem, 3.6vw, 2.8rem)", claro ? CREAM : INK)}>
-        {titulo} {em && <em style={{ color: GOLD, fontStyle: "italic" }}>{em}</em>}
+        {titulo} {em && <em style={{ color: "inherit" }}>{em}</em>}
       </h2>
       {sub && (
         <p
@@ -224,7 +223,7 @@ export default async function TratamientoPage({ params }: Props) {
       {/* ══ 1. PORTADA ═══════════════════════════════════════════════════ */}
       <section style={{ backgroundColor: DARK, overflow: "hidden", paddingBottom: "clamp(40px, 6vw, 72px)" }}>
         <div style={{ ...contenedor(1240), paddingTop: "clamp(20px, 3vw, 32px)" }}>
-          <nav aria-label="Ruta de navegación" style={{ ...cuerpo("rgba(250,248,245,0.4)", "0.7rem"), letterSpacing: "0.04em" }}>
+          <nav aria-label="Ruta de navegación" style={{ ...cuerpo("rgba(250,248,245,0.4)", "0.7rem"), letterSpacing: "0.01em" }}>
             <Link href="/" className="inline-block py-2 hover:text-[#b89a6a] transition-colors">Inicio</Link>
             <span aria-hidden style={{ margin: "0 0.6rem" }}>/</span>
             <Link href={categoria.href} className="inline-block py-2 hover:text-[#b89a6a] transition-colors">{categoria.label}</Link>
@@ -248,7 +247,7 @@ export default async function TratamientoPage({ params }: Props) {
             <h1 data-anim="mask" style={{ ...display("clamp(2.4rem, 5.4vw, 4.3rem)", CREAM), marginBottom: "1.4rem" }}>
               {t.hero.titulo}
               <br />
-              <em style={{ color: GOLD, fontStyle: "italic" }}>{t.hero.tituloEm}</em>
+              <em style={{ color: "inherit" }}>{t.hero.tituloEm}</em>
             </h1>
             <p
               data-anim="up"
@@ -282,7 +281,7 @@ export default async function TratamientoPage({ params }: Props) {
                 gap: "0.5rem 1.5rem",
                 marginTop: "2.25rem",
                 ...cuerpo("rgba(250,248,245,0.5)", "0.72rem"),
-                letterSpacing: "0.04em",
+                letterSpacing: "0.01em",
               }}
             >
               <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-block py-2 hover:text-[#b89a6a] transition-colors">
@@ -344,7 +343,7 @@ export default async function TratamientoPage({ params }: Props) {
               key={b}
               style={{
                 ...cuerpo("rgba(250,248,245,0.78)", "0.7rem"),
-                letterSpacing: "0.08em",
+                letterSpacing: "0.01em",
                 border: "1px solid rgba(184,154,106,0.28)",
                 padding: "7px 14px",
                 lineHeight: 1.4,
@@ -379,7 +378,7 @@ export default async function TratamientoPage({ params }: Props) {
                   borderTop: i >= 2 ? "1px solid rgba(184,154,106,0.14)" : undefined,
                 }}
               >
-                <dt style={{ ...label, letterSpacing: "0.22em", marginBottom: "0.45rem" }}>{d.k}</dt>
+                <dt style={{ ...label, letterSpacing: "0.01em", marginBottom: "0.45rem" }}>{d.k}</dt>
                 <dd style={{ ...display("clamp(1.05rem, 1.6vw, 1.25rem)", INK), lineHeight: 1.3, margin: 0 }}>{d.v}</dd>
               </div>
             ))}
@@ -576,7 +575,7 @@ export default async function TratamientoPage({ params }: Props) {
                   <p style={{ ...display("1.25rem", INK), lineHeight: 1.25 }}>{paso.title}</p>
                 </div>
                 <p style={{ ...cuerpo(MUTED, "0.88rem"), marginBottom: "0.7rem" }}>{paso.desc}</p>
-                <p style={{ ...label, letterSpacing: "0.18em" }}>{paso.detail}</p>
+                <p style={{ ...label, letterSpacing: "0.01em" }}>{paso.detail}</p>
               </li>
             ))}
           </ol>
@@ -587,7 +586,7 @@ export default async function TratamientoPage({ params }: Props) {
       <section style={{ backgroundColor: INK, padding: "clamp(32px, 5vw, 52px) 0" }}>
         <div className="flex flex-wrap items-center justify-center text-center" style={{ ...contenedor(), gap: "1.25rem 2.5rem" }}>
           <p style={display("clamp(1.2rem, 2.4vw, 1.65rem)", CREAM)}>
-            ¿Tienes dudas? <em style={{ color: GOLD, fontStyle: "italic" }}>Escríbenos y te orientamos.</em>
+            ¿Tienes dudas? <em style={{ color: "inherit" }}>Escríbenos y te orientamos.</em>
           </p>
           <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
             Hablar por WhatsApp
@@ -662,9 +661,9 @@ export default async function TratamientoPage({ params }: Props) {
           <div className="grid md:grid-cols-3" style={{ gap: "clamp(28px, 4vw, 56px)" }}>
             {testimonios.map((r) => (
               <figure key={r.name} data-anim="up" style={{ margin: 0 }}>
-                <p aria-label={`${r.rating} estrellas`} style={{ color: GOLD, letterSpacing: "0.2em", marginBottom: "1rem" }}>★★★★★</p>
+                <p aria-label={`${r.rating} estrellas`} style={{ color: GOLD, letterSpacing: "0.01em", marginBottom: "1rem" }}>★★★★★</p>
                 <blockquote style={{ ...display("1.2rem", CREAM), lineHeight: 1.5, margin: 0 }}>“{r.text}”</blockquote>
-                <figcaption style={{ ...cuerpo("rgba(250,248,245,0.45)", "0.75rem"), marginTop: "1.1rem", letterSpacing: "0.06em" }}>
+                <figcaption style={{ ...cuerpo("rgba(250,248,245,0.45)", "0.75rem"), marginTop: "1.1rem", letterSpacing: "0.01em" }}>
                   {r.name}
                   {r.fuente === "google" ? " · Reseña de Google" : ""}
                 </figcaption>
@@ -692,7 +691,7 @@ export default async function TratamientoPage({ params }: Props) {
           <div>
             <p data-anim="up" style={{ ...label, marginBottom: "1rem" }}>Tu seguridad, primero</p>
             <h2 data-anim="mask" style={{ ...display("clamp(1.9rem, 3.6vw, 2.8rem)", INK), marginBottom: "1.25rem" }}>
-              Entender primero, <em style={{ color: GOLD, fontStyle: "italic" }}>tratar después</em>
+              Entender primero, <em style={{ color: "inherit" }}>tratar después</em>
             </h2>
             <p data-anim="up" style={{ ...cuerpo(MUTED), marginBottom: "2rem", maxWidth: "560px" }}>
               Cada plan lo diseña y ejecuta personal médico, con una valoración previa y los requisitos de habilitación
@@ -727,7 +726,7 @@ export default async function TratamientoPage({ params }: Props) {
                   <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {b.items.map((x, i) => (
                       <li key={x} className="grid grid-cols-[2rem_1fr]" style={{ ...cuerpo("#3d3a36", "0.9rem"), padding: "0.7rem 0", borderBottom: "1px solid rgba(28,28,28,0.07)" }}>
-                        <span style={{ ...label, letterSpacing: "0.1em", paddingTop: "0.2rem" }}>{String(i + 1).padStart(2, "0")}</span>
+                        <span style={{ ...label, letterSpacing: "0.01em", paddingTop: "0.2rem" }}>{String(i + 1).padStart(2, "0")}</span>
                         {x}
                       </li>
                     ))}
@@ -780,7 +779,7 @@ export default async function TratamientoPage({ params }: Props) {
       <section style={{ backgroundColor: DARK, padding: "clamp(72px, 11vw, 132px) 0", textAlign: "center" }}>
         <div style={contenedor(720)}>
           <h2 data-anim="mask" style={{ ...display("clamp(2rem, 4.4vw, 3.2rem)", CREAM), marginBottom: "1.25rem" }}>
-            Tu mejor versión empieza con <em style={{ color: GOLD, fontStyle: "italic" }}>una valoración</em>
+            Tu mejor versión empieza con <em style={{ color: "inherit" }}>una valoración</em>
           </h2>
           <p data-anim="up" style={{ ...cuerpo("rgba(250,248,245,0.58)"), marginBottom: "2.25rem" }}>
             Revisamos tu caso con el analizador facial y capilar y te decimos con claridad qué necesitas y qué no. Sin presión:
@@ -791,7 +790,7 @@ export default async function TratamientoPage({ params }: Props) {
               Agendar por WhatsApp
             </a>
           </div>
-          <p style={{ ...label, letterSpacing: "0.2em", color: "rgba(250,248,245,0.38)", marginTop: "2.25rem", lineHeight: 2 }}>
+          <p style={{ ...label, letterSpacing: "0.01em", color: "rgba(250,248,245,0.38)", marginTop: "2.25rem", lineHeight: 2 }}>
             Cl. 7 #39-290, Consultorio 516 · El Poblado, Medellín
             <br />
             Lunes a sábado · 304 375 1975
@@ -813,7 +812,7 @@ export default async function TratamientoPage({ params }: Props) {
         }}
       >
         <div style={{ minWidth: 0 }}>
-          <p style={{ ...cuerpo("rgba(250,248,245,0.5)", "0.62rem"), lineHeight: 1.3 }} className="truncate">{t.nombre}</p>
+          <p style={{ ...cuerpo("rgba(250,248,245,0.6)", "0.75rem"), lineHeight: 1.3 }} className="truncate">{t.nombre}</p>
           <p style={{ ...display("1rem", CREAM), lineHeight: 1.3 }}>{precioTexto}</p>
         </div>
         <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: "0.85rem 1.25rem", flexShrink: 0 }}>

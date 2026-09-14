@@ -43,30 +43,29 @@ export default function ResultadosPage() {
         <p
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.58rem",
-            letterSpacing: "0.32em",
-            textTransform: "uppercase",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#b89a6a",
             marginBottom: "1.25rem",
           }}
         >
-          GALERÍA DE TRANSFORMACIONES
+          Galería de transformaciones
         </p>
 
         {/* Title */}
         <h1
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(2.4rem, 6vw, 4.5rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#faf8f5",
-            letterSpacing: "-0.04em",
+            letterSpacing: "-0.03em",
             lineHeight: 1.1,
             margin: "0 0 1.5rem",
           }}
         >
           Resultados que{" "}
-          <em style={{ fontStyle: "italic", color: "#b89a6a" }}>se notan</em>
+          <em style={{ color: "inherit" }}>se notan</em>
         </h1>
 
         {/* Gold line */}
@@ -113,7 +112,7 @@ export default function ResultadosPage() {
         <p
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.68rem",
+            fontSize: "0.9375rem",
             lineHeight: 1.7,
             color: "#8a867f",
             maxWidth: "680px",

@@ -231,9 +231,8 @@ export function ScrollVideoSection({
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.32em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 whiteSpace: "nowrap",
               }}
@@ -251,12 +250,11 @@ export function ScrollVideoSection({
         >
           <p
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1rem, 3vw, 2.5rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
+              letterSpacing: "-0.03em",
               textAlign: "center",
               textShadow: "0 2px 24px rgba(0,0,0,0.6)",
               padding: "0 1.5rem",
@@ -282,11 +280,11 @@ export function ScrollVideoSection({
         >
           <p
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.1rem, 2.2vw, 1.7rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.01em",
+              letterSpacing: "-0.03em",
               marginBottom: "0.3rem",
               textShadow: "0 2px 20px rgba(0,0,0,0.7)",
             }}
@@ -296,9 +294,8 @@ export function ScrollVideoSection({
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
               marginBottom: "1.4rem",
             }}
@@ -310,7 +307,7 @@ export function ScrollVideoSection({
             className="btn-gold"
             style={{ pointerEvents: "auto" }}
           >
-            AGENDA TU CITA
+            Agenda tu cita
           </a>
         </div>
 
@@ -333,9 +330,8 @@ export function ScrollVideoSection({
                 bottom: "0.6rem",
                 right: "1rem",
                 fontFamily: "var(--font-body)",
-                fontSize: "0.5rem",
-                letterSpacing: "0.28em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "rgba(184,154,106,0.55)",
               }}
             >

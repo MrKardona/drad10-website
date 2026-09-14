@@ -26,28 +26,27 @@ export function BlogTeaser() {
               className="section-label"
               style={{ marginBottom: "0.85rem", color: "rgba(184,154,106,0.9)" }}
             >
-              SALUD Y ESTÉTICA
+              Salud y estética
             </p>
             <h2
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#1c1c1c",
-                letterSpacing: "-0.025em",
+                letterSpacing: "-0.03em",
                 lineHeight: 1.1,
               }}
             >
-              Nuestro <em style={{ color: "#b89a6a", fontStyle: "italic" }}>blog</em>
+              Nuestro <em style={{ color: "inherit" }}>blog</em>
             </h2>
           </div>
           <Link
             href="/blog"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.62rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#b89a6a",
               textDecoration: "none",
               paddingBottom: "4px",
@@ -55,7 +54,7 @@ export function BlogTeaser() {
               alignSelf: "flex-start",
             }}
           >
-            VER TODOS LOS ARTÍCULOS →
+            Ver todos los artículos →
           </Link>
         </div>
 
@@ -94,9 +93,8 @@ export function BlogTeaser() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                   marginBottom: "0.5rem",
                 }}
@@ -105,9 +103,9 @@ export function BlogTeaser() {
               </p>
               <h3
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.05rem",
-                  fontWeight: 400,
+                  fontWeight: 600,
                   color: "#1c1c1c",
                   lineHeight: 1.35,
                   marginBottom: "0.5rem",
@@ -118,7 +116,7 @@ export function BlogTeaser() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.8rem",
+                  fontSize: "0.9375rem",
                   color: "#888580",
                   lineHeight: 1.65,
                   display: "-webkit-box",

@@ -81,28 +81,28 @@ const fieldDefs: {
 }[] = [
   {
     key: "nombre",
-    label: "Nombre Completo",
+    label: "Nombre completo",
     type: "text",
     placeholder: "Tu nombre completo",
     required: true,
   },
   {
     key: "telefono",
-    label: "Número de Teléfono",
+    label: "Número de teléfono",
     type: "tel",
     placeholder: "300 000 0000",
     required: true,
   },
   {
     key: "correo",
-    label: "Correo Electrónico",
+    label: "Correo electrónico",
     type: "email",
     placeholder: "tu@correo.com",
     required: true,
   },
   {
     key: "tratamiento",
-    label: "Tratamiento de Interés",
+    label: "Tratamiento de interés",
     type: "text",
     placeholder: "¿Qué tratamiento te interesa?",
     required: false,
@@ -162,21 +162,21 @@ export function ContactPremium() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
         {/* ── LEFT: Info column ── */}
         <div className="lg:sticky lg:top-32">
-          <p className="section-label mb-6">ESCRÍBENOS</p>
+          <p className="section-label mb-6">Escríbenos</p>
 
           <h2
             className="mb-5 leading-tight"
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#1c1c1c",
-              letterSpacing: "-0.02em",
+              letterSpacing: "-0.03em",
             }}
           >
             Agenda tu cita
             <br />
-            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+            <em style={{ color: "inherit" }}>
               de valoración
             </em>
           </h2>
@@ -217,9 +217,8 @@ export function ContactPremium() {
                     className="mb-0.5"
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.6rem",
-                      letterSpacing: "0.25em",
-                      textTransform: "uppercase",
+                      fontSize: "0.8125rem",
+                      letterSpacing: "0.01em",
                       color: "#b89a6a",
                     }}
                   >
@@ -272,20 +271,14 @@ export function ContactPremium() {
           {sent ? (
             /* Confirmation state */
             <div className="text-center py-16">
-              <span
-                className="block mb-6"
-                style={{ fontSize: "2.5rem", color: "#b89a6a" }}
-              >
-                ✦
-              </span>
               <h3
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.75rem",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#1c1c1c",
-                  letterSpacing: "-0.01em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Solicitud enviada
@@ -293,7 +286,7 @@ export function ContactPremium() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.85rem",
+                  fontSize: "0.9375rem",
                   color: "#888580",
                   lineHeight: 1.7,
                 }}
@@ -326,9 +319,8 @@ export function ContactPremium() {
                     style={{
                       display: "block",
                       fontFamily: "var(--font-body)",
-                      fontSize: "0.6rem",
-                      letterSpacing: "0.28em",
-                      textTransform: "uppercase",
+                      fontSize: "0.8125rem",
+                      letterSpacing: "0.01em",
                       color: "#888580",
                       marginBottom: "0.5rem",
                     }}
@@ -381,9 +373,8 @@ export function ContactPremium() {
                   style={{
                     display: "block",
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.6rem",
-                    letterSpacing: "0.28em",
-                    textTransform: "uppercase",
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "#888580",
                     marginBottom: "0.5rem",
                   }}
@@ -429,7 +420,7 @@ export function ContactPremium() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.78rem",
+                    fontSize: "0.8125rem",
                     color: "#c0392b",
                     textAlign: "center",
                   }}
@@ -443,9 +434,9 @@ export function ContactPremium() {
                 type="submit"
                 disabled={submitting}
                 className="btn-gold w-full mt-2"
-                style={{ letterSpacing: "0.2em", opacity: submitting ? 0.6 : 1 }}
+                style={{ letterSpacing: "0.01em", opacity: submitting ? 0.6 : 1 }}
               >
-                {submitting ? "ENVIANDO..." : "ENVIAR SOLICITUD"}
+                {submitting ? "Enviando..." : "Enviar solicitud"}
               </button>
 
               {/* Confidentiality note */}
@@ -453,10 +444,9 @@ export function ContactPremium() {
                 className="text-center"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.625rem",
-                  letterSpacing: "0.18em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#888580",
-                  textTransform: "uppercase",
                   marginTop: "0.25rem",
                 }}
               >

@@ -83,17 +83,17 @@ export function HeroPremium() {
             className="section-label mb-6 opacity-0 animate-fade-in"
             style={{ animationFillMode: "forwards" }}
           >
-            MEDELLÍN · EL POBLADO · COLOMBIA
+            Medellín · El Poblado · Colombia
           </p>
 
           {/* Heading line 1 */}
           <h1
             className="leading-[0.92] mb-2 opacity-0 animate-fade-up delay-200"
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(3.5rem, 7vw, 6rem)",
-              fontWeight: 300,
-              letterSpacing: "-0.02em",
+              fontWeight: 600,
+              letterSpacing: "-0.03em",
               color: "#1c1c1c",
               animationFillMode: "forwards",
             }}
@@ -105,11 +105,10 @@ export function HeroPremium() {
           <h1
             className="leading-[0.92] mb-7 opacity-0 animate-fade-up delay-200"
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(3.5rem, 7vw, 6rem)",
-              fontWeight: 300,
-              fontStyle: "italic",
-              letterSpacing: "-0.02em",
+              fontWeight: 600,
+              letterSpacing: "-0.03em",
               color: "#b89a6a",
               animationFillMode: "forwards",
             }}
@@ -143,10 +142,10 @@ export function HeroPremium() {
             style={{ animationFillMode: "forwards" }}
           >
             <Link href="#agenda" className="btn-gold">
-              AGENDA TU CITA
+              Agenda tu cita
             </Link>
             <Link href="#servicios" className="btn-outline-dark">
-              VER TRATAMIENTOS
+              Ver tratamientos
             </Link>
           </div>
 
@@ -156,13 +155,13 @@ export function HeroPremium() {
             style={{ animationFillMode: "forwards" }}
           >
             {[
-              "✦ INDIBA Certified",
+              " INDIBA Certified",
               "★ +500 Pacientes",
               "▲ Medellín",
             ].map((badge) => (
               <span
                 key={badge}
-                className="inline-flex items-center px-4 py-2 text-[10px] tracking-[0.2em] font-medium border transition-colors duration-200"
+                className="inline-flex items-center px-4 py-2 text-[13px] tracking-normal font-medium border transition-colors duration-200"
                 style={{
                   fontFamily: "var(--font-body)",
                   color: "#b89a6a",
@@ -228,7 +227,7 @@ export function HeroPremium() {
             {/* Top label */}
             <div className="absolute top-8 left-8">
               <span
-                className="text-[9px] tracking-[0.3em] uppercase"
+                className="text-[13px] tracking-normal"
                 style={{
                   fontFamily: "var(--font-body)",
                   color: "#b89a6a",
@@ -252,12 +251,12 @@ export function HeroPremium() {
                   boxShadow: "0 24px 56px rgba(28,28,28,0.10)",
                 }}
               >
-                <p className="section-label mb-3">TRATAMIENTO DESTACADO</p>
+                <p className="section-label mb-3">Tratamiento destacado</p>
                 <h3
                   className="text-[#1c1c1c] text-xl mb-2 leading-snug"
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontWeight: 400,
+                    fontFamily: "var(--font-display)",
+                    fontWeight: 600,
                   }}
                 >
                   INDIBA · Scanner Facial D10
@@ -278,19 +277,13 @@ export function HeroPremium() {
                   style={{ borderColor: "rgba(184,154,106,0.2)" }}
                 >
                   <span
-                    className="text-[9px] tracking-[0.2em] uppercase font-medium"
+                    className="text-[13px] tracking-normal font-medium"
                     style={{
                       fontFamily: "var(--font-body)",
                       color: "#b89a6a",
                     }}
                   >
-                    CLÍNICA QUANTUM CERTIFIED
-                  </span>
-                  <span
-                    className="text-[10px] font-bold tracking-widest"
-                    style={{ color: "#b89a6a" }}
-                  >
-                    ✦
+                    Clínica Quantum certified
                   </span>
                 </div>
               </div>
@@ -311,7 +304,7 @@ export function HeroPremium() {
               {(["DD", "MP", "AL"] as const).map((initials) => (
                 <div
                   key={initials}
-                  className="w-8 h-8 rounded-full border-2 flex items-center justify-center text-[9px] font-semibold"
+                  className="w-8 h-8 rounded-full border-2 flex items-center justify-center text-[13px] font-semibold"
                   style={{
                     backgroundColor: "#b89a6a",
                     borderColor: "#faf8f5",
@@ -343,7 +336,7 @@ export function HeroPremium() {
         aria-hidden="true"
       >
         <span
-          className="text-[9px] tracking-[0.35em] uppercase"
+          className="text-[13px] tracking-normal"
           style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
         >
           scroll

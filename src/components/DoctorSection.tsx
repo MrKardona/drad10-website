@@ -6,10 +6,10 @@ interface Credential {
 }
 
 const credentials: Credential[] = [
-  { label: "Microimplante Capilar Expert" },
+  { label: "Microimplante capilar" },
   { label: "INDIBA Certified" },
-  { label: "Médica Certificada" },
-  { label: "Formación Internacional" },
+  { label: "Médica certificada" },
+  { label: "Formación internacional" },
 ];
 
 export function DoctorSection() {
@@ -59,7 +59,7 @@ export function DoctorSection() {
                     backdropFilter: "blur(6px)",
                   }}
                 >
-                  <p className="section-label mb-1">FUNDADORA</p>
+                  <p className="section-label mb-1">Fundadora</p>
                   <p
                     className="text-xs leading-snug"
                     style={{
@@ -76,21 +76,21 @@ export function DoctorSection() {
 
           {/* ── Right: content ── */}
           <div className="opacity-0 animate-slide-left delay-200">
-            <p className="section-label mb-5">CONOCE A LA FUNDADORA</p>
+            <p className="section-label mb-5">Conoce a la fundadora</p>
 
             <h2
               className="mb-1 leading-tight"
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2.4rem, 4vw, 3.6rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#1c1c1c",
-                letterSpacing: "-0.025em",
+                letterSpacing: "-0.03em",
               }}
             >
               Dra. Daniela
               <br />
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>Díez</em>
+              <em style={{ color: "inherit" }}>Díez</em>
             </h2>
 
             <span className="gold-line" />
@@ -155,14 +155,14 @@ export function DoctorSection() {
               rel="noopener noreferrer"
               className="btn-gold inline-block opacity-0 animate-fade-up delay-600 mb-4"
             >
-              AGENDAR CON LA DRA. DÍEZ
+              Agendar con la Dra. Díez
             </a>
             <br />
             <Link
               href="/nosotros"
               className="btn-outline-dark inline-block opacity-0 animate-fade-up delay-700"
             >
-              CONOCER MÁS SOBRE EL EQUIPO
+              Conocer más sobre el equipo
             </Link>
           </div>
         </div>
@@ -175,20 +175,20 @@ export function DoctorSection() {
               className="md:col-span-2 flex flex-col justify-center px-10 py-12"
               style={{ backgroundColor: "#1c1c1c" }}
             >
-              <p className="section-label mb-4" style={{ color: "#b89a6a" }}>NUESTRO EQUIPO</p>
+              <p className="section-label mb-4" style={{ color: "#b89a6a" }}>Nuestro equipo</p>
               <h3
                 className="leading-tight mb-5"
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#faf8f5",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Profesionales
                 <br />
-                <em style={{ color: "#b89a6a", fontStyle: "italic" }}>dedicadas</em>
+                <em style={{ color: "inherit" }}>dedicadas</em>
                 <br />
                 a ti
               </h3>

@@ -18,7 +18,7 @@ interface Proceso {
 
 const procesos: Proceso[] = [
   {
-    label: "PASO 01 · DIAGNÓSTICO",
+    label: "Paso 01 · Diagnóstico",
     titulo: "Analizador",
     tituloEm: "facial y capilar",
     desc: "Todo empieza con una valoración, no con un catálogo. Leemos tu piel y tu cuero cabelludo a fondo y te decimos con claridad qué necesitas y qué no.",
@@ -28,7 +28,7 @@ const procesos: Proceso[] = [
     imgAlt: "Dra. Daniela Díez con el analizador capilar de Clínica Quantum",
   },
   {
-    label: "PASO 02 · CORPORAL",
+    label: "Paso 02 · Corporal",
     titulo: "Criolipólisis",
     tituloEm: "Cryonic",
     desc: "Nuestra tecnología estrella para moldear la figura. Congela las células de grasa localizada en una sola sesión, sin cirugía ni incapacidad, y afina medidas.",
@@ -38,7 +38,7 @@ const procesos: Proceso[] = [
     imgAlt: "Criolipólisis Cryonic aplicada en Clínica Quantum",
   },
   {
-    label: "PASO 03 · RADIOFRECUENCIA",
+    label: "Paso 03 · Radiofrecuencia",
     titulo: "INDIBA®",
     tituloEm: "Radiofrecuencia médica",
     desc: "Radiofrecuencia médica para tratamientos faciales, corporales, capilares, de dolor y recuperación post quirúrgica.",
@@ -48,7 +48,7 @@ const procesos: Proceso[] = [
     imgAlt: "Equipo INDIBA de Clínica Quantum",
   },
   {
-    label: "PASO 04 · PIEL",
+    label: "Paso 04 · Piel",
     titulo: "Láser CO2",
     tituloEm: "de última tecnología",
     desc: "Renueva la piel en profundidad: mejora cicatrices, marcas de acné, textura, poros y flacidez.",
@@ -105,14 +105,14 @@ export function TecnologiaShowcase() {
         <p
           style={{
             fontFamily: "var(--font-body), ui-sans-serif, system-ui, sans-serif",
-            fontSize: "0.6rem",
-            letterSpacing: "0.22em",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#b89a6a",
             fontWeight: 500,
           }}
-          className="uppercase mb-6"
+          className="mb-6"
         >
-          TECNOLOGÍA INSIGNIA · DRAD10
+          Tecnología insignia · Drad10
         </p>
 
         {/* Contenido que cambia con fade */}
@@ -126,21 +126,21 @@ export function TecnologiaShowcase() {
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.58rem",
-              letterSpacing: "0.26em",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "rgba(250,248,245,0.4)",
             }}
-            className="uppercase mb-3"
+            className="mb-3"
           >
             {p.label}
           </p>
 
           <h3
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
-              fontWeight: 300,
+              fontFamily: "var(--font-display)",
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.02em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.0,
               fontSize: "clamp(2.6rem, 5vw, 4.4rem)",
             }}
@@ -150,13 +150,12 @@ export function TecnologiaShowcase() {
           </h3>
           <h3
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
-              fontWeight: 400,
-              color: "#b89a6a",
-              letterSpacing: "-0.01em",
+              fontFamily: "var(--font-display)",
+              fontWeight: 600,
+              color: "rgba(250,248,245,0.5)",
+              letterSpacing: "-0.03em",
               lineHeight: 1.1,
               fontSize: "clamp(1.9rem, 3.6vw, 3.2rem)",
-              fontStyle: "italic",
             }}
             className="mb-7"
           >
@@ -182,13 +181,13 @@ export function TecnologiaShowcase() {
                 key={tag}
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.12em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "rgba(184,154,106,0.8)",
                   border: "1px solid rgba(184,154,106,0.25)",
                   padding: "0.3rem 0.75rem",
                 }}
-                className="uppercase"
+                className=""
               >
                 {tag}
               </span>
@@ -204,7 +203,7 @@ export function TecnologiaShowcase() {
               fontFamily: "var(--font-body)",
               color: "#b89a6a",
               fontSize: "0.875rem",
-              letterSpacing: "0.06em",
+              letterSpacing: "0.01em",
               display: "inline-flex",
               alignItems: "center",
               gap: "0.4rem",
@@ -248,7 +247,7 @@ export function TecnologiaShowcase() {
 
           <span
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display), fontWeight: 600, Georgia, serif",
               fontSize: "0.95rem",
               color: "rgba(184,154,106,0.5)",
               marginLeft: "auto",
@@ -299,9 +298,8 @@ export function TecnologiaShowcase() {
             bottom: "14px",
             right: "16px",
             fontFamily: "var(--font-body)",
-            fontSize: "0.55rem",
-            letterSpacing: "0.24em",
-            textTransform: "uppercase",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "rgba(250,248,245,0.7)",
             backgroundColor: "rgba(0,0,0,0.45)",
             padding: "6px 12px",

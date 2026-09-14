@@ -12,7 +12,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hidroxiapatita-de-calcio", "long-lasting", "hilos-tensores"],
     hero: {
-      eyebrow: "BIOESTIMULADOR · SCULPTRA",
+      eyebrow: "Bioestimulador · Sculptra",
       titulo: "Tu piel recupera firmeza,",
       tituloEm: "poco a poco y con naturalidad",
       sub: "Sculptra es el bioestimulador de colágeno más reconocido. Devuelve firmeza y volumen de forma gradual, con un plan que definimos con criterio médico según tu rostro o la zona corporal a tratar.",
@@ -159,7 +159,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: ["long-lasting"],
     relacionados: ["sculptra", "skinbooster", "nctf-mesoterapia"],
     hero: {
-      eyebrow: "BIOESTIMULACIÓN · CARA Y CUELLO",
+      eyebrow: "Bioestimulación · Cara y cuello",
       titulo: "Frescura y firmeza en cara y cuello,",
       tituloEm: "pensadas para durar",
       sub: "Long Lasting es nuestro rejuvenecimiento de cara y cuello enfocado en que el efecto se sostenga en el tiempo. Lo planeamos con criterio médico según el estado real de tu piel.",
@@ -451,7 +451,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hidroxiapatita-de-calcio", "sculptra", "plasma-rico-en-plaquetas-facial"],
     hero: {
-      eyebrow: "HIDROXIAPATITA · MANOS, CUELLO Y PECHO",
+      eyebrow: "Hidroxiapatita · Manos, cuello y pecho",
       titulo: "Manos, cuello y escote",
       tituloEm: "a la altura de tu rostro",
       sub: "Mejoramos la firmeza y la calidad de la piel de manos, cuello y pecho con hidroxiapatita de calcio, para una apariencia más rejuvenecida y natural, siempre con indicación médica.",
@@ -596,7 +596,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["skinbooster", "mesoterapia-facial", "long-lasting"],
     hero: {
-      eyebrow: "MESOTERAPIA · NCTF",
+      eyebrow: "Mesoterapia · NCTF",
       titulo: "Piel revitalizada y luminosa,",
       tituloEm: "desde adentro",
       sub: "NCTF es una fórmula con ácido hialurónico y un complejo de activos que revitaliza y mejora la apariencia de la piel del rostro y el cuello. Un tratamiento de calidad de piel indicado con criterio médico.",
@@ -741,7 +741,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hilos-de-colageno", "hidroxiapatita-de-calcio", "sculptra"],
     hero: {
-      eyebrow: "HILOS · EFECTO TENSOR",
+      eyebrow: "Hilos · Efecto tensor",
       titulo: "Levanta y da soporte a tu rostro,",
       tituloEm: "sin cirugía",
       sub: "Los hilos tensores aportan un efecto tensor y ayudan a reposicionar y dar soporte a los tejidos del rostro y el cuello. Definimos con criterio médico cuántos hilos y en qué vectores necesitas.",
@@ -887,7 +887,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hilos-bioestimulacion", "hilos-tensores", "sculptra"],
     hero: {
-      eyebrow: "HILOS LISOS · COLÁGENO",
+      eyebrow: "Hilos lisos · Colágeno",
       titulo: "Despierta tu colágeno,",
       tituloEm: "piel más firme y densa",
       sub: "Los hilos de colágeno estimulan la producción de colágeno y ayudan a mejorar la firmeza y la calidad de la piel. Los colocamos con criterio médico en las zonas que más lo necesitan.",
@@ -1031,7 +1031,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hilos-de-colageno", "hilos-tensores", "long-lasting"],
     hero: {
-      eyebrow: "HILOS · BIOESTIMULACIÓN",
+      eyebrow: "Hilos · Bioestimulación",
       titulo: "Estimula tu piel donde lo necesitas,",
       tituloEm: "en la medida justa",
       sub: "Los hilos de bioestimulación son hilos lisos reabsorbibles que ayudan a tu piel a producir colágeno. Los trabajamos en planes de 10, 20 o 30 hilos para ajustar la cantidad a tu zona, con criterio médico.",
@@ -1175,7 +1175,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hidroxiapatita-de-calcio", "hilos-tensores", "skinbooster"],
     hero: {
-      eyebrow: "INDIBA · RADIOFRECUENCIA FACIAL",
+      eyebrow: "INDIBA · Radiofrecuencia facial",
       titulo: "Piel más firme y descansada,",
       tituloEm: "reactivada con calor",
       sub: "INDIBA es radiofrecuencia médica. En el rostro la usamos como tratamiento dermatológico, como complemento de inyectables o para potenciar un efecto lifting, en un plan de 12 sesiones con criterio médico.",
@@ -1320,7 +1320,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["limpieza-facial", "alta-hidratacion", "porcelanizacion-facial"],
     hero: {
-      eyebrow: "COSMETOLOGÍA · HYDRAFACIAL",
+      eyebrow: "Cosmetología · Hydrafacial",
       titulo: "Piel limpia, hidratada y luminosa",
       tituloEm: "desde la primera sesión",
       sub: "Hydrafacial es una limpieza profunda con infusión de nutrientes. Limpia, extrae impurezas e hidrata en una misma sesión, con un protocolo adaptado a tu tipo de piel.",
@@ -1465,7 +1465,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hydrafacial", "porcelanizacion-facial", "alta-hidratacion"],
     hero: {
-      eyebrow: "COSMETOLOGÍA · LIMPIEZA PROFUNDA",
+      eyebrow: "Cosmetología · Limpieza profunda",
       titulo: "Poros despejados y piel fresca,",
       tituloEm: "en equilibrio",
       sub: "Nuestra limpieza facial profunda destapa los poros, descongestiona y deja la piel fresca y equilibrada. Un protocolo adaptado a tu tipo de piel, la base de cualquier cuidado.",
@@ -1611,7 +1611,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hydrafacial", "limpieza-facial", "cosmelan"],
     hero: {
-      eyebrow: "COSMETOLOGÍA · PORCELANIZACIÓN",
+      eyebrow: "Cosmetología · Porcelanización",
       titulo: "Un tono uniforme y luminoso,",
       tituloEm: "acabado tipo porcelana",
       sub: "La porcelanización facial combina limpieza profunda y mascarilla aclarante para lograr un acabado uniforme y luminoso. Ideal cuando quieres que tu piel se vea pareja y descansada.",
@@ -1756,7 +1756,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     resultados: [],
     relacionados: ["hydrafacial", "skinbooster", "limpieza-facial"],
     hero: {
-      eyebrow: "COSMETOLOGÍA · HIDRATACIÓN PROFUNDA",
+      eyebrow: "Cosmetología · Hidratación profunda",
       titulo: "Tu piel vuelve a sentirse suave,",
       tituloEm: "hidratada y con luz",
       sub: "La alta hidratación facial es una limpieza profunda con mascarilla hidratante para piel apagada o reseca. Un alivio inmediato para la piel que se siente tirante.",

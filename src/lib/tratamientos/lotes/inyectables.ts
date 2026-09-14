@@ -14,7 +14,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["mesobotox", "toxina-bruxismo", "skinbooster"],
     hero: {
-      eyebrow: "TOXINA BOTULÍNICA · TERCIO SUPERIOR",
+      eyebrow: "Toxina botulínica · Tercio superior",
       titulo: "Una mirada descansada,",
       tituloEm: "con tu expresión intacta",
       sub: "Suavizamos las líneas de expresión de frente, entrecejo y patas de gallo para que te veas más fresca y descansada, conservando la expresión natural de tu rostro.",
@@ -119,7 +119,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["botox", "skinbooster", "nanopore"],
     hero: {
-      eyebrow: "TOXINA BOTULÍNICA · MESOBOTOX",
+      eyebrow: "Toxina botulínica · Mesobotox",
       titulo: "Poros más finos y menos brillo,",
       tituloEm: "con toda tu expresión intacta",
       sub: "Toxina botulínica aplicada de forma superficial que cierra el poro y controla el brillo, para un acabado tipo glass skin. Sin congelar tu rostro y con criterio médico en cada punto.",
@@ -221,7 +221,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["bruxismo"],
     relacionados: ["botox", "toxina-migrana", "perfilado-mandibular"],
     hero: {
-      eyebrow: "TOXINA BOTULÍNICA · BRUXISMO",
+      eyebrow: "Toxina botulínica · Bruxismo",
       titulo: "Suelta la mandíbula,",
       tituloEm: "descansa de apretar los dientes",
       sub: "Toxina botulínica en los músculos de la mandíbula para disminuir el apretamiento y la tensión muscular. Un procedimiento corto, con valoración médica y dosis ajustada a tu caso.",
@@ -324,7 +324,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["botox", "toxina-migrana", "sueroterapia"],
     hero: {
-      eyebrow: "TOXINA BOTULÍNICA · HIPERHIDROSIS",
+      eyebrow: "Toxina botulínica · Hiperhidrosis",
       titulo: "Deja de pensar en el sudor,",
       tituloEm: "vuelve a vestirte con tranquilidad",
       sub: "Toxina botulínica para ayudar a reducir la sudoración excesiva en axilas, manos y pies. Un uso médico que indicamos después de una valoración cuidadosa.",
@@ -424,7 +424,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["toxina-bruxismo", "botox", "indiba-dolor"],
     hero: {
-      eyebrow: "TOXINA BOTULÍNICA · MIGRAÑA",
+      eyebrow: "Toxina botulínica · Migraña",
       titulo: "Menos días perdidos por la migraña,",
       tituloEm: "más días para ti",
       sub: "Toxina botulínica aplicada en frente, zona temporal y occipital para ayudar a reducir la frecuencia e intensidad de las migrañas. Un uso médico que indicamos solo tras valoración.",
@@ -532,7 +532,7 @@ export const inyectables: Tratamiento[] = [
     ],
     relacionados: ["relleno-de-labios", "rinomodelacion", "ojeras-acido-hialuronico"],
     hero: {
-      eyebrow: "ARMONIZACIÓN CON INYECTABLES",
+      eyebrow: "Armonización con inyectables",
       titulo: "Tu rostro en equilibrio,",
       tituloEm: "fresco y natural, nunca exagerado",
       sub: "Armonización con ácido hialurónico. Trabajamos el rostro como un todo, buscando equilibrio, proporción y naturalidad, y todo parte de un diagnóstico con analizador facial.",
@@ -655,7 +655,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["labios-acido-hialuronico"],
     relacionados: ["acido-hialuronico", "rinomodelacion", "volumen-de-menton"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · LABIOS",
+      eyebrow: "Ácido hialurónico · Labios",
       titulo: "Labios que se ven tuyos,",
       tituloEm: "más definidos, nunca inflados",
       sub: "Volumen, contorno e hidratación a tu medida. Diseñamos labios proporcionados y naturales, sin el efecto inflado, con criterio médico y un diagnóstico de tu rostro completo.",
@@ -759,7 +759,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["rinomodelacion"],
     relacionados: ["alectomia", "volumen-de-menton", "relleno-de-labios"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · RINOMODELACIÓN",
+      eyebrow: "Ácido hialurónico · Rinomodelación",
       titulo: "Un perfil más armónico,",
       tituloEm: "sin pasar por cirugía",
       sub: "Mejora el perfil y la punta de la nariz sin cirugía, buscando mayor armonía y proporción facial. Una zona delicada que trabajamos con criterio médico y diagnóstico previo.",
@@ -862,7 +862,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["soporte-tercio-medio", "perfilado-mandibular", "volumen-de-menton"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · PÓMULOS",
+      eyebrow: "Ácido hialurónico · Pómulos",
       titulo: "Pómulos que dan estructura,",
       tituloEm: "luz y armonía a tu rostro",
       sub: "Realzamos y definimos los pómulos con ácido hialurónico para mejorar la estructura y armonía del rostro, con un diseño basado en tus proporciones y no en una moda.",
@@ -963,7 +963,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["volumen-menton"],
     relacionados: ["perfilado-mandibular", "rinomodelacion", "enzimas-papada"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · MENTÓN",
+      eyebrow: "Ácido hialurónico · Mentón",
       titulo: "Un mentón con proyección,",
       tituloEm: "un perfil en equilibrio",
       sub: "Aportamos proyección al mentón para equilibrar el perfil y la proporción del rostro. Un cambio pequeño en centímetros que se nota en toda la armonía facial.",
@@ -1063,7 +1063,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["surcos-nasogenianos"],
     relacionados: ["lineas-de-marioneta", "soporte-tercio-medio", "long-lasting"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · SURCOS NASOGENIANOS",
+      eyebrow: "Ácido hialurónico · Surcos nasogenianos",
       titulo: "Suaviza los surcos,",
       tituloEm: "recupera una expresión descansada",
       sub: "Suavizamos los pliegues que van de la nariz a la boca con ácido hialurónico, evaluando también el soporte del rostro para que el resultado se vea natural.",
@@ -1163,7 +1163,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["surcos-nasogenianos"],
     relacionados: ["surcos-nasogenianos", "perfilado-mandibular", "sculptra"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · LÍNEAS DE MARIONETA",
+      eyebrow: "Ácido hialurónico · Líneas de marioneta",
       titulo: "Adiós al gesto de tristeza,",
       tituloEm: "hola a una expresión serena",
       sub: "Suavizamos las líneas de marioneta, conocidas como líneas de amargura, con ácido hialurónico para que tu rostro en reposo no transmita un cansancio que no sientes.",
@@ -1263,7 +1263,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["ojeras-acido-hialuronico"],
     relacionados: ["ojeras-mesoterapia", "soporte-tercio-medio", "skinbooster"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · OJERAS",
+      eyebrow: "Ácido hialurónico · Ojeras",
       titulo: "Una mirada fresca,",
       tituloEm: "descansada aunque el día sea largo",
       sub: "Mejoramos la apariencia de la zona periocular para una mirada más fresca, uniforme y descansada. Una zona delicada que solo tratamos después de entender el origen de tu ojera.",
@@ -1364,7 +1364,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["definicion-de-pomulos", "ojeras-acido-hialuronico", "surcos-nasogenianos"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · TERCIO MEDIO",
+      eyebrow: "Ácido hialurónico · Tercio medio",
       titulo: "Devuelve estructura al rostro,",
       tituloEm: "sin que se note el cambio",
       sub: "Recuperamos el volumen y el soporte del tercio medio para devolver estructura y armonía al rostro. Un tratamiento de base que suele mejorar también ojeras y surcos.",
@@ -1465,7 +1465,7 @@ export const inyectables: Tratamiento[] = [
     resultados: ["perfilado-mandibular"],
     relacionados: ["volumen-de-menton", "enzimas-papada", "toxina-bruxismo"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · MANDÍBULA",
+      eyebrow: "Ácido hialurónico · Mandíbula",
       titulo: "Una línea mandibular definida,",
       tituloEm: "un contorno que se nota",
       sub: "Definimos la línea mandibular para mejorar el contorno y la armonía del rostro. Un diseño a la medida de tus rasgos, femenino o masculino, con diagnóstico previo.",
@@ -1566,7 +1566,7 @@ export const inyectables: Tratamiento[] = [
     resultados: [],
     relacionados: ["nctf-mesoterapia", "mesobotox", "hydrafacial"],
     hero: {
-      eyebrow: "ÁCIDO HIALURÓNICO · SKINBOOSTER",
+      eyebrow: "Ácido hialurónico · Skinbooster",
       titulo: "Piel hidratada desde adentro,",
       tituloEm: "luminosa sin cambiar tus rasgos",
       sub: "Hidratación profunda con ácido hialurónico que mejora la calidad, la luminosidad y la apariencia de la piel. No da volumen: devuelve jugosidad y brillo saludable.",

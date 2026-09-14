@@ -11,7 +11,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["subcision-de-hoyuelos", "tratamiento-de-acne", "microagujas"],
     hero: {
-      eyebrow: "LÁSER CO2 · RENOVACIÓN PROFUNDA",
+      eyebrow: "Láser CO2 · Renovación profunda",
       titulo: "Una piel renovada desde adentro,",
       tituloEm: "con textura más pareja y firme",
       sub: "Renovación profunda y controlada para mejorar cicatrices, marcas de acné, textura y firmeza. Siempre con valoración médica previa para definir si tu piel es apta y cómo prepararla.",
@@ -115,7 +115,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["manchas-mesoterapeutico", "microagujas-despigmentantes", "porcelanizacion-facial"],
     hero: {
-      eyebrow: "COSMELAN · PROTOCOLO DESPIGMENTANTE",
+      eyebrow: "Cosmelan · Protocolo despigmentante",
       titulo: "Un tono más uniforme,",
       tituloEm: "una piel que recupera su luz",
       sub: "Protocolo despigmentante para manchas, melasma e hiperpigmentación, con una fase en consulta y otra en casa. Te acompañamos en cada etapa con seguimiento profesional.",
@@ -216,7 +216,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["cosmelan", "microagujas-despigmentantes", "peeling"],
     hero: {
-      eyebrow: "MESOTERAPIA · APARATOLOGÍA · MANCHAS",
+      eyebrow: "Mesoterapia · Aparatología · Manchas",
       titulo: "Aclara tus manchas paso a paso,",
       tituloEm: "sin detener tu rutina",
       sub: "Un paquete que combina mesoterapia y aparatología para ayudar a reducir la apariencia de las manchas y unificar el tono de forma progresiva, con criterio médico en cada sesión.",
@@ -315,7 +315,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["microagujas", "cosmelan", "manchas-mesoterapeutico"],
     hero: {
-      eyebrow: "MICROAGUJAS · DESPIGMENTANTES",
+      eyebrow: "Microagujas · Despigmentantes",
       titulo: "Textura renovada y manchas más tenues,",
       tituloEm: "en un mismo plan",
       sub: "Microagujas que estimulan colágeno y mejoran poros, cicatrices y textura, en paquete con activos despigmentantes para ayudar a unificar el tono.",
@@ -421,7 +421,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["microagujas", "mesobotox", "skinbooster"],
     hero: {
-      eyebrow: "NANOPORE · RENOVACIÓN DE LA PIEL",
+      eyebrow: "Nanopore · Renovación de la piel",
       titulo: "Una piel más firme y luminosa,",
       tituloEm: "con un tono que se ve parejo",
       sub: "Nanopore crea microcanales que potencian la entrada de activos y activan la renovación de la piel. Una opción para mejorar calidad y luz con recuperación corta.",
@@ -526,7 +526,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["manchas-mesoterapeutico", "tratamiento-de-acne", "limpieza-facial"],
     hero: {
-      eyebrow: "PEELING · RENOVACIÓN SUPERFICIAL",
+      eyebrow: "Peeling · Renovación superficial",
       titulo: "Más luz en tu rostro,",
       tituloEm: "una textura suave y pareja",
       sub: "Renueva las capas superficiales de la piel para darle más luz y una textura pareja. Elegimos el tipo de peeling según tu piel y te explicamos la descamación desde antes.",
@@ -632,7 +632,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["microagujas", "plasma-fibroblast", "nctf-mesoterapia"],
     hero: {
-      eyebrow: "PRP · PLASMA RICO EN PLAQUETAS",
+      eyebrow: "PRP · Plasma rico en plaquetas",
       titulo: "Tu propio plasma,",
       tituloEm: "una piel con más vida",
       sub: "Usamos tu propio plasma para ayudar a regenerar la piel y darle vitalidad. Un tratamiento autólogo, preparado en consulta y aplicado por personal médico.",
@@ -738,7 +738,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["microagujas-despigmentantes", "plasma-rico-en-plaquetas-facial", "nanopore"],
     hero: {
-      eyebrow: "MICROAGUJAS · COLÁGENO",
+      eyebrow: "Microagujas · Colágeno",
       titulo: "Poros más finos y textura suave,",
       tituloEm: "con tu propio colágeno",
       sub: "Las microagujas estimulan colágeno y mejoran poros, cicatrices y textura. Un tratamiento versátil, con recuperación corta y profundidad ajustada a cada zona.",
@@ -844,7 +844,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["nctf-mesoterapia", "skinbooster", "hydrafacial"],
     hero: {
-      eyebrow: "MESOTERAPIA · REVITALIZACIÓN",
+      eyebrow: "Mesoterapia · Revitalización",
       titulo: "Una piel hidratada y luminosa,",
       tituloEm: "que se ve descansada",
       sub: "Un cóctel de activos y nutrientes que revitaliza la piel y ayuda a mejorar su luminosidad, hidratación y apariencia. Lo ajustamos a lo que tu piel necesita.",
@@ -950,7 +950,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["laser-co2", "peeling", "limpieza-facial"],
     hero: {
-      eyebrow: "ACNÉ · PROTOCOLO PERSONALIZADO",
+      eyebrow: "Acné · Protocolo personalizado",
       titulo: "Menos brotes, menos marcas,",
       tituloEm: "más tranquilidad frente al espejo",
       sub: "Un protocolo personalizado para ayudar a controlar los brotes y mejorar la apariencia de las marcas que deja el acné. Empieza por entender por qué aparece en tu piel.",
@@ -1052,7 +1052,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["ojeras-acido-hialuronico", "mesoterapia-facial", "skinbooster"],
     hero: {
-      eyebrow: "OJERAS · MESOTERAPIA",
+      eyebrow: "Ojeras · Mesoterapia",
       titulo: "Una mirada más clara,",
       tituloEm: "que no refleja el cansancio",
       sub: "Mesoterapia que ayuda a aclarar y desinflamar la zona bajo los ojos. Primero identificamos el tipo de ojera, porque no todas se tratan igual.",
@@ -1158,7 +1158,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["perfilado-mandibular", "volumen-de-menton", "criolipolisis"],
     hero: {
-      eyebrow: "ENZIMAS · PAPADA",
+      eyebrow: "Enzimas · Papada",
       titulo: "Un óvalo del rostro más definido,",
       tituloEm: "sin cirugía",
       sub: "Enzimas que ayudan a reducir la grasa bajo el mentón y a definir el óvalo del rostro. Te decimos en la valoración si tu papada es de grasa o de otra causa.",
@@ -1264,7 +1264,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["tratamiento-de-fibrosis", "tratamiento-de-cicatrices", "subcision-de-hoyuelos"],
     hero: {
-      eyebrow: "ENZIMAS · QUELOIDES Y FIBROSIS",
+      eyebrow: "Enzimas · Queloides y fibrosis",
       titulo: "Cicatrices más planas y suaves,",
       tituloEm: "piel que vuelve a sentirse tuya",
       sub: "Enzimas que ayudan a suavizar cicatrices abultadas y tejido fibroso. Un tratamiento por sesiones, con expectativas claras sobre lo que puede mejorar.",
@@ -1370,7 +1370,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["laser-co2", "subcision-de-hoyuelos", "enzimas-cicatrices-queloides"],
     hero: {
-      eyebrow: "CICATRICES · ENZIMAS PB SERUM",
+      eyebrow: "Cicatrices · Enzimas PB Serum",
       titulo: "Cicatrices menos visibles,",
       tituloEm: "en tu rostro o en tu cuerpo",
       sub: "Un tratamiento que ayuda a atenuar cicatrices en cara o cuerpo con enzimas PB Serum. Revisamos el tipo de cicatriz para indicarte lo que realmente puede ayudarte.",
@@ -1476,7 +1476,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["cauterizacion", "laser-co2", "hidroxiapatita-de-calcio"],
     hero: {
-      eyebrow: "PLASMA FIBROBLAST · RETRACCIÓN DE PIEL",
+      eyebrow: "Plasma fibroblast · Retracción de piel",
       titulo: "Piel más tensa en zonas pequeñas,",
       tituloEm: "sin bisturí",
       sub: "Técnica de sublimación con arco de plasma que ayuda a retraer la piel en zonas pequeñas, como párpados o arrugas finas. Siempre con valoración previa, sobre todo en pieles oscuras.",
@@ -1582,7 +1582,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["laser-co2", "tratamiento-de-cicatrices", "celulitis"],
     hero: {
-      eyebrow: "SUBCISIÓN · CÁNULA FINA",
+      eyebrow: "Subcisión · Cánula fina",
       titulo: "Libera lo que hunde tu piel,",
       tituloEm: "una superficie más uniforme",
       sub: "La subcisión libera las adherencias que generan cicatrices hundidas y hoyuelos, ayudando a conseguir una piel más uniforme. La realizamos con cánula fina.",
@@ -1688,7 +1688,7 @@ export const piel: Tratamiento[] = [
     resultados: [],
     relacionados: ["plasma-fibroblast", "peeling", "laser-co2"],
     hero: {
-      eyebrow: "CAUTERIZACIÓN · LESIONES DE PIEL",
+      eyebrow: "Cauterización · Lesiones de piel",
       titulo: "Despídete de esas lesiones que te incomodan,",
       tituloEm: "con revisión médica previa",
       sub: "Eliminamos lunares, verrugas y lentigos solares, además de milium, xantelasmas y acrocordones. Cada lesión se valora antes y lo que resulte sospechoso se remite a estudio.",

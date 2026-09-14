@@ -38,11 +38,11 @@ function RenderSection({ section }: { section: BlogSection }) {
       return (
         <h2
           style={{
-            fontFamily: "var(--font-display), Georgia, serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(1.3rem, 3vw, 1.75rem)",
-            fontWeight: 300,
+            fontWeight: 600,
             color: "#faf8f5",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.03em",
             lineHeight: 1.25,
             marginTop: "3rem",
             marginBottom: "1.25rem",
@@ -92,12 +92,11 @@ function RenderSection({ section }: { section: BlogSection }) {
             <figcaption
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.72rem",
+                fontSize: "0.8125rem",
                 color: "#888580",
                 textAlign: "center",
                 marginTop: "0.75rem",
-                letterSpacing: "0.06em",
-                fontStyle: "italic",
+                letterSpacing: "0.01em",
               }}
             >
               {section.caption}
@@ -118,12 +117,11 @@ function RenderSection({ section }: { section: BlogSection }) {
         >
           <p
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.1rem, 2.5vw, 1.35rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "rgba(250,248,245,0.88)",
               lineHeight: 1.7,
-              fontStyle: "italic",
             }}
           >
             &ldquo;{section.text}&rdquo;
@@ -148,7 +146,7 @@ function RenderSection({ section }: { section: BlogSection }) {
               key={i}
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.92rem",
+                fontSize: "0.9375rem",
                 color: "rgba(250,248,245,0.7)",
                 lineHeight: 1.7,
                 paddingLeft: "1.25rem",
@@ -219,22 +217,19 @@ export default async function BlogPostPage({ params }: Props) {
               href="/blog"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.58rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "rgba(250,248,245,0.6)",
                 textDecoration: "none",
               }}
             >
               ← Blog
             </Link>
-            <span style={{ color: "rgba(184,154,106,0.5)", fontSize: "0.4rem" }}>✦</span>
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.58rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 border: "1px solid rgba(184,154,106,0.4)",
                 padding: "3px 10px",
@@ -245,11 +240,11 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
           <h1
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#faf8f5",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.2,
               marginBottom: "1.25rem",
             }}
@@ -260,17 +255,16 @@ export default async function BlogPostPage({ params }: Props) {
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.68rem",
+                fontSize: "0.8125rem",
                 color: "rgba(250,248,245,0.5)",
               }}
             >
               {post.date}
             </span>
-            <span style={{ color: "rgba(184,154,106,0.4)", fontSize: "0.4rem" }}>✦</span>
             <span
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.68rem",
+                fontSize: "0.8125rem",
                 color: "rgba(250,248,245,0.5)",
               }}
             >
@@ -289,12 +283,11 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Excerpt intro */}
           <p
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "rgba(250,248,245,0.8)",
               lineHeight: 1.8,
-              fontStyle: "italic",
               marginBottom: "2.5rem",
               paddingBottom: "2.5rem",
               borderBottom: "1px solid rgba(184,154,106,0.12)",
@@ -327,9 +320,8 @@ export default async function BlogPostPage({ params }: Props) {
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.28em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 color: "#b89a6a",
                 marginBottom: "0.75rem",
               }}
@@ -338,9 +330,9 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <p
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "1.4rem",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
                 marginBottom: "1.75rem",
                 lineHeight: 1.4,
@@ -354,11 +346,11 @@ export default async function BlogPostPage({ params }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
-                style={{ fontSize: "0.65rem" }}
+                style={{ fontSize: "0.8125rem" }}
               >
                 Agendar por WhatsApp
               </a>
-              <Link href="/blog" className="btn-outline-cream" style={{ fontSize: "0.65rem" }}>
+              <Link href="/blog" className="btn-outline-cream" style={{ fontSize: "0.8125rem" }}>
                 Ver más artículos
               </Link>
             </div>

@@ -50,19 +50,19 @@ export function ServicesPremium() {
 
         {/* ── Header ── */}
         <div className="mb-20" data-anim="up">
-          <p className="section-label mb-4">LO QUE HACEMOS</p>
+          <p className="section-label mb-4">Lo que hacemos</p>
           <h2
             style={{
-              fontFamily: "var(--font-display), Georgia, serif",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.6rem, 5vw, 4.2rem)",
-              fontWeight: 300,
+              fontWeight: 600,
               color: "#1c1c1c",
-              letterSpacing: "-0.025em",
+              letterSpacing: "-0.03em",
               lineHeight: 1.05,
             }}
           >
             Nuestros{" "}
-            <em style={{ color: "#b89a6a", fontStyle: "italic" }}>Tratamientos</em>
+            <em style={{ color: "inherit" }}>tratamientos</em>
           </h2>
         </div>
 
@@ -79,25 +79,14 @@ export function ServicesPremium() {
             style={{ borderRight: "1px solid #e0d0c6" }}
           >
             <div>
-              <span
-                className="text-5xl lg:text-7xl"
-                style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
-                  fontWeight: 300,
-                  color: "rgba(184,154,106,0.18)",
-                  lineHeight: 1,
-                }}
-              >
-                01
-              </span>
               <h3
-                className="mt-4"
+                className=""
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#1c1c1c",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Faciales
@@ -127,7 +116,7 @@ export function ServicesPremium() {
                 href={`/servicios/${t.slug}`}
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.78rem",
+                  fontSize: "0.8125rem",
                   color: "#1c1c1c",
                   border: "1px solid #e0d0c6",
                   padding: "0.7rem 1rem",
@@ -144,11 +133,11 @@ export function ServicesPremium() {
                 href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20faciales"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                className="inline-flex items-center gap-2 text-[0.875rem] tracking-normal transition-opacity hover:opacity-70"
                 style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
               >
                 Solicitar información
-                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+                <span aria-hidden="true" style={{ fontSize: "0.8125rem" }}>→</span>
               </a>
             </div>
           </div>
@@ -168,24 +157,13 @@ export function ServicesPremium() {
           >
             <div className="flex items-start justify-between mb-6">
               <div>
-                <span
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "3rem",
-                    fontWeight: 300,
-                    color: "rgba(184,154,106,0.18)",
-                    lineHeight: 1,
-                  }}
-                >
-                  02
-                </span>
                 <h3
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "#1c1c1c",
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "-0.03em",
                     marginTop: "0.5rem",
                   }}
                 >
@@ -207,7 +185,7 @@ export function ServicesPremium() {
                   className="flex items-center gap-3 transition-colors hover:text-[#b89a6a]"
                   style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#1c1c1c" }}
                 >
-                  <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>◆</span>
+                  <span style={{ color: "#b89a6a", fontSize: "0.8125rem" }}>◆</span>
                   {t.label}
                 </a>
               ))}
@@ -217,35 +195,24 @@ export function ServicesPremium() {
                 href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20tratamientos%20corporales"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                className="inline-flex items-center gap-2 text-[0.875rem] tracking-normal transition-opacity hover:opacity-70"
                 style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
               >
                 Solicitar información
-                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+                <span aria-hidden="true" style={{ fontSize: "0.8125rem" }}>→</span>
               </a>
             </div>
           </div>
 
           {/* Capilares */}
           <div id="capilares" className="px-8 py-12">
-            <span
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "3rem",
-                fontWeight: 300,
-                color: "rgba(184,154,106,0.18)",
-                lineHeight: 1,
-              }}
-            >
-              03
-            </span>
             <h3
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#1c1c1c",
-                letterSpacing: "-0.02em",
+                letterSpacing: "-0.03em",
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
               }}
@@ -266,7 +233,7 @@ export function ServicesPremium() {
                   className="flex items-center gap-3 transition-colors hover:text-[#b89a6a]"
                   style={{ fontFamily: "var(--font-body)", fontSize: "0.82rem", color: "#1c1c1c" }}
                 >
-                  <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>◆</span>
+                  <span style={{ color: "#b89a6a", fontSize: "0.8125rem" }}>◆</span>
                   {t.label}
                 </a>
               ))}
@@ -276,11 +243,11 @@ export function ServicesPremium() {
                 href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20implante%20capilar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                className="inline-flex items-center gap-2 text-[0.875rem] tracking-normal transition-opacity hover:opacity-70"
                 style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
               >
                 Solicitar información
-                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+                <span aria-hidden="true" style={{ fontSize: "0.8125rem" }}>→</span>
               </a>
             </div>
           </div>
@@ -299,24 +266,13 @@ export function ServicesPremium() {
             style={{ borderRight: "1px solid #e0d0c6" }}
           >
             <div className="flex items-baseline gap-4 mb-5">
-              <span
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "2rem",
-                  fontWeight: 300,
-                  color: "rgba(184,154,106,0.18)",
-                  lineHeight: 1,
-                }}
-              >
-                04
-              </span>
               <h3
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.5rem",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#1c1c1c",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Inyectables y bienestar
@@ -329,7 +285,7 @@ export function ServicesPremium() {
                   href={`/servicios/${t.slug}`}
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.72rem",
+                    fontSize: "0.8125rem",
                     color: "#888580",
                     border: "1px solid #e0d0c6",
                     padding: "0.3rem 0.75rem",
@@ -344,11 +300,11 @@ export function ServicesPremium() {
                 href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20inyectables%20estéticos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.15em] uppercase transition-opacity hover:opacity-70"
+                className="inline-flex items-center gap-2 text-[0.875rem] tracking-normal transition-opacity hover:opacity-70"
                 style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}
               >
                 Solicitar información
-                <span aria-hidden="true" style={{ fontSize: "0.8rem" }}>→</span>
+                <span aria-hidden="true" style={{ fontSize: "0.8125rem" }}>→</span>
               </a>
             </div>
           </div>
@@ -356,24 +312,13 @@ export function ServicesPremium() {
           {/* Zona Íntima */}
           <div className="px-8 py-10">
             <div className="flex items-baseline gap-4 mb-5">
-              <span
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "2rem",
-                  fontWeight: 300,
-                  color: "rgba(184,154,106,0.18)",
-                  lineHeight: 1,
-                }}
-              >
-                05
-              </span>
               <h3
                 style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.5rem",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   color: "#1c1c1c",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "-0.03em",
                 }}
               >
                 Íntima y quirúrgicos
@@ -386,7 +331,7 @@ export function ServicesPremium() {
                   href={`/servicios/${t.slug}`}
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.72rem",
+                    fontSize: "0.8125rem",
                     color: "#888580",
                     border: "1px solid #e0d0c6",
                     padding: "0.3rem 0.75rem",
@@ -402,7 +347,7 @@ export function ServicesPremium() {
         {/* ── CTA ── */}
         <div className="mt-16 text-center" data-anim="up">
           <a href="#agenda" className="btn-gold">
-            AGENDA TU VALORACIÓN
+            Agenda tu valoración
           </a>
         </div>
       </div>

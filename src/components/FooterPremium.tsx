@@ -13,8 +13,8 @@ const clinicaLinks: { label: string; href: string }[] = [
   { label: "Nosotros", href: "/nosotros" },
   { label: "Blog", href: "/blog" },
   { label: "Resultados", href: "/resultados" },
-  { label: "Política de Privacidad", href: "/politica-de-privacidad" },
-  { label: "Política de Reembolso", href: "/politica-de-reembolso" },
+  { label: "Política de privacidad", href: "/politica-de-privacidad" },
+  { label: "Política de reembolso", href: "/politica-de-reembolso" },
 ];
 
 const socialLinks: { label: string; href: string; ariaLabel: string }[] = [
@@ -65,12 +65,12 @@ export function FooterPremium() {
             className="mb-7 leading-relaxed"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.78rem",
+              fontSize: "0.8125rem",
               color: "#888580",
               maxWidth: "230px",
             }}
           >
-            Clínica Estética y de Rejuvenecimiento en Medellín, Colombia.
+            Clínica de medicina estética y rejuvenecimiento en Medellín, Colombia.
             Medicina estética segura, natural y personalizada.
           </p>
 
@@ -90,8 +90,8 @@ export function FooterPremium() {
                 className="footer-social w-8 h-8 flex items-center justify-center font-bold"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.05em",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   border: "1px solid rgba(136,133,128,0.25)",
                   color: "#888580",
                   transition: "color 0.2s, border-color 0.2s",
@@ -109,9 +109,8 @@ export function FooterPremium() {
             className="mb-5"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#ffffff",
               fontWeight: 600,
             }}
@@ -126,9 +125,9 @@ export function FooterPremium() {
                   className="footer-nav-link"
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.78rem",
+                    fontSize: "0.8125rem",
                     color: "#888580",
-                    letterSpacing: "0.04em",
+                    letterSpacing: "0.01em",
                     transition: "color 0.2s",
                     textDecoration: "none",
                   }}
@@ -146,9 +145,8 @@ export function FooterPremium() {
             className="mb-5"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#ffffff",
               fontWeight: 600,
             }}
@@ -163,9 +161,9 @@ export function FooterPremium() {
                   className="footer-nav-link"
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.78rem",
+                    fontSize: "0.8125rem",
                     color: "#888580",
-                    letterSpacing: "0.04em",
+                    letterSpacing: "0.01em",
                     transition: "color 0.2s",
                     textDecoration: "none",
                   }}
@@ -183,9 +181,8 @@ export function FooterPremium() {
             className="mb-5"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
+              fontSize: "0.8125rem",
+              letterSpacing: "0.01em",
               color: "#ffffff",
               fontWeight: 600,
             }}
@@ -200,9 +197,8 @@ export function FooterPremium() {
                 className="mb-1"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                 }}
               >
@@ -211,7 +207,7 @@ export function FooterPremium() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.78rem",
+                  fontSize: "0.9375rem",
                   color: "#888580",
                   lineHeight: 1.6,
                 }}
@@ -235,9 +231,8 @@ export function FooterPremium() {
                 className="mb-1"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                 }}
               >
@@ -247,7 +242,7 @@ export function FooterPremium() {
                 href="tel:+573043751975"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.78rem",
+                  fontSize: "0.8125rem",
                   color: "#888580",
                   textDecoration: "none",
                   transition: "color 0.2s",
@@ -264,9 +259,8 @@ export function FooterPremium() {
                 className="mb-1"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
+                  fontSize: "0.8125rem",
+                  letterSpacing: "0.01em",
                   color: "#b89a6a",
                 }}
               >
@@ -275,7 +269,7 @@ export function FooterPremium() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.78rem",
+                  fontSize: "0.9375rem",
                   color: "#888580",
                   lineHeight: 1.7,
                 }}
@@ -294,10 +288,9 @@ export function FooterPremium() {
         <p
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.625rem",
-            letterSpacing: "0.18em",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#888580",
-            textTransform: "uppercase",
           }}
         >
           © 2026 Clínica Estética DraD10. Todos los derechos reservados.
@@ -305,13 +298,12 @@ export function FooterPremium() {
         <p
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "0.625rem",
-            letterSpacing: "0.18em",
+            fontSize: "0.8125rem",
+            letterSpacing: "0.01em",
             color: "#888580",
-            textTransform: "uppercase",
           }}
         >
-          Medellín · Colombia ✦ Medicina Estética Certificada
+          Medellín, Colombia
         </p>
       </div>
     </footer>

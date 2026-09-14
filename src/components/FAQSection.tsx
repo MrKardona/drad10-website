@@ -162,14 +162,14 @@ export function FAQSection() {
           {/* ── Left column: section header ── */}
           <div className="lg:sticky lg:top-28" data-anim="up">
             {/* Label */}
-            <p className="section-label mb-6">Preguntas Frecuentes</p>
+            <p className="section-label mb-6">Preguntas frecuentes</p>
 
             {/* Heading */}
             <h2
               className="leading-tight tracking-tight mb-0"
               style={{
                 fontFamily: "var(--font-display), Cormorant Garamond, Georgia, serif",
-                fontWeight: 300,
+                fontWeight: 600,
                 fontSize: "clamp(2.25rem, 4vw, 3.25rem)",
                 color: "#1c1c1c",
                 lineHeight: 1.12,
@@ -178,8 +178,7 @@ export function FAQSection() {
               Todo lo que{" "}
               <em
                 style={{
-                  fontStyle: "italic",
-                  color: "#b89a6a",
+                  color: "inherit",
                   fontWeight: 300,
                 }}
               >
@@ -191,7 +190,7 @@ export function FAQSection() {
             <span
               className="block h-px my-7"
               style={{
-                background: "linear-gradient(to right, #b89a6a, transparent)",
+                background: "rgba(184,154,106,0.3)",
                 width: "5rem",
               }}
               aria-hidden="true"
@@ -219,9 +218,8 @@ export function FAQSection() {
               className="group inline-flex items-center gap-2 mt-10"
               style={{
                 fontFamily: "var(--font-body), DM Sans, sans-serif",
-                fontSize: "0.75rem",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.01em",
                 fontWeight: 600,
                 color: "#b89a6a",
                 textDecoration: "none",

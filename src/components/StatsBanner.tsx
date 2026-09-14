@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const marqueeItems: string[] = [
-  "MEDICINA ESTÉTICA",
-  "INDIBA CERTIFIED",
-  "EL POBLADO",
-  "MEDELLÍN",
-  "+20.000 PACIENTES",
-  "DRA. DANIELA DÍEZ",
-  "RESULTADOS REALES",
-  "QUANTUM CERTIFIED",
+  "Medicina estética",
+  "INDIBA certified",
+  "El Poblado",
+  "Medellín",
+  "+20.000 pacientes",
+  "Dra. Daniela Díez",
+  "Resultados reales",
+  "Quantum certified",
 ];
 
 const marqueeTrack = [...marqueeItems, ...marqueeItems];
@@ -37,23 +37,23 @@ export function StatsBanner() {
               className="section-label mb-6"
               style={{ color: "rgba(184,154,106,0.6)" }}
             >
-              RESPALDO REAL
+              Respaldo real
             </p>
             <p
               className="leading-snug"
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)",
-                fontWeight: 300,
+                fontWeight: 600,
                 color: "#faf8f5",
-                letterSpacing: "-0.02em",
+                letterSpacing: "-0.03em",
                 maxWidth: "560px",
               }}
             >
-              <span style={{ color: "#b89a6a" }}>20.000 pacientes</span> y{" "}
-              <span style={{ color: "#b89a6a" }}>5 años</span> después, seguimos
+              20.000 pacientes y{" "}
+              5 años después, seguimos
               midiendo lo único que importa:{" "}
-              <em style={{ color: "#b89a6a", fontStyle: "italic" }}>
+              <em style={{ color: "inherit" }}>
                 resultados que se notan.
               </em>
             </p>
@@ -125,11 +125,11 @@ export function StatsBanner() {
                   data-prefix={s.pre}
                   data-suffix={s.suf}
                   style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(2rem, 3vw, 2.6rem)",
-                    fontWeight: 300,
+                    fontWeight: 600,
                     color: "#b89a6a",
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "-0.03em",
                     lineHeight: 1,
                     minWidth: "80px",
                   }}
@@ -140,9 +140,8 @@ export function StatsBanner() {
                 <span
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.72rem",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
+                    fontSize: "0.8125rem",
+                    letterSpacing: "0.01em",
                     color: "rgba(250,248,245,0.45)",
                   }}
                 >
@@ -174,12 +173,12 @@ export function StatsBanner() {
               style={{ fontFamily: "var(--font-body)" }}
             >
               <span
-                className="text-[10px] tracking-[0.3em] uppercase font-medium whitespace-nowrap"
+                className="text-[13px] tracking-normal font-medium whitespace-nowrap"
                 style={{ color: "#888580" }}
               >
                 {text}
               </span>
-              <span className="text-[8px]" style={{ color: "#b89a6a" }}>·</span>
+              <span className="text-[13px]" style={{ color: "#b89a6a" }}>·</span>
             </span>
           ))}
         </div>
