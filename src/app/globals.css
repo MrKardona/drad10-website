@@ -153,6 +153,9 @@
 
 /* ─── Buttons ─── */
 .btn-gold {
+  /* inline-block: en un <a> inline, overflow:hidden no recorta y el brillo
+     de ::after asomaba como una franja gris a la izquierda del botón. */
+  display: inline-block;
   background: #b89a6a;
   color: #faf8f5;
   font-family: var(--font-body), sans-serif;

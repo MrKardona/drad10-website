@@ -13,6 +13,7 @@ const clinicaLinks: { label: string; href: string }[] = [
   { label: "Nosotros", href: "/nosotros" },
   { label: "Blog", href: "/blog" },
   { label: "Resultados", href: "/resultados" },
+  { label: "Programa de Aliados", href: "/aliados" },
   { label: "Política de Privacidad", href: "/politica-de-privacidad" },
   { label: "Política de Reembolso", href: "/politica-de-reembolso" },
 ];
