@@ -98,7 +98,7 @@ export const inyectables: Tratamiento[] = [
       nota: "El tercio superior incluye entrecejo, patas de gallo y frente. Para otras zonas se calcula por unidades.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el botox?", a: "El tercio superior (entrecejo, patas de gallo y frente) cuesta $1.100.000 en mujeres y $1.200.000 en hombres. Para otras zonas se calcula por unidad, a $19.000 cada una." },
+      { q: "¿Cuánto cuesta el botox?", a: "El tercio superior (entrecejo, patas de gallo y frente) cuesta desde $1.100.000 en mujeres y desde $1.200.000 en hombres. Para otras zonas se calcula por unidad, desde $19.000 cada una." },
       { q: "¿Voy a quedar con la cara congelada?", a: "No es el objetivo. Las dosis se ajustan a tu musculatura para suavizar las líneas conservando tu expresión natural." },
       { q: "¿Cuándo se ve el resultado?", a: "Habitualmente empieza a notarse entre los primeros días y la primera semana, y se completa en las semanas siguientes." },
       { q: "¿Cuánto dura?", a: "Suele durar varios meses; depende de cada persona, la zona y la actividad muscular. Por eso se repite periódicamente." },
@@ -201,7 +201,7 @@ export const inyectables: Tratamiento[] = [
       nota: "La frecuencia para repetir la definimos en la valoración según tu piel.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el mesobotox?", a: "La sesión tiene un valor de $750.000. En la valoración confirmamos que es el tratamiento indicado para tu piel." },
+      { q: "¿Cuánto cuesta el mesobotox?", a: "La sesión tiene un valor desde $750.000. En la valoración confirmamos que es el tratamiento indicado para tu piel." },
       { q: "¿Me va a quitar expresión?", a: "No es su objetivo. Se aplica de forma superficial para tratar la piel, no los músculos de la expresión. Si buscas suavizar arrugas de movimiento, el tratamiento indicado es el botox." },
       { q: "¿Duele?", a: "Son pequeños pinchazos superficiales. La mayoría de pacientes lo describe como una molestia leve y tolerable." },
       { q: "¿Cuándo veo el resultado y cuánto dura?", a: "Habitualmente empieza a notarse en pocos días. El efecto dura meses y varía según tu piel, por eso definimos contigo cuándo repetir." },
@@ -303,7 +303,7 @@ export const inyectables: Tratamiento[] = [
       nota: "La dosis y la frecuencia se definen en la valoración según tu caso.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la toxina para bruxismo?", a: "La sesión tiene un valor de $950.000. Antes hacemos una valoración médica para confirmar que es lo indicado para ti." },
+      { q: "¿Cuánto cuesta la toxina para bruxismo?", a: "La sesión tiene un valor desde $950.000. Antes hacemos una valoración médica para confirmar que es lo indicado para ti." },
       { q: "¿Voy a poder masticar normal?", a: "Sí. La dosis busca reducir la fuerza excesiva, no impedir la función. Algunas personas sienten la masticación más suave los primeros días con alimentos duros." },
       { q: "¿Cuándo se nota y cuánto dura?", a: "El efecto se nota de forma progresiva en los días siguientes. Dura meses y varía según la fuerza de tus músculos, por eso definimos contigo cuándo repetir." },
       { q: "¿Duele la aplicación?", a: "Son pocos pinchazos en la mandíbula. La mayoría lo describe como una molestia leve y breve." },
@@ -404,7 +404,7 @@ export const inyectables: Tratamiento[] = [
       nota: "La zona a tratar y la dosis se confirman en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el tratamiento?", a: "La sesión tiene un valor de $2.000.000. En la valoración confirmamos la zona a tratar y que el tratamiento es adecuado para ti." },
+      { q: "¿Cuánto cuesta el tratamiento?", a: "La sesión tiene un valor desde $2.000.000. En la valoración confirmamos la zona a tratar y que el tratamiento es adecuado para ti." },
       { q: "¿Es seguro dejar de sudar en una zona?", a: "Sí. La zona tratada es pequeña frente al total de la piel, que sigue sudando y regulando tu temperatura con normalidad." },
       { q: "¿Duele?", a: "En axilas la molestia suele ser leve. Manos y pies son zonas más sensibles, por eso conversamos antes cómo hacer la aplicación más tolerable." },
       { q: "¿Cuándo se nota y cuánto dura?", a: "La sudoración disminuye de forma progresiva en los días siguientes. El efecto dura meses y varía entre personas, así que definimos contigo cuándo repetir." },
@@ -505,7 +505,7 @@ export const inyectables: Tratamiento[] = [
       nota: "La indicación del tratamiento se confirma en la valoración médica.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "La sesión tiene un valor de $1.500.000 e incluye la aplicación en frente, zona temporal y occipital con 50 unidades." },
+      { q: "¿Cuánto cuesta?", a: "La sesión tiene un valor desde $1.500.000 e incluye la aplicación en frente, zona temporal y occipital con 50 unidades." },
       { q: "¿La toxina cura la migraña?", a: "No. Es un tratamiento que ayuda a reducir la frecuencia e intensidad de las crisis en pacientes seleccionados. La respuesta varía entre personas." },
       { q: "¿Cuándo empiezo a notar el efecto?", a: "Es progresivo y suele evaluarse en las semanas siguientes. Por eso te pedimos llevar un registro de tus crisis." },
       { q: "¿Duele la aplicación?", a: "Son varios pinchazos pequeños en la cabeza y el cuello. La mayoría lo describe como una molestia tolerable y breve." },
@@ -634,7 +634,7 @@ export const inyectables: Tratamiento[] = [
       nota: "En las zonas marcadas con ≈2 o ≈4 jeringas, el valor es por jeringa: es la cantidad que suele requerirse, y el número exacto lo define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el ácido hialurónico?", a: "Depende de la zona. La jeringa para labios, ojeras, surcos y líneas de marioneta tiene un valor de $1.200.000, la rinomodelación $1.300.000 y el skinbooster $800.000. Puedes ver la tabla completa arriba." },
+      { q: "¿Cuánto cuesta el ácido hialurónico?", a: "Depende de la zona. La jeringa para labios, ojeras, surcos y líneas de marioneta tiene un valor desde $1.200.000, la rinomodelación desde $1.300.000 y el skinbooster desde $800.000. Puedes ver la tabla completa arriba." },
       { q: "¿Qué significa ≈2 jeringas o ≈4 jeringas?", a: "En pómulos, mentón y tercio medio suelen requerirse cerca de 2 jeringas, y en perfilado mandibular cerca de 4. El valor de la tabla es por jeringa, y la cantidad exacta la definimos en la valoración según tu rostro." },
       { q: "¿Duele?", a: "Se siente como pinchazos y presión. Según la zona puede usarse anestesia tópica, y muchos productos incluyen anestésico. La mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura el resultado?", a: "Habitualmente de varios meses a alrededor de un año, según la zona, el producto y tu metabolismo. Las zonas con más movimiento, como los labios, suelen durar menos." },
@@ -738,7 +738,7 @@ export const inyectables: Tratamiento[] = [
       nota: "Si tu diseño requiere algo distinto a 1 jeringa, lo conversamos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el relleno de labios?", a: "La jeringa tiene un valor de $1.200.000. En la valoración confirmamos que es la cantidad adecuada para el resultado que buscas." },
+      { q: "¿Cuánto cuesta el relleno de labios?", a: "La jeringa tiene un valor desde $1.200.000. En la valoración confirmamos que es la cantidad adecuada para el resultado que buscas." },
       { q: "¿Voy a quedar con labios exagerados?", a: "No es nuestro enfoque. El diseño se acuerda contigo y la aplicación es gradual. Es más fácil sumar en otra sesión que quitar." },
       { q: "¿Duele?", a: "Los labios son sensibles. Puede usarse anestesia tópica y muchos productos incluyen anestésico, así que la mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura el resultado?", a: "Habitualmente varios meses, según el producto y tu metabolismo. Los labios se mueven mucho, por eso suelen durar menos que otras zonas." },
@@ -841,7 +841,7 @@ export const inyectables: Tratamiento[] = [
       nota: "La valoración confirma si tu perfil se beneficia de la rinomodelación.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la rinomodelación?", a: "Tiene un valor de $1.300.000 e incluye 1 jeringa de ácido hialurónico. Antes confirmamos en la valoración que es adecuada para tu nariz." },
+      { q: "¿Cuánto cuesta la rinomodelación?", a: "Tiene un valor desde $1.300.000 e incluye 1 jeringa de ácido hialurónico. Antes confirmamos en la valoración que es adecuada para tu nariz." },
       { q: "¿Me puede hacer la nariz más pequeña?", a: "No. El ácido hialurónico agrega volumen: camufla la giba y da soporte a la punta, pero no reduce el tamaño. Para eso la opción es quirúrgica." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos pequeños. La mayoría lo describe como una molestia tolerable y breve." },
       { q: "¿Cuánto dura?", a: "Habitualmente varios meses a alrededor de un año, según el producto y tu metabolismo. Es una zona con poco movimiento, lo que favorece la duración." },
@@ -943,7 +943,7 @@ export const inyectables: Tratamiento[] = [
       nota: "El valor es por jeringa. Suele requerir cerca de 2, y el número exacto lo define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El valor es de $1.200.000 por jeringa. La definición de pómulos suele requerir cerca de 2 jeringas; el número exacto lo definimos en la valoración según tu rostro." },
+      { q: "¿Cuánto cuesta?", a: "El valor es desde $1.200.000 por jeringa. La definición de pómulos suele requerir cerca de 2 jeringas; el número exacto lo definimos en la valoración según tu rostro." },
       { q: "¿Por qué el precio es por jeringa?", a: "Porque la cantidad depende de tu estructura y del resultado que buscamos. Preferimos cotizar con base en lo que tu rostro necesita." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos. La mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura?", a: "Habitualmente de varios meses a alrededor de un año, según el producto y tu metabolismo." },
@@ -1043,7 +1043,7 @@ export const inyectables: Tratamiento[] = [
       nota: "El valor es por jeringa. Suele requerir cerca de 2, y el número exacto lo define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El valor es de $1.200.000 por jeringa. El volumen de mentón suele requerir cerca de 2 jeringas; el número exacto lo definimos en la valoración." },
+      { q: "¿Cuánto cuesta?", a: "El valor es desde $1.200.000 por jeringa. El volumen de mentón suele requerir cerca de 2 jeringas; el número exacto lo definimos en la valoración." },
       { q: "¿Por qué el precio es por jeringa?", a: "Porque la proyección que necesita cada perfil es distinta. Cotizamos según lo que tu rostro requiere." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos. La mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura?", a: "Habitualmente de varios meses a alrededor de un año, según el producto y tu metabolismo." },
@@ -1143,7 +1143,7 @@ export const inyectables: Tratamiento[] = [
       nota: "Si tu caso requiere trabajar también el soporte del rostro, lo conversamos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "La jeringa tiene un valor de $1.200.000. En la valoración confirmamos si es suficiente para tu caso." },
+      { q: "¿Cuánto cuesta?", a: "La jeringa tiene un valor desde $1.200.000. En la valoración confirmamos si es suficiente para tu caso." },
       { q: "¿Se borran por completo?", a: "No es el objetivo. El surco es parte de la expresión natural; lo suavizamos para que el rostro se vea descansado sin verse rígido." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos. Puede usarse anestesia tópica y la mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura?", a: "Habitualmente varios meses, según el producto, tu metabolismo y el movimiento de la zona." },
@@ -1243,7 +1243,7 @@ export const inyectables: Tratamiento[] = [
       nota: "Si tu caso requiere trabajar también el soporte mandibular, lo conversamos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "La jeringa tiene un valor de $1.200.000. En la valoración confirmamos si es suficiente para tu caso." },
+      { q: "¿Cuánto cuesta?", a: "La jeringa tiene un valor desde $1.200.000. En la valoración confirmamos si es suficiente para tu caso." },
       { q: "¿Qué diferencia hay con los surcos nasogenianos?", a: "Los surcos van de la nariz a la boca; las líneas de marioneta bajan desde las comisuras hacia el mentón. Pueden tratarse por separado o juntas." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos. La mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura?", a: "Habitualmente varios meses, según el producto, tu metabolismo y el movimiento de la zona." },
@@ -1344,7 +1344,7 @@ export const inyectables: Tratamiento[] = [
       nota: "La valoración define si tu tipo de ojera se beneficia del ácido hialurónico.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "La jeringa tiene un valor de $1.200.000. Antes confirmamos en la valoración que tu tipo de ojera responde a este tratamiento." },
+      { q: "¿Cuánto cuesta?", a: "La jeringa tiene un valor desde $1.200.000. Antes confirmamos en la valoración que tu tipo de ojera responde a este tratamiento." },
       { q: "¿Sirve para todo tipo de ojeras?", a: "No. Funciona mejor en ojeras hundidas. Las de pigmento o con bolsas suelen responder a otros tratamientos, como la mesoterapia de ojeras, y te lo decimos en la valoración." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos pequeños. La mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura?", a: "Habitualmente varios meses a alrededor de un año, según el producto y tu metabolismo." },
@@ -1445,7 +1445,7 @@ export const inyectables: Tratamiento[] = [
       nota: "El valor es por jeringa. Suele requerir cerca de 2, y el número exacto lo define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El valor es de $1.200.000 por jeringa. El soporte de tercio medio suele requerir cerca de 2 jeringas; el número exacto lo definimos en la valoración." },
+      { q: "¿Cuánto cuesta?", a: "El valor es desde $1.200.000 por jeringa. El soporte de tercio medio suele requerir cerca de 2 jeringas; el número exacto lo definimos en la valoración." },
       { q: "¿Por qué el precio es por jeringa?", a: "Porque la pérdida de volumen es distinta en cada rostro. Cotizamos según lo que tu caso necesita." },
       { q: "¿Qué diferencia hay con la definición de pómulos?", a: "La definición de pómulos busca realzar y marcar el pómulo. El soporte de tercio medio busca reponer volumen perdido y sostener la zona, lo que suele mejorar ojeras y surcos." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos. La mayoría lo describe como una molestia tolerable." },
@@ -1546,7 +1546,7 @@ export const inyectables: Tratamiento[] = [
       nota: "El valor es por jeringa. Suele requerir cerca de 4, y el número exacto lo define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El valor es de $1.200.000 por jeringa. El perfilado mandibular suele requerir cerca de 4 jeringas; el número exacto lo definimos en la valoración según tu estructura." },
+      { q: "¿Cuánto cuesta?", a: "El valor es desde $1.200.000 por jeringa. El perfilado mandibular suele requerir cerca de 4 jeringas; el número exacto lo definimos en la valoración según tu estructura." },
       { q: "¿Por qué suele requerir más jeringas?", a: "Porque la mandíbula es una zona extensa: va del ángulo hasta cerca del mentón en ambos lados. Si prefieres, podemos plantear el tratamiento por fases." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos. La mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuánto dura?", a: "Habitualmente de varios meses a alrededor de un año, según el producto y tu metabolismo." },
@@ -1647,7 +1647,7 @@ export const inyectables: Tratamiento[] = [
       nota: "El número de sesiones y la frecuencia de mantenimiento se definen en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el skinbooster?", a: "Tiene un valor de $800.000 por jeringa. En la valoración definimos cuántas sesiones tienen sentido para tu piel." },
+      { q: "¿Cuánto cuesta el skinbooster?", a: "Tiene un valor desde $800.000 por jeringa. En la valoración definimos cuántas sesiones tienen sentido para tu piel." },
       { q: "¿Me va a dar volumen?", a: "No. El skinbooster hidrata y mejora la calidad de la piel. Si buscas volumen o suavizar surcos, lo indicado son los rellenos." },
       { q: "¿Duele?", a: "Son varios pinchazos pequeños. Puede usarse anestesia tópica, y la mayoría lo describe como una molestia tolerable." },
       { q: "¿Cuándo veo el resultado y cuánto dura?", a: "La piel se ve más hidratada en los días siguientes, cuando ceden las ronchas. El efecto dura meses y se prolonga con mantenimiento." },

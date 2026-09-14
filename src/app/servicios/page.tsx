@@ -129,11 +129,15 @@ export default function ServiciosPage() {
                                 />
                               )}
                             </div>
-                            <p className="group-hover:text-[#b89a6a] transition-colors" style={{ fontFamily: "var(--font-display), fontWeight: 600, Georgia, serif", fontSize: "clamp(1rem, 1.6vw, 1.2rem)", color: INK, lineHeight: 1.25 }}>
+                            <p className="group-hover:text-[#b89a6a] transition-colors" style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "clamp(1rem, 1.6vw, 1.2rem)", color: INK, lineHeight: 1.25 }}>
                               {t.nombre}
                             </p>
                             <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: MUTED, marginTop: "0.25rem" }}>
-                              {t.desde ? `Desde ${formatCOP(t.desde)}` : "Precio a valoración"}
+                              {t.desde ? (
+                                <>
+                                  <span style={{ color: "#8a6a3c", fontWeight: 700 }}>Desde</span> {formatCOP(t.desde)}
+                                </>
+                              ) : "Precio a valoración"}
                             </p>
                           </Link>
                         </li>

@@ -196,7 +196,7 @@ export const piel: Tratamiento[] = [
       incluye: ["Valoración médica previa", "Cosme 1 (aplicación en consulta)", "Cosme 2 para la fase en casa", "Pantalla y calmante", "Indicaciones y seguimiento profesional"],
     },
     faq: [
-      { q: "¿Cuánto cuesta Cosmelan?", a: "El protocolo completo tiene un valor de $3.500.000 e incluye Cosme 1, Cosme 2, pantalla y calmante." },
+      { q: "¿Cuánto cuesta Cosmelan?", a: "El protocolo completo tiene un valor desde $3.500.000 e incluye Cosme 1, Cosme 2, pantalla y calmante." },
       { q: "¿Duele?", a: "No es un procedimiento con agujas. Durante los primeros días puedes sentir ardor, picor y tirantez, que se manejan con el calmante y las indicaciones." },
       { q: "¿Cuánto dura la recuperación?", a: "Habitualmente la piel se enrojece y se descama durante varios días. Muchas personas prefieren hacer esos días en casa." },
       { q: "¿Cuándo veo el resultado?", a: "El aclaramiento es progresivo y se nota en las semanas siguientes. Cuánto mejora depende del tipo de mancha y de cómo sigas la fase en casa." },
@@ -295,7 +295,7 @@ export const piel: Tratamiento[] = [
       incluye: ["Valoración médica previa", "6 sesiones de mesoterapia", "6 sesiones de aparatología", "2 limpiezas faciales", "Indicaciones de cuidado"],
     },
     faq: [
-      { q: "¿Cuánto cuesta el paquete?", a: "El paquete tiene un valor de $2.000.000 e incluye 6 mesoterapias, 6 sesiones de aparatología y 2 limpiezas." },
+      { q: "¿Cuánto cuesta el paquete?", a: "El paquete tiene un valor desde $2.000.000 e incluye 6 mesoterapias, 6 sesiones de aparatología y 2 limpiezas." },
       { q: "¿Duele?", a: "Las microinyecciones son superficiales. Sientes pequeños pinchazos, tolerables para la mayoría de pacientes." },
       { q: "¿Necesito incapacidad?", a: "No. Puede quedar un leve enrojecimiento o pequeños puntos por unas horas y retomas tu rutina el mismo día." },
       { q: "¿Cuándo se nota la mejoría?", a: "Es progresiva. Habitualmente se empieza a notar después de varias sesiones y se consolida al final del paquete." },
@@ -400,7 +400,7 @@ export const piel: Tratamiento[] = [
       nota: "En la valoración te explicamos cuántas sesiones incluye el paquete para tu caso.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El paquete de microagujas con despigmentantes tiene un valor de $1.000.000. Incluye la valoración médica previa, las sesiones de microagujas del paquete, los activos despigmentantes y las indicaciones de cuidado. En la valoración te explicamos cómo se organiza para tu piel." },
+      { q: "¿Cuánto cuesta?", a: "El paquete de microagujas con despigmentantes tiene un valor desde $1.000.000. Incluye la valoración médica previa, las sesiones de microagujas del paquete, los activos despigmentantes y las indicaciones de cuidado. En la valoración te explicamos cómo se organiza para tu piel." },
       { q: "¿Duele?", a: "Antes de empezar aplicamos anestesia tópica. Durante la sesión sientes vibración y una molestia leve, un poco más en zonas óseas como frente y nariz. La mayoría lo describe como tolerable, y puedes pedir pausas si lo necesitas." },
       { q: "¿Cuántas sesiones tiene el paquete?", a: "El número de sesiones se define en la valoración según tus manchas, la textura de tu piel y cómo responde. Habitualmente se espacian varias semanas entre una y otra para que la piel se recupere y produzca colágeno." },
       { q: "¿Cuándo veo resultados?", a: "La piel suele verse más luminosa en pocos días. La mejoría de manchas, poros y textura es progresiva a lo largo de las sesiones, porque el colágeno nuevo y la renovación del pigmento toman semanas en notarse." },
@@ -505,7 +505,7 @@ export const piel: Tratamiento[] = [
       incluye: ["Valoración médica previa", "Sesión de Nanopore", "Activos según tu piel", "Indicaciones de cuidado"],
     },
     faq: [
-      { q: "¿Cuánto cuesta Nanopore?", a: "Cada sesión de Nanopore tiene un valor de $700.000. Incluye la valoración médica previa, la sesión, los activos elegidos según tu piel y las indicaciones de cuidado. Si conviene más de una sesión, te lo explicamos en la valoración." },
+      { q: "¿Cuánto cuesta Nanopore?", a: "Cada sesión de Nanopore tiene un valor desde $700.000. Incluye la valoración médica previa, la sesión, los activos elegidos según tu piel y las indicaciones de cuidado. Si conviene más de una sesión, te lo explicamos en la valoración." },
       { q: "¿Duele?", a: "Es un tratamiento tolerable. Puedes sentir una molestia leve, cosquilleo o sensación de calor durante la sesión. Según tu sensibilidad, podemos aplicar anestesia tópica para mayor comodidad." },
       { q: "¿Tiene recuperación?", a: "Habitualmente queda un enrojecimiento leve de 1 a 2 días, con algo de sensibilidad. La mayoría retoma su rutina enseguida, evitando el maquillaje las primeras 24 horas y usando protector solar." },
       { q: "¿Cuándo se ve el resultado?", a: "La luminosidad suele notarse en pocos días, cuando cede el enrojecimiento. Los cambios en firmeza, poros y uniformidad del tono son progresivos, porque dependen de la renovación natural de la piel." },
@@ -611,7 +611,7 @@ export const piel: Tratamiento[] = [
       nota: "El tipo de peeling y el número de sesiones se definen en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta un peeling?", a: "Cada sesión de peeling tiene un valor de $380.000. Incluye la valoración médica previa, la sesión y las indicaciones de cuidado posterior. El tipo de peeling y cuántas sesiones necesitas se definen en la valoración." },
+      { q: "¿Cuánto cuesta un peeling?", a: "Cada sesión de peeling tiene un valor desde $380.000. Incluye la valoración médica previa, la sesión y las indicaciones de cuidado posterior. El tipo de peeling y cuántas sesiones necesitas se definen en la valoración." },
       { q: "¿Duele?", a: "Durante la aplicación sientes ardor o picor que habitualmente dura pocos minutos, hasta que el producto se neutraliza o se retira. Después la piel queda sensible y tirante por unos días." },
       { q: "¿Cuánto dura la descamación y qué efectos puede tener?", a: "Habitualmente varios días, según la intensidad. La piel se enrojece y luego se pela de forma fina o en láminas, con ardor y sensibilidad. Con menos frecuencia pueden aparecer manchas, brotes o herpes en quienes lo han tenido." },
       { q: "¿Cuándo veo el resultado?", a: "Cuando termina la descamación la piel se ve más luminosa y suave. En manchas y marcas la mejoría suele requerir varias sesiones." },
@@ -717,7 +717,7 @@ export const piel: Tratamiento[] = [
       nota: "El valor es por zona. En la valoración definimos las zonas y el número de sesiones.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El plasma rico en plaquetas facial tiene un valor de $300.000 por zona. Incluye la valoración médica previa, la toma y el procesamiento de la muestra, la aplicación y las indicaciones de cuidado. Las zonas y sesiones se definen en la valoración." },
+      { q: "¿Cuánto cuesta?", a: "El plasma rico en plaquetas facial tiene un valor desde $300.000 por zona. Incluye la valoración médica previa, la toma y el procesamiento de la muestra, la aplicación y las indicaciones de cuidado. Las zonas y sesiones se definen en la valoración." },
       { q: "¿Duele?", a: "Sientes el pinchazo de la toma de sangre y pequeñas molestias durante la aplicación, sobre todo en zonas sensibles como el contorno de ojos. Podemos usar anestesia tópica para que sea más tolerable." },
       { q: "¿Cuántas sesiones necesito?", a: "Habitualmente se recomiendan de 2 a 3 sesiones espaciadas varias semanas, pero depende de tu piel y de lo que quieras mejorar. Lo definimos en la valoración y ajustamos según tu respuesta." },
       { q: "¿Cuándo veo resultados?", a: "La piel puede verse más luminosa en pocos días, cuando baja la inflamación. La mejoría en textura, hidratación y firmeza es progresiva en las semanas siguientes, a medida que la piel se regenera." },
@@ -823,7 +823,7 @@ export const piel: Tratamiento[] = [
       nota: "El valor es por zona. El número de sesiones lo define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuestan las microagujas?", a: "Las microagujas faciales tienen un valor de $280.000 por zona. Incluye la valoración médica previa, la sesión en la zona y las indicaciones de cuidado. Cuántas zonas y sesiones necesitas lo definimos en la valoración." },
+      { q: "¿Cuánto cuestan las microagujas?", a: "Las microagujas faciales tienen un valor desde $280.000 por zona. Incluye la valoración médica previa, la sesión en la zona y las indicaciones de cuidado. Cuántas zonas y sesiones necesitas lo definimos en la valoración." },
       { q: "¿Duele?", a: "Aplicamos anestesia tópica antes de empezar. Durante la sesión sientes vibración y una molestia leve, más en zonas óseas como frente, nariz y mentón. La mayoría lo describe como tolerable." },
       { q: "¿Cuánto dura el enrojecimiento?", a: "Habitualmente de 1 a 3 días, como una quemadura de sol leve, con algo de sensibilidad y descamación fina. Muchas personas retoman su rutina al día siguiente, sin maquillaje las primeras 24 horas." },
       { q: "¿Cuántas sesiones necesito?", a: "Para textura y cicatrices se suelen indicar de 3 a 6 sesiones espaciadas varias semanas, para dar tiempo a que la piel produzca colágeno. El número exacto lo definimos según tu piel y tu objetivo." },
@@ -1243,7 +1243,7 @@ export const piel: Tratamiento[] = [
       nota: "El número de sesiones lo define la valoración según la cantidad de grasa.",
     },
     faq: [
-      { q: "¿Cuánto cuestan las enzimas para papada?", a: "La presentación de 3 cc tiene un valor de $480.000. Incluye la valoración médica previa, las enzimas en esa presentación, la aplicación en la zona y las indicaciones de cuidado. El número de sesiones se define según la cantidad de grasa." },
+      { q: "¿Cuánto cuestan las enzimas para papada?", a: "La presentación de 3 cc tiene un valor desde $480.000. Incluye la valoración médica previa, las enzimas en esa presentación, la aplicación en la zona y las indicaciones de cuidado. El número de sesiones se define según la cantidad de grasa." },
       { q: "¿Cuántas sesiones necesito?", a: "Habitualmente de 2 a 4 sesiones espaciadas varias semanas, pero depende de la cantidad de grasa bajo el mentón y de tu respuesta. En cada control revisamos la reducción y definimos si conviene otra sesión." },
       { q: "¿Duele?", a: "Sientes pinchazos y un ardor pasajero durante la aplicación, que suele ceder en minutos. Después la zona queda sensible y algo tensa por unos días, una molestia que la mayoría describe como tolerable." },
       { q: "¿Qué pasa después?", a: "Es normal que la zona se inflame, se sienta dura o sensible, o que aparezca un morado leve durante algunos días. Por eso recomendamos agendar lejos de eventos. Si la molestia aumenta en lugar de ceder, consúltanos." },
@@ -1349,7 +1349,7 @@ export const piel: Tratamiento[] = [
       nota: "El número de sesiones lo define la valoración según la cicatriz.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "La presentación de 3 cc tiene un valor de $480.000. Incluye la valoración médica previa, la aplicación en la cicatriz o zona fibrosa y las indicaciones de cuidado. Cuántas sesiones necesitas lo define la valoración según tu cicatriz." },
+      { q: "¿Cuánto cuesta?", a: "La presentación de 3 cc tiene un valor desde $480.000. Incluye la valoración médica previa, la aplicación en la cicatriz o zona fibrosa y las indicaciones de cuidado. Cuántas sesiones necesitas lo define la valoración según tu cicatriz." },
       { q: "¿La cicatriz desaparece?", a: "No se borra. El objetivo es que quede más plana, blanda y menos notoria, y que moleste menos. En la valoración te explicamos con honestidad cuánto puede mejorar tu cicatriz en particular." },
       { q: "¿Cuántas sesiones necesito?", a: "Suelen necesitarse varias sesiones espaciadas. El número exacto depende del tamaño, la antigüedad y la dureza de la cicatriz, y lo ajustamos según cómo responde en cada control." },
       { q: "¿Duele?", a: "El tejido cicatricial es firme y la aplicación genera molestia o ardor pasajero, tolerable para la mayoría. Las sesiones son cortas y la zona puede quedar sensible unas horas o pocos días." },
@@ -1455,7 +1455,7 @@ export const piel: Tratamiento[] = [
       nota: "El número de sesiones lo define la valoración según el tipo de cicatriz.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "Las enzimas PB Serum en presentación de 3 cc tienen un valor de $280.000. Incluye la valoración médica previa, la aplicación en la cicatriz y las indicaciones de cuidado. El número de sesiones lo define la valoración." },
+      { q: "¿Cuánto cuesta?", a: "Las enzimas PB Serum en presentación de 3 cc tienen un valor desde $280.000. Incluye la valoración médica previa, la aplicación en la cicatriz y las indicaciones de cuidado. El número de sesiones lo define la valoración." },
       { q: "¿La cicatriz se borra?", a: "No se borra por completo. El objetivo es que se vea más suave, uniforme y menos notoria. En la valoración te explicamos con claridad cuánto puede mejorar tu cicatriz según su tipo y antigüedad." },
       { q: "¿Cuántas sesiones necesito?", a: "Suelen requerirse varias sesiones espaciadas. El número depende del tipo, tamaño y antigüedad de la cicatriz, y lo ajustamos según cómo responde en cada control." },
       { q: "¿Duele?", a: "Sientes pinchazos y una molestia pasajera durante la aplicación, algo mayor en cicatrices duras. Las sesiones son cortas y la mayoría retoma su rutina enseguida." },
@@ -1561,7 +1561,7 @@ export const piel: Tratamiento[] = [
       nota: "En la valoración confirmamos si tu zona y tu tipo de piel son aptos.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el plasma fibroblast?", a: "Cada sesión de plasma fibroblast tiene un valor de $700.000. Incluye la valoración médica previa, la sesión, las indicaciones de cuidado posterior y el control de evolución. Primero confirmamos si tu zona y tu piel son aptas." },
+      { q: "¿Cuánto cuesta el plasma fibroblast?", a: "Cada sesión de plasma fibroblast tiene un valor desde $700.000. Incluye la valoración médica previa, la sesión, las indicaciones de cuidado posterior y el control de evolución. Primero confirmamos si tu zona y tu piel son aptas." },
       { q: "¿Duele?", a: "Aplicamos anestesia tópica antes de empezar. Durante la sesión se siente calor y picor en los puntos tratados, y después la zona queda sensible e inflamada unos días." },
       { q: "¿Cuánto dura la recuperación?", a: "Habitualmente hay inflamación los primeros días, sobre todo en párpados, y costras pequeñas que caen en alrededor de una semana. Después puede quedar un enrojecimiento que cede de forma gradual." },
       { q: "¿Cuándo veo resultados?", a: "La retracción se va notando después de que caen las costras y sigue mejorando en las semanas siguientes, a medida que la piel se renueva." },
@@ -1667,7 +1667,7 @@ export const piel: Tratamiento[] = [
       nota: "El número de sesiones y las zonas se definen en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la subcisión?", a: "La subcisión con cánula fina tiene un valor de $650.000. Incluye la valoración médica previa, la anestesia local, el procedimiento y las indicaciones de cuidado. Las zonas y el número de sesiones se definen en la valoración." },
+      { q: "¿Cuánto cuesta la subcisión?", a: "La subcisión con cánula fina tiene un valor desde $650.000. Incluye la valoración médica previa, la anestesia local, el procedimiento y las indicaciones de cuidado. Las zonas y el número de sesiones se definen en la valoración." },
       { q: "¿Duele?", a: "Se hace con anestesia local: sientes el pinchazo inicial y luego presión durante el procedimiento. Después la zona queda sensible y adolorida unos días, una molestia que suele ser tolerable." },
       { q: "¿Cuánto dura la recuperación?", a: "Habitualmente hay morados e inflamación durante una a dos semanas, según la zona. Puedes retomar muchas actividades pronto, evitando el ejercicio intenso los primeros días." },
       { q: "¿Cuándo veo el resultado?", a: "Cuando baja la inflamación empieza a notarse el cambio, que sigue mejorando en las semanas siguientes a medida que se forma tejido nuevo bajo la piel." },
@@ -1770,7 +1770,7 @@ export const piel: Tratamiento[] = [
       nota: "En la valoración revisamos cuántas lesiones se pueden tratar en la sesión.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la cauterización?", a: "La sesión tiene un valor de $380.000 e incluye lunares, verrugas, milium, xantelasmas o acrocordones." },
+      { q: "¿Cuánto cuesta la cauterización?", a: "La sesión tiene un valor desde $380.000 e incluye lunares, verrugas, milium, xantelasmas o acrocordones." },
       { q: "¿Duele?", a: "Aplicamos anestesia tópica o local según la lesión, así que la molestia es breve." },
       { q: "¿Queda marca?", a: "Puede quedar una marca leve o un cambio de tono, que depende de la lesión, la zona y tu piel. La fotoprotección ayuda a que se note menos." },
       { q: "¿Cuánto dura la recuperación?", a: "Se forma una costra pequeña que habitualmente cae en una a dos semanas. Retomas tu rutina el mismo día." },

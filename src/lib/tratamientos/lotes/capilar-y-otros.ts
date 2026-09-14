@@ -112,7 +112,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "En la valoración confirmamos si el trasplante es lo indicado para tu caso.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el trasplante capilar?", a: "El procedimiento para coronilla, entradas o repoblamiento tiene un valor de $7.500.000 COP. En la valoración confirmamos si es lo indicado para ti." },
+      { q: "¿Cuánto cuesta el trasplante capilar?", a: "El procedimiento para coronilla, entradas o repoblamiento tiene un valor desde $7.500.000 COP. En la valoración confirmamos si es lo indicado para ti." },
       { q: "¿Duele?", a: "Se realiza con anestesia local. Lo que más se siente es la aplicación de la anestesia; después suele ser tolerable. En los días siguientes puede haber molestia leve que se maneja con las indicaciones médicas." },
       { q: "¿Cuándo se ve el resultado?", a: "Es progresivo. Es normal una caída temporal del cabello implantado en las primeras semanas; el crecimiento nuevo suele notarse desde el tercer o cuarto mes y el resultado final se aprecia entre los 9 y 12 meses." },
       { q: "¿Cuánto tiempo de recuperación necesito?", a: "Habitualmente puedes retomar actividades suaves en pocos días. Las costras caen en las primeras semanas y el ejercicio intenso se retoma cuando lo autoricemos." },
@@ -227,7 +227,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "En la valoración confirmamos si tu zona donante permite el diseño que buscas.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el trasplante de barba?", a: "El procedimiento tiene un valor de $6.500.000 COP. En la valoración revisamos tu caso y confirmamos si es lo indicado." },
+      { q: "¿Cuánto cuesta el trasplante de barba?", a: "El procedimiento tiene un valor desde $6.500.000 COP. En la valoración revisamos tu caso y confirmamos si es lo indicado." },
       { q: "¿Duele?", a: "Se hace con anestesia local. Se siente sobre todo la aplicación de la anestesia; luego suele ser tolerable. Después puede haber molestia leve e inflamación unos días." },
       { q: "¿Cuándo se ve el resultado?", a: "Es progresivo. Es normal que el vello implantado se caiga en las primeras semanas y vuelva a crecer; el resultado se aprecia a lo largo de varios meses." },
       { q: "¿Se nota que es trasplantado?", a: "Buscamos que no. Diseñamos con tus facciones y respetamos la dirección natural del vello facial. Te explicamos los límites de tu caso en la valoración." },
@@ -339,7 +339,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "El número de sesiones lo define la valoración según tu caso.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la mesoterapia capilar?", a: "Cada sesión tiene un valor de $250.000 COP e incluye mesoterapia, aparatología capilar y recomendaciones. El número de sesiones se define en la valoración." },
+      { q: "¿Cuánto cuesta la mesoterapia capilar?", a: "Cada sesión tiene un valor desde $250.000 COP e incluye mesoterapia, aparatología capilar y recomendaciones. El número de sesiones se define en la valoración." },
       { q: "¿Duele?", a: "Se sienten pequeños pinchazos en el cuero cabelludo. La mayoría de pacientes lo describe como tolerable y la sesión es corta." },
       { q: "¿Cuántas sesiones necesito?", a: "Depende de tu diagnóstico. Habitualmente se hace un ciclo de varias sesiones espaciadas y luego mantenimiento según la evolución." },
       { q: "¿Cuándo veo cambios?", a: "El ciclo del cabello es lento: los cambios suelen notarse de forma progresiva a lo largo de semanas o meses." },
@@ -451,7 +451,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "El número de sesiones lo define la valoración según tu caso.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el PRP capilar?", a: "Cada sesión tiene un valor de $350.000 COP. El número de sesiones lo definimos en la valoración." },
+      { q: "¿Cuánto cuesta el PRP capilar?", a: "Cada sesión tiene un valor desde $350.000 COP. El número de sesiones lo definimos en la valoración." },
       { q: "¿Duele?", a: "Se siente el pinchazo de la toma de sangre y pequeñas punciones en el cuero cabelludo. Suele ser tolerable y la molestia pasa rápido." },
       { q: "¿Cuántas sesiones necesito?", a: "Habitualmente se hace un ciclo de varias sesiones espaciadas y luego mantenimiento. Lo ajustamos a tu diagnóstico y a tu evolución." },
       { q: "¿Cuándo se ven los resultados?", a: "Los cambios son progresivos y suelen notarse con el paso de los meses, porque dependen del ciclo natural del cabello." },
@@ -562,7 +562,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "El número de sesiones y la combinación con otros tratamientos los define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuestan los exosomas capilares?", a: "Cada sesión tiene un valor de $800.000 COP. En la valoración definimos cuántas sesiones tienen sentido para ti." },
+      { q: "¿Cuánto cuestan los exosomas capilares?", a: "Cada sesión tiene un valor desde $800.000 COP. En la valoración definimos cuántas sesiones tienen sentido para ti." },
       { q: "¿Duele?", a: "Se siente una molestia leve en el cuero cabelludo durante la aplicación. Suele ser tolerable." },
       { q: "¿Cuándo se ven los resultados?", a: "Los cambios son progresivos y dependen del ciclo del cabello, por eso suelen apreciarse con el paso de los meses." },
       { q: "¿Qué diferencia hay con el PRP?", a: "El PRP usa el plasma de tu propia sangre; los exosomas son un tratamiento distinto orientado a revitalizar el cuero cabelludo. En la valoración te decimos cuál conviene o si se combinan." },
@@ -677,7 +677,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "La frecuencia de las sesiones la definimos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el paquete de INDIBA capilar?", a: "El paquete de 10 sesiones tiene un valor de $800.000 COP. Incluye las sesiones de aparatología capilar con INDIBA, indicaciones de cuidado y seguimiento; en la valoración definimos la frecuencia y cómo encaja en tu plan." },
+      { q: "¿Cuánto cuesta el paquete de INDIBA capilar?", a: "El paquete de 10 sesiones tiene un valor desde $800.000 COP. Incluye las sesiones de aparatología capilar con INDIBA, indicaciones de cuidado y seguimiento; en la valoración definimos la frecuencia y cómo encaja en tu plan." },
       { q: "¿Duele o se siente algo?", a: "Habitualmente no es doloroso. Se siente un calor suave en el cuero cabelludo que la mayoría de pacientes describe como relajante. La intensidad se ajusta a tu tolerancia y puedes avisarnos si quieres menos calor." },
       { q: "¿Cuántas sesiones son y cada cuánto?", a: "El paquete incluye 10 sesiones que habitualmente se programan una o dos veces por semana. La frecuencia exacta la ajustamos en la valoración según tu diagnóstico y los demás tratamientos de tu plan capilar." },
       { q: "¿Cuándo se notan los cambios?", a: "Los cambios en el cabello son lentos porque dependen de su ciclo de crecimiento. Se aprecian de forma progresiva a lo largo del ciclo de sesiones y, sobre todo, en los meses siguientes." },
@@ -791,7 +791,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "En la valoración confirmamos si la alectomía es lo indicado para tu nariz.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la alectomía?", a: "La reducción de aletas nasales tiene un valor de $1.800.000 COP. En la valoración confirmamos que es lo indicado para ti." },
+      { q: "¿Cuánto cuesta la alectomía?", a: "La reducción de aletas nasales tiene un valor desde $1.800.000 COP. En la valoración confirmamos que es lo indicado para ti." },
       { q: "¿Duele?", a: "Se realiza con anestesia local, así que lo que se siente es la aplicación de la anestesia. Después puede haber molestia leve que se maneja con las indicaciones médicas." },
       { q: "¿Cuánto dura la recuperación?", a: "Habitualmente retomas actividades tranquilas en pocos días. Los puntos se retiran entre 1 y 2 semanas y la inflamación baja de forma progresiva." },
       { q: "¿Se nota la cicatriz?", a: "Las incisiones se ubican en el pliegue natural de la nariz para que sea discreta. Durante las primeras semanas se ve rosada y va madurando con los cuidados." },
@@ -906,7 +906,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "En la valoración confirmamos si la otomodelización es lo indicado para ti.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la otomodelización?", a: "La corrección de orejas tiene un valor de $2.300.000 COP y es un solo procedimiento. Contempla la cirugía con anestesia local, las indicaciones de cuidado postoperatorio y el retiro de puntos con control. En la valoración confirmamos que es lo indicado para ti." },
+      { q: "¿Cuánto cuesta la otomodelización?", a: "La corrección de orejas tiene un valor desde $2.300.000 COP y es un solo procedimiento. Contempla la cirugía con anestesia local, las indicaciones de cuidado postoperatorio y el retiro de puntos con control. En la valoración confirmamos que es lo indicado para ti." },
       { q: "¿Duele?", a: "Se hace con anestesia local, así que lo que se siente es la aplicación de la anestesia. Los primeros días puede haber molestia y sensibilidad que se manejan con las indicaciones médicas." },
       { q: "¿Cuánto dura la recuperación?", a: "Habitualmente retomas actividades tranquilas en pocos días. La banda se usa el tiempo que te indiquemos, a veces solo para dormir durante una etapa, y los deportes de contacto se evitan unas semanas." },
       { q: "¿Qué efectos secundarios son normales? ¿Se nota la cicatriz?", a: "Lo habitual es inflamación, morado leve, sensibilidad o adormecimiento temporal de las orejas, que mejoran en las semanas siguientes. La incisión se ubica detrás de la oreja, por lo que la cicatriz queda poco visible una vez madura." },
@@ -1363,7 +1363,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "El mismo valor aplica para todas las líneas. La línea y la frecuencia se definen en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta la sueroterapia?", a: "Cada sesión tiene un valor de $200.000 COP en cualquiera de las líneas: détox, inmunológica, antienvejecimiento, adelgazante, post quirúrgica, deportiva, antiestrés, megadosis de vitamina C y energía. La línea la definimos en la valoración." },
+      { q: "¿Cuánto cuesta la sueroterapia?", a: "Cada sesión tiene un valor desde $200.000 COP en cualquiera de las líneas: détox, inmunológica, antienvejecimiento, adelgazante, post quirúrgica, deportiva, antiestrés, megadosis de vitamina C y energía. La línea la definimos en la valoración." },
       { q: "¿Duele?", a: "Solo se siente el pinchazo al canalizar la vena, parecido al de un examen de sangre. Durante la sesión puedes descansar cómodamente; algunas personas notan una leve sensación de frío en el brazo mientras pasa el suero." },
       { q: "¿Qué puedo esperar? ¿Cura enfermedades?", a: "No. Es un complemento de bienestar y no reemplaza el tratamiento médico, la alimentación ni el descanso. La línea adelgazante tampoco hace bajar de peso por sí sola. Cómo te sientes después varía de una persona a otra, y lo revisamos en el seguimiento." },
       { q: "¿Cuánto dura la sesión y su efecto?", a: "La sesión dura habitualmente entre 30 y 60 minutos, según la línea. Su aporte es temporal, por eso funciona como complemento dentro de tus hábitos y no como una solución aislada; en el seguimiento definimos si conviene repetirla." },
@@ -1479,7 +1479,7 @@ export const capilarYOtros: Tratamiento[] = [
       nota: "Cuéntanos al agendar si tienes alguna condición de salud para adaptar la sesión.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el masaje de relajación?", a: "La sesión de 2 h 30 tiene un valor de $250.000 COP e incluye masaje craneal, facial y corporal con piedras volcánicas. Si tienes alguna condición de salud, cuéntanos al agendar para adaptar la sesión a ti." },
+      { q: "¿Cuánto cuesta el masaje de relajación?", a: "La sesión de 2 h 30 tiene un valor desde $250.000 COP e incluye masaje craneal, facial y corporal con piedras volcánicas. Si tienes alguna condición de salud, cuéntanos al agendar para adaptar la sesión a ti." },
       { q: "¿Duele o las piedras queman?", a: "No debería doler: la presión se ajusta a lo que te resulte cómodo. Controlamos la temperatura de las piedras volcánicas antes de apoyarlas sobre tu piel y puedes pedir que ajustemos el calor o la presión en cualquier momento." },
       { q: "¿Cuánto dura la sesión y su efecto?", a: "La sesión dura dos horas y media y la relajación se nota desde ese mismo momento. Cuánto se prolonga depende de tu ritmo y del estrés que cargues; hidratarte y darte un rato tranquilo después ayuda a conservarla." },
       { q: "¿Tiene efectos secundarios?", a: "No requiere recuperación: retomas tu rutina el mismo día. Algunas personas sienten somnolencia, sed o algún músculo sensible al día siguiente, algo pasajero. Bebe agua y evita el ejercicio intenso ese día." },

@@ -80,7 +80,13 @@ function AccordionItem({
             paddingRight: "2.5rem",
           }}
         >
-          {item.a}
+          {item.a.split(/(\b[Dd]esde(?= \$))/).map((parte, i) =>
+            /^[Dd]esde$/.test(parte) ? (
+              <strong key={i} style={{ fontWeight: 700, color: "#1c1c1c" }}>{parte}</strong>
+            ) : (
+              parte
+            ),
+          )}
         </p>
       </div>
     </div>

@@ -334,7 +334,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta el programa?",
-        a: "El programa de reducción intensiva tiene un valor de $3.500.000 e incluye seguimiento médico, nutrición, mesoterapia, aparatología y sueroterapia détox.",
+        a: "El programa de reducción intensiva tiene un valor desde $3.500.000 e incluye seguimiento médico, nutrición, mesoterapia, aparatología y sueroterapia détox.",
       },
       {
         q: "¿Voy a bajar entre 5 y 10 kilos?",
@@ -689,7 +689,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El paquete tiene un valor de $1.400.000 e incluye 2 sesiones de 6 ampollas cada una, 2 drenajes, 4 masajes y aparatología.",
+        a: "El paquete tiene un valor desde $1.400.000 e incluye 2 sesiones de 6 ampollas cada una, 2 drenajes, 4 masajes y aparatología.",
       },
       {
         q: "¿Duele?",
@@ -860,7 +860,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta el paquete?",
-        a: "Tiene un valor de $1.300.000 e incluye 5 mesoterapias, 5 drenajes, 5 sesiones de aparatología y acompañamiento nutricional.",
+        a: "Tiene un valor desde $1.300.000 e incluye 5 mesoterapias, 5 drenajes, 5 sesiones de aparatología y acompañamiento nutricional.",
       },
       {
         q: "¿La mesoterapia duele?",
@@ -1002,7 +1002,7 @@ export const corporales: Tratamiento[] = [
       nota: "Las zonas y la frecuencia las definimos en la valoración según el grado de celulitis.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El paquete tiene un valor de $1.500.000 COP e incluye 1 sesión de Liposonic, 5 mesoterapias, 5 drenajes y 5 sesiones de aparatología. En la valoración revisamos tus zonas y organizamos el calendario de sesiones contigo." },
+      { q: "¿Cuánto cuesta?", a: "El paquete tiene un valor desde $1.500.000 COP e incluye 1 sesión de Liposonic, 5 mesoterapias, 5 drenajes y 5 sesiones de aparatología. En la valoración revisamos tus zonas y organizamos el calendario de sesiones contigo." },
       { q: "¿La celulitis se quita por completo? ¿Cuánto dura el resultado?", a: "Se puede mejorar de forma visible la textura y la firmeza, pero no desaparece del todo y tiende a reaparecer con cambios hormonales, de peso o de hábitos. Mantenerte activa, hidratada y hacer mantenimiento cuando se indique marca la diferencia." },
       { q: "¿Duele?", a: "Los drenajes y la aparatología suelen ser cómodos. La mesoterapia se siente como pinchazos finos y rápidos, generalmente tolerables. Durante la aparatología y el Liposonic puedes sentir calor o molestia leve, y ajustamos la intensidad a tu tolerancia." },
       { q: "¿Cuántas sesiones son?", a: "El paquete reúne 16 sesiones: 1 Liposonic, 5 mesoterapias, 5 drenajes y 5 de aparatología. La frecuencia la definimos en la valoración según el grado de celulitis y tu disponibilidad, para que puedas cumplir el plan con constancia." },
@@ -1162,7 +1162,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El paquete reductor tiene un valor de $800.000 con 5 INDIBA, 5 maderoterapias y 2 quemadores. El valor del paquete GOLD te lo confirmamos en la valoración.",
+        a: "El paquete reductor tiene un valor desde $800.000 con 5 INDIBA, 5 maderoterapias y 2 quemadores. El valor del paquete GOLD te lo confirmamos en la valoración.",
       },
       {
         q: "¿Qué diferencia hay entre el reductor y el GOLD?",
@@ -1636,7 +1636,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El paquete de aparatología de 5 sesiones cuesta $450.000. El paquete corporal INDIBA, con 12 sesiones y 5 mesoterapias, cuesta $2.500.000.",
+        a: "El paquete de aparatología de 5 sesiones cuesta desde $450.000. El paquete corporal INDIBA, con 12 sesiones y 5 mesoterapias, cuesta desde $2.500.000.",
       },
       {
         q: "¿Cuántas sesiones necesito?",
@@ -1806,7 +1806,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El paquete de dolor tiene un valor de $1.500.000 e incluye 10 sesiones de INDIBA.",
+        a: "El paquete de dolor tiene un valor desde $1.500.000 e incluye 10 sesiones de INDIBA.",
       },
       {
         q: "¿Reemplaza a mi médico o fisioterapeuta?",
@@ -1987,7 +1987,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El plan post quirúrgico con 8 drenajes, curaciones y 4 ultrasonidos cuesta $750.000. El plan con 10 sesiones de INDIBA, drenajes manuales y curaciones cuesta $2.500.000.",
+        a: "El plan post quirúrgico con 8 drenajes, curaciones y 4 ultrasonidos cuesta desde $750.000. El plan con 10 sesiones de INDIBA, drenajes manuales y curaciones cuesta desde $2.500.000.",
       },
       {
         q: "¿Cuándo puedo empezar?",
@@ -2159,7 +2159,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El paquete tiene un valor de $2.800.000 e incluye 10 sesiones de INDIBA, drenajes y curaciones.",
+        a: "El paquete tiene un valor desde $2.800.000 e incluye 10 sesiones de INDIBA, drenajes y curaciones.",
       },
       {
         q: "¿Cuándo puedo empezar con INDIBA?",
@@ -2328,7 +2328,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "La aplicación de enzimas recombinantes tiene un valor de $280.000 por cada 3 cc. La cantidad necesaria depende de la extensión de la fibrosis.",
+        a: "La aplicación de enzimas recombinantes tiene un valor desde $280.000 por cada 3 cc. La cantidad necesaria depende de la extensión de la fibrosis.",
       },
       {
         q: "¿Cuántas sesiones necesito?",
@@ -2499,7 +2499,7 @@ export const corporales: Tratamiento[] = [
     faq: [
       {
         q: "¿Cuánto cuesta?",
-        a: "El valor es de $40.000 por zona. El costo total depende de cuántas zonas trates y del número de sesiones que necesites.",
+        a: "El valor es desde $40.000 por zona. El costo total depende de cuántas zonas trates y del número de sesiones que necesites.",
       },
       {
         q: "¿Cuántas sesiones necesito?",

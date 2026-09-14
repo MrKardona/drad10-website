@@ -138,7 +138,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       nota: "La cantidad de producto y el número de sesiones los define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta Sculptra?", a: "La bioestimulación facial o corporal con Sculptra tiene un valor de $2.500.000. En la valoración te decimos cuántas sesiones necesitas según tu piel." },
+      { q: "¿Cuánto cuesta Sculptra?", a: "La bioestimulación facial o corporal con Sculptra tiene un valor desde $2.500.000. En la valoración te decimos cuántas sesiones necesitas según tu piel." },
       { q: "¿Cuándo se ven los resultados?", a: "Es gradual. El colágeno nuevo se forma en las semanas siguientes y la mejora se aprecia mejor entre el segundo y el tercer mes." },
       { q: "¿Cuánto dura el efecto?", a: "Los resultados pueden durar hasta dos años. La duración varía según tu edad, tu piel y tus hábitos, como la exposición al sol." },
       { q: "¿Duele la aplicación?", a: "Se siente como pinchazos y algo de presión. Usamos anestesia local cuando hace falta para que el procedimiento sea tolerable." },
@@ -283,7 +283,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       nota: "El plan exacto para tu piel lo definimos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta Long Lasting?", a: "El rejuvenecimiento de cara y cuello Long Lasting tiene un valor de $1.600.000. En la valoración confirmamos que es lo indicado para ti." },
+      { q: "¿Cuánto cuesta Long Lasting?", a: "El rejuvenecimiento de cara y cuello Long Lasting tiene un valor desde $1.600.000. En la valoración confirmamos que es lo indicado para ti." },
       { q: "¿Cuándo se ven los resultados?", a: "La mejora es progresiva: la piel se ve más fresca en las primeras semanas y la firmeza se consolida con el tiempo." },
       { q: "¿Cuánto dura el efecto?", a: "Está pensado para sostenerse en el tiempo. La duración depende de tu piel, tu edad y tus hábitos, sobre todo del cuidado frente al sol." },
       { q: "¿Tiene incapacidad?", a: "Habitualmente no. Puedes retomar tu rutina con cuidados sencillos. Puede haber enrojecimiento o sensibilidad leve por poco tiempo." },
@@ -430,7 +430,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       nota: "La cantidad de producto y las zonas las define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta el tensado con hidroxiapatita?", a: "El tensado y revitalización facial tiene un valor de $2.500.000. También se puede aplicar en manos, cuello y pecho." },
+      { q: "¿Cuánto cuesta el tensado con hidroxiapatita?", a: "El tensado y revitalización facial tiene un valor desde $2.500.000. También se puede aplicar en manos, cuello y pecho." },
       { q: "¿Cuándo se ven los resultados?", a: "Parte del soporte se percibe pronto y el efecto tensor avanza en las semanas siguientes, a medida que tu piel produce colágeno." },
       { q: "¿Cuánto dura?", a: "Habitualmente el efecto se mantiene alrededor de un año o más. Depende de tu piel, tu edad y tus hábitos." },
       { q: "¿Duele?", a: "Se siente presión y pinchazos leves. Usamos anestesia cuando hace falta para que sea tolerable." },
@@ -575,7 +575,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       nota: "Las zonas y la cantidad de producto las define la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta?", a: "El rejuvenecimiento con hidroxiapatita de calcio tiene un valor de $2.500.000. En la valoración definimos las zonas a tratar." },
+      { q: "¿Cuánto cuesta?", a: "El rejuvenecimiento con hidroxiapatita de calcio tiene un valor desde $2.500.000. En la valoración definimos las zonas a tratar." },
       { q: "¿Cuándo veo el cambio?", a: "La mejora es progresiva: la piel gana firmeza y calidad en las semanas siguientes a la aplicación." },
       { q: "¿Cuánto dura el resultado?", a: "Habitualmente alrededor de un año o más. El sol acelera el envejecimiento de estas zonas, por eso el protector solar es clave." },
       { q: "¿Duele?", a: "Se siente presión y molestia leve. Usamos anestesia local en los puntos de entrada cuando hace falta." },
@@ -721,7 +721,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       nota: "El número de sesiones recomendado lo definimos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta NCTF mesoterapia?", a: "El rejuvenecimiento facial y de cuello con NCTF tiene un valor de $700.000. En la valoración te indicamos cuántas sesiones recomendamos para tu piel." },
+      { q: "¿Cuánto cuesta NCTF mesoterapia?", a: "El rejuvenecimiento facial y de cuello con NCTF tiene un valor desde $700.000. En la valoración te indicamos cuántas sesiones recomendamos para tu piel." },
       { q: "¿Cuántas sesiones necesito?", a: "Habitualmente se hacen entre 3 y 5 sesiones espaciadas unas semanas, y luego mantenimiento. Lo define tu valoración." },
       { q: "¿Duele?", a: "Aplicamos crema anestésica antes. Se sienten pinchazos pequeños, tolerables para la mayoría de pacientes." },
       { q: "¿Deja marcas?", a: "Es normal ver pequeñas elevaciones y enrojecimiento que suelen desaparecer en 24 a 48 horas. Puede aparecer algún morado leve." },
@@ -1301,7 +1301,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       nota: "La frecuencia de las sesiones la definimos en la valoración.",
     },
     faq: [
-      { q: "¿Cuánto cuesta INDIBA facial?", a: "El paquete facial de 12 sesiones tiene un valor de $2.100.000. Puede enfocarse como tratamiento dermatológico, complemento de inyectables o lifting." },
+      { q: "¿Cuánto cuesta INDIBA facial?", a: "El paquete facial de 12 sesiones tiene un valor desde $2.100.000. Puede enfocarse como tratamiento dermatológico, complemento de inyectables o lifting." },
       { q: "¿Duele?", a: "No es un tratamiento invasivo. Se siente calor progresivo que la mayoría describe como agradable, y ajustamos la intensidad según tu tolerancia." },
       { q: "¿Tiene incapacidad?", a: "No. Puedes volver a tu rutina el mismo día. Como mucho, un enrojecimiento leve que pasa rápido." },
       { q: "¿Cuándo se notan los resultados?", a: "Es habitual ver la piel más luminosa desde las primeras sesiones. La mejora en firmeza es progresiva a lo largo del plan." },
@@ -1444,7 +1444,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       ],
     },
     faq: [
-      { q: "¿Cuánto cuesta un Hydrafacial?", a: "La sesión de Hydrafacial, una limpieza facial profunda con multinutrientes, tiene un valor de $220.000 COP. Incluye el diagnóstico de tu tipo de piel, el protocolo adaptado a ella y recomendaciones de cuidado en casa." },
+      { q: "¿Cuánto cuesta un Hydrafacial?", a: "La sesión de Hydrafacial, una limpieza facial profunda con multinutrientes, tiene un valor desde $220.000 COP. Incluye el diagnóstico de tu tipo de piel, el protocolo adaptado a ella y recomendaciones de cuidado en casa." },
       { q: "¿Duele?", a: "No suele doler. Es un tratamiento cómodo que muchas personas encuentran relajante; en la fase de extracción puedes sentir una succión suave y, en pieles sensibles, un leve cosquilleo que ajustamos si te molesta." },
       { q: "¿Cuándo se ven los resultados y cuánto duran?", a: "Desde la primera sesión la piel queda más limpia, hidratada y luminosa. Ese efecto se mantiene habitualmente algunos días o semanas, según tu piel y tus cuidados; por eso se recomienda repetirlo de forma periódica." },
       { q: "¿Cada cuánto me lo puedo hacer?", a: "Habitualmente una vez al mes, según tu piel y tus objetivos. Para un evento puedes hacer una sesión puntual unos días antes; si buscas mantener la piel en buen estado, te recomendamos un plan periódico en la sesión." },
@@ -1590,7 +1590,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       ],
     },
     faq: [
-      { q: "¿Cuánto cuesta la limpieza facial profunda?", a: "La sesión de limpieza facial profunda tiene un valor de $150.000 COP. Incluye el diagnóstico de tu tipo de piel, la limpieza por fases con extracción, mascarilla e hidratación según tu piel y recomendaciones de cuidado en casa." },
+      { q: "¿Cuánto cuesta la limpieza facial profunda?", a: "La sesión de limpieza facial profunda tiene un valor desde $150.000 COP. Incluye el diagnóstico de tu tipo de piel, la limpieza por fases con extracción, mascarilla e hidratación según tu piel y recomendaciones de cuidado en casa." },
       { q: "¿Duele la extracción?", a: "Puede generar una molestia leve en algunas zonas, sobre todo nariz y mentón, donde suele haber más comedones. Preparamos los poros antes para que la extracción sea lo más cómoda posible y ajustamos si te molesta." },
       { q: "¿Cuándo se nota y cuánto dura?", a: "Desde el mismo día sientes la piel más limpia, fresca y suave. Como la piel sigue produciendo grasa y células muertas, el efecto se mantiene unas semanas; tu rutina en casa ayuda a que dure más." },
       { q: "¿Queda la piel roja? ¿Tiene recuperación?", a: "Es normal un enrojecimiento leve por algunas horas, sobre todo en las zonas de extracción. No requiere recuperación y retomas tu rutina el mismo día; solo evita maquillarte ese día y usa protector solar." },
@@ -1735,7 +1735,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       ],
     },
     faq: [
-      { q: "¿Cuánto cuesta la porcelanización facial?", a: "La sesión tiene un valor de $180.000 COP e incluye limpieza facial profunda y mascarilla aclarante, además del diagnóstico de tu tipo de piel y recomendaciones de cuidado en casa para mantener el acabado." },
+      { q: "¿Cuánto cuesta la porcelanización facial?", a: "La sesión tiene un valor desde $180.000 COP e incluye limpieza facial profunda y mascarilla aclarante, además del diagnóstico de tu tipo de piel y recomendaciones de cuidado en casa para mantener el acabado." },
       { q: "¿Quita las manchas?", a: "Ayuda a que el tono se vea más uniforme y luminoso, pero no trata manchas profundas ni melasma. Para eso tenemos tratamientos médicos como Cosmelan." },
       { q: "¿Duele?", a: "No suele doler. Durante la extracción puede haber una molestia leve en algunas zonas y la mascarilla puede generar un cosquilleo o calor pasajero. Si tu piel es sensible, ajustamos los productos para que estés cómoda." },
       { q: "¿Cuándo se ve el resultado y cuánto dura?", a: "Desde el mismo día notas la piel más luminosa, suave y pareja. El acabado se mantiene habitualmente algunas semanas y dura más si usas protector solar a diario y cuidas tu piel en casa." },
@@ -1880,7 +1880,7 @@ export const rejuvenecimiento: Tratamiento[] = [
       ],
     },
     faq: [
-      { q: "¿Cuánto cuesta la alta hidratación facial?", a: "La sesión tiene un valor de $150.000 COP e incluye limpieza facial profunda y mascarilla hidratante, además del diagnóstico de tu tipo de piel y recomendaciones para mantener la hidratación en casa." },
+      { q: "¿Cuánto cuesta la alta hidratación facial?", a: "La sesión tiene un valor desde $150.000 COP e incluye limpieza facial profunda y mascarilla hidratante, además del diagnóstico de tu tipo de piel y recomendaciones para mantener la hidratación en casa." },
       { q: "¿Duele?", a: "No suele doler. Es un tratamiento cómodo y relajante; en la extracción puede haber una molestia leve en algunas zonas. Como la piel reseca suele ser sensible, cuidamos que cada paso sea suave." },
       { q: "¿Cuándo se nota y cuánto dura?", a: "Desde la misma sesión la piel se siente suave, cómoda y se ve más luminosa. El efecto se mantiene habitualmente algunos días o semanas, y dura más si usas una crema hidratante adecuada y protector solar a diario." },
       { q: "¿Cada cuánto me la puedo hacer?", a: "Depende de qué tan reseca esté tu piel y de tu entorno, por ejemplo si pasas mucho tiempo con aire acondicionado o sol. Puede hacerse de forma puntual o periódica, y te recomendamos una frecuencia en la sesión." },

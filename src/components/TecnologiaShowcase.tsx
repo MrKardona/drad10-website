@@ -247,7 +247,7 @@ export function TecnologiaShowcase() {
 
           <span
             style={{
-              fontFamily: "var(--font-display), fontWeight: 600, Georgia, serif",
+              fontFamily: "var(--font-display)", fontWeight: 600,
               fontSize: "0.95rem",
               color: "rgba(184,154,106,0.5)",
               marginLeft: "auto",

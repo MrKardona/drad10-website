@@ -62,6 +62,16 @@ const CATEGORIAS: Record<CategoriaTratamiento, { label: string; href: string }> 
 
 const formatCOP = (n: number) => `$${n.toLocaleString("es-CO")}`;
 
+/** Precio publicado siempre como punto de partida, con "Desde" resaltado. */
+function PrecioDesde({ valor, acento = GOLD }: { valor: number | null; acento?: string }) {
+  if (!valor) return <>Precio a valoración</>;
+  return (
+    <>
+      <span style={{ color: acento, fontWeight: 700 }}>Desde</span> {formatCOP(valor)}
+    </>
+  );
+}
+
 const label: React.CSSProperties = {
   fontFamily: "var(--font-body)",
   fontSize: "0.8125rem",
@@ -155,7 +165,8 @@ export default async function TratamientoPage({ params }: Props) {
   const testimonios = [...reviews].sort((a, b) => (a.fuente === "google" ? -1 : 1) - (b.fuente === "google" ? -1 : 1)).slice(0, 3);
   const categoria = CATEGORIAS[t.categoria];
   const WA = `https://wa.me/573043751975?text=${encodeURIComponent(t.waMensaje)}`;
-  const precioTexto = t.precio.desde ? `Desde ${formatCOP(t.precio.desde)}` : "Precio a valoración";
+  const precioTexto = <PrecioDesde valor={t.precio.desde} />;
+  const precioTextoClaro = <PrecioDesde valor={t.precio.desde} acento="#8a6a3c" />;
   // Cosmetología y bienestar no son procedimientos médicos: se agenda una cita.
   const cta = t.grupo === "Cosmetología" || t.categoria === "bienestar" ? "Agendar cita" : "Agendar valoración";
 
@@ -368,7 +379,7 @@ export default async function TratamientoPage({ params }: Props) {
               { k: "Sesiones", v: t.ficha.sesiones },
               { k: "Recuperación", v: t.ficha.recuperacion },
               { k: "Resultados", v: t.ficha.resultados },
-              { k: "Inversión", v: precioTexto },
+              { k: "Inversión", v: precioTextoClaro },
             ].map((d, i) => (
               <div
                 key={d.k}
@@ -615,7 +626,7 @@ export default async function TratamientoPage({ params }: Props) {
                     </th>
                     <td style={{ textAlign: "right", padding: "1.15rem 0", whiteSpace: "nowrap", verticalAlign: "top" }}>
                       <span style={{ ...display("clamp(1.1rem, 2vw, 1.35rem)", o.valor ? INK : MUTED) }}>
-                        {o.valor ? formatCOP(o.valor) : "A valoración"}
+                        {o.valor ? <PrecioDesde valor={o.valor} acento="#8a6a3c" /> : "A valoración"}
                       </span>
                     </td>
                   </tr>
@@ -765,7 +776,7 @@ export default async function TratamientoPage({ params }: Props) {
                       {r.nombre}
                     </p>
                     <p style={{ ...cuerpo(MUTED, "0.82rem"), marginTop: "0.3rem" }}>
-                      {r.desde ? `Desde ${formatCOP(r.desde)}` : "Precio a valoración"} →
+                      <PrecioDesde valor={r.desde ?? null} acento="#8a6a3c" /> →
                     </p>
                   </Link>
                 </li>
