@@ -1,16 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ScrollVideoSection } from "@/components/ScrollVideoSection";
-import { BeforeAfterSlider } from "@/components/gallery/BeforeAfterSlider";
-import { galleryCases } from "@/lib/gallery-data";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ScrollVideoSection } from "@/components/ScrollVideoSection";
+import { BeforeAfterSlider } from "@/components/gallery/BeforeAfterSlider";
 import { NavBar } from "@/components/NavBar";
 import { FooterPremium } from "@/components/FooterPremium";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { TratamientoFAQ } from "@/components/servicios/TratamientoFAQ";
-import { ContactPremium } from "@/components/ContactPremium";
+import { galleryCases } from "@/lib/gallery-data";
+import { reviews, GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_MAPS_URL } from "@/lib/testimonios";
 import { getTratamiento, getAllSlugs } from "@/lib/tratamientos";
+import { mediosDe } from "@/lib/tratamientos/medios";
+import type { CategoriaTratamiento } from "@/lib/tratamientos/types";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,28 +25,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const t = getTratamiento(slug);
   if (!t) return {};
+  const medios = mediosDe(t);
   return {
     title: t.seo.title,
     description: t.seo.description,
     keywords: t.seo.keywords,
+    alternates: { canonical: `https://drad10.com/servicios/${t.slug}` },
     openGraph: {
       title: t.seo.title,
       description: t.seo.description,
       url: `https://drad10.com/servicios/${t.slug}`,
-      siteName: "DRA.D10",
+      siteName: "DRA.D10 | Clínica Quantum",
       locale: "es_CO",
       type: "website",
+      images: medios ? [{ url: `https://drad10.com${medios.hero}`, alt: t.nombre }] : undefined,
     },
   };
 }
 
+/* ── Tokens ─────────────────────────────────────────────────────────────── */
 const GOLD = "#b89a6a";
 const CREAM = "#faf8f5";
+const SAND = "#f4ede6";
 const DARK = "#141414";
+const INK = "#1c1c1c";
+const MUTED = "#6b6760";
 
-function formatCOP(n: number) {
-  return `$${n.toLocaleString("es-CO")}`;
-}
+const CATEGORIAS: Record<CategoriaTratamiento, { label: string; href: string }> = {
+  faciales: { label: "Faciales", href: "/#faciales" },
+  corporales: { label: "Corporales", href: "/#corporales" },
+  capilares: { label: "Capilares", href: "/#capilares" },
+  "zona-intima": { label: "Zona íntima", href: "/#zona-intima" },
+  bienestar: { label: "Bienestar", href: "/#corporales" },
+  quirurgicos: { label: "Quirúrgicos", href: "/#quirurgicos" },
+};
+
+const formatCOP = (n: number) => `$${n.toLocaleString("es-CO")}`;
 
 const label: React.CSSProperties = {
   fontFamily: "var(--font-body)",
@@ -64,571 +79,325 @@ const display = (size: string, color: string): React.CSSProperties => ({
   lineHeight: 1.12,
 });
 
+const cuerpo = (color: string, size = "0.95rem"): React.CSSProperties => ({
+  fontFamily: "var(--font-body)",
+  fontSize: size,
+  color,
+  lineHeight: 1.85,
+});
+
+const contenedor = (ancho = 1180): React.CSSProperties => ({
+  maxWidth: `${ancho}px`,
+  margin: "0 auto",
+  padding: "0 clamp(20px, 6vw, 80px)",
+});
+
+const seccion = (bg: string): React.CSSProperties => ({
+  backgroundColor: bg,
+  padding: "clamp(64px, 9vw, 112px) 0",
+});
+
+function Encabezado({
+  eyebrow,
+  titulo,
+  em,
+  sub,
+  claro = false,
+  centrado = true,
+}: {
+  eyebrow: string;
+  titulo: string;
+  em?: string;
+  sub?: string;
+  claro?: boolean;
+  centrado?: boolean;
+}) {
+  return (
+    <div style={{ textAlign: centrado ? "center" : "left", marginBottom: "clamp(2.25rem, 4vw, 3.25rem)" }}>
+      <p data-anim="up" style={{ ...label, marginBottom: "1rem" }}>
+        {eyebrow}
+      </p>
+      <h2 data-anim="mask" style={display("clamp(1.9rem, 3.6vw, 2.8rem)", claro ? CREAM : INK)}>
+        {titulo} {em && <em style={{ color: GOLD, fontStyle: "italic" }}>{em}</em>}
+      </h2>
+      {sub && (
+        <p
+          data-anim="up"
+          style={{
+            ...cuerpo(claro ? "rgba(250,248,245,0.55)" : MUTED, "0.92rem"),
+            maxWidth: "560px",
+            margin: centrado ? "1rem auto 0" : "1rem 0 0",
+          }}
+        >
+          {sub}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default async function TratamientoPage({ params }: Props) {
   const { slug } = await params;
   const t = getTratamiento(slug);
   if (!t) notFound();
 
-  const img = t.imagenes;
-  // Casos reales de este tratamiento. Un id que no exista se descarta en vez de romper la página.
+  const medios = mediosDe(t);
   const casos = (t.resultados ?? [])
     .map((id) => galleryCases.find((c) => c.id === id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
+  const relacionados = (t.relacionados ?? [])
+    .map((s) => getTratamiento(s))
+    .filter((r): r is NonNullable<typeof r> => Boolean(r))
+    .map((r) => ({ t: r, medios: mediosDe(r) }));
+  // Las reseñas de Google van primero: son verificables públicamente.
+  const testimonios = [...reviews].sort((a, b) => (a.fuente === "google" ? -1 : 1) - (b.fuente === "google" ? -1 : 1)).slice(0, 3);
+  const categoria = CATEGORIAS[t.categoria];
   const WA = `https://wa.me/573002440656?text=${encodeURIComponent(t.waMensaje)}`;
+  const precioTexto = t.precio.desde ? `Desde ${formatCOP(t.precio.desde)}` : "Precio a valoración";
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    name: t.nombre,
-    description: t.seo.description,
-    procedureType: "https://schema.org/NoninvasiveProcedure",
-    provider: {
-      "@type": "MedicalBusiness",
-      name: "DRA.D10 | Clínica Quantum",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Cl. 7 #39-290 Consultorio 516",
-        addressLocality: "Medellín",
-        addressCountry: "CO",
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      name: t.nombre,
+      description: t.seo.description,
+      image: medios ? `https://drad10.com${medios.hero}` : undefined,
+      provider: {
+        "@type": "MedicalBusiness",
+        name: "DRA.D10 | Clínica Quantum",
+        telephone: "+573002440656",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Cl. 7 #39-290 Consultorio 516",
+          addressLocality: "Medellín",
+          addressRegion: "Antioquia",
+          addressCountry: "CO",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: GOOGLE_RATING,
+          reviewCount: GOOGLE_REVIEW_COUNT,
+        },
       },
-      telephone: "+573002440656",
+      ...(t.precio.desde
+        ? { offers: { "@type": "Offer", price: t.precio.desde, priceCurrency: "COP" } }
+        : {}),
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: t.faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://drad10.com" },
+        { "@type": "ListItem", position: 2, name: categoria.label, item: `https://drad10.com${categoria.href}` },
+        { "@type": "ListItem", position: 3, name: t.nombre, item: `https://drad10.com/servicios/${t.slug}` },
+      ],
+    },
+  ];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <NavBar />
 
-      {/* Barra de progreso de lectura — se escala con el scroll de la página */}
-      <div
-        aria-hidden
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "2px",
-          zIndex: 90,
-          pointerEvents: "none",
-        }}
-      >
+      {/* Barra de progreso de lectura */}
+      <div aria-hidden style={{ position: "fixed", top: 0, left: 0, right: 0, height: "2px", zIndex: 90, pointerEvents: "none" }}>
         <div
           data-progress-bar
-          style={{
-            height: "100%",
-            background: `linear-gradient(to right, ${GOLD}, rgba(184,154,106,0.45))`,
-            transform: "scaleX(0)",
-            transformOrigin: "left center",
-          }}
+          style={{ height: "100%", background: GOLD, transform: "scaleX(0)", transformOrigin: "left center" }}
         />
       </div>
-      {/* ══ 1. HERO ═══════════════════════════════════════════════════════ */}
-      {/* Split editorial: copy a la izquierda, retrato a la derecha.
-          Sin imagen propia cae al layout centrado de una sola columna. */}
-      <section
-        style={{
-          backgroundColor: DARK,
-          paddingTop: "clamp(104px, 14vw, 160px)",
-          paddingBottom: "clamp(48px, 7vw, 80px)",
-          overflow: "hidden",
-        }}
-      >
+
+      {/* ══ 1. PORTADA ═══════════════════════════════════════════════════ */}
+      <section style={{ backgroundColor: DARK, overflow: "hidden", paddingBottom: "clamp(40px, 6vw, 72px)" }}>
+        <div style={{ ...contenedor(1240), paddingTop: "clamp(20px, 3vw, 32px)" }}>
+          <nav aria-label="Ruta de navegación" style={{ ...cuerpo("rgba(250,248,245,0.4)", "0.7rem"), letterSpacing: "0.04em" }}>
+            <Link href="/" className="hover:text-[#b89a6a] transition-colors">Inicio</Link>
+            <span aria-hidden style={{ margin: "0 0.6rem" }}>/</span>
+            <Link href={categoria.href} className="hover:text-[#b89a6a] transition-colors">{categoria.label}</Link>
+            {t.grupo && (
+              <>
+                <span aria-hidden style={{ margin: "0 0.6rem" }}>/</span>
+                <span>{t.grupo}</span>
+              </>
+            )}
+          </nav>
+        </div>
+
         <div
-          style={{
-            maxWidth: "1240px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-            display: "grid",
-            gridTemplateColumns: img ? "1.05fr 0.95fr" : "1fr",
-            gap: "clamp(32px, 5vw, 72px)",
-            alignItems: "center",
-          }}
-          className="tratamiento-hero-grid"
+          className={medios ? "grid lg:grid-cols-[1.05fr_0.95fr] items-center" : ""}
+          style={{ ...contenedor(1240), paddingTop: "clamp(36px, 6vw, 72px)", gap: "clamp(36px, 5vw, 80px)" }}
         >
-          {/* ── Columna de copy ── */}
-          <div style={{ textAlign: img ? "left" : "center" }}>
-            <p style={{ ...label, marginBottom: "1.25rem" }} data-anim="up">
+          <div style={{ textAlign: medios ? "left" : "center" }}>
+            <p data-anim="up" style={{ ...label, marginBottom: "1.25rem" }}>
               {t.hero.eyebrow}
             </p>
-            <h1
-              data-anim="mask"
-              style={{
-                ...display("clamp(2.4rem, 5.2vw, 4.1rem)", CREAM),
-                marginBottom: "1.25rem",
-              }}
-            >
+            <h1 data-anim="mask" style={{ ...display("clamp(2.4rem, 5.4vw, 4.3rem)", CREAM), marginBottom: "1.4rem" }}>
               {t.hero.titulo}
               <br />
               <em style={{ color: GOLD, fontStyle: "italic" }}>{t.hero.tituloEm}</em>
             </h1>
-            <div
-              data-anim="line"
-              style={{
-                width: "56px",
-                height: "1px",
-                background: `linear-gradient(to right, ${GOLD}, transparent)`,
-                margin: img ? "0 0 1.6rem" : "0 auto 1.6rem",
-              }}
-            />
             <p
               data-anim="up"
               style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "clamp(0.9rem, 1.4vw, 1rem)",
-                color: "rgba(250,248,245,0.62)",
-                lineHeight: 1.85,
-                maxWidth: "480px",
-                margin: img ? "0 0 2.25rem" : "0 auto 2.25rem",
+                ...cuerpo("rgba(250,248,245,0.66)", "clamp(0.95rem, 1.4vw, 1.05rem)"),
+                maxWidth: "500px",
+                margin: medios ? "0 0 2.25rem" : "0 auto 2.25rem",
               }}
             >
               {t.hero.sub}
             </p>
-            <div data-anim="up">
-              <Link href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
-                AGENDA TU VALORACIÓN GRATUITA
-              </Link>
-            </div>
-
-            {/* Prueba social */}
             <div
               data-anim="up"
+              className="flex flex-col sm:flex-row gap-3"
+              style={{ justifyContent: medios ? "flex-start" : "center" }}
+            >
+              <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold text-center">
+                Agendar valoración
+              </a>
+              <a href="#precio" className="btn-outline-cream text-center">
+                {precioTexto}
+              </a>
+            </div>
+
+            {/* Prueba social verificable */}
+            <div
+              data-anim="up"
+              className="flex flex-wrap items-center"
               style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: img ? "flex-start" : "center",
-                flexWrap: "wrap",
-                gap: "0.6rem 1.6rem",
+                justifyContent: medios ? "flex-start" : "center",
+                gap: "0.5rem 1.5rem",
                 marginTop: "2.25rem",
-                fontFamily: "var(--font-body)",
-                fontSize: "0.64rem",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "rgba(250,248,245,0.42)",
+                ...cuerpo("rgba(250,248,245,0.5)", "0.72rem"),
+                letterSpacing: "0.04em",
               }}
             >
-              <span style={{ color: GOLD }}>★ 4.9 en Google</span>
-              <span>+20.000 pacientes</span>
-              <span>Médica certificada ARG · COL</span>
+              <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#b89a6a] transition-colors">
+                <span style={{ color: GOLD }}>★ {GOOGLE_RATING}</span> en Google · {GOOGLE_REVIEW_COUNT} reseñas
+              </a>
+              <span>Dirección médica: Dra. Daniela Díez</span>
+              <span>El Poblado, Medellín</span>
             </div>
           </div>
 
-          {/* ── Columna de retrato ── */}
-          {img && (
-            <div
-              data-anim="right"
-              style={{ position: "relative", aspectRatio: "4 / 5", minHeight: "340px" }}
-            >
-              {/* Marcas doradas de esquina */}
+          {medios && (
+            <div data-anim="up" className="relative mx-auto w-full max-w-md lg:max-w-none" style={{ aspectRatio: "4 / 5" }}>
               <div
                 aria-hidden
-                style={{
-                  position: "absolute", top: "-10px", left: "-10px",
-                  width: "44px", height: "44px",
-                  borderTop: `2px solid ${GOLD}`, borderLeft: `2px solid ${GOLD}`,
-                  zIndex: 2, pointerEvents: "none",
-                }}
+                className="absolute"
+                style={{ inset: "-12px 12px 12px -12px", border: "1px solid rgba(184,154,106,0.3)" }}
               />
-              <div
-                aria-hidden
-                style={{
-                  position: "absolute", bottom: "-10px", right: "-10px",
-                  width: "44px", height: "44px",
-                  borderBottom: `2px solid ${GOLD}`, borderRight: `2px solid ${GOLD}`,
-                  zIndex: 2, pointerEvents: "none",
-                }}
-              />
-              <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+              <div className="absolute inset-0 overflow-hidden">
                 <Image
-                  data-parallax="0.1"
-                  src={img.hero}
-                  alt={`${t.nombre} — Dra. Daniela Díez, DRA.D10 Medellín`}
+                  src={medios.hero}
+                  alt={t.nombre}
                   fill
-                  sizes="(max-width: 900px) 100vw, 46vw"
-                  className="object-cover"
                   priority
+                  sizes="(max-width: 1024px) 90vw, 46vw"
+                  className="object-cover"
                 />
-                {/* Degradado inferior para asentar la imagen en el fondo oscuro */}
-                <div
-                  aria-hidden
-                  style={{
-                    position: "absolute", inset: 0, pointerEvents: "none",
-                    background: `linear-gradient(to top, ${DARK} 0%, transparent 42%)`,
-                  }}
-                />
+                {medios.video && (
+                  <video
+                    className="servicio-video absolute inset-0 h-full w-full object-cover"
+                    src={medios.video}
+                    poster={medios.hero}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-hidden
+                  />
+                )}
               </div>
             </div>
           )}
         </div>
 
-        {/* Chips de beneficios */}
-        <div
+        {/* Beneficios */}
+        <ul
+          className="flex flex-wrap"
           style={{
-            maxWidth: "1240px",
-            margin: "clamp(32px, 5vw, 56px) auto 0",
-            padding: "0 clamp(24px, 6vw, 80px)",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: img ? "flex-start" : "center",
-            gap: "0.55rem",
+            ...contenedor(1240),
+            listStyle: "none",
+            marginTop: "clamp(36px, 5vw, 56px)",
+            gap: "0.5rem",
+            justifyContent: medios ? "flex-start" : "center",
           }}
         >
           {t.beneficios.map((b) => (
-            <span
+            <li
               key={b}
-              data-anim="up"
               style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.66rem",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "rgba(250,248,245,0.75)",
-                border: "1px solid rgba(184,154,106,0.3)",
-                backgroundColor: "rgba(184,154,106,0.06)",
-                padding: "8px 16px",
+                ...cuerpo("rgba(250,248,245,0.78)", "0.7rem"),
+                letterSpacing: "0.08em",
+                border: "1px solid rgba(184,154,106,0.28)",
+                padding: "7px 14px",
+                lineHeight: 1.4,
               }}
             >
-              <span style={{ color: GOLD, marginRight: "0.5rem" }}>✓</span>
+              <span aria-hidden style={{ color: GOLD, marginRight: "0.45rem" }}>✓</span>
               {b}
-            </span>
+            </li>
           ))}
-        </div>
-
-        <style>{`
-          @media (max-width: 900px) {
-            .tratamiento-hero-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
+        </ul>
       </section>
 
-      {/* ══ 2-3. PROBLEMA ════════════════════════════════════ */}
-      <section style={{ backgroundColor: CREAM, padding: "clamp(56px, 9vw, 100px) 0" }}>
-        <div
-          style={{
-            maxWidth: "760px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-            textAlign: "center",
-          }}
-        >
-          <h2 style={{ ...display("clamp(1.7rem, 3.4vw, 2.6rem)", "#1c1c1c"), marginBottom: "1.75rem" }}>
-            {t.problema.titulo}
-          </h2>
-          {t.problema.parrafos.map((p, i) => (
-            <p
-              key={i}
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.95rem",
-                color: "#6f6b66",
-                lineHeight: 1.9,
-                marginBottom: "1.1rem",
-              }}
-            >
-              {p}
-            </p>
-          ))}
-        </div>
-      </section>
-
-      {/* ══ 4. QUÉ ES + ZONAS ════════════════════════════════ */}
-      <section style={{ backgroundColor: "#f4ede6", padding: "clamp(56px, 9vw, 100px) 0" }}>
-        <div
-          style={{
-            maxWidth: "1160px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-          }}
-        >
-          <div style={{ maxWidth: "680px", marginBottom: "3.5rem" }}>
-            <p style={{ ...label, marginBottom: "1rem" }}>EL TRATAMIENTO</p>
-            <h2 style={{ ...display("clamp(1.7rem, 3.4vw, 2.6rem)", "#1c1c1c"), marginBottom: "1.25rem" }}>
-              {t.queEs.titulo}
-            </h2>
-            <p
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.95rem",
-                color: "#6f6b66",
-                lineHeight: 1.9,
-              }}
-            >
-              {t.queEs.desc}
-            </p>
-          </div>
-
-          <p style={{ ...label, marginBottom: "1.5rem" }}>{t.zonasTitulo.toUpperCase()}</p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "1px",
-              backgroundColor: "rgba(184,154,106,0.2)",
-              border: "1px solid rgba(184,154,106,0.2)",
-            }}
+      {/* ══ 2. FICHA RÁPIDA ══════════════════════════════════════════════ */}
+      {t.ficha && (
+        <section style={{ backgroundColor: CREAM, borderBottom: "1px solid rgba(184,154,106,0.18)" }}>
+          <dl
+            className="ficha-sin-borde grid grid-cols-2 lg:grid-cols-5"
+            style={{ ...contenedor(1240), margin: "0 auto" }}
           >
-            {t.zonas.map((z) => (
-              <div key={z.label} style={{ backgroundColor: CREAM, padding: "1.75rem 1.5rem" }}>
-                <span
-                  aria-hidden
-                  style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.6rem",
-                    color: GOLD,
-                    display: "block",
-                    marginBottom: "0.75rem",
-                    lineHeight: 1,
-                  }}
-                >
-                  {z.icon}
-                </span>
-                <p
-                  style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.05rem",
-                    fontWeight: 400,
-                    color: "#1c1c1c",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {z.label}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.8rem",
-                    color: "#888580",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {z.desc}
-                </p>
+            {[
+              { k: "Duración", v: t.ficha.duracion },
+              { k: "Sesiones", v: t.ficha.sesiones },
+              { k: "Recuperación", v: t.ficha.recuperacion },
+              { k: "Resultados", v: t.ficha.resultados },
+              { k: "Inversión", v: precioTexto },
+            ].map((d, i) => (
+              <div
+                key={d.k}
+                className={i === 4 ? "col-span-2 lg:col-span-1" : ""}
+                style={{
+                  padding: "clamp(1.25rem, 2.5vw, 1.9rem) clamp(0.75rem, 1.5vw, 1.25rem)",
+                  borderTop: i >= 2 ? "1px solid rgba(184,154,106,0.14)" : undefined,
+                }}
+              >
+                <dt style={{ ...label, letterSpacing: "0.22em", marginBottom: "0.45rem" }}>{d.k}</dt>
+                <dd style={{ ...display("clamp(1.05rem, 1.6vw, 1.25rem)", INK), lineHeight: 1.3, margin: 0 }}>{d.v}</dd>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ CTA INTERMEDIO ═══════════════════════════════════ */}
-      <section
-        style={{
-          backgroundColor: "#f4ede6",
-          borderTop: "1px solid rgba(184,154,106,0.2)",
-          padding: "clamp(28px, 4vw, 44px) 0",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1160px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "1.25rem 2.5rem",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "var(--font-display), Georgia, serif",
-              fontSize: "clamp(1.1rem, 2.2vw, 1.5rem)",
-              fontWeight: 300,
-              color: "#1c1c1c",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            ¿Quieres saber si es para ti?{" "}
-            <em style={{ color: GOLD, fontStyle: "italic" }}>La valoración es gratuita.</em>
-          </p>
-          <Link href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
-            AGENDAR AHORA
-          </Link>
-        </div>
-      </section>
-
-      {/* ══ VIDEO EDUCATIVO (opcional) ═══════════════════════ */}
-      {t.videoId && (
-        <section style={{ backgroundColor: DARK, padding: "clamp(56px, 9vw, 100px) 0" }}>
-          <div
-            style={{
-              maxWidth: "860px",
-              margin: "0 auto",
-              padding: "0 clamp(24px, 6vw, 80px)",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ ...label, marginBottom: "1rem" }}>MÍRALO EN 1 MINUTO</p>
-            <h2 style={{ ...display("clamp(1.6rem, 3vw, 2.2rem)", CREAM), marginBottom: "2.25rem" }}>
-              La Dra. Daniela te lo explica
-            </h2>
-            <div style={{ position: "relative", aspectRatio: "16 / 9", overflow: "hidden" }}>
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${t.videoId}`}
-                title={`Video: ${t.nombre}`}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-              />
-            </div>
-          </div>
+          </dl>
+          <style>{`@media (min-width:1024px){.ficha-sin-borde>div{border-top:none!important}}`}</style>
         </section>
       )}
 
-      {/* ══ SECUENCIA ATADA AL SCROLL ═══════════════════════════════════ */}
-      {/* El usuario controla la reproducción con su propio scroll. Solo se
-          monta si el tratamiento declara una secuencia de frames. */}
-      {t.secuencia && (
-        <ScrollVideoSection
-          dir={t.secuencia.dir}
-          frameCount={t.secuencia.frameCount}
-          alturaVh={t.secuencia.alturaVh ?? 300}
-          badge={t.secuencia.badge ?? ""}
-          frase={t.secuencia.frase ?? ""}
-        />
-      )}
-      {/* ══ 5. CÓMO FUNCIONA — 3 PASOS ═══════════════════════ */}
-      <section style={{ backgroundColor: DARK, padding: "clamp(56px, 9vw, 100px) 0" }}>
-        <div
-          style={{
-            maxWidth: "1160px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-          }}
-        >
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <p style={{ ...label, marginBottom: "1rem" }}>PASO A PASO</p>
-            <h2 style={display("clamp(1.7rem, 3.4vw, 2.6rem)", CREAM)}>
-              Así es el <em style={{ color: GOLD, fontStyle: "italic" }}>proceso</em>
-            </h2>
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {t.pasos.map((paso, i) => (
-              <div
-                key={paso.num}
-                className="paso-card"
-                style={{
-                  border: "1px solid rgba(184,154,106,0.18)",
-                  padding: "2.25rem 1.9rem",
-                  backgroundColor: "#1a1a1a",
-                }}
-              >
-                {/* Macro del procedimiento — una por paso, en orden */}
-                {img?.pasos?.[i] && (
-                  <div
-                    style={{
-                      position: "relative",
-                      aspectRatio: "3 / 2",
-                      overflow: "hidden",
-                      marginBottom: "1.5rem",
-                      border: "1px solid rgba(184,154,106,0.14)",
-                    }}
-                  >
-                    <Image
-                      src={img.pasos[i]}
-                      alt={`${paso.title} — ${t.nombre}`}
-                      fill
-                      sizes="(max-width: 900px) 100vw, 33vw"
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-                <span
-                  style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "2.6rem",
-                    fontWeight: 300,
-                    color: "rgba(184,154,106,0.35)",
-                    lineHeight: 1,
-                    display: "block",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  {paso.num}
-                </span>
-                <p
-                  style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.2rem",
-                    fontWeight: 400,
-                    color: CREAM,
-                    marginBottom: "0.75rem",
-                  }}
-                >
-                  {paso.title}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.85rem",
-                    color: "rgba(250,248,245,0.5)",
-                    lineHeight: 1.8,
-                    marginBottom: "1.1rem",
-                  }}
-                >
-                  {paso.desc}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.62rem",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: GOLD,
-                  }}
-                >
-                  {paso.detail}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ RESULTADOS REALES ═════════════════════════════════════════════ */}
+      {/* ══ 3. RESULTADOS REALES ═════════════════════════════════════════ */}
       {casos.length > 0 && (
-        <section style={{ backgroundColor: CREAM, padding: "clamp(56px, 9vw, 100px) 0" }}>
-          <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 clamp(24px, 6vw, 80px)" }}>
-            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <p style={{ ...label, marginBottom: "1rem" }} data-anim="up">
-                RESULTADOS REALES
-              </p>
-              <h2 data-anim="mask" style={{ ...display("clamp(1.9rem, 3.8vw, 2.9rem)", "#1c1c1c") }}>
-                Casos de nuestras{" "}
-                <em style={{ color: GOLD, fontStyle: "italic" }}>pacientes</em>
-              </h2>
-              <p
-                data-anim="up"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.9rem",
-                  color: "#6b6760",
-                  lineHeight: 1.8,
-                  maxWidth: "520px",
-                  margin: "1rem auto 0",
-                }}
-              >
-                Arrastra el visor para comparar el antes y el después.
-              </p>
-            </div>
-
+        <section style={seccion(CREAM)}>
+          <div style={contenedor()}>
+            <Encabezado
+              eyebrow="Resultados reales"
+              titulo="Casos de pacientes de"
+              em="Clínica Quantum"
+              sub="Arrastra el visor para comparar el antes y el después."
+            />
             <div
+              className="grid"
               style={{
-                display: "grid",
-                gridTemplateColumns: `repeat(auto-fit, minmax(${casos.length === 1 ? "320px" : "280px"}, 1fr))`,
+                gridTemplateColumns: `repeat(auto-fit, minmax(${casos.length === 1 ? "300px" : "260px"}, 1fr))`,
                 gap: "clamp(20px, 3vw, 32px)",
-                maxWidth: casos.length === 1 ? "460px" : "none",
+                maxWidth: casos.length === 1 ? "440px" : undefined,
                 margin: "0 auto",
               }}
             >
@@ -643,272 +412,409 @@ export default async function TratamientoPage({ params }: Props) {
                     sizes="(max-width: 768px) 100vw, 40vw"
                   />
                   <figcaption style={{ paddingTop: "0.9rem" }}>
-                    <p style={{ ...label, marginBottom: "0.35rem" }}>{c.zone}</p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-display), Georgia, serif",
-                        fontSize: "1.15rem",
-                        color: "#1c1c1c",
-                      }}
-                    >
-                      {c.title}
-                    </p>
+                    <p style={{ ...label, marginBottom: "0.3rem" }}>{c.zone}</p>
+                    <p style={display("1.15rem", INK)}>{c.title}</p>
                   </figcaption>
                 </figure>
               ))}
             </div>
-
-            <p
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.72rem",
-                color: "#8a867f",
-                lineHeight: 1.7,
-                maxWidth: "620px",
-                margin: "2.5rem auto 0",
-                textAlign: "center",
-              }}
-            >
-              Casos reales de pacientes de Clínica Quantum. Los resultados varían según
-              las características de cada persona y requieren valoración médica previa.{" "}
+            <p style={{ ...cuerpo("#8a867f", "0.72rem"), maxWidth: "620px", margin: "2.5rem auto 0", textAlign: "center" }}>
+              Los resultados varían según las características de cada persona y todo tratamiento requiere valoración médica previa.{" "}
               <Link href="/resultados" style={{ color: GOLD, textDecoration: "underline" }}>
-                Ver todos los resultados
+                Ver más resultados
               </Link>
             </p>
           </div>
         </section>
       )}
 
-      {/* ══ 6. SEGURIDAD — el corazón ════════════════════════ */}
-      <section
-        style={{
-          backgroundColor: DARK,
-          borderTop: "1px solid rgba(184,154,106,0.15)",
-          padding: "clamp(56px, 9vw, 100px) 0",
-        }}
-      >
+      {/* ══ 4. EL PROBLEMA ═══════════════════════════════════════════════ */}
+      <section style={seccion(casos.length > 0 ? SAND : CREAM)}>
         <div
-          style={{
-            maxWidth: "1160px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-          }}
+          className={medios?.resultado ? "grid lg:grid-cols-[1fr_0.8fr] items-center" : ""}
+          style={{ ...contenedor(), gap: "clamp(36px, 6vw, 96px)" }}
         >
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <p style={{ ...label, marginBottom: "1rem" }}>TU SEGURIDAD PRIMERO</p>
-            <h2 style={display("clamp(1.7rem, 3.4vw, 2.6rem)", CREAM)}>
-              Por qué es <em style={{ color: GOLD, fontStyle: "italic" }}>seguro</em> con nosotras
+          <div style={{ maxWidth: medios?.resultado ? undefined : "720px", margin: medios?.resultado ? undefined : "0 auto" }}>
+            <h2 data-anim="mask" style={{ ...display("clamp(1.9rem, 3.6vw, 2.8rem)", INK), marginBottom: "1.75rem" }}>
+              {t.problema.titulo}
             </h2>
-            <p
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.88rem",
-                color: "rgba(250,248,245,0.45)",
-                maxWidth: "520px",
-                margin: "1.25rem auto 0",
-                lineHeight: 1.85,
-              }}
-            >
-              En medicina estética la diferencia no está en el producto — está en
-              quién lo aplica, con qué protocolo y qué pasa después.
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {t.seguridad.map((s) => (
-              <div
-                key={s.num}
-                style={{
-                  borderLeft: `2px solid ${GOLD}`,
-                  padding: "1.5rem 1.75rem",
-                  backgroundColor: "rgba(184,154,106,0.05)",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-display), Georgia, serif",
-                    fontSize: "1.15rem",
-                    fontWeight: 400,
-                    color: CREAM,
-                    marginBottom: "0.6rem",
-                  }}
-                >
-                  {s.title}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.85rem",
-                    color: "rgba(250,248,245,0.55)",
-                    lineHeight: 1.8,
-                  }}
-                >
-                  {s.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 7. PRECIO ════════════════════════════════════════ */}
-      <section style={{ backgroundColor: CREAM, padding: "clamp(56px, 9vw, 100px) 0" }}>
-        <div
-          style={{
-            maxWidth: "680px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-            textAlign: "center",
-          }}
-        >
-          <p style={{ ...label, marginBottom: "1rem" }}>INVERSIÓN</p>
-          {t.precio.desde ? (
-            <h2 style={{ ...display("clamp(2.2rem, 5vw, 3.6rem)", "#1c1c1c"), marginBottom: "0.5rem" }}>
-              Desde{" "}
-              <span
-                data-counter={t.precio.desde}
-                data-prefix="$"
-              >
-                {formatCOP(t.precio.desde)}
-              </span>
-            </h2>
-          ) : (
-            <h2 style={{ ...display("clamp(1.7rem, 3.4vw, 2.6rem)", "#1c1c1c"), marginBottom: "0.5rem" }}>
-              Precio personalizado en tu{" "}
-              <em style={{ color: GOLD, fontStyle: "italic" }}>valoración gratuita</em>
-            </h2>
-          )}
-          {t.precio.nota && (
-            <p
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.8rem",
-                color: "#888580",
-                marginBottom: "0.5rem",
-              }}
-            >
-              {t.precio.nota}
-            </p>
-          )}
-
-          <div
-            style={{
-              border: "1px solid rgba(184,154,106,0.25)",
-              backgroundColor: "#f4ede6",
-              padding: "2rem 2.25rem",
-              margin: "2.25rem 0",
-              textAlign: "left",
-            }}
-          >
-            <p style={{ ...label, marginBottom: "1.1rem" }}>SIEMPRE INCLUYE</p>
-            {t.precio.incluye.map((item) => (
-              <p
-                key={item}
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.9rem",
-                  color: "#3d3a36",
-                  lineHeight: 2.1,
-                }}
-              >
-                <span style={{ color: GOLD, marginRight: "0.6rem" }}>✓</span>
-                {item}
+            {t.problema.parrafos.map((p, i) => (
+              <p key={i} data-anim="up" style={{ ...cuerpo(MUTED), marginBottom: "1.1rem" }}>
+                {p}
               </p>
             ))}
           </div>
-
-          <Link href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
-            AGENDAR VALORACIÓN GRATUITA
-          </Link>
+          {medios?.resultado && (
+            <div data-anim="up" className="relative w-full max-w-sm mx-auto lg:max-w-none" style={{ aspectRatio: "4 / 5" }}>
+              <Image src={medios.resultado} alt={`Resultado natural de ${t.nombre}`} fill sizes="(max-width: 1024px) 80vw, 36vw" className="object-cover" />
+            </div>
+          )}
         </div>
       </section>
 
-      {/* ══ 8. FAQ ═══════════════════════════════════════════ */}
-      <section
-        style={{
-          backgroundColor: CREAM,
-          borderTop: "1px solid rgba(184,154,106,0.15)",
-          padding: "clamp(56px, 9vw, 100px) 0",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "760px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-          }}
-        >
-          <div style={{ textAlign: "center", marginBottom: "2.75rem" }}>
-            <p style={{ ...label, marginBottom: "1rem" }}>PREGUNTAS FRECUENTES</p>
-            <h2 style={display("clamp(1.7rem, 3.4vw, 2.4rem)", "#1c1c1c")}>
-              Lo que todas preguntan
-            </h2>
+      {/* ══ 5. QUÉ ES + ZONAS ════════════════════════════════════════════ */}
+      <section style={seccion(DARK)}>
+        <div style={contenedor()}>
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr]" style={{ gap: "clamp(32px, 6vw, 96px)" }}>
+            <div>
+              <p data-anim="up" style={{ ...label, marginBottom: "1rem" }}>El tratamiento</p>
+              <h2 data-anim="mask" style={{ ...display("clamp(1.9rem, 3.6vw, 2.8rem)", CREAM), marginBottom: "1.4rem" }}>
+                {t.queEs.titulo}
+              </h2>
+              <p data-anim="up" style={cuerpo("rgba(250,248,245,0.62)")}>
+                {t.queEs.desc}
+              </p>
+            </div>
+            <div>
+              <p data-anim="up" style={{ ...label, marginBottom: "1.25rem" }}>{t.zonasTitulo}</p>
+              <ul data-anim="stagger" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {t.zonas.map((z) => (
+                  <li
+                    key={z.label}
+                    className="grid grid-cols-[2.25rem_1fr]"
+                    style={{ gap: "1rem", padding: "1.15rem 0", borderBottom: "1px solid rgba(184,154,106,0.16)" }}
+                  >
+                    <span aria-hidden style={{ ...display("1.5rem", GOLD), lineHeight: 1 }}>{z.icon}</span>
+                    <div>
+                      <p style={{ ...display("1.15rem", CREAM), marginBottom: "0.25rem", lineHeight: 1.3 }}>{z.label}</p>
+                      <p style={cuerpo("rgba(250,248,245,0.5)", "0.85rem")}>{z.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* ══ 6. PARA QUIÉN ════════════════════════════════════════════════ */}
+      {t.paraQuien && (
+        <section style={seccion(CREAM)}>
+          <div style={contenedor(1080)}>
+            <Encabezado
+              eyebrow="¿Es para ti?"
+              titulo="Te decimos con claridad"
+              em="qué necesitas y qué no"
+            />
+            <div className="grid md:grid-cols-2" style={{ gap: "clamp(20px, 3vw, 40px)" }}>
+              <div data-anim="up" style={{ backgroundColor: "#fff", border: "1px solid rgba(184,154,106,0.22)", padding: "clamp(1.75rem, 3vw, 2.5rem)" }}>
+                <p style={{ ...display("1.35rem", INK), marginBottom: "1.25rem" }}>Es para ti si…</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {t.paraQuien.ideal.map((x) => (
+                    <li key={x} className="flex" style={{ ...cuerpo("#3d3a36", "0.92rem"), gap: "0.75rem", padding: "0.4rem 0" }}>
+                      <span aria-hidden style={{ color: GOLD, flexShrink: 0 }}>✓</span>
+                      {x}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div data-anim="up" style={{ border: "1px solid rgba(28,28,28,0.1)", padding: "clamp(1.75rem, 3vw, 2.5rem)" }}>
+                <p style={{ ...display("1.35rem", INK), marginBottom: "1.25rem" }}>Primero lo valoramos si…</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {t.paraQuien.noIdeal.map((x) => (
+                    <li key={x} className="flex" style={{ ...cuerpo(MUTED, "0.92rem"), gap: "0.75rem", padding: "0.4rem 0" }}>
+                      <span aria-hidden style={{ color: "#a8a49d", flexShrink: 0 }}>○</span>
+                      {x}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ══ SECUENCIA ATADA AL SCROLL (opcional) ═════════════════════════ */}
+      {t.secuencia && (
+        <ScrollVideoSection
+          dir={t.secuencia.dir}
+          frameCount={t.secuencia.frameCount}
+          alturaVh={t.secuencia.alturaVh ?? 300}
+          badge={t.secuencia.badge ?? ""}
+          frase={t.secuencia.frase ?? ""}
+        />
+      )}
+
+      {/* ══ 7. PROCESO ═══════════════════════════════════════════════════ */}
+      <section style={seccion(SAND)}>
+        <div style={contenedor()}>
+          <Encabezado eyebrow="Paso a paso" titulo="Así es tu" em="proceso" />
+          <ol style={{ listStyle: "none", padding: 0, margin: 0 }} className="grid md:grid-cols-3" >
+            {t.pasos.map((paso, i) => (
+              <li
+                key={paso.num}
+                data-anim="up"
+                style={{
+                  padding: "0 clamp(0px, 1.5vw, 20px)",
+                  marginBottom: "2.5rem",
+                }}
+              >
+                {medios?.pasos?.[i] && (
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "3 / 2", marginBottom: "1.4rem" }}>
+                    <Image
+                      src={medios.pasos[i]}
+                      alt={`${paso.title}: ${t.nombre}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                    />
+                  </div>
+                )}
+                <div className="flex items-baseline" style={{ gap: "0.9rem", marginBottom: "0.6rem" }}>
+                  <span style={{ ...display("2rem", GOLD), lineHeight: 1 }}>{paso.num}</span>
+                  <p style={{ ...display("1.25rem", INK), lineHeight: 1.25 }}>{paso.title}</p>
+                </div>
+                <p style={{ ...cuerpo(MUTED, "0.88rem"), marginBottom: "0.7rem" }}>{paso.desc}</p>
+                <p style={{ ...label, letterSpacing: "0.18em" }}>{paso.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ══ CTA INTERMEDIO ═══════════════════════════════════════════════ */}
+      <section style={{ backgroundColor: INK, padding: "clamp(32px, 5vw, 52px) 0" }}>
+        <div className="flex flex-wrap items-center justify-center text-center" style={{ ...contenedor(), gap: "1.25rem 2.5rem" }}>
+          <p style={display("clamp(1.2rem, 2.4vw, 1.65rem)", CREAM)}>
+            ¿Tienes dudas? <em style={{ color: GOLD, fontStyle: "italic" }}>Escríbenos y te orientamos.</em>
+          </p>
+          <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ══ 8. PRECIO ════════════════════════════════════════════════════ */}
+      <section id="precio" style={{ ...seccion(CREAM), scrollMarginTop: "80px" }}>
+        <div style={contenedor(880)}>
+          <Encabezado
+            eyebrow="Inversión"
+            titulo={t.precio.desde ? "Precios claros," : "Un plan a tu medida,"}
+            em={t.precio.desde ? "sin sorpresas" : "cotizado en tu valoración"}
+          />
+
+          {t.precio.opciones && t.precio.opciones.length > 0 && (
+            <table data-anim="up" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "2rem" }}>
+              <caption className="sr-only">Precios de {t.nombre}</caption>
+              <tbody>
+                {t.precio.opciones.map((o, i) => (
+                  <tr key={o.label + i} style={{ borderBottom: "1px solid rgba(184,154,106,0.22)", borderTop: i === 0 ? `1px solid ${GOLD}` : undefined }}>
+                    <th scope="row" style={{ textAlign: "left", padding: "1.15rem 1rem 1.15rem 0", fontWeight: 400 }}>
+                      <span style={{ ...display("1.15rem", INK), lineHeight: 1.3, display: "block" }}>{o.label}</span>
+                      {o.detalle && <span style={{ ...cuerpo("#8a867f", "0.8rem"), display: "block", lineHeight: 1.5, marginTop: "0.2rem" }}>{o.detalle}</span>}
+                    </th>
+                    <td style={{ textAlign: "right", padding: "1.15rem 0", whiteSpace: "nowrap", verticalAlign: "top" }}>
+                      <span style={{ ...display("clamp(1.1rem, 2vw, 1.35rem)", o.valor ? INK : MUTED) }}>
+                        {o.valor ? formatCOP(o.valor) : "A valoración"}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          <div className="grid md:grid-cols-[1.2fr_0.8fr] items-start" style={{ gap: "clamp(24px, 4vw, 48px)" }}>
+            <div data-anim="up" style={{ backgroundColor: SAND, padding: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              <p style={{ ...label, marginBottom: "1rem" }}>Incluye</p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {t.precio.incluye.map((item) => (
+                  <li key={item} className="flex" style={{ ...cuerpo("#3d3a36", "0.9rem"), gap: "0.7rem", padding: "0.3rem 0" }}>
+                    <span aria-hidden style={{ color: GOLD }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div data-anim="up">
+              {t.precio.nota && <p style={{ ...cuerpo(MUTED, "0.86rem"), marginBottom: "1.5rem" }}>{t.precio.nota}</p>}
+              <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold text-center" style={{ display: "block" }}>
+                Agendar valoración
+              </a>
+              <p style={{ ...cuerpo("#8a867f", "0.72rem"), marginTop: "0.9rem" }}>
+                Valores de referencia en pesos colombianos. El plan final lo define la valoración médica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 9. TESTIMONIOS ═══════════════════════════════════════════════ */}
+      <section style={seccion(DARK)}>
+        <div style={contenedor()}>
+          <Encabezado
+            eyebrow={`★ ${GOOGLE_RATING} en Google · ${GOOGLE_REVIEW_COUNT} reseñas`}
+            titulo="Lo que dicen"
+            em="nuestros pacientes"
+            claro
+          />
+          <div className="grid md:grid-cols-3" style={{ gap: "clamp(28px, 4vw, 56px)" }}>
+            {testimonios.map((r) => (
+              <figure key={r.name} data-anim="up" style={{ margin: 0 }}>
+                <p aria-label={`${r.rating} estrellas`} style={{ color: GOLD, letterSpacing: "0.2em", marginBottom: "1rem" }}>★★★★★</p>
+                <blockquote style={{ ...display("1.2rem", CREAM), lineHeight: 1.5, margin: 0 }}>“{r.text}”</blockquote>
+                <figcaption style={{ ...cuerpo("rgba(250,248,245,0.45)", "0.75rem"), marginTop: "1.1rem", letterSpacing: "0.06em" }}>
+                  {r.name}
+                  {r.fuente === "google" ? " · Reseña de Google" : ""}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p style={{ textAlign: "center", marginTop: "3rem" }}>
+            <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" style={{ ...cuerpo(GOLD, "0.8rem"), textDecoration: "underline" }}>
+              Ver todas las reseñas en Google
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* ══ 10. DIRECCIÓN MÉDICA + SEGURIDAD ═════════════════════════════ */}
+      <section style={seccion(CREAM)}>
+        <div className="grid lg:grid-cols-[0.75fr_1.25fr]" style={{ ...contenedor(), gap: "clamp(36px, 6vw, 96px)" }}>
+          <div data-anim="up">
+            <div className="relative w-full max-w-sm" style={{ aspectRatio: "3 / 4" }}>
+              <Image src="/images/dra/scrubs.webp" alt="Dra. Daniela Díez, directora médica de Clínica Quantum" fill sizes="(max-width: 1024px) 80vw, 30vw" className="object-cover" />
+            </div>
+            <p style={{ ...display("1.3rem", INK), marginTop: "1.1rem" }}>Dra. Daniela Díez</p>
+            <p style={cuerpo(MUTED, "0.82rem")}>Dirección médica · Clínica Quantum</p>
+          </div>
+          <div>
+            <p data-anim="up" style={{ ...label, marginBottom: "1rem" }}>Tu seguridad, primero</p>
+            <h2 data-anim="mask" style={{ ...display("clamp(1.9rem, 3.6vw, 2.8rem)", INK), marginBottom: "1.25rem" }}>
+              Entender primero, <em style={{ color: GOLD, fontStyle: "italic" }}>tratar después</em>
+            </h2>
+            <p data-anim="up" style={{ ...cuerpo(MUTED), marginBottom: "2rem", maxWidth: "560px" }}>
+              Cada plan lo diseña y ejecuta personal médico, con una valoración previa y los requisitos de habilitación
+              sanitaria aplicables. Si un tratamiento no es lo que necesitas, te lo decimos.
+            </p>
+            <div data-anim="stagger" className="grid sm:grid-cols-2" style={{ gap: "1.75rem 2.5rem" }}>
+              {t.seguridad.map((s) => (
+                <div key={s.num} style={{ borderTop: "1px solid rgba(184,154,106,0.35)", paddingTop: "1.1rem" }}>
+                  <p style={{ ...display("1.12rem", INK), marginBottom: "0.4rem", lineHeight: 1.3 }}>{s.title}</p>
+                  <p style={cuerpo(MUTED, "0.86rem")}>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 11. CUIDADOS ═════════════════════════════════════════════════ */}
+      {t.cuidados && (
+        <section style={seccion(SAND)}>
+          <div style={contenedor(1080)}>
+            <Encabezado eyebrow="Prepárate" titulo="Cuidados antes" em="y después" />
+            <div className="grid md:grid-cols-2" style={{ gap: "clamp(28px, 5vw, 72px)" }}>
+              {[
+                { titulo: "Antes de tu cita", items: t.cuidados.antes },
+                { titulo: "Después del tratamiento", items: t.cuidados.despues },
+              ].map((b) => (
+                <div key={b.titulo} data-anim="up">
+                  <p style={{ ...display("1.35rem", INK), paddingBottom: "0.9rem", borderBottom: `1px solid ${GOLD}`, marginBottom: "0.5rem" }}>
+                    {b.titulo}
+                  </p>
+                  <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    {b.items.map((x, i) => (
+                      <li key={x} className="grid grid-cols-[2rem_1fr]" style={{ ...cuerpo("#3d3a36", "0.9rem"), padding: "0.7rem 0", borderBottom: "1px solid rgba(28,28,28,0.07)" }}>
+                        <span style={{ ...label, letterSpacing: "0.1em", paddingTop: "0.2rem" }}>{String(i + 1).padStart(2, "0")}</span>
+                        {x}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ══ 12. PREGUNTAS FRECUENTES ═════════════════════════════════════ */}
+      <section style={seccion(CREAM)}>
+        <div style={contenedor(780)}>
+          <Encabezado eyebrow="Preguntas frecuentes" titulo="Resolvemos tus" em="dudas" />
           <TratamientoFAQ items={t.faq} />
         </div>
       </section>
 
-      {/* ══ 9. CTA FINAL ═════════════════════════════════════ */}
-      <section
-        style={{
-          backgroundColor: DARK,
-          padding: "clamp(64px, 10vw, 120px) 0",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "680px",
-            margin: "0 auto",
-            padding: "0 clamp(24px, 6vw, 80px)",
-          }}
-        >
-          <h2 style={{ ...display("clamp(1.9rem, 4vw, 3rem)", CREAM), marginBottom: "1.25rem" }}>
-            El primer paso no cuesta{" "}
-            <em style={{ color: GOLD, fontStyle: "italic" }}>nada</em>
+      {/* ══ 13. RELACIONADOS ═════════════════════════════════════════════ */}
+      {relacionados.length > 0 && (
+        <section style={seccion(SAND)}>
+          <div style={contenedor()}>
+            <Encabezado eyebrow="Se complementa con" titulo="Tratamientos" em="relacionados" />
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3" style={{ listStyle: "none", padding: 0, margin: 0, gap: "clamp(20px, 3vw, 32px)" }}>
+              {relacionados.map(({ t: r, medios: m }) => (
+                <li key={r.slug} data-anim="up">
+                  <Link href={`/servicios/${r.slug}`} className="group block">
+                    {m && (
+                      <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 3", marginBottom: "1rem" }}>
+                        <Image src={m.hero} alt={r.nombre} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+                      </div>
+                    )}
+                    <p style={{ ...label, marginBottom: "0.35rem" }}>{r.grupo ?? CATEGORIAS[r.categoria].label}</p>
+                    <p style={{ ...display("1.3rem", INK), lineHeight: 1.25 }} className="group-hover:text-[#b89a6a] transition-colors">
+                      {r.nombre}
+                    </p>
+                    <p style={{ ...cuerpo(MUTED, "0.82rem"), marginTop: "0.3rem" }}>
+                      {r.precio.desde ? `Desde ${formatCOP(r.precio.desde)}` : "Precio a valoración"} →
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* ══ 14. CIERRE ═══════════════════════════════════════════════════ */}
+      <section style={{ backgroundColor: DARK, padding: "clamp(72px, 11vw, 132px) 0", textAlign: "center" }}>
+        <div style={contenedor(720)}>
+          <h2 data-anim="mask" style={{ ...display("clamp(2rem, 4.4vw, 3.2rem)", CREAM), marginBottom: "1.25rem" }}>
+            Tu mejor versión empieza con <em style={{ color: GOLD, fontStyle: "italic" }}>una valoración</em>
           </h2>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.92rem",
-              color: "rgba(250,248,245,0.55)",
-              lineHeight: 1.85,
-              marginBottom: "2.25rem",
-            }}
-          >
-            Agenda tu valoración gratuita con la Dra. Daniela Díez. Resolvemos
-            todas tus dudas, sin compromiso y sin presión — la decisión siempre
-            es tuya.
+          <p data-anim="up" style={{ ...cuerpo("rgba(250,248,245,0.58)"), marginBottom: "2.25rem" }}>
+            Revisamos tu caso con el analizador facial y capilar y te decimos con claridad qué necesitas y qué no. Sin presión:
+            la decisión siempre es tuya.
           </p>
-          <Link href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
-            AGENDAR POR WHATSAPP
-          </Link>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "rgba(250,248,245,0.3)",
-              marginTop: "1.5rem",
-            }}
-          >
-            Cl. 7 #39-290 · El Poblado, Medellín · 300 244 0656
+          <div data-anim="up">
+            <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold">
+              Agendar por WhatsApp
+            </a>
+          </div>
+          <p style={{ ...label, letterSpacing: "0.2em", color: "rgba(250,248,245,0.38)", marginTop: "2.25rem", lineHeight: 2 }}>
+            Cl. 7 #39-290, Consultorio 516 · El Poblado, Medellín
+            <br />
+            Lunes a sábado · 300 244 0656
           </p>
         </div>
       </section>
 
-      {/* ══ 10. FORMULARIO DE CONTACTO ═══════════════════════ */}
-      <ContactPremium />
-
       <FooterPremium />
-      <WhatsAppButton />
+
+      {/* Barra fija en móvil: precio y acción siempre a mano */}
+      <div
+        className="lg:hidden fixed inset-x-0 bottom-0 flex items-center justify-between"
+        style={{
+          zIndex: 80,
+          gap: "1rem",
+          backgroundColor: "rgba(20,20,20,0.96)",
+          borderTop: "1px solid rgba(184,154,106,0.3)",
+          padding: "0.7rem clamp(16px, 5vw, 24px) calc(0.7rem + env(safe-area-inset-bottom))",
+        }}
+      >
+        <div style={{ minWidth: 0 }}>
+          <p style={{ ...cuerpo("rgba(250,248,245,0.5)", "0.62rem"), lineHeight: 1.3 }} className="truncate">{t.nombre}</p>
+          <p style={{ ...display("1rem", CREAM), lineHeight: 1.3 }}>{precioTexto}</p>
+        </div>
+        <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: "0.85rem 1.25rem", flexShrink: 0 }}>
+          Agendar
+        </a>
+      </div>
+      {/* Espacio para que la barra fija no tape el pie de página */}
+      <div className="lg:hidden" style={{ height: "72px", backgroundColor: DARK }} aria-hidden />
+
+      <style>{`
+        @media (prefers-reduced-motion: reduce) { .servicio-video { display: none; } }
+      `}</style>
     </>
   );
 }
