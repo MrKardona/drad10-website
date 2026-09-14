@@ -1,35 +1,17 @@
 import React from "react";
 import Image from "next/image";
 
-// Posts reales del feed de @clinicaquantum.co
+// Publicaciones reales del feed de @dra.d10
 const PHOTOS = [
-  {
-    src: "/images/instagram/post-01.webp",
-    alt: "Clínica Quantum - ¿Vienes a Medellín para la Feria de las Flores?",
-  },
-  {
-    src: "/images/instagram/post-03.webp",
-    alt: "Clínica Quantum - Promo amigas: aumento de labios",
-  },
-  {
-    src: "/images/instagram/post-04.webp",
-    alt: "Clínica Quantum - La Dra. Daniela explica el Botox",
-  },
-  {
-    src: "/images/instagram/post-05.webp",
-    alt: "Clínica Quantum - Tratamiento tensor sin cirugía",
-  },
-  {
-    src: "/images/instagram/post-02.webp",
-    alt: "Clínica Quantum - ¿Por qué tantas personas eligen Medellín para aplicarse Botox?",
-  },
-  {
-    src: "/images/instagram/post-06.webp",
-    alt: "Clínica Quantum - Medicamentos para bajar de peso: no todos son iguales",
-  },
+  { src: "/images/instagram/post-01.webp", href: "https://www.instagram.com/dra.d10/reel/DbYm_-CxpC4/", alt: "Dra. Daniela Díez en consulta capilar" },
+  { src: "/images/instagram/post-02.webp", href: "https://www.instagram.com/dra.d10/p/DTfcrWikcGq/", alt: "Antes y después de 6 meses de tratamiento capilar" },
+  { src: "/images/instagram/post-03.webp", href: "https://www.instagram.com/dra.d10/p/DcbWc3kxNyZ/", alt: "Antes y después de recuperación capilar en coronilla" },
+  { src: "/images/instagram/post-04.webp", href: "https://www.instagram.com/dra.d10/p/DSFssNPEV3a/", alt: "Mesoterapia capilar con la Dra. D10" },
+  { src: "/images/instagram/post-05.webp", href: "https://www.instagram.com/dra.d10/reel/DceFZMMxlb9/", alt: "La Dra. Daniela Díez explica el enfoque médico" },
+  { src: "/images/instagram/post-06.webp", href: "https://www.instagram.com/dra.d10/reel/Dc4f3K2R89Q/", alt: "La Dra. Daniela Díez en su consultorio" },
 ];
 
-const INSTAGRAM_URL = "https://www.instagram.com/clinicaquantum.co/";
+const INSTAGRAM_URL = "https://www.instagram.com/dra.d10/";
 
 const GoldStripe = () => (
   <div
@@ -163,7 +145,7 @@ export default function InstagramSection() {
                 }}
                 className="transition-opacity duration-300 group-hover/handle:opacity-70"
               >
-                @clinicaquantum.co
+                @dra.d10
               </span>
             </a>
 
@@ -205,11 +187,12 @@ export default function InstagramSection() {
               {PHOTOS.map((photo, index) => (
                 <a
                   key={index}
-                  href={INSTAGRAM_URL}
+                  href={photo.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Ver en Instagram: ${photo.alt}`}
                   className="group/photo relative block overflow-hidden"
-                  style={{ aspectRatio: "1" }}
+                  style={{ aspectRatio: "4 / 5" }}
                 >
                   <Image
                     src={photo.src}

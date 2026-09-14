@@ -134,10 +134,10 @@ export function NavBar() {
           Cl. 7 #39 – 290 Consultorio 516, El Poblado · Medellín
         </a>
         <a
-          href="https://www.instagram.com/clinicaquantum.co/"
+          href="https://www.instagram.com/dra.d10/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Instagram @clinicaquantum.co"
+          aria-label="Instagram @dra.d10"
           style={{ color: "#1c1c1c", display: "flex", alignItems: "center", gap: "4px", textDecoration: "none", transition: "opacity 0.2s", padding: "6px 0" }}
           className="hover:opacity-60"
         >
@@ -146,7 +146,7 @@ export function NavBar() {
             <circle cx="12" cy="12" r="4" />
             <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
           </svg>
-          <span className="hidden sm:inline" style={{ letterSpacing: "0.18em" }}>@clinicaquantum.co</span>
+          <span className="hidden sm:inline" style={{ letterSpacing: "0.18em" }}>@dra.d10</span>
         </a>
         <span className="hidden md:inline" style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
         <span className="hidden sm:inline">

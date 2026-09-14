@@ -20,8 +20,8 @@ const clinicaLinks: { label: string; href: string }[] = [
 const socialLinks: { label: string; href: string; ariaLabel: string }[] = [
   {
     label: "IG",
-    href: "https://www.instagram.com/clinicaquantum.co/",
-    ariaLabel: "Instagram @clinicaquantum.co",
+    href: "https://www.instagram.com/dra.d10/",
+    ariaLabel: "Instagram @dra.d10",
   },
   {
     label: "FB",

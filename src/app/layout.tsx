@@ -89,7 +89,7 @@ const schemaData = {
     },
   ],
   sameAs: [
-    "https://www.instagram.com/clinicaquantum.co/",
+    "https://www.instagram.com/dra.d10/",
     "https://www.facebook.com/clinicaquantum.co/",
   ],
   priceRange: "$$",
