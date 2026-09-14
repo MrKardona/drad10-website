@@ -26,9 +26,11 @@ export default function ResultadosPage() {
       <NavBar />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
+      {/* Fondo oscuro propio: el cuerpo de la página es crema y el título es claro. */}
+      <div style={{ backgroundColor: "#141414" }}>
       <section
         style={{
-          paddingTop: "clamp(100px, 14vw, 160px)",
+          paddingTop: "clamp(56px, 12vw, 140px)",
           paddingBottom: "clamp(48px, 8vw, 88px)",
           paddingLeft: "clamp(20px, 6vw, 80px)",
           paddingRight: "clamp(20px, 6vw, 80px)",
@@ -92,12 +94,14 @@ export default function ResultadosPage() {
           estás mejor, no que te hiciste algo. Arrastra el visor para comparar.
         </p>
       </section>
+      </div>
 
       {/* ── Gallery ───────────────────────────────────────────────────────── */}
       <section
         style={{
           paddingLeft: "clamp(20px, 6vw, 80px)",
           paddingRight: "clamp(20px, 6vw, 80px)",
+          paddingTop: "clamp(40px, 6vw, 72px)",
           paddingBottom: "clamp(60px, 10vw, 120px)",
           maxWidth: "1200px",
           margin: "0 auto",
@@ -111,7 +115,7 @@ export default function ResultadosPage() {
             fontFamily: "var(--font-body)",
             fontSize: "0.68rem",
             lineHeight: 1.7,
-            color: "rgba(250,248,245,0.35)",
+            color: "#8a867f",
             maxWidth: "680px",
             margin: "3rem auto 0",
             textAlign: "center",

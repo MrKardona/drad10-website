@@ -153,9 +153,6 @@
 
 /* ─── Buttons ─── */
 .btn-gold {
-  /* inline-block: en un <a> inline, overflow:hidden no recorta y el brillo
-     de ::after asomaba como una franja gris a la izquierda del botón. */
-  display: inline-block;
   background: #b89a6a;
   color: #faf8f5;
   font-family: var(--font-body), sans-serif;
@@ -168,6 +165,12 @@
   transition: background 0.3s, transform 0.25s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+}
+/* inline-block: en un <a> inline, overflow:hidden no recorta y el brillo de
+   ::after asomaba como una franja gris. Va en la capa de componentes para que
+   utilidades como hidden, block o lg:inline-block lo sigan sobrescribiendo. */
+@layer components {
+  .btn-gold { display: inline-block; }
 }
 .btn-gold::after {
   content: '';
@@ -225,7 +228,7 @@
 /* ─── Section label ─── */
 .section-label {
   font-family: var(--font-body), sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #b89a6a;
@@ -236,6 +239,8 @@
 
 /* ─── Footer social ─── */
 .footer-social {
+  min-width: 44px;
+  min-height: 44px;
   background-color: rgba(184,154,106,0.1);
   color: #b89a6a;
   transition: background-color 0.25s, color 0.25s;
@@ -315,6 +320,9 @@
      desenfoque en cada fotograma. Un fondo algo más opaco da la misma lectura. */
   background-color: rgba(0, 0, 0, 0.4);
   padding: 7px 14px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -468,4 +476,10 @@
   .paso-card:hover img {
     transform: none;
   }
+}
+
+/* ─── Secuencia de frames atada al scroll ─── */
+.scroll-secuencia { height: var(--alto-secuencia, 420vh); }
+@media (max-width: 767px) {
+  .scroll-secuencia { height: min(var(--alto-secuencia, 420vh), 240vh); }
 }

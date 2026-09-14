@@ -38,6 +38,9 @@ export function HeroVideo() {
     let idle: number | undefined;
     let timer: ReturnType<typeof setTimeout> | undefined;
     const iniciar = () => {
+      // En celular el navegador suele bloquear el autoplay de YouTube y muestra
+      // sus controles encima del texto; además gasta datos. Ahí basta la imagen.
+      if (!window.matchMedia("(min-width: 768px)").matches) return;
       if (typeof window.requestIdleCallback === "function") {
         idle = window.requestIdleCallback(() => setMontarVideo(true), { timeout: 2500 });
       } else {

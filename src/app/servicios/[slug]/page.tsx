@@ -64,8 +64,8 @@ const formatCOP = (n: number) => `$${n.toLocaleString("es-CO")}`;
 
 const label: React.CSSProperties = {
   fontFamily: "var(--font-body)",
-  fontSize: "0.6rem",
-  letterSpacing: "0.3em",
+  fontSize: "0.68rem",
+  letterSpacing: "0.26em",
   textTransform: "uppercase",
   color: GOLD,
 };
@@ -225,9 +225,9 @@ export default async function TratamientoPage({ params }: Props) {
       <section style={{ backgroundColor: DARK, overflow: "hidden", paddingBottom: "clamp(40px, 6vw, 72px)" }}>
         <div style={{ ...contenedor(1240), paddingTop: "clamp(20px, 3vw, 32px)" }}>
           <nav aria-label="Ruta de navegación" style={{ ...cuerpo("rgba(250,248,245,0.4)", "0.7rem"), letterSpacing: "0.04em" }}>
-            <Link href="/" className="hover:text-[#b89a6a] transition-colors">Inicio</Link>
+            <Link href="/" className="inline-block py-2 hover:text-[#b89a6a] transition-colors">Inicio</Link>
             <span aria-hidden style={{ margin: "0 0.6rem" }}>/</span>
-            <Link href={categoria.href} className="hover:text-[#b89a6a] transition-colors">{categoria.label}</Link>
+            <Link href={categoria.href} className="inline-block py-2 hover:text-[#b89a6a] transition-colors">{categoria.label}</Link>
             {t.grupo && (
               <>
                 <span aria-hidden style={{ margin: "0 0.6rem" }}>/</span>
@@ -285,7 +285,7 @@ export default async function TratamientoPage({ params }: Props) {
                 letterSpacing: "0.04em",
               }}
             >
-              <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#b89a6a] transition-colors">
+              <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-block py-2 hover:text-[#b89a6a] transition-colors">
                 <span style={{ color: GOLD }}>★ {GOOGLE_RATING}</span> en Google · {GOOGLE_REVIEW_COUNT} reseñas
               </a>
               <span>+20.000 pacientes</span>
@@ -408,7 +408,12 @@ export default async function TratamientoPage({ params }: Props) {
               }}
             >
               {casos.map((c) => (
-                <figure key={c.id} data-anim="up" style={{ margin: 0 }}>
+                <figure
+                  key={c.id}
+                  data-anim="up"
+                  // Los casos verticales 1:2 no deben ocupar más de una pantalla en celular.
+                  style={{ margin: "0 auto", width: "100%", maxWidth: c.aspectRatio === "1 / 2" ? "340px" : undefined }}
+                >
                   <BeforeAfterSlider
                     antes={c.antes}
                     despues={c.despues}

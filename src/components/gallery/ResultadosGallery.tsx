@@ -226,10 +226,10 @@ export function ResultadosGallery() {
               onClick={() => setActiveCategory(cat)}
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.22em",
+                fontSize: "0.68rem",
+                letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                padding: "8px 18px",
+                padding: "12px 18px",
                 border: active
                   ? "1px solid #b89a6a"
                   : "1px solid rgba(184,154,106,0.2)",

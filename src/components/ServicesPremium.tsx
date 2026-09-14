@@ -130,7 +130,7 @@ export function ServicesPremium() {
                   fontSize: "0.78rem",
                   color: "#1c1c1c",
                   border: "1px solid #e0d0c6",
-                  padding: "0.45rem 1rem",
+                  padding: "0.7rem 1rem",
                   whiteSpace: "nowrap",
                   transition: "border-color 0.25s, color 0.25s",
                                   }}

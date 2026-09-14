@@ -190,7 +190,13 @@ export function ScrollVideoSection({
   }, { scope: containerRef, dependencies: [loaded] });
 
   return (
-    <section ref={containerRef} style={{ height: `${alturaVh}vh` }} className="relative bg-black">
+    <section
+      ref={containerRef}
+      style={{ ["--alto-secuencia" as string]: `${alturaVh}vh` }}
+      className="scroll-secuencia relative bg-black"
+    >
+      {/* En celular la secuencia se recorre en menos pantallas (ver .scroll-secuencia):
+          con la altura de escritorio ocupaba cinco pantallas de la misma imagen. */}
 
       {/* sticky viewport */}
       <div className="sticky top-0 h-screen w-full overflow-hidden">

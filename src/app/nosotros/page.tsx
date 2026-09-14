@@ -595,6 +595,9 @@ export default function NosotrosPage() {
         id="formacion"
         className="nos-timeline"
         style={{
+          // Las filas entran desplazadas ±72 px (NosotrosAnimations); sin recorte
+          // horizontal ensanchan la página en celular.
+          overflowX: "clip",
           backgroundColor: "#faf8f5",
           padding: "clamp(48px, 7vw, 80px) 0",
           scrollMarginTop: "90px",

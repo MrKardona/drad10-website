@@ -136,7 +136,7 @@ export default function InstagramSection() {
               }}
             >
               Cada semana compartimos técnicas, resultados y el día a día de
-              nuestra clínica. Más de 8.000 pacientes transformadas son nuestra
+              nuestra clínica. Más de 20.000 pacientes son nuestra
               mayor inspiración.
             </p>
 

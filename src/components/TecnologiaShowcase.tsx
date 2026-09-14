@@ -231,14 +231,16 @@ export function TecnologiaShowcase() {
                 key={i}
                 onClick={() => goTo(i)}
                 aria-label={`Ver proceso ${i + 1}`}
+                // La barra visible mide 2 px; el padding agranda el área táctil a 42 px.
                 style={{
-                  width: i === idx ? "26px" : "8px",
-                  height: "2px",
+                  width: i === idx ? "34px" : "16px",
+                  height: "42px",
+                  padding: "20px 4px",
+                  backgroundClip: "content-box",
                   backgroundColor: i === idx ? "#b89a6a" : "rgba(184,154,106,0.3)",
                   border: "none",
                   cursor: "pointer",
                   transition: "width 0.3s ease, background 0.3s ease",
-                  padding: 0,
                 }}
               />
             ))}

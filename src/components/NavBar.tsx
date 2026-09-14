@@ -114,7 +114,7 @@ export function NavBar() {
     <>
       {/* ── Top bar ── */}
       <div
-        className="w-full py-2 px-6 flex items-center justify-center gap-6 text-[10px] tracking-[0.22em]"
+        className="w-full py-2 px-4 sm:px-6 flex items-center justify-center gap-4 sm:gap-6 text-[11px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.22em]"
         style={{ backgroundColor: "#f0e8e2", color: "#1c1c1c" }}
       >
         <a
@@ -122,7 +122,7 @@ export function NavBar() {
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit", transition: "opacity 0.2s" }}
-          className="hover:opacity-60"
+          className="hidden md:inline hover:opacity-60"
         >
           Cl. 7 #39 – 290 Consultorio 516, El Poblado · Medellín
         </a>
@@ -131,7 +131,7 @@ export function NavBar() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram @clinicaquantum.co"
-          style={{ color: "#1c1c1c", display: "flex", alignItems: "center", gap: "4px", textDecoration: "none", transition: "opacity 0.2s" }}
+          style={{ color: "#1c1c1c", display: "flex", alignItems: "center", gap: "4px", textDecoration: "none", transition: "opacity 0.2s", padding: "6px 0" }}
           className="hover:opacity-60"
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -141,10 +141,10 @@ export function NavBar() {
           </svg>
           <span className="hidden sm:inline" style={{ letterSpacing: "0.18em" }}>@clinicaquantum.co</span>
         </a>
-        <span style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
+        <span className="hidden md:inline" style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
         <span>
           Citas:{" "}
-          <a href="tel:+573002440656" className="font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
+          <a href="tel:+573002440656" className="inline-block py-1.5 font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
             300 244 0656
           </a>
         </span>
@@ -282,13 +282,13 @@ export function NavBar() {
             </a>
             <button
               type="button"
-              className="lg:hidden p-1.5"
+              className="lg:hidden p-2.5"
               style={{ color: "#1c1c1c" }}
               onClick={toggleMenuMovil}
               aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={mobileOpen}
             >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -311,7 +311,7 @@ export function NavBar() {
               const filaStyle: React.CSSProperties = { ...textoMenu, borderBottom: "1px solid rgba(184,154,106,0.1)" };
               if (!item.columnas) {
                 return (
-                  <Link key={item.label} href={item.href} className="block px-6 py-3.5 text-[10px] tracking-[0.22em] uppercase font-medium" style={filaStyle} onClick={cerrarTodo}>
+                  <Link key={item.label} href={item.href} className="block px-6 py-4 text-[12px] tracking-[0.2em] uppercase font-medium" style={filaStyle} onClick={cerrarTodo}>
                     {item.label}
                   </Link>
                 );
@@ -320,25 +320,25 @@ export function NavBar() {
                 <div key={item.label}>
                   <button
                     type="button"
-                    className="w-full flex items-center justify-between px-6 py-3.5 text-[10px] tracking-[0.22em] uppercase font-medium"
+                    className="w-full flex items-center justify-between px-6 py-4 text-[12px] tracking-[0.2em] uppercase font-medium"
                     style={filaStyle}
                     aria-expanded={expandido}
                     onClick={() => setMobileExpanded(expandido ? null : item.label)}
                   >
                     {item.label}
-                    <ChevronDown className="w-3 h-3 transition-transform duration-200" style={{ color: "#b89a6a", transform: expandido ? "rotate(180deg)" : "none" }} />
+                    <ChevronDown className="w-4 h-4 transition-transform duration-200" style={{ color: "#b89a6a", transform: expandido ? "rotate(180deg)" : "none" }} />
                   </button>
                   {expandido && (
                     <div style={{ backgroundColor: "#f0e8e2", borderBottom: "1px solid rgba(184,154,106,0.1)", padding: "0.5rem 0 1rem" }}>
                       {item.columnas.map((col) => (
                         <div key={col.titulo}>
                           {item.columnas!.length > 1 && (
-                            <p className="px-9 pt-3 pb-1 text-[9px] tracking-[0.26em] uppercase" style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}>
+                            <p className="px-8 pt-4 pb-1 text-[10px] tracking-[0.24em] uppercase" style={{ fontFamily: "var(--font-body)", color: "#b89a6a" }}>
                               {col.titulo}
                             </p>
                           )}
                           {col.items.map((sub) => (
-                            <Link key={sub.href} href={sub.href} className="block px-9 py-2 text-[12px]" style={{ fontFamily: "var(--font-body)", color: "#5c5a57" }} onClick={cerrarTodo}>
+                            <Link key={sub.href} href={sub.href} className="block px-8 py-2.5 text-[14px]" style={{ fontFamily: "var(--font-body)", color: "#5c5a57" }} onClick={cerrarTodo}>
                               {sub.label}
                             </Link>
                           ))}

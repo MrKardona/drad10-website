@@ -104,7 +104,8 @@ function ReviewCard({ review }: { review: Review }) {
             alignSelf: "flex-start",
             background: "none",
             border: "none",
-            padding: 0,
+            padding: "12px 0",
+            margin: "-12px 0",
             fontFamily: "var(--font-body)",
             fontSize: "0.72rem",
             letterSpacing: "0.16em",
@@ -307,11 +308,13 @@ export function ReviewsCarousel() {
             rel="noopener noreferrer"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
+              fontSize: "0.68rem",
               color: "#b89a6a",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               textDecoration: "none",
+              display: "inline-block",
+              padding: "12px 0",
             }}
           >
             Ver todas las reseñas en Google Maps →

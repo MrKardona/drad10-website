@@ -161,7 +161,7 @@ export function BeforeAfterSlider({
           pointerEvents: "none",
         }}
       >
-        <span style={{ color: "#faf8f5", fontSize: "0.52rem", letterSpacing: "0.22em", textTransform: "uppercase" }}>
+        <span style={{ color: "#faf8f5", fontSize: "0.62rem", letterSpacing: "0.22em", textTransform: "uppercase" }}>
           ANTES
         </span>
       </div>
@@ -180,7 +180,7 @@ export function BeforeAfterSlider({
         <span
           style={{
             color: "#1c1c1c",
-            fontSize: "0.52rem",
+            fontSize: "0.62rem",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
             fontWeight: 700,
@@ -253,7 +253,7 @@ export function BeforeAfterSlider({
         <span
           style={{
             color: "rgba(255,255,255,0.65)",
-            fontSize: "0.48rem",
+            fontSize: "0.56rem",
             letterSpacing: "0.2em",
             textTransform: "uppercase",
           }}

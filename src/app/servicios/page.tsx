@@ -67,7 +67,7 @@ export default function ServiciosPage() {
 
       <section style={{ backgroundColor: DARK, padding: "clamp(72px, 11vw, 136px) 0 clamp(48px, 7vw, 88px)" }}>
         <div style={{ maxWidth: "1180px", margin: "0 auto", padding: "0 clamp(20px, 6vw, 80px)" }}>
-          <p data-anim="up" style={{ fontFamily: "var(--font-body)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "1.25rem" }}>
+          <p data-anim="up" style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", letterSpacing: "0.26em", textTransform: "uppercase", color: GOLD, marginBottom: "1.25rem" }}>
             {tarjetas.length} tratamientos · Clínica Quantum
           </p>
           <h1 data-anim="mask" style={{ fontFamily: "var(--font-display), Georgia, serif", fontWeight: 300, fontSize: "clamp(2.5rem, 6vw, 4.6rem)", color: CREAM, letterSpacing: "-0.03em", lineHeight: 1.08, maxWidth: "15ch", marginBottom: "1.5rem" }}>
@@ -83,7 +83,7 @@ export default function ServiciosPage() {
                 key={s.id}
                 href={`#${s.id}`}
                 className="hover:border-[#b89a6a] hover:text-[#b89a6a] transition-colors"
-                style={{ fontFamily: "var(--font-body)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "rgba(250,248,245,0.8)", border: "1px solid rgba(184,154,106,0.3)", padding: "8px 16px" }}
+                style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", letterSpacing: "0.06em", color: "rgba(250,248,245,0.85)", border: "1px solid rgba(184,154,106,0.3)", padding: "12px 16px", display: "inline-block" }}
               >
                 {s.titulo}
               </a>
@@ -108,7 +108,7 @@ export default function ServiciosPage() {
               {grupos.map((g) => (
                 <div key={g} style={{ marginBottom: "clamp(2.5rem, 5vw, 3.5rem)" }}>
                   {grupos.length > 1 && (
-                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.62rem", letterSpacing: "0.26em", textTransform: "uppercase", color: GOLD, paddingBottom: "0.75rem", borderBottom: "1px solid rgba(184,154,106,0.25)", marginBottom: "1.5rem" }}>
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.68rem", letterSpacing: "0.24em", textTransform: "uppercase", color: GOLD, paddingBottom: "0.75rem", borderBottom: "1px solid rgba(184,154,106,0.25)", marginBottom: "1.5rem" }}>
                       {g}
                     </p>
                   )}
