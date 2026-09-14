@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const tratamientos: { label: string; href: string }[] = [
-  { label: "Criolipólisis", href: "/#tratamientos-destacados" },
-  { label: "Faciales", href: "/#faciales" },
-  { label: "Corporales", href: "/#corporales" },
-  { label: "Capilares", href: "/#capilares" },
-  { label: "Inyectables", href: "/#inyectables" },
+  { label: "Criolipólisis", href: "/servicios/criolipolisis" },
+  { label: "Faciales", href: "/servicios#faciales" },
+  { label: "Corporales", href: "/servicios#corporales" },
+  { label: "Capilares", href: "/servicios#capilares" },
+  { label: "Todos los tratamientos", href: "/servicios" },
   { label: "Resultados", href: "/resultados" },
 ];
 

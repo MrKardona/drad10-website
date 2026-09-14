@@ -52,12 +52,12 @@ const INK = "#1c1c1c";
 const MUTED = "#6b6760";
 
 const CATEGORIAS: Record<CategoriaTratamiento, { label: string; href: string }> = {
-  faciales: { label: "Faciales", href: "/#faciales" },
-  corporales: { label: "Corporales", href: "/#corporales" },
-  capilares: { label: "Capilares", href: "/#capilares" },
-  "zona-intima": { label: "Zona íntima", href: "/#zona-intima" },
-  bienestar: { label: "Bienestar", href: "/#corporales" },
-  quirurgicos: { label: "Quirúrgicos", href: "/#quirurgicos" },
+  faciales: { label: "Faciales", href: "/servicios#faciales" },
+  corporales: { label: "Corporales", href: "/servicios#corporales" },
+  capilares: { label: "Capilares", href: "/servicios#capilares" },
+  "zona-intima": { label: "Zona íntima", href: "/servicios#zona-intima" },
+  bienestar: { label: "Bienestar", href: "/servicios#corporales" },
+  quirurgicos: { label: "Quirúrgicos", href: "/servicios#quirurgicos" },
 };
 
 const formatCOP = (n: number) => `$${n.toLocaleString("es-CO")}`;
