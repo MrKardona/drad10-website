@@ -146,14 +146,21 @@ export default async function TratamientoPage({ params }: Props) {
     .map((id) => galleryCases.find((c) => c.id === id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
   const relacionados = (t.relacionados ?? [])
-    .map((s) => getTratamiento(s))
-    .filter((r): r is NonNullable<typeof r> => Boolean(r))
-    .map((r) => ({ t: r, medios: mediosDe(r) }));
+    .map((s) => {
+      const r = getTratamiento(s);
+      if (r) return { slug: r.slug, nombre: r.nombre, grupo: r.grupo ?? CATEGORIAS[r.categoria].label, desde: r.precio.desde, hero: mediosDe(r)?.hero };
+      // Botox tiene página propia fuera del registro de tratamientos.
+      if (s === "botox") return { slug: "botox", nombre: "Botox (toxina botulínica)", grupo: "Toxina botulínica", desde: 1100000, hero: "/images/servicios/botox/paso-1.webp" };
+      return null;
+    })
+    .filter((r): r is NonNullable<typeof r> => Boolean(r));
   // Las reseñas de Google van primero: son verificables públicamente.
   const testimonios = [...reviews].sort((a, b) => (a.fuente === "google" ? -1 : 1) - (b.fuente === "google" ? -1 : 1)).slice(0, 3);
   const categoria = CATEGORIAS[t.categoria];
   const WA = `https://wa.me/573002440656?text=${encodeURIComponent(t.waMensaje)}`;
   const precioTexto = t.precio.desde ? `Desde ${formatCOP(t.precio.desde)}` : "Precio a valoración";
+  // Cosmetología y bienestar no son procedimientos médicos: se agenda una cita.
+  const cta = t.grupo === "Cosmetología" || t.categoria === "bienestar" ? "Agendar cita" : "Agendar valoración";
 
   const schema = [
     {
@@ -261,7 +268,7 @@ export default async function TratamientoPage({ params }: Props) {
               style={{ justifyContent: medios ? "flex-start" : "center" }}
             >
               <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold text-center">
-                Agendar valoración
+                {cta}
               </a>
               <a href="#precio" className="btn-outline-cream text-center">
                 {precioTexto}
@@ -629,7 +636,7 @@ export default async function TratamientoPage({ params }: Props) {
             <div data-anim="up">
               {t.precio.nota && <p style={{ ...cuerpo(MUTED, "0.86rem"), marginBottom: "1.5rem" }}>{t.precio.nota}</p>}
               <a href={WA} target="_blank" rel="noopener noreferrer" className="btn-gold text-center" style={{ display: "block" }}>
-                Agendar valoración
+                {cta}
               </a>
               <p style={{ ...cuerpo("#8a867f", "0.72rem"), marginTop: "0.9rem" }}>
                 Valores de referencia en pesos colombianos. El plan final lo define la valoración médica.
@@ -742,20 +749,20 @@ export default async function TratamientoPage({ params }: Props) {
           <div style={contenedor()}>
             <Encabezado eyebrow="Se complementa con" titulo="Tratamientos" em="relacionados" />
             <ul className="grid sm:grid-cols-2 lg:grid-cols-3" style={{ listStyle: "none", padding: 0, margin: 0, gap: "clamp(20px, 3vw, 32px)" }}>
-              {relacionados.map(({ t: r, medios: m }) => (
+              {relacionados.map((r) => (
                 <li key={r.slug} data-anim="up">
                   <Link href={`/servicios/${r.slug}`} className="group block">
-                    {m && (
+                    {r.hero && (
                       <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 3", marginBottom: "1rem" }}>
-                        <Image src={m.hero} alt={r.nombre} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+                        <Image src={r.hero} alt={r.nombre} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
                       </div>
                     )}
-                    <p style={{ ...label, marginBottom: "0.35rem" }}>{r.grupo ?? CATEGORIAS[r.categoria].label}</p>
+                    <p style={{ ...label, marginBottom: "0.35rem" }}>{r.grupo}</p>
                     <p style={{ ...display("1.3rem", INK), lineHeight: 1.25 }} className="group-hover:text-[#b89a6a] transition-colors">
                       {r.nombre}
                     </p>
                     <p style={{ ...cuerpo(MUTED, "0.82rem"), marginTop: "0.3rem" }}>
-                      {r.precio.desde ? `Desde ${formatCOP(r.precio.desde)}` : "Precio a valoración"} →
+                      {r.desde ? `Desde ${formatCOP(r.desde)}` : "Precio a valoración"} →
                     </p>
                   </Link>
                 </li>

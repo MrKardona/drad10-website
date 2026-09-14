@@ -13,7 +13,7 @@ export const capilarYOtros: Tratamiento[] = [
       dir: "capilar",
       frameCount: 61,
       alturaVh: 300,
-      badge: "Técnica FUE · folículo a folículo",
+      badge: "Folículo a folículo",
       frase: "Cada injerto, colocado a mano",
     },
     hero: {
@@ -1468,6 +1468,6 @@ export const capilarYOtros: Tratamiento[] = [
       { q: "¿Qué debo llevar?", a: "Solo ropa cómoda. Te indicamos todo lo necesario al llegar." },
       { q: "¿Quién no debe hacérselo?", a: "Personas con fiebre, infecciones, trombosis, lesiones agudas o heridas en la piel. En embarazo solo con autorización médica." },
     ],
-    waMensaje: "Hola, quiero agendar una valoración para Masajes de relajación",
+    waMensaje: "Hola, quiero agendar un masaje de relajación",
   },
 ];
