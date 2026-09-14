@@ -928,23 +928,25 @@ export const corporales: Tratamiento[] = [
         "Notas la zona con poca firmeza o irregular",
         "Sientes pesadez o retención en las piernas",
         "Quieres un plan combinado con seguimiento",
+        "Buscas mejorar la textura sin cirugía ni incapacidad",
       ],
       noIdeal: [
         "Esperas que la celulitis desaparezca por completo",
         "Estás en embarazo o lactancia",
         "Tienes várices importantes o problemas de circulación sin valorar",
+        "Tienes infección, heridas o irritación en la piel de la zona",
       ],
     },
     problema: {
       titulo: "La textura que te hace pensar dos veces antes de ponerte algo",
       parrafos: [
-        "La celulitis aparece en mujeres de todos los pesos y edades. Tiene que ver con hormonas, circulación y la estructura del tejido, no solo con cuánto comes o entrenas.",
-        "Por eso responde mejor a un abordaje combinado: trabajar el tejido, la circulación y la firmeza de la piel al mismo tiempo, con constancia.",
+        "La celulitis aparece en mujeres de todos los pesos y edades, incluso en quienes entrenan y se alimentan bien. Tiene que ver con hormonas, circulación y la estructura del tejido bajo la piel, no solo con cuánto comes o cuánto te mueves. Por eso es tan frustrante cuando nada parece funcionar.",
+        "Responde mejor a un abordaje combinado: trabajar el tejido, la circulación y la firmeza de la piel al mismo tiempo, con constancia y seguimiento. Así la textura mejora de forma visible y vuelves a elegir tu ropa sin pensar en la piel de naranja.",
       ],
     },
     queEs: {
       titulo: "Qué es el tratamiento de celulitis",
-      desc: "Es un paquete que mejora la textura de piel de naranja y firma la zona. Combina una sesión de Liposonic con mesoterapias, drenajes linfáticos y aparatología, para trabajar el tejido graso superficial, la retención de líquidos y la calidad de la piel. La celulitis se puede mejorar de forma visible, pero tiende a reaparecer si no se mantienen hábitos y cuidados.",
+      desc: "Es un paquete que mejora la textura de piel de naranja y firma la zona. La celulitis se forma cuando pequeñas acumulaciones de grasa empujan la piel hacia afuera mientras bandas de tejido fibroso la sujetan hacia adentro, lo que crea los hoyuelos. Por eso combinamos una sesión de Liposonic con mesoterapias, drenajes linfáticos y aparatología, para trabajar el tejido graso superficial, la retención de líquidos y la calidad de la piel. La celulitis se puede mejorar de forma visible, pero tiende a reaparecer si no se mantienen hábitos y cuidados.",
     },
     beneficios: [
       "Mejora la textura",
@@ -960,46 +962,21 @@ export const corporales: Tratamiento[] = [
       { icon: "◇", label: "Abdomen", desc: "Textura y firmeza de la piel." },
     ],
     pasos: [
-      {
-        num: "01",
-        title: "Valoración del grado de celulitis",
-        desc: "Revisamos el tipo y grado de celulitis, la circulación y la firmeza de la piel para definir las zonas del paquete.",
-        detail: "Valoración médica previa",
-      },
-      {
-        num: "02",
-        title: "Liposonic y sesiones combinadas",
-        desc: "Realizas la sesión de Liposonic y continúas con mesoterapias, drenajes y aparatología según el calendario.",
-        detail: "1 + 5 + 5 + 5 sesiones",
-      },
-      {
-        num: "03",
-        title: "Evolución y mantenimiento",
-        desc: "Revisamos cómo cambió la textura y te damos pautas para conservar el resultado en el tiempo.",
-        detail: "Control de avance",
-      },
+      { num: "01", title: "Valoración del grado de celulitis", desc: "Revisamos el tipo y grado de celulitis, la circulación de tus piernas y la firmeza de la piel para definir las zonas del paquete y el calendario de sesiones.", detail: "Valoración médica previa" },
+      { num: "02", title: "Liposonic y sesiones combinadas", desc: "Empiezas con la sesión de Liposonic y continúas con 5 mesoterapias, 5 drenajes linfáticos y 5 sesiones de aparatología, organizadas según el calendario acordado contigo.", detail: "1 + 5 + 5 + 5 sesiones" },
+      { num: "03", title: "Evolución y mantenimiento", desc: "Revisamos cómo cambió la textura y la firmeza de la zona a lo largo del paquete y te damos pautas de hábitos y mantenimiento para conservar el resultado.", detail: "Control de avance" },
     ],
     seguridad: [
-      {
-        num: "01",
-        title: "Diagnóstico antes de tratar",
-        desc: "No toda irregularidad es celulitis. Revisamos circulación y tejido para no tratar algo que necesita otro enfoque.",
-      },
-      {
-        num: "02",
-        title: "Técnicas combinadas con criterio",
-        desc: "La mezcla y la frecuencia de las sesiones se ajustan a tu piel y tolerancia, no a una receta única.",
-      },
-      {
-        num: "03",
-        title: "Expectativas realistas",
-        desc: "Buscamos una mejora visible de la textura. Te explicamos que la celulitis puede volver sin hábitos de mantenimiento.",
-      },
+      { num: "01", title: "Diagnóstico antes de tratar", desc: "No toda irregularidad es celulitis. Revisamos circulación y tejido para no tratar algo que necesita otro enfoque." },
+      { num: "02", title: "Técnicas combinadas con criterio", desc: "La mezcla y la frecuencia de las sesiones se ajustan a tu piel y tolerancia, no a una receta única." },
+      { num: "03", title: "Expectativas realistas", desc: "Buscamos una mejora visible de la textura. Te explicamos que la celulitis puede volver sin hábitos de mantenimiento." },
+      { num: "04", title: "Seguimiento durante el paquete", desc: "Revisamos cómo responde tu piel entre sesiones y ajustamos zonas o intensidad si notas molestias, morados o sensibilidad." },
     ],
     cuidados: {
       antes: [
         "Llega con la piel limpia, sin cremas",
         "Usa ropa cómoda",
+        "Evita el sol intenso en la zona los días previos",
         "Cuéntanos si tienes várices, trombosis previa o problemas circulatorios",
       ],
       despues: [
@@ -1025,34 +1002,14 @@ export const corporales: Tratamiento[] = [
       nota: "Las zonas y la frecuencia las definimos en la valoración según el grado de celulitis.",
     },
     faq: [
-      {
-        q: "¿Cuánto cuesta?",
-        a: "El paquete tiene un valor de $1.500.000 e incluye 1 Liposonic, 5 mesoterapias, 5 drenajes y 5 sesiones de aparatología.",
-      },
-      {
-        q: "¿La celulitis se quita por completo?",
-        a: "Se puede mejorar de forma visible la textura y la firmeza, pero no desaparece del todo y puede reaparecer. Los hábitos y el mantenimiento marcan la diferencia.",
-      },
-      {
-        q: "¿Duele?",
-        a: "Los drenajes y la aparatología suelen ser cómodos. La mesoterapia se siente como pinchazos finos, generalmente tolerables.",
-      },
-      {
-        q: "¿Cuándo veo resultados?",
-        a: "Los cambios son progresivos y se aprecian a medida que avanzas en el paquete.",
-      },
-      {
-        q: "¿Tiene efectos secundarios?",
-        a: "Lo habitual es enrojecimiento, sensibilidad o pequeños morados donde se aplicó la mesoterapia, que ceden en pocos días.",
-      },
-      {
-        q: "¿Lo puedo combinar con otros tratamientos?",
-        a: "Sí. Según tu caso puede complementarse con moldeamiento corporal con INDIBA o con el tratamiento de estrías.",
-      },
-      {
-        q: "¿Quién no puede hacérselo?",
-        a: "No está indicado en embarazo o lactancia, con infección en la piel de la zona o alergia a los componentes de la mesoterapia. Si tienes problemas circulatorios, primero los valoramos.",
-      },
+      { q: "¿Cuánto cuesta?", a: "El paquete tiene un valor de $1.500.000 COP e incluye 1 sesión de Liposonic, 5 mesoterapias, 5 drenajes y 5 sesiones de aparatología. En la valoración revisamos tus zonas y organizamos el calendario de sesiones contigo." },
+      { q: "¿La celulitis se quita por completo? ¿Cuánto dura el resultado?", a: "Se puede mejorar de forma visible la textura y la firmeza, pero no desaparece del todo y tiende a reaparecer con cambios hormonales, de peso o de hábitos. Mantenerte activa, hidratada y hacer mantenimiento cuando se indique marca la diferencia." },
+      { q: "¿Duele?", a: "Los drenajes y la aparatología suelen ser cómodos. La mesoterapia se siente como pinchazos finos y rápidos, generalmente tolerables. Durante la aparatología y el Liposonic puedes sentir calor o molestia leve, y ajustamos la intensidad a tu tolerancia." },
+      { q: "¿Cuántas sesiones son?", a: "El paquete reúne 16 sesiones: 1 Liposonic, 5 mesoterapias, 5 drenajes y 5 de aparatología. La frecuencia la definimos en la valoración según el grado de celulitis y tu disponibilidad, para que puedas cumplir el plan con constancia." },
+      { q: "¿Cuándo veo resultados?", a: "Los cambios son progresivos. Habitualmente primero notas la piel más suave y las piernas menos pesadas, y la mejoría de la textura se aprecia mejor a medida que avanzas y completas el paquete." },
+      { q: "¿Tiene efectos secundarios o recuperación?", a: "No requiere incapacidad: retomas tu rutina el mismo día. Lo habitual es enrojecimiento, sensibilidad o pequeños morados donde se aplicó la mesoterapia, que ceden en pocos días. Ese día evita sol directo, sauna y piscina." },
+      { q: "¿Lo puedo combinar con otros tratamientos?", a: "Sí. Según tu caso puede complementarse con el moldeamiento corporal con INDIBA, el paquete mesoterapéutico o el tratamiento de estrías si también te preocupan. En la valoración ordenamos las sesiones para que cada técnica sume." },
+      { q: "¿Quién no puede hacérselo?", a: "No está indicado en embarazo o lactancia, con infección o heridas en la piel de la zona ni con alergia a los componentes de la mesoterapia. Si tienes várices, trombosis previa o problemas circulatorios, primero los valoramos." },
     ],
     waMensaje: "Hola, quiero agendar una valoración para Tratamiento de celulitis",
   },
@@ -1272,6 +1229,7 @@ export const corporales: Tratamiento[] = [
         "Tienes estrías por embarazo, cambios de peso o crecimiento",
         "Te molesta su color o su textura",
         "Tienes estrías recientes, rojizas o violáceas",
+        "Te preocupa que se noten con vestido de baño o ropa corta",
         "Buscas mejorar su aspecto con un plan realista",
       ],
       noIdeal: [
@@ -1290,7 +1248,7 @@ export const corporales: Tratamiento[] = [
     },
     queEs: {
       titulo: "Qué es el tratamiento de estrías",
-      desc: "Es un protocolo que mejora el aspecto y el color de las estrías. En la valoración revisamos si son recientes, rojizas o violáceas, que suelen responder mejor, o antiguas y blancas, que mejoran de forma más limitada. Con eso definimos las técnicas, el número de sesiones y el intervalo entre ellas.",
+      desc: "Es un protocolo que mejora el aspecto y el color de las estrías. Las estrías son pequeñas roturas de las fibras de colágeno y elastina en la capa profunda de la piel, que aparecen cuando esta se estira más rápido de lo que puede adaptarse. Los tratamientos buscan estimular colágeno nuevo y mejorar el color de la marca. En la valoración revisamos si son recientes, rojizas o violáceas, que suelen responder mejor, o antiguas y blancas, que mejoran de forma más limitada. Con eso definimos las técnicas, el número de sesiones y el intervalo entre ellas.",
     },
     beneficios: [
       "Protocolo personalizado",
@@ -1307,46 +1265,21 @@ export const corporales: Tratamiento[] = [
       { icon: "▽", label: "Brazos", desc: "Parte interna del brazo." },
     ],
     pasos: [
-      {
-        num: "01",
-        title: "Valoración de tus estrías",
-        desc: "Revisamos tipo, color, antigüedad y extensión de las estrías, y tu tipo de piel, para definir el protocolo.",
-        detail: "Valoración médica previa",
-      },
-      {
-        num: "02",
-        title: "Sesiones del protocolo",
-        desc: "Aplicamos las técnicas indicadas en la zona con el intervalo acordado, cuidando la piel entre sesiones.",
-        detail: "Plan por sesiones",
-      },
-      {
-        num: "03",
-        title: "Evolución y ajustes",
-        desc: "Comparamos la zona en cada control y ajustamos el plan según la respuesta de tu piel.",
-        detail: "Seguimiento en meses",
-      },
+      { num: "01", title: "Valoración de tus estrías", desc: "Revisamos el tipo, el color, la antigüedad y la extensión de tus estrías, junto con tu fototipo y tu tendencia a manchas, para definir un protocolo realista.", detail: "Valoración médica previa" },
+      { num: "02", title: "Sesiones del protocolo", desc: "Aplicamos en la zona las técnicas indicadas en tu protocolo, con el intervalo acordado entre sesiones, y te damos cuidados para proteger la piel mientras se renueva.", detail: "Plan por sesiones" },
+      { num: "03", title: "Evolución y ajustes", desc: "Comparamos la zona en cada control y ajustamos técnicas, intensidad o intervalos según la respuesta de tu piel a lo largo de los meses.", detail: "Seguimiento en meses" },
     ],
     seguridad: [
-      {
-        num: "01",
-        title: "Técnica elegida para tu piel",
-        desc: "El fototipo y la tendencia a manchas o cicatrices cambian la indicación. Lo revisamos antes de proponer un protocolo.",
-      },
-      {
-        num: "02",
-        title: "Promesas realistas",
-        desc: "Buscamos que las estrías se vean menos, no que desaparezcan. Las blancas y antiguas mejoran de forma más limitada.",
-      },
-      {
-        num: "03",
-        title: "Cuidado entre sesiones",
-        desc: "Te damos indicaciones de protección solar e hidratación para cuidar la piel tratada y reducir el riesgo de manchas.",
-      },
+      { num: "01", title: "Técnica elegida para tu piel", desc: "El fototipo y la tendencia a manchas o cicatrices cambian la indicación. Lo revisamos antes de proponer un protocolo." },
+      { num: "02", title: "Promesas realistas", desc: "Buscamos que las estrías se vean menos, no que desaparezcan. Las blancas y antiguas mejoran de forma más limitada." },
+      { num: "03", title: "Cuidado entre sesiones", desc: "Te damos indicaciones de protección solar e hidratación para cuidar la piel tratada y reducir el riesgo de manchas." },
+      { num: "04", title: "Ajustes en cada control", desc: "Revisamos la reacción de la piel después de cada sesión y ajustamos el plan si aparece sensibilidad, manchas o una respuesta menor a la esperada." },
     ],
     cuidados: {
       antes: [
         "Evita el sol y el bronceado en la zona las semanas previas",
         "Suspende exfoliantes fuertes si tu médico lo indica",
+        "Llega con la piel limpia, sin cremas ni aceites",
         "Cuéntanos si tienes tendencia a queloides o manchas",
       ],
       despues: [
@@ -1369,34 +1302,14 @@ export const corporales: Tratamiento[] = [
       nota: "El valor depende de la zona, el tipo de estría y el número de sesiones: lo definimos en la valoración.",
     },
     faq: [
-      {
-        q: "¿Cuánto cuesta?",
-        a: "El precio es personalizado porque depende de la zona, la extensión y el número de sesiones. Te lo damos en la valoración.",
-      },
-      {
-        q: "¿Las estrías se quitan por completo?",
-        a: "No. El objetivo es mejorar su color y su textura para que se vean menos. Las estrías recientes suelen responder mejor que las blancas y antiguas.",
-      },
-      {
-        q: "¿Cuántas sesiones necesito?",
-        a: "Habitualmente varias, separadas por semanas. El número exacto depende del tipo de estría y de cómo responda tu piel.",
-      },
-      {
-        q: "¿Duele?",
-        a: "Depende de la técnica. Suele sentirse molestia tolerable y, cuando se requiere, usamos anestesia tópica.",
-      },
-      {
-        q: "¿Qué efectos secundarios puede tener?",
-        a: "Enrojecimiento, inflamación y sensibilidad pasajera son lo habitual. En pieles morenas existe riesgo de manchas, por eso el cuidado solar es importante.",
-      },
-      {
-        q: "¿Cuándo veo resultados?",
-        a: "La mejoría es gradual y se aprecia a lo largo de meses, a medida que la piel se renueva.",
-      },
-      {
-        q: "¿Puedo hacérmelo en embarazo o lactancia?",
-        a: "No. Es mejor esperar a terminar la lactancia para iniciar el protocolo.",
-      },
+      { q: "¿Cuánto cuesta?", a: "El precio es personalizado porque depende de la zona, la extensión, el tipo de estría y el número de sesiones del protocolo. En la valoración revisamos tu piel y te entregamos el plan con su valor antes de empezar." },
+      { q: "¿Las estrías se quitan por completo? ¿Cuánto dura la mejoría?", a: "No se borran del todo: el objetivo es mejorar su color y su textura para que se vean menos. La mejoría lograda suele mantenerse, aunque pueden aparecer estrías nuevas con otro embarazo o cambios de peso. Las recientes responden mejor que las blancas." },
+      { q: "¿Cuántas sesiones necesito?", a: "Habitualmente varias, separadas por algunas semanas para dar tiempo a que la piel se renueve. El número exacto depende del tipo de estría, de la extensión de la zona y de cómo responda tu piel, y lo definimos en la valoración." },
+      { q: "¿Duele?", a: "Depende de la técnica indicada. Suele sentirse una molestia tolerable, como calor o pinchazos finos, y cuando se requiere usamos anestesia tópica para que la sesión sea más cómoda. Te explicamos qué sentirás antes de empezar." },
+      { q: "¿Qué efectos secundarios y recuperación tiene?", a: "Enrojecimiento, inflamación y sensibilidad pasajera son lo habitual, y según la técnica la recuperación va de 0 a 5 días. En pieles morenas existe riesgo de manchas, por eso el cuidado solar entre sesiones es importante." },
+      { q: "¿Cuándo veo resultados?", a: "La mejoría es gradual porque la piel necesita tiempo para producir colágeno nuevo. Habitualmente se aprecia a lo largo de varios meses, y el resultado se evalúa mejor cuando terminas el protocolo." },
+      { q: "¿Lo puedo combinar con otros tratamientos?", a: "Según tu caso, sí. En la valoración podemos proponer complementar con microagujas o láser CO2, que también realizamos, o sumar el tratamiento de celulitis si te preocupa la textura de la misma zona, respetando los tiempos de la piel." },
+      { q: "¿Quién no puede hacérselo?", a: "No se indica en embarazo ni lactancia: es mejor esperar a terminarla. Tampoco con infección o herida activa en la zona. Si tienes tendencia a queloides o a manchas, lo revisamos antes para elegir una técnica adecuada para tu piel." },
     ],
     waMensaje: "Hola, quiero agendar una valoración para Tratamiento de estrías",
   },
