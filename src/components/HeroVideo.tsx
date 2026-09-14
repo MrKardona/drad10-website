@@ -240,8 +240,8 @@ export function HeroVideo() {
             { label: "LABIOS", href: "/servicios/relleno-de-labios" },
             { label: "ÁCIDO HIALURÓNICO", href: "/servicios/acido-hialuronico" },
             { label: "IMPLANTE CAPILAR", href: "/servicios/implante-capilar-fue" },
-            { label: "MOLDEAMIENTO", href: "/servicios/moldeamiento-corporal" },
-            { label: "DESCENSO DE PESO", href: "/servicios/descenso-de-peso" },
+            { label: "CRIOLIPÓLISIS", href: "/servicios/criolipolisis" },
+            { label: "VER TODOS", href: "/servicios" },
           ].map((c) => (
             <a key={c.label} href={c.href} className="hero-chip">
               {c.label}
