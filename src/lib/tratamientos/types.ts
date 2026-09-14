@@ -2,7 +2,40 @@ export type CategoriaTratamiento =
   | "faciales"
   | "corporales"
   | "capilares"
-  | "zona-intima";
+  | "zona-intima"
+  | "bienestar"
+  | "quirurgicos";
+
+/** Una línea de la tabla de precios del portafolio. valor null = "a valoración". */
+export interface OpcionPrecio {
+  label: string;
+  detalle?: string;
+  valor: number | null;
+}
+
+/** Datos rápidos que el paciente busca antes de decidir. Rangos orientativos. */
+export interface FichaRapida {
+  /** Duración de la sesión, p. ej. "30 a 45 min". */
+  duracion: string;
+  /** Número de sesiones habitual, p. ej. "1 sesión" o "4 a 6 sesiones". */
+  sesiones: string;
+  /** Tiempo de recuperación, p. ej. "Retomas tu rutina el mismo día". */
+  recuperacion: string;
+  /** Cuándo se notan y cuánto duran los resultados. */
+  resultados: string;
+}
+
+export interface ParaQuien {
+  /** Perfiles o motivos para los que el tratamiento está indicado. */
+  ideal: string[];
+  /** Casos en los que no es lo indicado o hay que valorar antes. */
+  noIdeal: string[];
+}
+
+export interface Cuidados {
+  antes: string[];
+  despues: string[];
+}
 
 export interface ZonaBeneficio {
   icon: string;
@@ -37,6 +70,10 @@ export interface ImagenesTratamiento {
   pasos?: string[];
   /** Retrato vertical junto al CTA de cierre — 3:4. */
   cierre?: string;
+  /** Imagen de resultado o estilo de vida — 4:5. */
+  resultado?: string;
+  /** Video corto en bucle para la portada (mp4, sin audio). */
+  video?: string;
 }
 export interface SecuenciaScroll {
   /** Carpeta bajo /frames con los sets d/ y m/. */
@@ -51,7 +88,14 @@ export interface SecuenciaScroll {
 export interface Tratamiento {
   slug: string;
   categoria: CategoriaTratamiento;
+  /** Subgrupo del menú, p. ej. "Ácido hialurónico" o "Contorno corporal". */
+  grupo?: string;
   nombre: string;
+  ficha?: FichaRapida;
+  paraQuien?: ParaQuien;
+  cuidados?: Cuidados;
+  /** Slugs de otros tratamientos que complementan este. */
+  relacionados?: string[];
   /** Imágenes propias. Opcional: sin ellas la página cae al diseño sin foto. */
   imagenes?: ImagenesTratamiento;
   /** Secuencia de frames atada al scroll. Omitir para no mostrarla. */
@@ -93,6 +137,8 @@ export interface Tratamiento {
   precio: {
     /** COP. null = mostrar "precio personalizado en valoración" */
     desde: number | null;
+    /** Tabla de opciones con su valor. La primera se destaca. */
+    opciones?: OpcionPrecio[];
     incluye: string[];
     nota?: string;
   };
