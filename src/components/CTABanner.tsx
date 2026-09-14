@@ -75,7 +75,7 @@ export function CTABanner() {
             fontSize: "0.9rem",
           }}
         >
-          Agenda tu cita de valoración sin costo. Nuestros especialistas
+          Agenda tu cita de valoración. Nuestros especialistas
           analizarán tus necesidades y diseñarán un plan personalizado
           para ti.
         </p>
@@ -83,7 +83,7 @@ export function CTABanner() {
         {/* ── Buttons ── */}
         <div className="flex flex-wrap justify-center gap-4 opacity-0 animate-fade-up delay-400">
           {/* Primary */}
-          <Link href="#agenda" className="btn-dark inline-block">
+          <Link href="/#agenda" className="btn-dark inline-block">
             AGENDAR CITA AHORA
           </Link>
 

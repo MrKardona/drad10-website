@@ -33,13 +33,13 @@ const FAQ_ITEMS: FAQItem[] = [
     id: 4,
     question: "¿Cuántas sesiones necesito para ver resultados?",
     answer:
-      "Muchos tratamientos muestran resultados desde la primera sesión. El número de sesiones varía: el botox tiene efecto inmediato y dura entre 4 y 6 meses; INDIBA generalmente requiere entre 4 y 8 sesiones para resultados óptimos; el implante capilar es un procedimiento único. En tu valoración gratuita diseñamos un plan personalizado según tus objetivos.",
+      "Muchos tratamientos muestran resultados desde la primera sesión. El número de sesiones varía: el botox tiene efecto inmediato y dura entre 4 y 6 meses; INDIBA generalmente requiere entre 4 y 8 sesiones para resultados óptimos; el implante capilar es un procedimiento único. En tu valoración diseñamos un plan personalizado según tus objetivos.",
   },
   {
     id: 5,
     question: "¿Cómo sé cuál es el tratamiento indicado para mí?",
     answer:
-      "Por eso ofrecemos una cita de valoración sin costo. La Dra. Díez analiza tu caso de forma integral — tu tipo de piel, historial médico, objetivos y presupuesto — y te propone el plan más adecuado. Nunca te recomendamos algo que no necesitas.",
+      "Para eso está la cita de valoración: la Dra. Díez analiza tu caso de forma integral — tu tipo de piel, historial médico, objetivos y presupuesto — y te propone el plan más adecuado. Nunca te recomendamos algo que no necesitas.",
   },
   {
     id: 6,

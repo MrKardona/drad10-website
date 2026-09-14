@@ -288,6 +288,7 @@ export default async function TratamientoPage({ params }: Props) {
               <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#b89a6a] transition-colors">
                 <span style={{ color: GOLD }}>★ {GOOGLE_RATING}</span> en Google · {GOOGLE_REVIEW_COUNT} reseñas
               </a>
+              <span>+20.000 pacientes</span>
               <span>Dirección médica: Dra. Daniela Díez</span>
               <span>El Poblado, Medellín</span>
             </div>

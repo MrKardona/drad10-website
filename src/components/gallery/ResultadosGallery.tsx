@@ -309,7 +309,7 @@ export function ResultadosGallery() {
             marginBottom: "1.75rem",
           }}
         >
-          Agenda tu valoración gratuita hoy
+          Agenda tu valoración hoy
         </p>
         <a
           href="https://wa.me/573002440656"

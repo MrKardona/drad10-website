@@ -346,7 +346,7 @@ export default async function BlogPostPage({ params }: Props) {
                 lineHeight: 1.4,
               }}
             >
-              Agenda tu valoración gratuita con la Dra. Daniela Díez
+              Agenda tu valoración con la Dra. Daniela Díez
             </p>
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
               <a

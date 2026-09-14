@@ -402,7 +402,7 @@ export function ServicesPremium() {
         {/* ── CTA ── */}
         <div className="mt-16 text-center" data-anim="up">
           <a href="#agenda" className="btn-gold">
-            AGENDA UNA VALORACIÓN GRATUITA
+            AGENDA TU VALORACIÓN
           </a>
         </div>
       </div>
