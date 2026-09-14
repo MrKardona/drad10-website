@@ -231,10 +231,11 @@ export function SedesSection() {
 
             <div className="space-y-4 mb-8">
               {[
-                { icon: "📍", label: "Ciudad", value: "Buenos Aires, Argentina" },
+                { icon: "📍", label: "Dirección", value: "Av. Gaona 1237, Depto 11-2" },
+                { icon: "🏙️", label: "Ciudad", value: "Buenos Aires, Argentina" },
                 { icon: "🌎", label: "Habilitación", value: "Doble habilitación ARG & COL" },
                 { icon: "📞", label: "Contacto", value: "A través de WhatsApp" },
-                { icon: "🕐", label: "Atención", value: "Consultar disponibilidad" },
+                { icon: "🕐", label: "Horario", value: "Lun–Vie 14–20h · Sáb 9–14h" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
                   <span style={{ fontSize: "0.85rem", marginTop: "1px", opacity: 0.6 }}>{item.icon}</span>
@@ -265,6 +266,7 @@ export function SedesSection() {
               ))}
             </div>
 
+            <div className="flex flex-wrap gap-x-8 gap-y-3">
             <a
               href="https://wa.me/573002440656?text=Hola%2C%20me%20interesa%20información%20sobre%20atención%20en%20Argentina"
               target="_blank"
@@ -285,6 +287,27 @@ export function SedesSection() {
               Consultar por WhatsApp
               <span>→</span>
             </a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Gaona+1237,+Buenos+Aires,+Argentina"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.62rem",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase" as const,
+                color: "#b89a6a",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
+                transition: "opacity 0.2s",
+              }}
+              className="hover:opacity-70"
+            >
+              Ver en Google Maps
+              <span>→</span>
+            </a>
+            </div>
           </div>
 
         </div>
