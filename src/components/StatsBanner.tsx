@@ -93,7 +93,7 @@ export function StatsBanner() {
               }}
             />
             <Image
-              src="/images/dra-daniela-respaldo.webp"
+              src="/images/dra/scrubs.webp"
               alt="Dra. Daniela Díez — directora médica de DRA.D10, El Poblado, Medellín"
               fill
               className="object-cover"

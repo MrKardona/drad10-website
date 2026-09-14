@@ -2,30 +2,34 @@ import Link from "next/link";
 import Image from "next/image";
 import { resultadosTeaser } from "@/lib/images";
 
-// 4 categorías de tratamiento. Imágenes ilustrativas (no son pacientes de la clínica).
+// 4 especialidades con la foto de portada de su página de servicio.
 const casos = [
   {
     id: "botox",
+    href: "/servicios/botox",
     label: "Faciales",
-    tratamiento: "Toxina Botulínica",
+    tratamiento: "Toxina botulínica",
     image: resultadosTeaser.faciales,
   },
   {
     id: "labios",
+    href: "/servicios/relleno-de-labios",
     label: "Inyectables",
-    tratamiento: "Ácido Hialurónico",
+    tratamiento: "Labios con ácido hialurónico",
     image: resultadosTeaser.inyectables,
   },
   {
     id: "corporal",
+    href: "/servicios/criolipolisis",
     label: "Corporales",
-    tratamiento: "INDIBA Activ",
+    tratamiento: "Criolipólisis",
     image: resultadosTeaser.corporales,
   },
   {
     id: "capilar",
+    href: "/servicios/implante-capilar-fue",
     label: "Capilares",
-    tratamiento: "Implante Capilar",
+    tratamiento: "Trasplante capilar",
     image: resultadosTeaser.capilares,
   },
 ];
@@ -83,7 +87,7 @@ export function ResultadosTeaser() {
           {casos.map((caso, i) => (
             <Link
               key={caso.id}
-              href="/resultados"
+              href={caso.href}
               className="group relative block overflow-hidden"
               style={{ aspectRatio: "3/4" }}
               aria-label={`Ver ${caso.tratamiento}`}
