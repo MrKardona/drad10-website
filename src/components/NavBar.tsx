@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { menuServicios } from "@/lib/tratamientos/menu";
+import { PAISES, alCambiarPais, guardarPais, leerPais, type Pais } from "@/lib/pais";
 import type { CategoriaTratamiento } from "@/lib/tratamientos/types";
 
 type Enlace = { label: string; href: string };
@@ -102,6 +103,12 @@ export function NavBar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  const [pais, setPais] = useState<Pais>("co");
+  useEffect(() => {
+    setPais(leerPais());
+    return alCambiarPais(setPais);
+  }, []);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpenDropdown(null);
@@ -142,12 +149,26 @@ export function NavBar() {
           <span className="hidden sm:inline" style={{ letterSpacing: "0.18em" }}>@clinicaquantum.co</span>
         </a>
         <span className="hidden md:inline" style={{ color: "#b89a6a", fontSize: "0.5rem" }}>✦</span>
-        <span>
+        <span className="hidden sm:inline">
           Citas:{" "}
-          <a href="tel:+573043751975" className="inline-block py-1.5 font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
-            304 375 1975
+          <a href={`tel:${PAISES[pais].tel}`} className="inline-block py-1.5 font-semibold tracking-[0.18em] transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
+            {PAISES[pais].telefono}
           </a>
         </span>
+        <div role="group" aria-label="País de atención" className="flex items-center rounded-full p-0.5" style={{ border: "1px solid rgba(184,154,106,0.45)" }}>
+          {(["co", "ar"] as const).map((p) => (
+            <button
+              key={p}
+              type="button"
+              aria-pressed={pais === p}
+              onClick={() => { setPais(p); guardarPais(p); }}
+              className="rounded-full px-3 py-1.5 uppercase transition-colors"
+              style={{ backgroundColor: pais === p ? "#1c1c1c" : "transparent", color: pais === p ? "#faf8f5" : "#1c1c1c", letterSpacing: "0.16em", minHeight: 30 }}
+            >
+              {PAISES[p].nombre}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* ── Main navbar ── */}

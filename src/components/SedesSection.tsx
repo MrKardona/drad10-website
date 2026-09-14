@@ -234,7 +234,7 @@ export function SedesSection() {
                 { icon: "📍", label: "Dirección", value: "Av. Gaona 1237, Depto 11-2" },
                 { icon: "🏙️", label: "Ciudad", value: "Buenos Aires, Argentina" },
                 { icon: "🌎", label: "Habilitación", value: "Doble habilitación ARG & COL" },
-                { icon: "📞", label: "Contacto", value: "A través de WhatsApp" },
+                { icon: "📞", label: "WhatsApp", value: "+54 11 5344-7956" },
                 { icon: "🕐", label: "Horario", value: "Lun–Vie 14–20h · Sáb 9–14h" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
@@ -268,7 +268,8 @@ export function SedesSection() {
 
             <div className="flex flex-wrap gap-x-8 gap-y-3">
             <a
-              href="https://wa.me/573043751975?text=Hola%2C%20me%20interesa%20información%20sobre%20atención%20en%20Argentina"
+              href="https://wa.me/5491153447956?text=Hola%2C%20me%20interesa%20información%20sobre%20atención%20en%20Argentina"
+              data-wa-fijo
               target="_blank"
               rel="noopener noreferrer"
               style={{
