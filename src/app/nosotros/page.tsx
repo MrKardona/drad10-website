@@ -5,6 +5,7 @@ import { CTABanner } from "@/components/CTABanner";
 import { FooterPremium } from "@/components/FooterPremium";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { NosotrosAnimations } from "@/components/NosotrosAnimations";
+import { NosotrosRetrato } from "@/components/NosotrosRetrato";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -145,9 +146,12 @@ export default function NosotrosPage() {
           paddingTop: "clamp(110px, 15vw, 180px)",
           paddingBottom: 0,
           overflow: "hidden",
+          position: "relative",
         }}
       >
+        <NosotrosRetrato />
         <div
+          className="nos-hero-texto"
           style={{
             maxWidth: "1160px",
             margin: "0 auto",

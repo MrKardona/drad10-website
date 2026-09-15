@@ -483,3 +483,60 @@
 @media (max-width: 767px) {
   .scroll-secuencia { height: min(var(--alto-secuencia, 420vh), 240vh); }
 }
+
+/* ─── /nosotros: retrato del hero con profundidad ─── */
+.nos-retrato {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  top: 540px;
+  height: 520px;
+  opacity: 0.14;
+  pointer-events: none;
+  perspective: 1400px;
+  z-index: 0;
+}
+.nos-retrato-plano {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 25%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 25%, #000 55%, transparent 100%);
+}
+.nos-retrato-foto { position: absolute; top: -34%; right: -5%; bottom: -6%; left: -5%; will-change: transform; }
+.nos-retrato-luz { position: absolute; inset: 0; mix-blend-mode: soft-light; }
+.nos-retrato-tarjeta { display: none; }
+.nos-hero-texto { position: relative; z-index: 1; }
+
+@media (min-width: 1024px) {
+  .nos-retrato {
+    top: 72px;
+    bottom: 0;
+    height: auto;
+    width: min(46vw, 720px);
+    opacity: 1;
+  }
+  .nos-retrato-plano {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 48%), linear-gradient(to bottom, transparent 0%, #000 16%, #000 62%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0%, #000 48%), linear-gradient(to bottom, transparent 0%, #000 16%, #000 62%, transparent 100%);
+    mask-composite: intersect;
+  }
+  .nos-retrato-tarjeta {
+    position: absolute;
+    left: 30%;
+    bottom: 26%;
+    display: grid;
+    gap: 2px;
+    padding: 14px 18px;
+    background: #faf8f5;
+    border: 1px solid rgba(28, 28, 28, 0.08);
+    box-shadow: 0 18px 40px rgba(28, 28, 28, 0.08);
+    will-change: transform;
+  }
+  .nos-retrato-tarjeta span { font-weight: 600; font-size: 0.95rem; color: #1c1c1c; letter-spacing: -0.01em; }
+  .nos-retrato-tarjeta small { font-size: 0.8125rem; color: #6f6b66; }
+}
