@@ -11,7 +11,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Toxina botulínica",
     nombre: "Botox (toxina botulínica)",
-    resultados: [],
+    resultados: ["botox-entrecejo", "botox-frente", "botox-entrecejo-2"],
     relacionados: ["mesobotox", "toxina-bruxismo", "skinbooster"],
     hero: {
       eyebrow: "Toxina botulínica · Tercio superior",
@@ -652,7 +652,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Ácido hialurónico",
     nombre: "Labios con ácido hialurónico",
-    resultados: ["labios-acido-hialuronico"],
+    resultados: ["labios-acido-hialuronico", "labios-2", "labios-3", "labios-4"],
     relacionados: ["acido-hialuronico", "rinomodelacion", "volumen-de-menton"],
     hero: {
       eyebrow: "Ácido hialurónico · Labios",
@@ -756,7 +756,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Ácido hialurónico",
     nombre: "Rinomodelación",
-    resultados: ["rinomodelacion"],
+    resultados: ["rinomodelacion", "rinomodelacion-2", "rinomodelacion-3", "rinomodelacion-4"],
     relacionados: ["alectomia", "volumen-de-menton", "relleno-de-labios"],
     hero: {
       eyebrow: "Ácido hialurónico · Rinomodelación",
@@ -1260,7 +1260,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Ácido hialurónico",
     nombre: "Ojeras con ácido hialurónico",
-    resultados: ["ojeras-acido-hialuronico"],
+    resultados: ["ojeras-acido-hialuronico", "ojeras-2", "ojeras-3"],
     relacionados: ["ojeras-mesoterapia", "soporte-tercio-medio", "skinbooster"],
     hero: {
       eyebrow: "Ácido hialurónico · Ojeras",

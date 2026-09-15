@@ -695,7 +695,7 @@ export const capilarYOtros: Tratamiento[] = [
     categoria: "quirurgicos",
     grupo: "Armonización quirúrgica menor",
     nombre: "Alectomía",
-    resultados: ["alectomia"],
+    resultados: ["alectomia", "alectomia-2", "alectomia-3", "alectomia-4"],
     relacionados: ["rinomodelacion", "otomodelizacion", "lobulo-rasgado"],
     hero: {
       eyebrow: "Armonización quirúrgica menor · Alectomía",

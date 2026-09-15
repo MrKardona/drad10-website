@@ -156,7 +156,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Bioestimuladores",
     nombre: "Long Lasting",
-    resultados: ["long-lasting"],
+    resultados: ["long-lasting", "long-lasting-2"],
     relacionados: ["sculptra", "skinbooster", "nctf-mesoterapia"],
     hero: {
       eyebrow: "Bioestimulación · Cara y cuello",
@@ -448,7 +448,7 @@ export const rejuvenecimiento: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Bioestimuladores",
     nombre: "Rejuvenecimiento de manos, cuello y pecho",
-    resultados: [],
+    resultados: ["manos", "manos-2"],
     relacionados: ["hidroxiapatita-de-calcio", "sculptra", "plasma-rico-en-plaquetas-facial"],
     hero: {
       eyebrow: "Hidroxiapatita · Manos, cuello y pecho",
