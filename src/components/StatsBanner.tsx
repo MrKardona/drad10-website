@@ -29,7 +29,7 @@ export function StatsBanner() {
 
       {/* ── Main content: narrative + facts ── */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px_auto] gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px_340px] gap-12 lg:gap-16 items-center">
 
           {/* Left: editorial sentence */}
           <div data-anim="left">
@@ -107,10 +107,10 @@ export function StatsBanner() {
             data-anim="right"
           >
             {[
-              { num: "20000", pre: "+", suf: "", label: "Pacientes atendidas" },
-              { num: "5",   pre: "",  suf: "+", label: "Años de trayectoria" },
-              { num: "35",  pre: "",  suf: "+", label: "Tratamientos disponibles" },
-              { num: "4.9", pre: "",  suf: "★", label: "Calificación en Google" },
+              { num: "20000", pre: "+", suf: "", label: "Pacientes atendidas", texto: "+20.000" },
+              { num: "5",   pre: "",  suf: "+", label: "Años de trayectoria", texto: "5+" },
+              { num: "35",  pre: "",  suf: "+", label: "Tratamientos disponibles", texto: "35+" },
+              { num: "4.9", pre: "",  suf: "★", label: "Calificación en Google", texto: "4.9★" },
             ].map((s, i) => (
               <div
                 key={s.label}
@@ -131,10 +131,15 @@ export function StatsBanner() {
                     color: "#b89a6a",
                     letterSpacing: "-0.03em",
                     lineHeight: 1,
-                    minWidth: "80px",
+                    // Ancho fijo y cifras del mismo ancho: el contador no empuja la foto.
+                    display: "inline-block",
+                    width: "6.8ch",
+                    flexShrink: 0,
+                    whiteSpace: "nowrap",
+                    fontVariantNumeric: "tabular-nums",
                   }}
                 >
-                  {s.pre}{s.num}{s.suf}
+                  {s.texto}
                 </span>
                 {/* Label */}
                 <span
