@@ -93,13 +93,13 @@ export function NosotrosRetrato() {
       <div ref={plano} className="nos-retrato-plano">
         <div ref={foto} className="nos-retrato-foto">
           <Image
-            src="/images/dra/sofa.webp"
+            src="/images/dra/retrato-sillon.webp"
             alt=""
             fill
             priority
             sizes="(min-width: 1024px) 46vw, 100vw"
             className="object-cover"
-            style={{ objectPosition: "50% 100%" }}
+            style={{ objectPosition: "50% 30%" }}
           />
         </div>
         <div ref={luz} className="nos-retrato-luz" />

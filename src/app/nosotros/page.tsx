@@ -84,7 +84,7 @@ const equipo = [
     cargo: "Directora Médica · Clínica Quantum",
     especialidad: "Medicina estética y antienvejecimiento · Dermatología · Recuperación capilar",
     bio: "Médica con doble habilitación en Argentina y Colombia, formada en la Universidad de Buenos Aires. Su práctica en salud capilar abarca el diagnóstico y tratamiento de la pérdida del cabello y la cirugía de trasplante capilar, siempre a partir de una valoración médica individual. Su filosofía: entender primero, tratar después.",
-    foto: "/images/dra/scrubs.webp",
+    foto: "/images/dra/uniforme-rosa-2.webp",
     initials: "DD",
   },
   {
@@ -381,7 +381,7 @@ export default function NosotrosPage() {
               }}
             >
               <Image
-                src="/images/dra-daniela.jpg"
+                src="/images/dra/bata-rosa-cuerpo.webp"
                 alt="Dra. Daniela Díez — Fundadora DRA.D10"
                 fill
                 className="object-cover object-top"

@@ -44,7 +44,7 @@ export function DoctorSection() {
               {/* Photo frame */}
               <div className="relative aspect-[3/4] w-full overflow-hidden img-zoom">
                 <Image
-                  src="/images/dra-daniela.jpg"
+                  src="/images/dra/uniforme-rosa.webp"
                   alt="Dra. Daniela Díez — DRA.D10 Medicina Estética"
                   fill
                   className="object-cover object-top"

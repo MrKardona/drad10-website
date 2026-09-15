@@ -31,7 +31,7 @@ export const resultadosTeaser = {
  *  Las cuatro coinciden con el equipamiento declarado en el portafolio. */
 export const tecnologia = {
   /** Foto real: la Dra. Daniela con el analizador capilar. */
-  analizador: "/images/dra/analizador.webp",
+  analizador: "/images/dra/analizador-bata.webp",
   /** Foto real: criolipólisis Cryonic en uso. */
   criolipolisis: "/images/clinica/criolipolisis.webp",
   /** Foto real: equipo INDIBA de la clínica. */

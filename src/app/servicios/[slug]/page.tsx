@@ -694,7 +694,7 @@ export default async function TratamientoPage({ params }: Props) {
         <div className="grid lg:grid-cols-[0.75fr_1.25fr]" style={{ ...contenedor(), gap: "clamp(36px, 6vw, 96px)" }}>
           <div data-anim="up">
             <div className="relative w-full max-w-sm" style={{ aspectRatio: "3 / 4" }}>
-              <Image src="/images/dra/scrubs.webp" alt="Dra. Daniela Díez, directora médica de Clínica Quantum" fill sizes="(max-width: 1024px) 80vw, 30vw" className="object-cover" />
+              <Image src="/images/dra/bata-rosa.webp" alt="Dra. Daniela Díez, directora médica de Clínica Quantum" fill sizes="(max-width: 1024px) 80vw, 30vw" className="object-cover" />
             </div>
             <p style={{ ...display("1.3rem", INK), marginTop: "1.1rem" }}>Dra. Daniela Díez</p>
             <p style={cuerpo(MUTED, "0.82rem")}>Dirección médica · Clínica Quantum</p>
