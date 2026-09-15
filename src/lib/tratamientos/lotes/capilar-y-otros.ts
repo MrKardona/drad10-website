@@ -244,7 +244,7 @@ export const capilarYOtros: Tratamiento[] = [
     categoria: "capilares",
     grupo: "Medicina capilar",
     nombre: "Mesoterapia capilar + INDIBA",
-    resultados: [],
+    resultados: ["capilar-coronilla", "capilar-2", "capilar-3", "capilar-4", "capilar-5", "capilar-6"],
     relacionados: ["prp-capilar", "exosomas-capilares", "indiba-capilar"],
     hero: {
       eyebrow: "Medicina capilar · Mesoterapia + INDIBA",
@@ -356,7 +356,7 @@ export const capilarYOtros: Tratamiento[] = [
     categoria: "capilares",
     grupo: "Medicina capilar",
     nombre: "Plasma rico en plaquetas capilar",
-    resultados: [],
+    resultados: ["capilar-7", "capilar-8", "capilar-9", "capilar-10", "capilar-11", "capilar-tratamiento"],
     relacionados: ["mesoterapia-capilar", "exosomas-capilares", "implante-capilar-fue"],
     hero: {
       eyebrow: "Medicina capilar · Plasma rico en plaquetas",
@@ -468,7 +468,7 @@ export const capilarYOtros: Tratamiento[] = [
     categoria: "capilares",
     grupo: "Medicina capilar",
     nombre: "Exosomas capilares",
-    resultados: [],
+    resultados: ["capilar-coronilla", "capilar-3", "capilar-5", "capilar-7", "capilar-9", "capilar-11"],
     relacionados: ["prp-capilar", "mesoterapia-capilar", "implante-capilar-fue"],
     hero: {
       eyebrow: "Medicina capilar · Exosomas",
