@@ -7,7 +7,7 @@ export const capilarYOtros: Tratamiento[] = [
     categoria: "capilares",
     grupo: "Medicina capilar",
     nombre: "Trasplante capilar",
-    resultados: ["trasplante-capilar"],
+    resultados: ["trasplante-capilar", "implante-capilar", "implante-capilar-2", "implante-capilar-3"],
     relacionados: ["trasplante-de-barba", "prp-capilar", "exosomas-capilares"],
     secuencia: {
       dir: "capilar",
