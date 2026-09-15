@@ -11,7 +11,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Toxina botulínica",
     nombre: "Botox (toxina botulínica)",
-    resultados: ["botox-entrecejo", "botox-frente", "botox-entrecejo-2"],
+    resultados: ["botox-entrecejo", "botox-frente", "botox-entrecejo-2", "botox-entrecejo-3", "botox-entrecejo-5", "botox-entrecejo-6", "botox-entrecejo-4"],
     relacionados: ["mesobotox", "toxina-bruxismo", "skinbooster"],
     hero: {
       eyebrow: "Toxina botulínica · Tercio superior",
@@ -652,7 +652,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Ácido hialurónico",
     nombre: "Labios con ácido hialurónico",
-    resultados: ["labios-acido-hialuronico", "labios-2", "labios-3", "labios-4"],
+    resultados: ["labios-acido-hialuronico", "labios-2", "labios-3", "labios-4", "labios-5", "labios-6", "labios-7", "labios-8", "labios-9"],
     relacionados: ["acido-hialuronico", "rinomodelacion", "volumen-de-menton"],
     hero: {
       eyebrow: "Ácido hialurónico · Labios",
