@@ -756,7 +756,7 @@ export const inyectables: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Ácido hialurónico",
     nombre: "Rinomodelación",
-    resultados: ["rinomodelacion", "rinomodelacion-2", "rinomodelacion-3", "rinomodelacion-4"],
+    resultados: ["rinomodelacion", "rinomodelacion-2", "rinomodelacion-3", "rinomodelacion-4", "rinomodelacion-5", "rinomodelacion-6", "rinomodelacion-7", "rinomodelacion-8"],
     relacionados: ["alectomia", "volumen-de-menton", "relleno-de-labios"],
     hero: {
       eyebrow: "Ácido hialurónico · Rinomodelación",
