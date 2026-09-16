@@ -38,9 +38,9 @@ export function HeroVideo() {
     let idle: number | undefined;
     let timer: ReturnType<typeof setTimeout> | undefined;
     const iniciar = () => {
-      // En celular el navegador suele bloquear el autoplay de YouTube y muestra
-      // sus controles encima del texto; además gasta datos. Ahí basta la imagen.
-      if (!window.matchMedia("(min-width: 768px)").matches) return;
+      // Con ahorro de datos activo no se carga el video; queda la imagen.
+      const conexion = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+      if (conexion?.saveData) return;
       if (typeof window.requestIdleCallback === "function") {
         idle = window.requestIdleCallback(() => setMontarVideo(true), { timeout: 2500 });
       } else {
@@ -89,6 +89,7 @@ export function HeroVideo() {
         aria-hidden="true"
         style={{
           zIndex: 1,
+          containerType: "size",
           backgroundImage: `url(${POSTER})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -105,11 +106,10 @@ export function HeroVideo() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              /* 16:9 sizing that always covers the container */
-              width: "177.78vh",   /* 100vh × (16/9) */
-              height: "56.25vw",   /* 100vw × (9/16) */
-              minWidth: "100%",
-              minHeight: "100%",
+              /* 16:9 que siempre cubre el contenedor, también en celular
+                 donde la sección es más alta que la pantalla */
+              width: "max(100cqw, 177.78cqh)",
+              height: "max(100cqh, 56.25cqw)",
               border: "none",
               pointerEvents: "none",
             }}
