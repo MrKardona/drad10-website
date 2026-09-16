@@ -226,7 +226,7 @@ export const galleryCases: GalleryCase[] = [
   },
   {
     id: "botox-entrecejo-3",
-    title: "Ceño relajado",
+    title: "Entrecejo liso al fruncir",
     treatment: "Toxina botulínica",
     zone: "Entrecejo",
     category: "inyectable",
@@ -358,7 +358,7 @@ export const galleryCases: GalleryCase[] = [
   },
   {
     id: "labios-6",
-    title: "Volumen proporcionado",
+    title: "Labios más llenos y naturales",
     treatment: "Relleno de labios",
     zone: "Labios",
     category: "inyectable",
@@ -418,7 +418,7 @@ export const galleryCases: GalleryCase[] = [
   },
   {
     id: "ojeras-2",
-    title: "Mirada más descansada",
+    title: "Ojeras menos marcadas",
     treatment: "Ácido hialurónico",
     zone: "Ojeras",
     category: "inyectable",
