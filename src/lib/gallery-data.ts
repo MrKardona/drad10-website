@@ -418,7 +418,7 @@ export const galleryCases: GalleryCase[] = [
   },
   {
     id: "ojeras-2",
-    title: "Ojeras menos marcadas",
+    title: "Zona de ojeras más uniforme",
     treatment: "Ácido hialurónico",
     zone: "Ojeras",
     category: "inyectable",
