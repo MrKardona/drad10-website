@@ -7,6 +7,8 @@ import { BeforeAfterSlider } from "@/components/gallery/BeforeAfterSlider";
 import { NavBar } from "@/components/NavBar";
 import { FooterPremium } from "@/components/FooterPremium";
 import { TratamientoFAQ } from "@/components/servicios/TratamientoFAQ";
+import { VideosTratamiento } from "@/components/servicios/VideosTratamiento";
+import { videosPorTratamiento } from "@/lib/tratamientos/videos";
 import { galleryCases } from "@/lib/gallery-data";
 import { reviews, GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_MAPS_URL } from "@/lib/testimonios";
 import { getTratamiento, getAllSlugs } from "@/lib/tratamientos";
@@ -151,6 +153,7 @@ export default async function TratamientoPage({ params }: Props) {
   if (!t) notFound();
 
   const medios = mediosDe(t);
+  const clips = videosPorTratamiento[t.slug] ?? [];
   const casos = (t.resultados ?? [])
     .map((id) => galleryCases.find((c) => c.id === id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
@@ -395,6 +398,21 @@ export default async function TratamientoPage({ params }: Props) {
             ))}
           </dl>
           <style>{`@media (min-width:1024px){.ficha-sin-borde>div{border-top:none!important}}`}</style>
+        </section>
+      )}
+
+      {/* ══ VIDEOS REALES ═════════════════════════════════════════════ */}
+      {clips.length > 0 && (
+        <section style={seccion(SAND)}>
+          <div style={contenedor()}>
+            <Encabezado
+              eyebrow="Videos reales"
+              titulo="Así se vive en"
+              em="la clínica"
+              sub="Grabados en nuestras salas, con pacientes reales."
+            />
+            <VideosTratamiento clips={clips} nombre={t.nombre} />
+          </div>
         </section>
       )}
 
