@@ -26,7 +26,7 @@ export function VideosTratamiento({ clips, nombre }: { clips: ClipTratamiento[];
       }}
     >
       {clips.map((c, i) => (
-        <Clip key={c.src} clip={c} alt={`${nombre}: ${c.tipo === "testimonio" ? "testimonio de paciente" : "procedimiento real"} ${i + 1}`} />
+        <Clip key={c.src} clip={c} alt={`${nombre}: ${c.tipo === "testimonio" ? "testimonio de paciente" : c.tipo === "educativo" ? "explicación del equipo" : "procedimiento real"} ${i + 1}`} />
       ))}
       <style>{`.videos-trat::-webkit-scrollbar{height:4px}.videos-trat::-webkit-scrollbar-thumb{background:${GOLD}66;border-radius:4px}`}</style>
     </div>
@@ -120,7 +120,7 @@ function Clip({ clip, alt }: { clip: ClipTratamiento; alt: string }) {
             pointerEvents: "none",
           }}
         >
-          {clip.tipo === "testimonio" ? "Testimonio" : "En la clínica"}
+          {clip.tipo === "testimonio" ? "Testimonio" : clip.tipo === "educativo" ? "Te explicamos" : "En la clínica"}
         </span>
       </div>
     </figure>
