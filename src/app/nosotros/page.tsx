@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const stats = [
   { value: 5, suffix: "+", label: "Años de experiencia", prefix: "" },
   { value: 20000, suffix: "+", label: "Personas atendidas", prefix: "" },
-  { value: 35, suffix: "+", label: "Tratamientos disponibles", prefix: "" },
+  { value: 70, suffix: "+", label: "Tratamientos disponibles", prefix: "" },
 ];
 
 const credentials = [
