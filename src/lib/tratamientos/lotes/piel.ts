@@ -8,7 +8,7 @@ export const piel: Tratamiento[] = [
     categoria: "faciales",
     grupo: "Piel y manchas",
     nombre: "Láser CO2 de última tecnología",
-    resultados: [],
+    resultados: ["laser-co2", "laser-co2-2"],
     relacionados: ["subcision-de-hoyuelos", "tratamiento-de-acne", "microagujas"],
     hero: {
       eyebrow: "Láser CO2 · Renovación profunda",

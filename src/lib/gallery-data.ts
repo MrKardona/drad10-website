@@ -173,6 +173,30 @@ export const galleryCases: GalleryCase[] = [
       "Reduce la actividad de los músculos de la mandíbula para disminuir el apretamiento y la tensión muscular.",
   },
   {
+    id: "laser-co2",
+    title: "Marcas de acné que se apagan",
+    treatment: "Láser CO2",
+    zone: "Mejillas",
+    category: "facial",
+    antes: `${R}/laser-co2-antes.webp`,
+    despues: `${R}/laser-co2-despues.webp`,
+    aspectRatio: "3 / 4",
+    description:
+      "La misma paciente antes y después de sus sesiones de láser CO2: menos marcas rojizas y una piel más uniforme.",
+  },
+  {
+    id: "laser-co2-2",
+    title: "Textura más pareja en la mejilla",
+    treatment: "Láser CO2",
+    zone: "Mejillas",
+    category: "facial",
+    antes: `${R}/laser-co2-2-antes.webp`,
+    despues: `${R}/laser-co2-2-despues.webp`,
+    aspectRatio: "3 / 4",
+    description:
+      "La misma paciente antes y después de sus sesiones de láser CO2: menos marcas rojizas y una piel más uniforme.",
+  },
+  {
     id: "alectomia",
     title: "Afinado de aletas nasales",
     treatment: "Alectomía",
