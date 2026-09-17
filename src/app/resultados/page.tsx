@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Resultados reales | Clínica Quantum",
     description:
-      "Explora nuestra galería de transformaciones reales. Tratamientos faciales, corporales, capilares e inyectables de la mano de la Dra. Daniela Díez en Medellín.",
+      "Explora nuestra galería de transformaciones reales. Tratamientos faciales, corporales, capilares e inyectables del equipo médico de la Dra. Daniela Díez en Medellín.",
     url: "https://drad10.com/resultados",
     siteName: "DRA.D10",
     locale: "es_CO",

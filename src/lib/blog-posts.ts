@@ -110,7 +110,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: "list",
         items: [
-          "1. Valoración facial — la Dra. Daniela analiza tu anatomía, escucha tus objetivos y diseña un plan personalizado",
+          "1. Valoración facial — nuestro equipo médico analiza tu anatomía, escucha tus objetivos y diseña un plan personalizado",
           "2. Preparación — limpieza de la zona y aplicación de anestesia tópica (crema) durante 20-30 minutos",
           "3. Aplicación — microinyecciones precisas con aguja o cánula según la zona; el procedimiento toma entre 20 y 45 minutos",
           "4. Modelado — masaje suave para distribuir uniformemente el producto y afinar el resultado",
@@ -207,7 +207,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "La cita dura entre 20 y 30 minutos. La Dra. Daniela Díez realiza una valoración facial detallada — analizamos tu anatomía, tus gestos habituales y lo que quieres lograr. Luego aplicamos el producto con agujas muy finas en DRA.D10; la mayoría de personas describe la sensación como pequeños pinchazos casi imperceptibles. No requiere anestesia, aunque podemos aplicar crema tópica si lo prefieres.",
+        text: "La cita dura entre 20 y 30 minutos. Nuestro equipo médico realiza una valoración facial detallada — analizamos tu anatomía, tus gestos habituales y lo que quieres lograr. Luego aplicamos el producto con agujas muy finas en DRA.D10; la mayoría de personas describe la sensación como pequeños pinchazos casi imperceptibles. No requiere anestesia, aunque podemos aplicar crema tópica si lo prefieres.",
       },
       {
         type: "quote",
@@ -504,7 +504,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Realidad: Este es el mito más peligroso. El implante capilar es una cirugía. La diferencia entre un resultado natural y uno que 'se nota' está completamente en la habilidad y el criterio estético del médico. Busca siempre un profesional certificado y desconfía de precios muy por debajo del mercado. En DRA.D10 Medellín, la Dra. Daniela Díez es médica certificada con formación internacional en implante capilar.",
+        text: "Realidad: Este es el mito más peligroso. El implante capilar es una cirugía. La diferencia entre un resultado natural y uno que 'se nota' está completamente en la habilidad y el criterio estético del médico. Busca siempre un profesional certificado y desconfía de precios muy por debajo del mercado. En DRA.D10 Medellín, el procedimiento lo realiza un equipo médico capacitado, bajo la dirección de la Dra. Daniela Díez, médica certificada con formación internacional en implante capilar.",
       },
       {
         type: "quote",
@@ -615,7 +615,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Realidad: El efecto 'cara de plástico' no es una consecuencia inevitable del tratamiento — es el resultado de una mala aplicación. Dosis excesivas, puntos incorrectos, técnica inadecuada. En DRA.D10, la Dra. Daniela Díez aplica botox con un enfoque de resultados naturales: el botox bien aplicado relaja músculos específicos de forma sutil y conserva la expresividad natural.",
+        text: "Realidad: El efecto 'cara de plástico' no es una consecuencia inevitable del tratamiento — es el resultado de una mala aplicación. Dosis excesivas, puntos incorrectos, técnica inadecuada. En DRA.D10, nuestro equipo médico, bajo la dirección de la Dra. Daniela Díez, aplica botox con un enfoque de resultados naturales: el botox bien aplicado relaja músculos específicos de forma sutil y conserva la expresividad natural.",
       },
       {
         type: "heading",

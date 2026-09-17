@@ -338,7 +338,7 @@ export default async function BlogPostPage({ params }: Props) {
                 lineHeight: 1.4,
               }}
             >
-              Agenda tu valoración con la Dra. Daniela Díez
+              Agenda tu valoración en DRA.D10
             </p>
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
               <a

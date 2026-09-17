@@ -21,7 +21,7 @@ const FAQ_ITEMS: FAQItem[] = [
     id: 2,
     question: "¿Son seguros? ¿Cuáles son los riesgos?",
     answer:
-      "Todos nuestros tratamientos son realizados por la Dra. Daniela Díez, médica certificada con formación internacional. Utilizamos tecnología avalada y productos de primera línea. Las complicaciones serias son extremadamente raras cuando los procedimientos se realizan en manos de profesionales calificados. En la valoración inicial evaluamos tu historial médico para asegurarnos de que el tratamiento sea el adecuado para ti.",
+      "Nuestros tratamientos los realiza un equipo médico altamente capacitado, bajo la dirección médica de la Dra. Daniela Díez, médica certificada con formación internacional. Utilizamos tecnología avalada y productos de primera línea. Las complicaciones serias son extremadamente raras cuando los procedimientos se realizan en manos de profesionales calificados. En la valoración inicial evaluamos tu historial médico para asegurarnos de que el tratamiento sea el adecuado para ti.",
   },
   {
     id: 3,

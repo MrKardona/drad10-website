@@ -572,7 +572,7 @@ export default function NosotrosPage() {
                 className="btn-gold"
                 style={{ fontSize: "0.8125rem" }}
               >
-                Agendar con la Dra. Daniela
+                Agendar valoración
               </Link>
             </div>
           </div>

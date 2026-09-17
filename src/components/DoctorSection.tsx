@@ -112,10 +112,7 @@ export function DoctorSection() {
               className="leading-relaxed mb-10 text-sm"
               style={{ color: "#888580", fontFamily: "var(--font-body)" }}
             >
-              Su enfoque proactivo, analítico y su liderazgo natural hacen de
-              cada tratamiento una experiencia personalizada y de alto nivel. La
-              Dra. Díez se destaca por su fácil adaptación y un compromiso
-              responsable con cada paciente.
+              Lidera un equipo médico altamente capacitado que realiza cadatratamiento con el mismo criterio: valoración individual, técnicacuidadosa y un compromiso responsable con cada paciente.
             </p>
 
             {/* Credentials 2×2 */}
@@ -150,12 +147,12 @@ export function DoctorSection() {
             </div>
 
             <a
-              href="https://wa.me/573043751975?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20con%20la%20Dra.%20Daniela%20D%C3%ADez"
+              href="https://wa.me/573043751975?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20en%20DRA.D10"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold inline-block opacity-0 animate-fade-up delay-600 mb-4"
             >
-              Agendar con la Dra. Díez
+              Agendar valoración
             </a>
             <br />
             <Link
