@@ -125,13 +125,13 @@ export function NavBar() {
         style={{ backgroundColor: "#f0e8e2", color: "#1c1c1c" }}
       >
         <a
-          href="https://maps.app.goo.gl/dtwj4zv9ayygTz8NA"
+          href={PAISES[pais].mapa}
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit", transition: "opacity 0.2s" }}
           className="hidden md:inline hover:opacity-60"
         >
-          Cl. 7 #39 – 290 Consultorio 516, El Poblado · Medellín
+          {PAISES[pais].direccion}
         </a>
         <a
           href="https://www.instagram.com/dra.d10/"

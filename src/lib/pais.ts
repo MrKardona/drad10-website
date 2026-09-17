@@ -1,8 +1,8 @@
 export type Pais = "co" | "ar";
 
-export const PAISES: Record<Pais, { nombre: string; wa: string; telefono: string; tel: string }> = {
-  co: { nombre: "Colombia", wa: "573043751975", telefono: "304 375 1975", tel: "+573043751975" },
-  ar: { nombre: "Argentina", wa: "5491153447956", telefono: "+54 11 5344-7956", tel: "+541153447956" },
+export const PAISES: Record<Pais, { nombre: string; wa: string; telefono: string; tel: string; direccion: string; mapa: string }> = {
+  co: { nombre: "Colombia", wa: "573043751975", telefono: "304 375 1975", tel: "+573043751975", direccion: "Cl. 7 #39 – 290 Consultorio 516, El Poblado · Medellín", mapa: "https://maps.app.goo.gl/dtwj4zv9ayygTz8NA" },
+  ar: { nombre: "Argentina", wa: "5491153447956", telefono: "+54 11 5344-7956", tel: "+541153447956", direccion: "Av. Gaona 1237, Depto 11-2 · Buenos Aires", mapa: "https://www.google.com/maps/search/?api=1&query=Av.+Gaona+1237,+Buenos+Aires,+Argentina" },
 };
 
 const CLAVE = "drad10-pais";
