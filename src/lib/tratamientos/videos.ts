@@ -37,13 +37,6 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       tipo: "procedimiento",
       duracion: 6,
       sonido: false
-    },
-    {
-      src: "/videos/clips/acido-hialuronico/testimonio-5.mp4",
-      poster: "/videos/clips/acido-hialuronico/testimonio-5.jpg",
-      tipo: "testimonio",
-      duracion: 19,
-      sonido: true
     }
   ],
   alectomia: [
