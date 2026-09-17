@@ -5,12 +5,16 @@ import type { ClipTratamiento } from "@/lib/tratamientos/videos";
 
 const GOLD = "#b89a6a";
 
+const etiqueta = (tipo: ClipTratamiento["tipo"]) =>
+  tipo === "testimonio" ? "Testimonio" : tipo === "educativo" ? "Te explicamos" : "En la clínica";
+
 /**
- * Carrusel de clips reales del tratamiento. Los de procedimiento no tienen
- * audio y se reproducen en bucle mientras están en pantalla; los testimonios
- * esperan a que la persona toque para reproducir con sonido.
+ * Carrusel de clips reales del tratamiento. Los videos viven en YouTube (no
+ * listados) y el reproductor solo se carga cuando la persona toca el video,
+ * así la página no descarga el player de YouTube por cada clip.
  */
 export function VideosTratamiento({ clips, nombre }: { clips: ClipTratamiento[]; nombre: string }) {
+  const [activo, setActivo] = useState<string | null>(null);
   return (
     <div
       className="videos-trat"
@@ -26,21 +30,37 @@ export function VideosTratamiento({ clips, nombre }: { clips: ClipTratamiento[];
       }}
     >
       {clips.map((c, i) => (
-        <Clip key={c.src} clip={c} alt={`${nombre}: ${c.tipo === "testimonio" ? "testimonio de paciente" : c.tipo === "educativo" ? "explicación del equipo" : "procedimiento real"} ${i + 1}`} />
+        <Clip
+          key={c.src}
+          clip={c}
+          activo={activo === c.src}
+          onActivar={() => setActivo(c.src)}
+          alt={`${nombre}: ${c.tipo === "testimonio" ? "testimonio de paciente" : c.tipo === "educativo" ? "explicación del equipo" : "procedimiento real"} ${i + 1}`}
+        />
       ))}
       <style>{`.videos-trat::-webkit-scrollbar{height:4px}.videos-trat::-webkit-scrollbar-thumb{background:${GOLD}66;border-radius:4px}`}</style>
     </div>
   );
 }
 
-function Clip({ clip, alt }: { clip: ClipTratamiento; alt: string }) {
+function Clip({
+  clip,
+  alt,
+  activo,
+  onActivar,
+}: {
+  clip: ClipTratamiento;
+  alt: string;
+  activo: boolean;
+  onActivar: () => void;
+}) {
   const ref = useRef<HTMLVideoElement>(null);
-  const [activo, setActivo] = useState(false);
+  const local = !clip.youtubeId;
 
-  // Clips mudos: reproducir solo mientras son visibles para no gastar datos ni CPU.
+  // Respaldo sin YouTube: los clips mudos se reproducen solo mientras son visibles.
   useEffect(() => {
     const v = ref.current;
-    if (!v || clip.sonido) return;
+    if (!v || !local || clip.sonido) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) v.play().catch(() => {});
@@ -48,37 +68,52 @@ function Clip({ clip, alt }: { clip: ClipTratamiento; alt: string }) {
     }, { threshold: 0.4 });
     io.observe(v);
     return () => io.disconnect();
-  }, [clip.sonido]);
+  }, [local, clip.sonido]);
 
-  const reproducir = () => {
-    const v = ref.current;
-    if (!v) return;
-    document.querySelectorAll<HTMLVideoElement>(".videos-trat video").forEach((o) => {
-      if (o !== v && !o.muted) o.pause();
-    });
-    setActivo(true);
-    v.play().catch(() => {});
-  };
+  const mostrarBoton = !activo && (clip.youtubeId || clip.sonido);
 
   return (
     <figure style={{ margin: 0, scrollSnapAlign: "start" }}>
       <div style={{ position: "relative", aspectRatio: "9 / 16", overflow: "hidden", background: "#111" }}>
-        <video
-          ref={ref}
-          src={clip.src}
-          poster={clip.poster}
-          muted={!clip.sonido}
-          loop={!clip.sonido}
-          playsInline
-          preload={clip.sonido ? "none" : "metadata"}
-          controls={clip.sonido && activo}
-          aria-label={alt}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-        />
-        {clip.sonido && !activo && (
+        {clip.youtubeId ? (
+          activo ? (
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${clip.youtubeId}?autoplay=1&playsinline=1&rel=0&modestbranding=1${clip.sonido ? "" : `&mute=1&loop=1&playlist=${clip.youtubeId}`}`}
+              title={alt}
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+            />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={clip.poster}
+              alt=""
+              loading="lazy"
+              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          )
+        ) : (
+          <video
+            ref={ref}
+            src={clip.src}
+            poster={clip.poster}
+            muted={!clip.sonido}
+            loop={!clip.sonido}
+            playsInline
+            preload={clip.sonido ? "none" : "metadata"}
+            controls={clip.sonido && activo}
+            aria-label={alt}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        )}
+        {mostrarBoton && (
           <button
             type="button"
-            onClick={reproducir}
+            onClick={() => {
+              onActivar();
+              if (local) ref.current?.play().catch(() => {});
+            }}
             aria-label={`Reproducir ${alt}`}
             style={{
               position: "absolute",
@@ -106,22 +141,24 @@ function Clip({ clip, alt }: { clip: ClipTratamiento; alt: string }) {
             </span>
           </button>
         )}
-        <span
-          style={{
-            position: "absolute",
-            left: 10,
-            top: 10,
-            fontSize: "0.72rem",
-            fontWeight: 600,
-            color: "#1c1c1c",
-            background: "rgba(250,248,245,0.9)",
-            padding: "3px 9px",
-            borderRadius: 999,
-            pointerEvents: "none",
-          }}
-        >
-          {clip.tipo === "testimonio" ? "Testimonio" : clip.tipo === "educativo" ? "Te explicamos" : "En la clínica"}
-        </span>
+        {!activo && (
+          <span
+            style={{
+              position: "absolute",
+              left: 10,
+              top: 10,
+              fontSize: "0.72rem",
+              fontWeight: 600,
+              color: "#1c1c1c",
+              background: "rgba(250,248,245,0.9)",
+              padding: "3px 9px",
+              borderRadius: 999,
+              pointerEvents: "none",
+            }}
+          >
+            {etiqueta(clip.tipo)}
+          </span>
+        )}
       </div>
     </figure>
   );

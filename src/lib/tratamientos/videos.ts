@@ -6,6 +6,8 @@ export interface ClipTratamiento {
   tipo: "procedimiento" | "testimonio" | "educativo";
   duracion: number;
   sonido: boolean;
+  /** Video no listado en el canal de YouTube de la clínica. */
+  youtubeId?: string;
 }
 
 export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
@@ -15,28 +17,32 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/acido-hialuronico/procedimiento-1.jpg",
       tipo: "procedimiento",
       duracion: 20,
-      sonido: false
+      sonido: false,
+      youtubeId: "GxgVdxzlLK8"
     },
     {
       src: "/videos/clips/acido-hialuronico/procedimiento-2.mp4",
       poster: "/videos/clips/acido-hialuronico/procedimiento-2.jpg",
       tipo: "procedimiento",
       duracion: 5,
-      sonido: false
+      sonido: false,
+      youtubeId: "8KdI7_G-7VE"
     },
     {
       src: "/videos/clips/acido-hialuronico/procedimiento-3.mp4",
       poster: "/videos/clips/acido-hialuronico/procedimiento-3.jpg",
       tipo: "procedimiento",
       duracion: 6,
-      sonido: false
+      sonido: false,
+      youtubeId: "jWhjOSy_U0Y"
     },
     {
       src: "/videos/clips/acido-hialuronico/procedimiento-4.mp4",
       poster: "/videos/clips/acido-hialuronico/procedimiento-4.jpg",
       tipo: "procedimiento",
       duracion: 6,
-      sonido: false
+      sonido: false,
+      youtubeId: "JbBpxYvmAKU"
     }
   ],
   alectomia: [
@@ -45,35 +51,40 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/alectomia/procedimiento-1.jpg",
       tipo: "procedimiento",
       duracion: 10,
-      sonido: false
+      sonido: false,
+      youtubeId: "_klhdYtb6k4"
     },
     {
       src: "/videos/clips/alectomia/procedimiento-2.mp4",
       poster: "/videos/clips/alectomia/procedimiento-2.jpg",
       tipo: "procedimiento",
       duracion: 16,
-      sonido: false
+      sonido: false,
+      youtubeId: "kAKmFtd6zbU"
     },
     {
       src: "/videos/clips/alectomia/educativo-1.mp4",
       poster: "/videos/clips/alectomia/educativo-1.jpg",
       tipo: "educativo",
       duracion: 28,
-      sonido: true
+      sonido: true,
+      youtubeId: "t6PMcriEhpA"
     },
     {
       src: "/videos/clips/alectomia/educativo-2.mp4",
       poster: "/videos/clips/alectomia/educativo-2.jpg",
       tipo: "educativo",
       duracion: 37,
-      sonido: true
+      sonido: true,
+      youtubeId: "GcyizCsvhQ0"
     },
     {
       src: "/videos/clips/alectomia/educativo-3.mp4",
       poster: "/videos/clips/alectomia/educativo-3.jpg",
       tipo: "educativo",
       duracion: 43,
-      sonido: true
+      sonido: true,
+      youtubeId: "h5x60kuJrHw"
     }
   ],
   botox: [
@@ -82,42 +93,48 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/botox/procedimiento-1.jpg",
       tipo: "procedimiento",
       duracion: 6,
-      sonido: false
+      sonido: false,
+      youtubeId: "KWINaoUAo0k"
     },
     {
       src: "/videos/clips/botox/procedimiento-2.mp4",
       poster: "/videos/clips/botox/procedimiento-2.jpg",
       tipo: "procedimiento",
       duracion: 4,
-      sonido: false
+      sonido: false,
+      youtubeId: "u_XLCssq_mw"
     },
     {
       src: "/videos/clips/botox/procedimiento-3.mp4",
       poster: "/videos/clips/botox/procedimiento-3.jpg",
       tipo: "procedimiento",
       duracion: 7,
-      sonido: false
+      sonido: false,
+      youtubeId: "tIPiaDVLQWI"
     },
     {
       src: "/videos/clips/botox/educativo-1.mp4",
       poster: "/videos/clips/botox/educativo-1.jpg",
       tipo: "educativo",
       duracion: 25,
-      sonido: true
+      sonido: true,
+      youtubeId: "BiAsnYf-lFU"
     },
     {
       src: "/videos/clips/botox/educativo-2.mp4",
       poster: "/videos/clips/botox/educativo-2.jpg",
       tipo: "educativo",
       duracion: 40,
-      sonido: true
+      sonido: true,
+      youtubeId: "PwRVbBblHvI"
     },
     {
       src: "/videos/clips/botox/educativo-3.mp4",
       poster: "/videos/clips/botox/educativo-3.jpg",
       tipo: "educativo",
       duracion: 57,
-      sonido: true
+      sonido: true,
+      youtubeId: "rrG6hMulSuc"
     }
   ],
   hydrafacial: [
@@ -126,7 +143,8 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/hydrafacial/procedimiento-1.jpg",
       tipo: "procedimiento",
       duracion: 30,
-      sonido: true
+      sonido: true,
+      youtubeId: "USN0nmuUOJ4"
     }
   ],
   "implante-capilar-fue": [
@@ -135,21 +153,24 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/implante-capilar-fue/procedimiento-1.jpg",
       tipo: "procedimiento",
       duracion: 38,
-      sonido: true
+      sonido: true,
+      youtubeId: "5EalVvQpqSc"
     },
     {
       src: "/videos/clips/implante-capilar-fue/procedimiento-2.mp4",
       poster: "/videos/clips/implante-capilar-fue/procedimiento-2.jpg",
       tipo: "procedimiento",
       duracion: 23,
-      sonido: true
+      sonido: true,
+      youtubeId: "84RKNQ34yP0"
     },
     {
       src: "/videos/clips/implante-capilar-fue/educativo-1.mp4",
       poster: "/videos/clips/implante-capilar-fue/educativo-1.jpg",
       tipo: "educativo",
       duracion: 11,
-      sonido: true
+      sonido: true,
+      youtubeId: "_syOn6_JBPk"
     },
     {
       src: "/videos/clips/implante-capilar-fue/educativo-2.mp4",
@@ -172,7 +193,8 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/indiba-capilar/educativo-1.jpg",
       tipo: "educativo",
       duracion: 39,
-      sonido: true
+      sonido: true,
+      youtubeId: "SENuNyTJ9cc"
     }
   ],
   "limpieza-facial": [
@@ -202,7 +224,8 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/limpieza-facial/procedimiento-4.jpg",
       tipo: "procedimiento",
       duracion: 14,
-      sonido: false
+      sonido: false,
+      youtubeId: "EZAx1zzRpYA"
     },
     {
       src: "/videos/clips/limpieza-facial/procedimiento-5.mp4",
@@ -290,7 +313,8 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/mesoterapia-capilar/educativo-1.jpg",
       tipo: "educativo",
       duracion: 28,
-      sonido: true
+      sonido: true,
+      youtubeId: "ay03qtriLKU"
     },
     {
       src: "/videos/clips/mesoterapia-capilar/educativo-2.mp4",
@@ -440,7 +464,8 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/rinomodelacion/procedimiento-1.jpg",
       tipo: "procedimiento",
       duracion: 13,
-      sonido: false
+      sonido: false,
+      youtubeId: "hsM538PEbis"
     },
     {
       src: "/videos/clips/rinomodelacion/procedimiento-2.mp4",
