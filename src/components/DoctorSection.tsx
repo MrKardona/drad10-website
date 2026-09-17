@@ -112,7 +112,7 @@ export function DoctorSection() {
               className="leading-relaxed mb-10 text-sm"
               style={{ color: "#888580", fontFamily: "var(--font-body)" }}
             >
-              Lidera un equipo médico altamente capacitado que realiza cadatratamiento con el mismo criterio: valoración individual, técnicacuidadosa y un compromiso responsable con cada paciente.
+              Lidera un equipo médico altamente capacitado que realiza cada tratamiento con el mismo criterio: valoración individual, técnica cuidadosa y un compromiso responsable con cada paciente.
             </p>
 
             {/* Credentials 2×2 */}
