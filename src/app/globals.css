@@ -506,7 +506,7 @@
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 25%, #000 55%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, #000 25%, #000 55%, transparent 100%);
 }
-.nos-retrato-foto { position: absolute; inset: -5%; will-change: transform; }
+.nos-retrato-foto { position: absolute; inset: -2% -5% -8%; will-change: transform; }
 .nos-retrato-luz { position: absolute; inset: 0; mix-blend-mode: soft-light; }
 .nos-retrato-tarjeta { display: none; }
 .nos-hero-texto { position: relative; z-index: 1; }

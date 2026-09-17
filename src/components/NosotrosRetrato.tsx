@@ -41,7 +41,7 @@ export function NosotrosRetrato() {
 
       // Scroll: la foto baja más lento que la página y se desvanece.
       gsap.to(foto.current, {
-        yPercent: 14,
+        yPercent: 8,
         scale: 1.06,
         ease: "none",
         scrollTrigger: { trigger: raiz, start: "top top", end: "bottom top", scrub: true },
@@ -99,7 +99,7 @@ export function NosotrosRetrato() {
             priority
             sizes="(min-width: 1024px) 46vw, 100vw"
             className="object-cover"
-            style={{ objectPosition: "50% 30%" }}
+            style={{ objectPosition: "50% 12%" }}
           />
         </div>
         <div ref={luz} className="nos-retrato-luz" />
