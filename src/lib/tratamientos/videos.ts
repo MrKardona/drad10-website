@@ -369,13 +369,6 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       sonido: false
     },
     {
-      src: "/videos/clips/prp-capilar/testimonio-5.mp4",
-      poster: "/videos/clips/prp-capilar/testimonio-5.jpg",
-      tipo: "testimonio",
-      duracion: 24,
-      sonido: true
-    },
-    {
       src: "/videos/clips/prp-capilar/educativo-1.mp4",
       poster: "/videos/clips/prp-capilar/educativo-1.jpg",
       tipo: "educativo",
@@ -417,13 +410,6 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       poster: "/videos/clips/relleno-de-labios/procedimiento-5.jpg",
       tipo: "procedimiento",
       duracion: 27,
-      sonido: true
-    },
-    {
-      src: "/videos/clips/relleno-de-labios/testimonio-6.mp4",
-      poster: "/videos/clips/relleno-de-labios/testimonio-6.jpg",
-      tipo: "testimonio",
-      duracion: 18,
       sonido: true
     },
     {
@@ -492,13 +478,6 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       sonido: false
     },
     {
-      src: "/videos/clips/rinomodelacion/testimonio-7.mp4",
-      poster: "/videos/clips/rinomodelacion/testimonio-7.jpg",
-      tipo: "testimonio",
-      duracion: 17,
-      sonido: true
-    },
-    {
       src: "/videos/clips/rinomodelacion/testimonio-8.mp4",
       poster: "/videos/clips/rinomodelacion/testimonio-8.jpg",
       tipo: "testimonio",
@@ -550,13 +529,6 @@ export const videosPorTratamiento: Record<string, ClipTratamiento[]> = {
       tipo: "procedimiento",
       duracion: 11,
       sonido: false
-    },
-    {
-      src: "/videos/clips/trasplante-de-barba/testimonio-2.mp4",
-      poster: "/videos/clips/trasplante-de-barba/testimonio-2.jpg",
-      tipo: "testimonio",
-      duracion: 28,
-      sonido: true
     }
   ],
   "rejuvenecimiento-vaginal": [
