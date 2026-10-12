@@ -26,11 +26,12 @@ const csp = [
   `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com ${META_EVENTOS}`,
   "font-src 'self'",
   `connect-src 'self' https://${SUPABASE_HOST} ${VERCEL_ANALYTICS} ${VERCEL_VITALS} ${META_SCRIPT} ${META_EVENTOS}`,
-  "frame-src https://www.youtube-nocookie.com",
+  // El píxel de Meta envía algunos eventos con un iframe o un formulario oculto hacia www.facebook.com.
+  `frame-src https://www.youtube-nocookie.com ${META_EVENTOS}`,
   "frame-ancestors 'none'",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  `form-action 'self' ${META_EVENTOS}`,
   "upgrade-insecure-requests",
 ].join("; ");
 

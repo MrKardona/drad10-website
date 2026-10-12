@@ -4,6 +4,7 @@ import "./globals.css";
 import { ScrollAnimations } from "@/components/ScrollAnimations";
 import { WhatsAppPorPais } from "@/components/WhatsAppPorPais";
 import { MetaPixel } from "@/components/MetaPixel";
+import { BannerCookies } from "@/components/BannerCookies";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -111,6 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <SpeedInsights />
         <MetaPixel />
+        <BannerCookies />
       </body>
     </html>
   );
