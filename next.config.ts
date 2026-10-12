@@ -87,6 +87,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/indiba-radiofrecuencia",
         permanent: true,
       },
+      // Google indexó la rutina fuera de /blog; esa ruta daba 404.
+      {
+        source: "/rutina-skincare-segun-la-doctora",
+        destination: "/blog/rutina-skincare-segun-la-doctora",
+        permanent: true,
+      },
     ];
   },
   async headers() {
