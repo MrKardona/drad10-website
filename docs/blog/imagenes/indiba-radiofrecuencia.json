@@ -1,0 +1,48 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": false,
+    "prompt": "Warm editorial photograph of a facial radiofrequency session in a serene consulting room. A woman lies on a treatment bed with cream linen sheets, her face turned away and softly out of focus, while a gloved hand glides a smooth round radiofrequency electrode along her jawline. The device console is visible only as a blurred, unbranded shape in the background. Soft natural window light, cream, golden and charcoal palette, real skin texture with visible pores, relaxing mood, shallow depth of field. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/indiba-facial/hero.webp",
+      "/images/tecnologia/indiba-facial.webp",
+      "/images/clinica/indiba.webp"
+    ],
+    "alt": "Sesión de radiofrecuencia facial en un consultorio cálido, con la paciente recostada y el rostro fuera de foco"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Close-up editorial photograph of a gloved hand moving a round radiofrequency electrode across a woman's cheek, cropped tightly so only the cheek, part of the jaw and the hand are visible, eyes out of frame. Thin layer of conductive cream glistening on real skin with natural texture and fine pores. Warm natural light, cream and soft gold tones, charcoal background, shallow depth of field. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/indiba-facial/paso-2.webp",
+      "/images/servicios/indiba-facial/paso-1.webp"
+    ],
+    "alt": "Mano de la médica deslizando un electrodo de radiofrecuencia sobre la mejilla de una paciente, en primer plano y sin mostrar su rostro completo"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a female doctor preparing a radiofrequency treatment. She has fair skin, very long straight jet-black hair parted in the middle, defined eyebrows and a wide warm smile, and wears a black zip-up clinical jacket. She stands beside a treatment bed with cream linen sheets, adjusting an unbranded radiofrequency console with a clean blank screen and holding the electrode. Natural window light, cream walls, golden details, charcoal accents, real skin texture, professional and welcoming mood. No text, no logos, no visible product brands, no readable screen.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/clinica/indiba.webp",
+      "/images/tecnologia/indiba-regeneracion.webp"
+    ],
+    "alt": "Médica de cabello negro largo y chaqueta clínica negra preparando el equipo de radiofrecuencia junto a una camilla con sábanas color crema"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Editorial beauty photograph of the cheek, jawline and neck of a woman in her forties, cropped below the eyes so she is not identifiable, healthy luminous skin with real texture, fine lines and pores, no makeup gloss, no retouching. Soft golden window light, cream background with charcoal shadow, calm and natural mood. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/indiba-facial/resultado.webp"
+    ],
+    "alt": "Mejilla y mandíbula de una mujer con piel luminosa y textura natural bajo luz de ventana"
+  }
+]

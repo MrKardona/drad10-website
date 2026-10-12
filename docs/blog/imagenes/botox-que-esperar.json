@@ -1,0 +1,47 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Wide editorial scene: a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, standing slightly to the side and attentively observing the facial expressions of a female patient who is seen from behind, seated in a cream treatment chair, while the doctor holds up a hand mirror for her. Bright, serene consultation room. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/botox/hero.webp"
+    ],
+    "alt": "La Dra. Daniela Díez observa los gestos de una paciente de espaldas durante la valoración para toxina botulínica"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Close medium shot of a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, wearing gloves, gently marking small application points with a white cosmetic pencil on the forehead of a patient whose face is out of focus and partially cropped so she is not identifiable. Concentrated, caring expression. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/botox/paso-1.webp"
+    ],
+    "alt": "La Dra. Daniela Díez marca con delicadeza los puntos de aplicación en la frente de una paciente desenfocada"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Overhead still life of a tidy clinical tray on a cream surface: very fine capped syringes, sterile gauze squares, folded gloves and an alcohol swab, all unlabeled, soft natural window light, subtle gold accents, charcoal shadows. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/botox/paso-2.webp"
+    ],
+    "alt": "Mesa clínica ordenada con jeringas finas, gasas y guantes en un consultorio luminoso con tonos crema"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Tight side-profile crop of a woman around 40 from the eyebrow to the cheekbone, eye looking away, relaxed and rested expression with soft natural crow's feet still present, real skin texture, warm golden window light, not identifiable. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/botox/resultado.webp",
+      "/images/servicios/botox/paso-3.webp"
+    ],
+    "alt": "Rostro de perfil de una mujer de unos 40 años, recortado a la altura de los ojos, con expresión relajada y piel con textura natural"
+  }
+]

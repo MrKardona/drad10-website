@@ -6,7 +6,8 @@ import { FooterPremium } from "@/components/FooterPremium";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BlogRating } from "@/components/blog/BlogRating";
 import { BlogComments } from "@/components/blog/BlogComments";
-import { getBlogPost, getAllSlugs, type BlogSection } from "@/lib/blog-posts";
+import { getBlogPost, getAllSlugs, getRelacionados, type BlogSection } from "@/lib/blog";
+import { Consejo, Ingredientes, PreguntasFrecuentes, Firma, SobreLaAutora, Relacionados } from "@/components/blog/BloquesArticulo";
 import type { Metadata } from "next";
 
 interface Props {
@@ -24,10 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Blog DRA.D10`,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    authors: [{ name: "Dra. Daniela Díez", url: "https://drad10.com/nosotros" }],
     openGraph: {
+      type: "article",
       title: post.title,
       description: post.excerpt,
       images: [post.coverImage],
+      publishedTime: post.dateISO,
+      authors: ["Dra. Daniela Díez"],
     },
   };
 }
@@ -170,6 +176,15 @@ function RenderSection({ section }: { section: BlogSection }) {
         </ul>
       );
 
+    case "tip":
+      return <Consejo title={section.title} text={section.text ?? ""} />;
+
+    case "ingredientes":
+      return <Ingredientes items={section.ingredientes ?? []} />;
+
+    case "faq":
+      return <PreguntasFrecuentes items={section.preguntas ?? []} />;
+
     default:
       return null;
   }
@@ -179,17 +194,42 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) notFound();
+  const relacionados = getRelacionados(post);
+
+  // Artículo médico con autora identificada (E-E-A-T): BlogPosting + Person.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://drad10.com${post.coverImage}`,
+    datePublished: post.dateISO,
+    inLanguage: "es-CO",
+    mainEntityOfPage: `https://drad10.com/blog/${post.slug}`,
+    articleSection: post.category,
+    author: {
+      "@type": "Person",
+      name: "Daniela Díez",
+      honorificPrefix: "Dra.",
+      jobTitle: "Médica estética",
+      url: "https://drad10.com/nosotros",
+      image: "https://drad10.com/images/dra-daniela.jpg",
+      alumniOf: { "@type": "CollegeOrUniversity", name: "Universidad de Buenos Aires" },
+    },
+    publisher: { "@type": "Organization", name: "DRA.D10", logo: { "@type": "ImageObject", url: "https://drad10.com/logo.svg" } },
+  };
 
   return (
     <>
       <NavBar />
       <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* ── Cover image ── */}
       <div style={{ position: "relative", height: "65vh", overflow: "hidden" }}>
         <Image
           src={post.coverImage}
-          alt={post.title}
+          alt={post.coverAlt}
           fill
           priority
           style={{ objectFit: "cover", objectPosition: "center" }}
@@ -272,6 +312,9 @@ export default async function BlogPostPage({ params }: Props) {
               {post.readTime} de lectura
             </span>
           </div>
+          <div style={{ marginTop: "1.25rem" }}>
+            <Firma />
+          </div>
         </div>
       </div>
 
@@ -301,6 +344,13 @@ export default async function BlogPostPage({ params }: Props) {
           {post.content.map((section, i) => (
             <RenderSection key={i} section={section} />
           ))}
+
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#a39f98", lineHeight: 1.7, marginTop: "2.5rem", fontStyle: "italic" }}>
+            Este artículo es informativo y no reemplaza una consulta médica. Cada caso se evalúa de forma individual en valoración.
+          </p>
+
+          <SobreLaAutora />
+          <Relacionados posts={relacionados} />
 
           {/* ── Rating ── */}
           <BlogRating slug={post.slug} />

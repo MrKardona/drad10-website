@@ -1,0 +1,47 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": false,
+    "prompt": "Warm editorial still life on a light wooden table: a ceramic cream-colored plate with a balanced home-cooked meal (grilled chicken, colorful roasted vegetables, a small portion of brown rice and avocado slices), a clear glass of water, and a closed linen notebook with a pen. Soft natural morning window light, cream, golden and charcoal palette, gentle shadows, honest and appetizing, not staged-diet aesthetic. No text, no logos, no visible product brands, no scales or measuring tapes.",
+    "referencias": [
+      "/images/servicios/descenso-de-peso/hero.webp"
+    ],
+    "alt": "Mesa de madera con un plato de comida casera balanceada, un vaso de agua y una libreta de notas bajo luz natural cálida"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "4:3",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a medical consultation about weight and health. A female doctor with fair skin, very long straight jet-black hair parted in the middle, defined eyebrows and a wide empathetic smile, wearing a black zip-up clinical jacket, sits at a desk listening attentively and taking notes. A female patient sits across from her, seen from behind and out of focus, face not visible. No scale in the scene. Natural window light, cream walls, golden accents, charcoal desk, real skin texture, warm, non-judgmental mood. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/descenso-de-peso/paso-1.webp",
+      "/images/equipo.jpg"
+    ],
+    "alt": "Médica de cabello negro largo y chaqueta clínica negra conversando con una paciente de espaldas en un consultorio luminoso"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Editorial lifestyle photograph of a woman with a real, non-model body walking outdoors on a tree-lined path, seen from behind, wearing simple charcoal and cream sportswear with no logos. Golden late-afternoon light, lush green hills softly blurred in the background evoking Medellín, natural and joyful movement. Face not visible. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/descenso-de-peso/paso-2.webp",
+      "/images/servicios/moldeamiento-corporal/hero.webp"
+    ],
+    "alt": "Mujer de espaldas caminando al aire libre con ropa deportiva bajo la luz dorada de la tarde"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Close-up editorial photograph of hands serving fresh vegetables (greens, tomatoes, carrots, lentils) onto a cream ceramic plate on a kitchen counter, real skin texture on the hands, no rings with logos. Warm natural window light, cream, golden and charcoal tones, shallow depth of field, homey and honest mood. No text, no logos, no visible product brands, no packaged products.",
+    "referencias": [
+      "/images/servicios/descenso-de-peso/paso-3.webp",
+      "/images/servicios/descenso-de-peso/resultado.webp"
+    ],
+    "alt": "Manos sirviendo verduras frescas en un plato de cerámica color crema sobre una mesa de cocina"
+  }
+]

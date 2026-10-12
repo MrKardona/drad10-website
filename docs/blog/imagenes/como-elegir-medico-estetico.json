@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a female aesthetic physician at her desk in a bright, orderly consulting room, reviewing a paper medical record with a pen in hand, looking up toward the camera with a confident, warm smile. She has fair skin, very long straight jet-black hair with a center part, defined eyebrows, wearing a black zip-up clinical jacket. Behind her, a clean treatment bed and tidy shelves. Natural daylight, palette cream, warm gold and charcoal, real skin texture with visible pores. Trustworthy, professional, approachable. No text legible on documents, no logos, no diplomas with readable text.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/dra/uniforme-rosa.webp"],
+    "alt": "La Dra. Daniela Díez en su consultorio revisando una historia clínica, con su chaqueta clínica negra y luz natural"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Editorial interior photograph of a clean, well-lit aesthetic medicine consulting room: a treatment bed with fresh white paper cover, spotless counters, covered sterile instruments on a tray, a hand sanitizer dispenser without labels, a sharps container in the corner. Natural daylight from a large window, palette cream walls, warm gold fixtures and charcoal accents. Calm, safe, orderly atmosphere. No people, no text, no logos, no brand names.",
+    "referencias": ["/images/servicios/botox/hero.webp", "/images/servicios/acido-hialuronico/hero.webp"],
+    "alt": "Consultorio médico estético ordenado y luminoso, con camilla, superficies limpias e instrumental cubierto"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph: a female physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a friendly smile, wearing a black zip-up clinical jacket, shows a sealed, plain, unbranded medical product box and a sealed syringe blister to a seated patient seen from behind and not identifiable, pointing to the lot information area (blank, unreadable). Bright consulting room, natural light, palette cream, gold and charcoal, real skin texture. Transparent, reassuring moment. No readable text, no logos, no brand names.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/servicios/acido-hialuronico/paso-1.webp"],
+    "alt": "La Dra. Daniela Díez muestra a una paciente, de espaldas a la cámara, una caja de producto sellada y sin marcas visibles"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Editorial still life on a consulting-room desk: a printed informed consent form with blurred, unreadable text, a fountain pen, a ceramic cup and a small vase with a green sprig, on a cream linen surface. Soft natural window light, palette cream, warm gold and charcoal, shallow depth of field. Calm and serious mood. No legible text, no logos, no brands, no people.",
+    "referencias": ["/images/equipo.jpg"],
+    "alt": "Escritorio de consultorio con un formulario de consentimiento informado, un bolígrafo y una taza, en tonos crema y dorado"
+  }
+]

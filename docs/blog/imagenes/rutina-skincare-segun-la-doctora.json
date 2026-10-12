@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a female aesthetic physician in her bright, minimal clinic in Medellín, standing beside a cream marble vanity with a small washbasin, arranging four generic unlabeled skincare bottles and jars (frosted glass, amber dropper, white pump, cream jar, no labels, no logos). She has fair skin, very long straight jet-black hair with a center part, defined eyebrows and a wide natural smile, wearing a black zip-up clinical jacket. Soft natural morning light from a side window, palette of cream, warm gold and charcoal, real skin texture with visible pores, no plastic retouching. Calm, trustworthy, approachable mood, shallow depth of field, 35mm lens. No text, no logos, no visible brand names.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/servicios/limpieza-facial/hero.webp"],
+    "alt": "La Dra. Daniela Díez en su consultorio, junto a un lavamanos con frascos de cuidado facial sin etiqueta"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Overhead still life, warm editorial style: four generic unlabeled skincare containers lined up in order on a cream marble surface — a gentle cleanser pump bottle, a small amber glass dropper serum, a white cream jar and a tube of sunscreen without any label — with a folded linen towel and a sprig of green leaves. Soft natural daylight with gentle shadows, palette cream, warm gold accents and charcoal details. Clean, minimal, uncluttered composition. No text, no logos, no brand names, no people.",
+    "referencias": ["/images/servicios/limpieza-facial/hero.webp", "/images/servicios/alta-hidratacion/hero.webp"],
+    "alt": "Cuatro frascos de cuidado facial sin etiqueta ordenados sobre una superficie de mármol crema con luz natural"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Close-up editorial beauty photograph of a woman's fingertips gently pressing a few drops of clear serum onto her cheek, face cropped from below the eyes so she is not identifiable. Real skin with visible pores, fine peach fuzz and natural texture, no retouching, no heavy makeup. Warm natural window light, palette cream, soft gold and charcoal background. Intimate, calm, honest mood. No text, no logos, no product packaging visible.",
+    "referencias": ["/images/servicios/skinbooster/hero.webp", "/images/servicios/mesoterapia-facial/hero.webp"],
+    "alt": "Primer plano de una mano aplicando unas gotas de sérum sobre la mejilla, con textura real de piel"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph inside a calm aesthetic medicine consulting room: a female physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm smile, wearing a black zip-up clinical jacket, examines the facial skin of a seated patient using a handheld magnifying lamp. The patient is shown from behind or in soft out-of-focus profile so she is not identifiable. Natural daylight, palette cream, gold and charcoal, real skin texture, believable clinical setting with tidy shelves. No text, no logos, no visible brands.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/dra/analizador-bata.webp", "/images/dra/analizador.webp"],
+    "alt": "La Dra. Daniela Díez revisa la piel de una paciente de espaldas a la cámara en su consultorio con luz natural"
+  }
+]

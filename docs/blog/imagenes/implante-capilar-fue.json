@@ -1,0 +1,48 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph in a refined aesthetic medicine consulting room in Medellín. A female doctor with fair skin, very long straight jet-black hair parted in the middle, defined eyebrows and a gentle wide smile, wearing a black zip-up clinical jacket, leans in to examine the frontal hairline of a male patient seen strictly from behind (only the back and top of his head visible, short dark hair with receding temples). She holds a small handheld magnifier and a fine surgical marker. Soft natural window light from the side, cream walls, golden accents, charcoal details, shallow depth of field, real skin texture, calm and trustworthy mood. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/implante-capilar-fue/hero.webp",
+      "/images/servicios/implante-capilar-fue/paso-1.webp"
+    ],
+    "alt": "Médica revisando con lupa la línea frontal del cuero cabelludo de un paciente de espaldas en un consultorio cálido"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Macro editorial photograph of individual hair follicular units, each with one to three hairs and tiny translucent bulbs, neatly arranged in rows on moist white gauze inside a stainless steel surgical tray. Gloved fingertips holding fine forceps at the edge of the frame. Warm natural light, cream and soft gold tones with charcoal shadows, shallow depth of field, clinical yet warm and clean. No blood, no text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/implante-capilar-fue/paso-2.webp",
+      "/images/servicios/implante-capilar-fue/paso-3.webp"
+    ],
+    "alt": "Primer plano de unidades foliculares organizadas sobre gasa húmeda en una bandeja quirúrgica"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a post-operative follow-up conversation in a calm consulting room. A female doctor with fair skin, very long straight jet-black hair parted in the middle, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, sits facing the camera and explains aftercare, gesturing with one hand while holding a small printed care sheet with no readable text. The male patient sits in the foreground seen from behind and slightly out of focus, a clean light bandage-free scalp with short hair, face not visible. Natural window light, cream, golden and charcoal palette, real skin texture, reassuring mood. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/implante-capilar-fue/cierre.webp"
+    ],
+    "alt": "Médica de cabello negro largo y chaqueta clínica negra explicando el cuidado posoperatorio a un paciente de espaldas"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Editorial photograph of the crown of a man's head seen from behind and slightly above, short dense natural-looking dark hair with realistic varied direction and a natural whorl, natural scalp texture. Background is a softly blurred warm cream interior with golden late-afternoon window light and charcoal accents. Face and ears not visible. Honest, natural result, no retouching gloss. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/implante-capilar-fue/resultado.webp"
+    ],
+    "alt": "Coronilla de un hombre de espaldas con cabello corto y denso bajo luz natural cálida"
+  }
+]

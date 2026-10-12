@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Warm editorial portrait of a female aesthetic physician seated in an elegant armchair in her calm consulting room, relaxed and attentive, as if in the middle of an unhurried conversation. She has fair skin, very long straight jet-black hair with a center part, defined eyebrows and a wide, warm smile, wearing a black zip-up clinical jacket. Late-afternoon natural light through sheer curtains, palette cream, warm gold and charcoal, real skin texture with visible pores, no plastic retouching. Serene, honest, human mood, 50mm lens, generous negative space on one side. No text, no logos.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/dra/sofa.webp"],
+    "alt": "La Dra. Daniela Díez sentada en un sillón de su consultorio, conversando con calma y luz natural de tarde"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Editorial profile portrait of a woman around 50 years old, fictional and non-identifiable model, with luminous healthy skin, natural expression lines around the eyes, visible pores and texture, minimal makeup, hair loosely pulled back. Soft natural window light, palette cream background, warm gold highlights and charcoal tones. Dignified, confident, calm. No retouching to plastic smoothness, no text, no logos.",
+    "referencias": ["/images/servicios/hilos-bioestimulacion/resultado.webp", "/images/servicios/sculptra/hero.webp"],
+    "alt": "Retrato de perfil de una mujer de unos 50 años con piel luminosa y líneas de expresión naturales, sin maquillaje recargado"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a consultation: a female physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a gentle smile, wearing a black zip-up clinical jacket, sits facing a patient and listens attentively, hands resting on a notebook. The patient is seen from behind, over the shoulder, not identifiable. Calm, minimal consulting room with cream walls and gold details, natural daylight, palette cream, gold and charcoal, real skin texture. Sense of trust and unhurried listening. No text, no logos.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/equipo.jpg"],
+    "alt": "La Dra. Daniela Díez escucha con atención a una paciente, sentadas frente a frente en el consultorio, la paciente de espaldas"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Quiet lifestyle still: the hands of a mature woman, with real skin texture, soft wrinkles and natural nails, holding a ceramic cup of coffee beside a window with morning light, a linen tablecloth and a small plant. Face not shown. Warm natural light, palette cream, gold and charcoal, gentle shadows, contemplative and serene mood. No text, no logos, no brands.",
+    "referencias": ["/images/servicios/rejuvenecimiento-manos-cuello-pecho/hero.webp"],
+    "alt": "Manos de una mujer madura sosteniendo una taza de café junto a una ventana con luz de mañana"
+  }
+]

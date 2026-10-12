@@ -7,7 +7,7 @@ const BASE_URL = "https://drad10.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogUrls = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(),
+    lastModified: new Date(post.dateISO),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

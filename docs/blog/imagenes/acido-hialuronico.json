@@ -1,0 +1,48 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Wide editorial shot of a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, seated at a cream consultation desk, gently gesturing toward her own cheekbone while explaining facial volume to a female patient seen from behind and out of focus in the foreground. A hand mirror rests on the desk. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/acido-hialuronico/hero.webp"
+    ],
+    "alt": "La Dra. Daniela Díez explica en consulta cómo actúa el ácido hialurónico en el rostro, frente a una paciente de espaldas"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Extreme close-up of the cheek and nasolabial area of an adult woman around 45, cropped so she is not identifiable (no eyes in frame), showing natural skin texture, fine lines and pores, lit by soft warm window light, subtle gold highlights. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/acido-hialuronico/paso-1.webp",
+      "/images/servicios/surcos-nasogenianos/hero.webp"
+    ],
+    "alt": "Detalle de la piel de la mejilla de una mujer adulta con textura natural, iluminada con luz suave de ventana"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Medium shot of a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, wearing nitrile gloves, calmly inspecting an unlabeled prefilled syringe against the window light next to a tidy clinical tray with sterile gauze. Focused, serene expression. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/acido-hialuronico/paso-2.webp"
+    ],
+    "alt": "La Dra. Daniela Díez revisa con calma la jeringa de ácido hialurónico antes de aplicarlo en su consultorio"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Close-up crop of the lips and chin of a woman in her late thirties with a natural, proportionate hyaluronic acid result and a relaxed soft smile, no eyes in frame so she is not identifiable, real skin texture, warm golden light. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/acido-hialuronico/resultado.webp",
+      "/images/servicios/relleno-de-labios/resultado.webp"
+    ],
+    "alt": "Labios y mentón de una mujer con resultado natural de ácido hialurónico, fotografiados de cerca con luz cálida"
+  }
+]

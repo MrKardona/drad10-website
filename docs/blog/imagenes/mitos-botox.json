@@ -1,0 +1,46 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Wide editorial portrait: a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, seated in her consultation room, smiling warmly and talking with open hands as she answers questions. A female patient sits in the foreground, blurred and seen from behind. Cream walls, a brass desk lamp, charcoal accents. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/botox/hero.webp"
+    ],
+    "alt": "La Dra. Daniela Díez sonríe mientras resuelve dudas sobre el bótox en su consultorio, con una paciente desenfocada en primer plano"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Very tight crop around the eyes of a mature woman around 50 smiling genuinely, soft natural smile lines still visible, cropped so the whole face is never shown and she is not identifiable, real skin texture and pores, warm natural light. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/botox/resultado.webp"
+    ],
+    "alt": "Mirada de una mujer madura sonriendo, recortada a la altura de los ojos, con líneas de expresión suaves y piel con textura real"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Over-the-shoulder shot: a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, listening attentively to a male patient in his forties seen from behind, with short dark hair and a casual shirt, across a cream consultation desk. Calm, respectful atmosphere. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/toxina-bruxismo/hero.webp"
+    ],
+    "alt": "La Dra. Daniela Díez escucha atenta a un paciente hombre de espaldas en su consultorio de tonos crema"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Still life on a cream marble bathroom counter in morning light: unlabeled amber glass dropper bottles, a plain white sunscreen tube with no text, and a small folded linen towel, brass faucet softly out of focus. Minimal and warm. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/botox/paso-3.webp"
+    ],
+    "alt": "Frascos de vidrio ámbar sin etiqueta junto a un protector solar sin marca sobre un lavamanos de mármol crema con luz de mañana"
+  }
+]

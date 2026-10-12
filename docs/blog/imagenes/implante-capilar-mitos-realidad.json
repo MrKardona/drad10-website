@@ -1,0 +1,49 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph in an elegant consulting room. A female doctor with fair skin, very long straight jet-black hair parted in the middle, defined eyebrows and a wide friendly smile, wearing a black zip-up clinical jacket, stands beside a large round mirror talking calmly with a male patient seated in front of it, seen from behind with his face blurred and out of focus in the mirror reflection. Relaxed, honest conversation, no instruments. Soft natural window light, cream walls, brushed gold mirror frame, charcoal furniture, real skin texture, shallow depth of field. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/implante-capilar-fue/hero.webp"
+    ],
+    "alt": "Médica conversando con un paciente de espaldas frente a un espejo en un consultorio con luz natural cálida"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Close-up editorial photograph of a natural male frontal hairline, cropped from the eyebrows up so the face is not identifiable: soft irregular hairline with fine single hairs at the edge transitioning to denser hair behind, realistic forehead skin texture with pores. Warm side window light, cream and golden tones with charcoal background, shallow depth of field. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/implante-capilar-fue/resultado.webp",
+      "/images/servicios/implante-capilar-fue/paso-3.webp"
+    ],
+    "alt": "Detalle de una línea frontal de cabello natural e irregular en la frente de un hombre, recortada sin mostrar el rostro"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph of a scalp evaluation. A female doctor with fair skin, very long straight jet-black hair parted in the middle, defined eyebrows, focused but warm expression, wearing a black zip-up clinical jacket and gloves, examines the scalp of a patient seated with his back to the camera using a handheld dermatoscope. Only the back of the patient's head and shoulders are visible. Natural light from a large window, cream walls, golden accents, charcoal chair, real skin texture, shallow depth of field. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/dra/analizador.webp",
+      "/images/servicios/implante-capilar-fue/paso-1.webp"
+    ],
+    "alt": "Médica de cabello negro largo con chaqueta clínica negra examinando con dermatoscopio el cuero cabelludo de un paciente de espaldas"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Editorial photograph of a woman seen from behind near a sunlit window, running her fingers through long dark hair at the part line, slightly thinner part visible but dignified and natural. Face not visible. Soft golden natural light, cream linen curtains, charcoal sweater, real hair and skin texture, calm introspective mood. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/prp-capilar/hero.webp",
+      "/images/servicios/mesoterapia-capilar/hero.webp"
+    ],
+    "alt": "Mujer de espaldas pasándose la mano por un cabello oscuro y largo junto a una ventana con luz cálida"
+  }
+]

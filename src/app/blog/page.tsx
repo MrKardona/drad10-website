@@ -3,18 +3,31 @@ import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
 import { FooterPremium } from "@/components/FooterPremium";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { blogPosts } from "@/lib/blog-posts";
+import { blogPosts, PILARES, type BlogPost } from "@/lib/blog";
+import { Firma } from "@/components/blog/BloquesArticulo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | DRA.D10 — Medicina Estética Medellín",
   description:
-    "Artículos sobre medicina estética, tratamientos faciales, capilares y corporales. Consejos de la Dra. Daniela Díez para cuidar tu piel y bienestar.",
+    "Artículos de la Dra. Daniela Díez sobre medicina estética, cuidado de la piel, cabello y bienestar: tratamientos sin mitos, consejos y su forma de entender la belleza natural.",
+  alternates: { canonical: "/blog" },
 };
+
+/** Id de ancla para cada pilar (p. ej. «Cuidado de la piel» → «cuidado-de-la-piel»). */
+const anclaPilar = (p: string) =>
+  p
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
 export default function BlogPage() {
   const featured = blogPosts[0];
   const rest = blogPosts.slice(1);
+  // El resto se agrupa por pilar para que el blog se lea como una colección coherente.
+  const grupos = PILARES.map((p) => ({ pilar: p, posts: rest.filter((x) => x.category === p) })).filter((g) => g.posts.length);
 
   return (
     <>
@@ -55,6 +68,40 @@ export default function BlogPage() {
             Blog{" "}
             <em style={{ color: "inherit" }}>DRA.D10</em>
           </h1>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "1.0625rem",
+              color: "rgba(250,248,245,0.72)",
+              lineHeight: 1.75,
+              maxWidth: "620px",
+              marginTop: "1.25rem",
+            }}
+          >
+            Lo que explico todos los días en consulta, escrito para ti: tratamientos sin mitos, cómo cuidar tu piel en casa y mi
+            forma de entender una medicina estética honesta y natural.
+          </p>
+          <div style={{ marginTop: "1.5rem" }}>
+            <Firma />
+          </div>
+          <nav aria-label="Temas del blog" style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "2.25rem" }}>
+            {grupos.map((g) => (
+              <a
+                key={g.pilar}
+                href={`#${anclaPilar(g.pilar)}`}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.8125rem",
+                  color: "#faf8f5",
+                  border: "1px solid rgba(184,154,106,0.4)",
+                  padding: "8px 14px",
+                  textDecoration: "none",
+                }}
+              >
+                {g.pilar}
+              </a>
+            ))}
+          </nav>
         </div>
       </div>
 
@@ -80,9 +127,9 @@ export default function BlogPage() {
                   className="img-zoom"
                   style={{ position: "relative", height: "420px", overflow: "hidden" }}
                 >
-                                    <Image
+                  <Image
                     src={featured.coverImage}
-                    alt={featured.title}
+                    alt={featured.coverAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 900px"
                     style={{ objectFit: "cover",
@@ -181,8 +228,40 @@ export default function BlogPage() {
             </Link>
           )}
 
-          {/* ── Grid of remaining posts ── */}
-          {rest.length > 0 && (
+          {/* ── Resto de artículos, por pilar ── */}
+          {grupos.map((g) => (
+            <section key={g.pilar} id={anclaPilar(g.pilar)} style={{ marginBottom: "4rem", scrollMarginTop: "120px" }} aria-labelledby={`t-${anclaPilar(g.pilar)}`}>
+              <h2
+                id={`t-${anclaPilar(g.pilar)}`}
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+                  fontWeight: 600,
+                  color: "#faf8f5",
+                  letterSpacing: "-0.03em",
+                  paddingBottom: "0.9rem",
+                  marginBottom: "1.75rem",
+                  borderBottom: "1px solid rgba(184,154,106,0.18)",
+                }}
+              >
+                {g.pilar}
+              </h2>
+              <Tarjetas posts={g.posts} />
+            </section>
+          ))}
+
+        </div>
+      </div>
+      </main>
+
+      <FooterPremium />
+      <WhatsAppButton />
+    </>
+  );
+}
+
+function Tarjetas({ posts }: { posts: BlogPost[] }) {
+  return (
             <div
               style={{
                 display: "grid",
@@ -190,7 +269,7 @@ export default function BlogPage() {
                 gap: "1.5rem",
               }}
             >
-              {rest.map((post) => (
+              {posts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
                   <div
                     style={{
@@ -201,9 +280,9 @@ export default function BlogPage() {
                     }}
                   >
                     <div className="img-zoom" style={{ position: "relative", height: "220px", overflow: "hidden" }}>
-                                            <Image
+                      <Image
                         src={post.coverImage}
-                        alt={post.title}
+                        alt={post.coverAlt}
                         fill
                         sizes="(max-width: 768px) 100vw, 380px"
                         style={{ objectFit: "cover" }}
@@ -249,35 +328,5 @@ export default function BlogPage() {
                 </Link>
               ))}
             </div>
-          )}
-
-          {/* ── Empty state if only 1 post ── */}
-          {rest.length === 0 && (
-            <div
-              style={{
-                borderTop: "1px solid rgba(184,154,106,0.1)",
-                paddingTop: "3rem",
-                textAlign: "center",
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.8125rem",
-                  color: "#a39f98",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                Próximos artículos — muy pronto </p>
-            </div>
-          )}
-
-        </div>
-      </div>
-      </main>
-
-      <FooterPremium />
-      <WhatsAppButton />
-    </>
   );
 }

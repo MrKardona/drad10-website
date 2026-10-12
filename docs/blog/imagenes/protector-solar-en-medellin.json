@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": false,
+    "prompt": "Warm editorial lifestyle photograph: a woman seen from behind on a balcony overlooking the green mountains of the Aburrá Valley in Medellín, Colombia, applying sunscreen to the side of her neck in the morning. Her face is not visible. Bright tropical morning light with soft haze, lush hills and terracotta rooftops in the background, palette cream, warm gold and charcoal. Real skin texture on the neck and shoulder. Generic unlabeled white sunscreen tube on the railing. No text, no logos, no brand names.",
+    "referencias": ["/images/hero-bg.jpg", "/images/servicios/manchas-mesoterapeutico/hero.webp"],
+    "alt": "Mujer de espaldas en un balcón de Medellín con montañas verdes al fondo, aplicándose protector solar en el cuello bajo luz de mañana"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": false,
+    "prompt": "Landscape editorial photograph of the Aburrá Valley, Medellín, under a partly cloudy sky, with beams of sunlight breaking through the clouds onto green mountainsides and the city below. Warm, slightly golden natural light, soft atmosphere, palette cream sky, warm gold light and charcoal shadows on the hills. Documentary, realistic, no dramatic HDR. No text, no logos, no people in focus.",
+    "referencias": ["/images/hero-bg.jpg"],
+    "alt": "Vista de las montañas del Valle de Aburrá bajo un cielo parcialmente nublado con rayos de sol atravesando las nubes"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Close-up still photograph of a hand with two lines of white sunscreen squeezed along the index and middle fingers (the two-finger rule), held over a cream linen surface next to a generic unlabeled white sunscreen tube. Real skin texture on the hand, natural nails. Soft natural daylight, palette cream, warm gold and charcoal. Clean, instructional yet editorial composition. No text, no logos, no brand names, face not shown.",
+    "referencias": ["/images/servicios/manchas-mesoterapeutico/paso-1.webp", "/images/servicios/limpieza-facial/hero.webp"],
+    "alt": "Dos líneas de protector solar blanco sobre los dedos índice y medio de una mano, con frasco genérico sin etiqueta al lado"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Warm editorial photograph in a bright aesthetic medicine consulting room in Medellín: a female physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a wide natural smile, wearing a black zip-up clinical jacket, holds a generic unlabeled sunscreen tube and demonstrates how much to apply, speaking to a patient who is seen from behind and not identifiable. Natural window light, palette cream, gold and charcoal, real skin texture, believable and friendly explanatory moment. No text, no logos, no visible brands.",
+    "referencias": ["/images/dra-daniela.jpg", "/images/dra/retrato-sillon.webp", "/images/dra/scrubs.webp"],
+    "alt": "La Dra. Daniela Díez explica en su consultorio cómo aplicar protector solar, sosteniendo un frasco genérico sin etiqueta"
+  }
+]

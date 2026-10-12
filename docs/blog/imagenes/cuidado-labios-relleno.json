@@ -1,0 +1,46 @@
+[
+  {
+    "archivo": "portada.webp",
+    "aspect": "16:9",
+    "conDoctora": false,
+    "prompt": "Cinematic close-up of natural, hydrated, softly defined lips after a subtle lip filler, cropped from the tip of the nose to the chin so the person is not identifiable, real lip texture with fine vertical lines, warm natural window light, cream background with gold highlights. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/relleno-de-labios/hero.webp",
+      "/images/servicios/relleno-de-labios/resultado.webp"
+    ],
+    "alt": "Detalle de unos labios naturales e hidratados después de un relleno con ácido hialurónico, con luz cálida"
+  },
+  {
+    "archivo": "01.webp",
+    "aspect": "3:2",
+    "conDoctora": true,
+    "prompt": "Over-the-shoulder shot: a Latina female aesthetic physician with fair skin, very long straight jet-black hair with a center part, defined eyebrows and a warm wide smile, wearing a black zip-up clinical jacket, sitting across a cream consultation table and kindly explaining aftercare while holding a small plain unbranded lip balm tin. The female patient is seen from behind and out of focus in the foreground. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/dra-daniela.jpg",
+      "/images/dra/retrato-sillon.webp",
+      "/images/servicios/relleno-de-labios/paso-1.webp"
+    ],
+    "alt": "La Dra. Daniela Díez conversa con una paciente de espaldas y le explica los cuidados del relleno de labios"
+  },
+  {
+    "archivo": "02.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Still life on a cream linen bedside table: a plain unbranded lip balm tin, a clear glass of water and a cold compress wrapped in natural linen cloth, soft morning window light, gold and charcoal accents, minimalist and calm, no labels. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/relleno-de-labios/paso-3.webp"
+    ],
+    "alt": "Mesa de noche con un bálsamo labial sin marca, un vaso de agua y una compresa fría envuelta en tela de lino"
+  },
+  {
+    "archivo": "03.webp",
+    "aspect": "4:3",
+    "conDoctora": false,
+    "prompt": "Side profile crop showing only the lips and chin of a woman, with natural volume and a softly defined lip border, not identifiable, real skin texture, warm window light, cream backdrop. Warm editorial photography, soft natural window light, cream, gold and charcoal palette, real skin with visible texture and pores, shallow depth of field, calm upscale clinic in Medellin. No text, no logos, no visible product brands.",
+    "referencias": [
+      "/images/servicios/relleno-de-labios/resultado.webp",
+      "/images/servicios/relleno-de-labios/paso-2.webp"
+    ],
+    "alt": "Perfil recortado de unos labios con volumen natural y contorno definido, con luz de ventana"
+  }
+]
