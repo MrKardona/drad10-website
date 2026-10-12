@@ -108,7 +108,7 @@ export function BlogRating({ slug }: { slug: string }) {
             <div style={{ width: "120px", height: "4px", backgroundColor: "rgba(184,154,106,0.15)", borderRadius: "2px", overflow: "hidden" }}>
               <div style={{ height: "100%", width: `${pct}%`, backgroundColor: "#b89a6a", borderRadius: "2px", transition: "width 0.6s ease" }} />
             </div>
-            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", letterSpacing: "0.01em" }}>
+            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#a39f98", letterSpacing: "0.01em" }}>
               {count} {count === 1 ? "valoración" : "valoraciones"}
             </span>
           </div>

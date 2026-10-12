@@ -55,6 +55,8 @@ export function FooterPremium() {
             <img
               src="/logo.svg"
               alt="DRA.D10"
+              width={480}
+              height={160}
               className="h-8 w-auto"
               style={{ filter: "invert(1) brightness(0.85)" }}
             />
@@ -80,7 +82,6 @@ export function FooterPremium() {
               <a
                 key={s.label}
                 href={s.href}
-                aria-label={s.ariaLabel}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel={
                   s.href.startsWith("http")
@@ -93,11 +94,14 @@ export function FooterPremium() {
                   fontSize: "0.8125rem",
                   letterSpacing: "0.01em",
                   border: "1px solid rgba(136,133,128,0.25)",
-                  color: "#888580",
+                  // Gris más claro que #888580: sobre el fondo dorado del botón no alcanzaba 4,5:1.
+                  color: "#a39f98",
                   transition: "color 0.2s, border-color 0.2s",
                 }}
               >
                 {s.label}
+                {/* El nombre accesible incluye el texto visible ("IG") y el detalle de la red */}
+                <span className="sr-only"> — {s.ariaLabel}</span>
               </a>
             ))}
           </div>

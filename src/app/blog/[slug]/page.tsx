@@ -183,6 +183,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <NavBar />
+      <main>
 
       {/* ── Cover image ── */}
       <div style={{ position: "relative", height: "65vh", overflow: "hidden" }}>
@@ -357,6 +358,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </div>
+      </main>
 
       <FooterPremium />
       <WhatsAppButton />

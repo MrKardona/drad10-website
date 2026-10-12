@@ -104,11 +104,11 @@ export function BlogComments({ slug }: { slug: string }) {
       {/* Comment list */}
       <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "3rem" }}>
         {loading ? (
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", textAlign: "center", padding: "2rem 0" }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#a39f98", textAlign: "center", padding: "2rem 0" }}>
             Cargando comentarios...
           </p>
         ) : comments.length === 0 ? (
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", textAlign: "center", padding: "2rem 0" }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#a39f98", textAlign: "center", padding: "2rem 0" }}>
             Sé el primero en comentar este artículo </p>
         ) : comments.map((c) => (
           <div key={c.id} style={{ display: "flex", gap: "16px", padding: "1.5rem", backgroundColor: "#242424", border: "1px solid rgba(184,154,106,0.1)" }}>
@@ -127,7 +127,7 @@ export function BlogComments({ slug }: { slug: string }) {
                   </span>
                   <MiniStars rating={c.rating} />
                 </div>
-                <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#888580", letterSpacing: "0.01em" }}>
+                <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", color: "#a39f98", letterSpacing: "0.01em" }}>
                   {formatDate(c.created_at)}
                 </span>
               </div>
@@ -159,7 +159,7 @@ export function BlogComments({ slug }: { slug: string }) {
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
             {/* Name */}
             <div>
-              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#a39f98", display: "block", marginBottom: "8px" }}>
                 Nombre *
               </label>
               <input
@@ -173,7 +173,7 @@ export function BlogComments({ slug }: { slug: string }) {
 
             {/* Rating */}
             <div>
-              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", display: "block", marginBottom: "10px" }}>
+              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#a39f98", display: "block", marginBottom: "10px" }}>
                 Tu valoración *
               </label>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
@@ -181,12 +181,14 @@ export function BlogComments({ slug }: { slug: string }) {
                   const filled = star <= (hovered || rating);
                   return (
                     <button key={star} type="button"
+                      aria-label={`${star} ${star === 1 ? "estrella" : "estrellas"}`}
+                      aria-pressed={star === rating}
                       onClick={() => setRating(star)}
                       onMouseEnter={() => setHovered(star)}
                       onMouseLeave={() => setHovered(0)}
                       style={{ background: "none", border: "none", padding: "2px", cursor: "pointer", transition: "transform 0.15s", transform: hovered >= star ? "scale(1.15)" : "scale(1)" }}
                     >
-                      <svg width="26" height="26" viewBox="0 0 24 24"
+                      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"
                         fill={filled ? "#b89a6a" : "rgba(184,154,106,0.15)"}
                         stroke={filled ? "#b89a6a" : "rgba(184,154,106,0.35)"}
                         strokeWidth="1" style={{ transition: "fill 0.2s" }}
@@ -206,7 +208,7 @@ export function BlogComments({ slug }: { slug: string }) {
 
             {/* Comment */}
             <div>
-              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#a39f98", display: "block", marginBottom: "8px" }}>
                 Comentario *
               </label>
               <textarea

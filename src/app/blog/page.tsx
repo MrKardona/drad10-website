@@ -19,6 +19,7 @@ export default function BlogPage() {
   return (
     <>
       <NavBar />
+      <main>
 
       {/* ── Hero ── */}
       <div
@@ -116,7 +117,7 @@ export default function BlogPage() {
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: "0.8125rem",
-                        color: "#888580",
+                        color: "#a39f98",
                       }}
                     >
                       {featured.readTime} lectura
@@ -154,7 +155,7 @@ export default function BlogPage() {
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: "0.8125rem",
-                        color: "#888580",
+                        color: "#a39f98",
                         letterSpacing: "0.01em",
                       }}
                     >
@@ -263,7 +264,7 @@ export default function BlogPage() {
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.8125rem",
-                  color: "#888580",
+                  color: "#a39f98",
                   letterSpacing: "0.01em",
                 }}
               >
@@ -273,6 +274,7 @@ export default function BlogPage() {
 
         </div>
       </div>
+      </main>
 
       <FooterPremium />
       <WhatsAppButton />

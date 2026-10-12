@@ -150,7 +150,7 @@ export function NavBar() {
         </a>
         <span className="hidden sm:inline">
           Citas:{" "}
-          <a href={`tel:${PAISES[pais].tel}`} className="inline-block py-1.5 font-semibold tracking-normal transition-opacity hover:opacity-70" style={{ color: "#b89a6a" }}>
+          <a href={`tel:${PAISES[pais].tel}`} className="inline-block py-1.5 font-semibold tracking-normal transition-opacity hover:opacity-70" style={{ color: "#7a6340" }}>
             {PAISES[pais].telefono}
           </a>
         </span>
@@ -183,7 +183,7 @@ export function NavBar() {
           <Link href="/" className="flex-shrink-0 text-[#1c1c1c]" aria-label="DRA.D10 – Inicio">
             <div className="text-[#1c1c1c] h-10 flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="DRA.D10" className="h-10 w-auto" />
+              <img src="/logo.svg" alt="DRA.D10" width={480} height={160} className="h-10 w-auto" />
             </div>
           </Link>
 
