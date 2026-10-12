@@ -6,6 +6,10 @@ const SUPABASE_HOST = "igijeqhyppvpennjdkiu.supabase.co";
 // script no carga y los eventos se quedan encolados en el navegador.
 const VERCEL_ANALYTICS = "https://va.vercel-scripts.com";
 const VERCEL_VITALS = "https://vitals.vercel-insights.com";
+// Píxel de Meta (components/MetaPixel.tsx): el script viene de connect.facebook.net y los eventos
+// se envían a www.facebook.com/tr (como imagen o como petición).
+const META_SCRIPT = "https://connect.facebook.net";
+const META_EVENTOS = "https://www.facebook.com";
 
 // Static CSP. The previous per-request nonce (src/proxy.ts) forced every
 // page into dynamic SSR — one function invocation per pageview and zero CDN
@@ -17,11 +21,11 @@ const DEV_EVAL = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
 
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${DEV_EVAL} ${VERCEL_ANALYTICS}`,
+  `script-src 'self' 'unsafe-inline'${DEV_EVAL} ${VERCEL_ANALYTICS} ${META_SCRIPT}`,
   "style-src 'self' 'unsafe-inline'",
-  `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com`,
+  `img-src 'self' data: https://images.unsplash.com https://${SUPABASE_HOST} https://i.ytimg.com ${META_EVENTOS}`,
   "font-src 'self'",
-  `connect-src 'self' https://${SUPABASE_HOST} ${VERCEL_ANALYTICS} ${VERCEL_VITALS}`,
+  `connect-src 'self' https://${SUPABASE_HOST} ${VERCEL_ANALYTICS} ${VERCEL_VITALS} ${META_SCRIPT} ${META_EVENTOS}`,
   "frame-src https://www.youtube-nocookie.com",
   "frame-ancestors 'none'",
   "object-src 'none'",
