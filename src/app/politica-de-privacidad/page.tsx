@@ -43,7 +43,7 @@ const sections = [
     content: [
       "Datos de identificación y contacto: nombre, documento de identidad, fecha de nacimiento, teléfono, correo electrónico, ciudad y país de residencia.",
       "Datos de salud (sensibles): antecedentes médicos, alergias, medicamentos, diagnóstico, evolución, consentimientos informados y demás información que integra la historia clínica. También fotografías y videos clínicos de las zonas tratadas, tomados para documentar tu valoración y tu evolución.",
-      "Datos de navegación: dirección IP aproximada, tipo de dispositivo y navegador, páginas visitadas y tiempo de permanencia, obtenidos mediante herramientas de medición del sitio. Datos de pago: comprobantes y datos de facturación. No almacenamos datos completos de tarjetas en este sitio web.",
+      "Datos de navegación: dirección IP, tipo de dispositivo y navegador, páginas visitadas, tiempo de permanencia, clics en los botones de contacto e identificadores de cookies, obtenidos mediante las herramientas de medición del sitio y el píxel de Meta (ver la sección 14). Datos de pago: comprobantes y datos de facturación. No almacenamos datos completos de tarjetas en este sitio web.",
     ],
   },
   {
@@ -54,7 +54,7 @@ const sections = [
       "Gestión de citas y comunicación: agendar, confirmar y recordar citas, y responder tus consultas por WhatsApp, llamada, correo electrónico o mensajería, en Colombia o en Argentina según la sede que elijas.",
       "Comunicaciones comerciales: enviarte información sobre servicios, novedades y promociones, solo si lo autorizas. Puedes retirar esta autorización en cualquier momento sin que afecte tu atención médica.",
       "Gestión administrativa y legal: facturación, cobro, contabilidad, obligaciones tributarias, atención de peticiones, quejas y reclamos, requerimientos de autoridades y defensa ante reclamaciones.",
-      "Mejora del servicio: medir el uso del sitio web y la calidad de la atención con datos estadísticos o anonimizados. Proveedores, contratistas y colaboradores: gestionar la relación contractual o laboral y cumplir las obligaciones legales que de ella se derivan.",
+      "Mejora del servicio: medir el uso del sitio web y la calidad de la atención con datos estadísticos o anonimizados. Publicidad: medir los resultados de nuestros anuncios en Facebook e Instagram, mostrar anuncios a personas que visitaron este sitio o a perfiles parecidos y mejorar nuestras campañas, mediante el píxel de Meta (ver la sección 14). Proveedores, contratistas y colaboradores: gestionar la relación contractual o laboral y cumplir las obligaciones legales que de ella se derivan.",
     ],
   },
   {
@@ -88,6 +88,7 @@ const sections = [
       "No vendemos ni alquilamos tus datos personales.",
       "Podemos transmitirlos a encargados que nos prestan servicios, como alojamiento del sitio web y bases de datos, mensajería, agendamiento, facturación, laboratorios o profesionales de apoyo, bajo acuerdos que limitan su uso a las finalidades de esta política y exigen confidencialidad y seguridad.",
       "Algunos de estos proveedores tienen servidores fuera de Colombia, por ejemplo en Estados Unidos. Además, si te atiendes en la sede de Argentina, la información necesaria para tu atención puede circular entre ambas sedes. En estos casos exigimos niveles adecuados de protección y, cuando la ley lo requiere, tu autorización.",
+      "Meta Platforms (Facebook e Instagram) recibe los datos de navegación que registra su píxel en este sitio, como se explica en la sección 14. Meta los trata como responsable independiente, según su propia política de privacidad, y puede hacerlo en servidores fuera de Colombia, incluso en Estados Unidos.",
       "También entregaremos información a autoridades judiciales, sanitarias o administrativas cuando lo exija la ley o una orden competente.",
     ],
   },
@@ -125,9 +126,13 @@ const sections = [
   },
   {
     number: "14",
-    title: "Cookies y medición del sitio",
+    title: "Cookies, píxel de Meta y medición del sitio",
     content: [
-      "Este sitio usa herramientas de analítica y rendimiento que recopilan información estadística sobre la navegación, sin identificarte directamente. Puedes configurar tu navegador para bloquear o eliminar cookies; algunas funciones del sitio podrían verse afectadas.",
+      "Este sitio usa cookies y herramientas de medición. Algunas son de analítica y rendimiento y recopilan información estadística sobre la navegación.",
+      "También usamos el píxel de Meta, una herramienta de Meta Platforms, Inc. y Meta Platforms Ireland Limited, las empresas de Facebook e Instagram. Cuando visitas el sitio, el píxel registra las páginas que ves y los clics en los botones de WhatsApp, junto con datos técnicos: tu dirección IP, navegador y dispositivo, la página desde la que llegas, el identificador del anuncio si vienes de uno y cookies propias del píxel (como _fbp y _fbc, que duran hasta 90 días).",
+      "Lo usamos para saber cuántas personas llegan desde nuestros anuncios y nos escriben, mostrar anuncios a quienes visitaron el sitio y a perfiles parecidos, y mejorar nuestras campañas. Si tienes una cuenta de Facebook o Instagram, Meta puede relacionar esta información con ella y usarla según su Política de Privacidad (facebook.com/privacy/policy). Meta puede tratar estos datos fuera de Colombia, incluso en Estados Unidos.",
+      "La dirección de la página que visitas puede reflejar el tratamiento que consultas (por ejemplo, la página de bótox). No enviamos al píxel tu nombre, tu teléfono, el contenido de tus conversaciones ni ningún dato de tu historia clínica.",
+      "Cómo controlarlo: puedes bloquear o eliminar las cookies de terceros desde la configuración de tu navegador; ajustar cómo Meta usa tu actividad en otros sitios desde el Centro de cuentas de Facebook o Instagram (Preferencias publicitarias y Tu actividad fuera de las tecnologías de Meta); o escribirnos para ejercer tus derechos. Bloquear estas cookies no impide usar el sitio.",
       "Cuando nos escribes por WhatsApp o nos sigues en Instagram, esos servicios también tratan tus datos según sus propias políticas de privacidad.",
     ],
   },
@@ -196,7 +201,7 @@ export default function PoliticaPrivacidad() {
                 color: "#888580",
               }}
             >
-              Última actualización: septiembre 2026
+              Última actualización: octubre 2026
             </span>
             <span
               style={{
