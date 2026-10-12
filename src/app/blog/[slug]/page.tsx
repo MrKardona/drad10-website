@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BlogRating } from "@/components/blog/BlogRating";
 import { BlogComments } from "@/components/blog/BlogComments";
 import { getBlogPost, getAllSlugs, getRelacionados, type BlogSection } from "@/lib/blog";
+import { seoBlog } from "@/lib/blog/seo";
 import { Consejo, Ingredientes, PreguntasFrecuentes, Firma, SobreLaAutora, Relacionados } from "@/components/blog/BloquesArticulo";
 import type { Metadata } from "next";
 
@@ -22,9 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
+  const seo = seoBlog[post.slug];
   return {
-    title: `${post.title} | Blog DRA.D10`,
-    description: post.excerpt,
+    title: `${seo?.titulo ?? post.title} | DRA.D10`,
+    description: seo?.descripcion ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     authors: [{ name: "Dra. Daniela Díez", url: "https://drad10.com/nosotros" }],
     openGraph: {
@@ -401,9 +403,15 @@ export default async function BlogPostPage({ params }: Props) {
               >
                 Agendar por WhatsApp
               </a>
-              <Link href="/blog" className="btn-outline-cream" style={{ fontSize: "0.8125rem" }}>
-                Ver más artículos
-              </Link>
+              {post.servicio ? (
+                <Link href={`/servicios/${post.servicio}`} className="btn-outline-cream" style={{ fontSize: "0.8125rem" }}>
+                  Conocer el tratamiento
+                </Link>
+              ) : (
+                <Link href="/blog" className="btn-outline-cream" style={{ fontSize: "0.8125rem" }}>
+                  Ver más artículos
+                </Link>
+              )}
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { NavBar } from "@/components/NavBar";
 import { HeroVideo } from "@/components/HeroVideo";
 import { StatsBanner } from "@/components/StatsBanner";
@@ -15,6 +16,9 @@ import { CTABanner } from "@/components/CTABanner";
 import { ContactPremium } from "@/components/ContactPremium";
 import { FooterPremium } from "@/components/FooterPremium";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+
+// La portada declara su canonical (las demás páginas declaran el suyo).
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
   return (

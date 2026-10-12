@@ -17,8 +17,10 @@ const schibsted = Schibsted_Grotesk({
 });
 
 export const metadata: Metadata = {
+  // Base para que los canonical y las URLs de Open Graph relativas salgan absolutas.
+  metadataBase: new URL("https://drad10.com"),
   title: "DRA.D10 | Medicina Estética en Medellín",
-  description: "Clínica de Medicina Estética y Rejuvenecimiento en El Poblado, Medellín. Tratamientos faciales, capilares, corporales e inyectables. INDIBA Certified. Dra. Daniela Díez.",
+  description: "Medicina estética y rejuvenecimiento en El Poblado, Medellín, con la Dra. Daniela Díez. Tratamientos faciales, capilares, corporales e inyectables.",
   keywords: ["medicina estética medellín", "rejuvenecimiento", "implante capilar", "botox medellín", "INDIBA", "drad10", "dra daniela diez", "el poblado"],
   openGraph: {
     title: "DRA.D10 | Medicina Estética de Alto Nivel",

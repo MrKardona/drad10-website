@@ -10,6 +10,7 @@ import { FormacionAcademica } from "@/components/FormacionAcademica";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/nosotros" },
   title: "Nosotros | DRA.D10 — Medicina Estética Medellín",
   description:
     "Conoce a la Dra. Daniela Díez y al equipo de DRA.D10, clínica de medicina estética en El Poblado, Medellín. Más de 20.000 personas atendidas.",

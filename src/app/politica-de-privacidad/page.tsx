@@ -4,6 +4,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/politica-de-privacidad" },
   title: "Política de privacidad y tratamiento de datos | DRA.D10",
   description:
     "Cómo DRA.D10 y Clínica Quantum recolectan, usan y protegen tus datos personales y de salud, conforme a la Ley 1581 de 2012 de Colombia.",

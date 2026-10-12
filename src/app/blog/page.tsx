@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog | DRA.D10 — Medicina Estética Medellín",
   description:
-    "Artículos de la Dra. Daniela Díez sobre medicina estética, cuidado de la piel, cabello y bienestar: tratamientos sin mitos, consejos y su forma de entender la belleza natural.",
+    "La Dra. Daniela Díez escribe sobre medicina estética, cuidado de la piel, cabello y bienestar: tratamientos sin mitos, consejos y belleza natural.",
   alternates: { canonical: "/blog" },
 };
 

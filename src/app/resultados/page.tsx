@@ -6,6 +6,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ResultadosGallery } from "@/components/gallery/ResultadosGallery";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resultados" },
   title: "Resultados | Clínica Quantum — Antes y después en Medellín",
   description:
     "Antes y después reales de Clínica Quantum en El Poblado, Medellín: trasplante capilar, criolipólisis, rinomodelación, labios, perfilado mandibular y más.",

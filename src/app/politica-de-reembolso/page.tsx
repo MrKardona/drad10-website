@@ -4,6 +4,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/politica-de-reembolso" },
   title: "Política de Reembolso | DRA.D10 — Medicina Estética Medellín",
   description:
     "Conoce nuestra política de reembolso y cancelación de citas en DRA.D10, clínica de medicina estética en El Poblado, Medellín.",

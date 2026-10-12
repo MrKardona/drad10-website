@@ -11,7 +11,7 @@ import type { CategoriaTratamiento } from "@/lib/tratamientos/types";
 export const metadata: Metadata = {
   title: "Tratamientos y precios | Clínica Quantum — Medellín",
   description:
-    "Todos los tratamientos de Clínica Quantum en El Poblado, Medellín: toxina botulínica, ácido hialurónico, bioestimuladores, piel, capilar, corporal y más, con precios de referencia.",
+    "Tratamientos de medicina estética en El Poblado, Medellín: toxina botulínica, ácido hialurónico, bioestimuladores, piel, cabello y cuerpo. Precios de referencia.",
   alternates: { canonical: "https://drad10.com/servicios" },
   openGraph: {
     title: "Tratamientos y precios | Clínica Quantum",
