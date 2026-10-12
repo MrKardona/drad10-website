@@ -5,13 +5,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { EVENTO_DECISION, fbq, leerDecision, pixelCargado, type Decision } from "@/lib/consentimiento";
 
-// Píxel de Meta de la clínica (dataset «CP1- CESH|2024|», el mismo de quantummedicinaestetica.com).
+// Píxel de Meta de la clínica: dataset «Clínica Quantum Event Data» (1955962571665828), propiedad del portfolio Quantum Clinic (1081301519591377).
 // Solo se carga si la persona acepta las cookies en el aviso (BannerCookies); sin decisión no se envía nada.
 // - PageView en la carga y en cada navegación interna (Next.js no recarga la página entre rutas).
 // - Contact en cada clic a WhatsApp (wa.me / api.whatsapp.com), el evento estándar de Meta para
 //   iniciar una conversación.
 // Sin <noscript>: sin JavaScript no hay forma de aceptar, así que tampoco se mide.
-export const META_PIXEL_ID = "1589069078656534";
+export const META_PIXEL_ID = "1955962571665828";
 
 export function MetaPixel() {
   const pathname = usePathname();
