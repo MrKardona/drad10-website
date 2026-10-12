@@ -3,8 +3,6 @@ import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ScrollAnimations } from "@/components/ScrollAnimations";
 import { WhatsAppPorPais } from "@/components/WhatsAppPorPais";
-import { MetaPixel } from "@/components/MetaPixel";
-import { BannerCookies } from "@/components/BannerCookies";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -111,8 +109,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Analytics />
         <SpeedInsights />
-        <MetaPixel />
-        <BannerCookies />
+        {/* Píxel de Meta y aviso de cookies desactivados: el ID instalado (1589069078656534) era de otro
+            negocio (Celada.Shopper). Se vuelven a montar <MetaPixel /> y <BannerCookies /> con el píxel de la clínica. */}
       </body>
     </html>
   );
