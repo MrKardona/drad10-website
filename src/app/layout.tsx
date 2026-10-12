@@ -3,6 +3,7 @@ import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ScrollAnimations } from "@/components/ScrollAnimations";
 import { WhatsAppPorPais } from "@/components/WhatsAppPorPais";
+import { MetaPixel } from "@/components/MetaPixel";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -109,6 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Analytics />
         <SpeedInsights />
+        <MetaPixel />
       </body>
     </html>
   );
