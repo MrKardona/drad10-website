@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BotonPreferenciasCookies } from "./BannerCookies";
 
 const tratamientos: { label: string; href: string }[] = [
   { label: "Criolipólisis", href: "/servicios/criolipolisis" },
@@ -299,6 +300,9 @@ export function FooterPremium() {
         >
           © 2026 Clínica Estética DraD10. Todos los derechos reservados.
         </p>
+        <BotonPreferenciasCookies
+          style={{ fontFamily: "var(--font-body)", fontSize: "0.8125rem", letterSpacing: "0.01em", color: "#888580", textDecoration: "underline", textUnderlineOffset: "4px" }}
+        />
         <p
           style={{
             fontFamily: "var(--font-body)",
